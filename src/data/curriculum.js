@@ -283,7 +283,7 @@ const curriculum = [
   {
     id: 14,
     semester: 3,
-    order: 1,
+    order: 2,
     name: 'Videomängude disain',
     module: 'Eriala valikained',
     required: false,
@@ -304,7 +304,7 @@ const curriculum = [
   {
     id: 15,
     semester: 3,
-    order: 2,
+    order: 3,
     name: 'Kasutajaliidese disain',
     module: 'Eriala valikained',
     required: false,
@@ -325,7 +325,7 @@ const curriculum = [
   {
     id: 16,
     semester: 3,
-    order: 1,
+    order: 4,
     name: 'Andmebaasid',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -346,7 +346,7 @@ const curriculum = [
   {
     id: 17,
     semester: 3,
-    order: 2,
+    order: 5,
     name: 'Veebiraamistike rakendamine',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -367,7 +367,7 @@ const curriculum = [
   {
     id: 18,
     semester: 3,
-    order: 2,
+    order: 6,
     name: 'Tagarakenduste arendamine',
     module: 'Eriala valikained',
     required: false,
@@ -410,7 +410,7 @@ const curriculum = [
   {
     id: 20,
     semester: 4,
-    order: 1,
+    order: 2,
     name: 'IT matemaatika',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -431,7 +431,7 @@ const curriculum = [
   {
     id: 21,
     semester: 4,
-    order: 1,
+    order: 3,
     name: 'Uurimistöö alused ja andmeanalüüs',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -456,7 +456,7 @@ const curriculum = [
   {
     id: 22,
     semester: 4,
-    order: 1,
+    order: 4,
     name: 'Protsessi- ja projektijuhtimine',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -477,7 +477,7 @@ const curriculum = [
   {
     id: 23,
     semester: 4,
-    order: 1,
+    order: 5,
     name: 'Erialane inglise keel',
     module: 'Erialane inglise keel',
     required: true,
@@ -499,7 +499,7 @@ const curriculum = [
   {
     id: 24,
     semester: 4,
-    order: 1,
+    order: 6,
     name: 'Kujundustarkvara edasijõudnutele',
     module: 'Eriala valikained',
     required: false,
@@ -541,7 +541,7 @@ const curriculum = [
   {
     id: 26,
     semester: 5,
-    order: 1,
+    order: 2,
     name: 'Uurimistöö',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -564,7 +564,7 @@ const curriculum = [
   {
     id: 27,
     semester: 5,
-    order: 1,
+    order: 3,
     name: 'Serverihaldus',
     module: 'Eriala valikained',
     required: false,
@@ -585,7 +585,7 @@ const curriculum = [
   {
     id: 28,
     semester: 5,
-    order: 1,
+    order: 4,
     name: 'Algoritmid ja andmestruktuurid',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -606,7 +606,7 @@ const curriculum = [
   {
     id: 29,
     semester: 5,
-    order: 1,
+    order: 5,
     name: 'Mobiilirakenduste arendamine',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -628,7 +628,7 @@ const curriculum = [
   {
     id: 30,
     semester: 5,
-    order: 1,
+    order: 6,
     name: 'Küberturve',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -670,7 +670,7 @@ const curriculum = [
   {
     id: 32,
     semester: 6,
-    order: 1,
+    order: 2,
     name: 'IT ja õigus',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -691,7 +691,7 @@ const curriculum = [
   {
     id: 33,
     semester: 6,
-    order: 1,
+    order: 3,
     name: 'Erialaseminar',
     module: 'Eriala kohustuslikud ained',
     required: true,
@@ -712,7 +712,7 @@ const curriculum = [
   {
     id: 34,
     semester: 6,
-    order: 1,
+    order: 4,
     name: 'Lõputöö',
     module: 'Lõputöö',
     required: true,
@@ -726,3 +726,5 @@ const curriculum = [
     nonUnique: false,
   },
 ];
+
+export default curriculum;
