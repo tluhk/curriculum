@@ -308,7 +308,7 @@ const App = () => {
                 height: "20px",
               }}
             />
-            Näita ainult kohustulikke aineid
+            Näita ainult kohustuslikke aineid
           </label>
 
           {/* ECTS by Module Table */}
