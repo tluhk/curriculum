@@ -308,7 +308,7 @@ const App = () => {
                 height: "20px",
               }}
             />
-            Show Required Subjects Only
+            Näita ainult kohustulikke aineid
           </label>
 
           {/* ECTS by Module Table */}
