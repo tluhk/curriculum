@@ -63,7 +63,7 @@ const Sidebar = ({
               padding: "8px 18px",
               marginBottom: "20px",
               backgroundColor: "#4CAF50",
-              color: "white",
+              color: "black",
               border: "none",
               borderRadius: "5px",
               cursor: "pointer",
@@ -98,7 +98,7 @@ const Sidebar = ({
                   gap: "8px",
                   fontWeight: "normal",
                   fontSize: "14px",
-                  color: moduleColors[module] || "#cccccc",
+                  color: "#000", // Set text color to black
                 }}
               >
                 <input
@@ -120,7 +120,7 @@ const Sidebar = ({
                     borderColor: moduleColors[module] || "#cccccc",
                     backgroundColor: activeModules[module]
                       ? moduleColors[module]
-                      : "transparent", // Change checked color to module color
+                      : moduleColors[module] || "#cccccc", // Change unchecked color to module color
                   }}
                 ></span>
                 {module}

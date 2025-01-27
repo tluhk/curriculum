@@ -25,6 +25,10 @@
   background-color: inherit; /* Use the background color set in the JSX */
 }
 
+.custom-checkbox input:not(:checked) ~ .checkmark {
+  background-color: inherit; /* Use the border color as the background color */
+}
+
 .custom-checkbox .checkmark:after {
   content: "";
   position: absolute;
