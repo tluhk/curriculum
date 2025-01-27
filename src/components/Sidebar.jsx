@@ -163,7 +163,6 @@ const Sidebar = ({
               color: "#333",
             }}
           >
-            <h3>ECTS by Module</h3>
             <table
               style={{
                 width: "100%",
@@ -173,8 +172,8 @@ const Sidebar = ({
             >
               <thead>
                 <tr>
-                  <th style={{ textAlign: "left" }}>Module</th>
-                  <th style={{ textAlign: "left" }}>ECTS</th>
+                  <th style={{ textAlign: "left" }}>Moodul</th>
+                  <th style={{ textAlign: "left" }}>EAP</th>
                 </tr>
               </thead>
               <tbody>
@@ -195,7 +194,6 @@ const Sidebar = ({
               color: "#333",
             }}
           >
-            <h3>ECTS by Semester</h3>
             <table
               style={{
                 width: "100%",
@@ -206,7 +204,7 @@ const Sidebar = ({
               <thead>
                 <tr>
                   <th style={{ textAlign: "left" }}>Semester</th>
-                  <th style={{ textAlign: "left" }}>ECTS</th>
+                  <th style={{ textAlign: "left" }}>EAP</th>
                 </tr>
               </thead>
               <tbody>
