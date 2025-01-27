@@ -1,11 +1,12 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ReactFlow, Background, Controls } from "@xyflow/react"; // Import necessary components
 import SubjectNode from "./SubjectNode"; // Import SubjectNode component
+import SubjectInfoModal from "./SubjectInfoModal"; // Import the new modal component
 
 const nodeTypes = {
-  subjectNode: SubjectNode,
+  subjectNode: (props) => <SubjectNode {...props} />,
 };
 
 const CurriculumVisualization = ({
@@ -13,12 +14,23 @@ const CurriculumVisualization = ({
   updatedEdges,
   onNodeClick,
 }) => {
+  const [modalData, setModalData] = useState(null);
+
+  const openModal = (data) => {
+    setModalData(data);
+  };
+
+  const closeModal = () => {
+    setModalData(null);
+  };
+
   return (
     <div
       style={{
         flexGrow: 1,
         display: "flex",
         flexDirection: "column",
+        position: "relative", // Make container position relative
       }}
     >
       <ReactFlow
@@ -29,7 +41,10 @@ const CurriculumVisualization = ({
             });
           }, 0);
         }}
-        nodes={updatedNodes}
+        nodes={updatedNodes.map((node) => ({
+          ...node,
+          data: { ...node.data, openModal },
+        }))}
         edges={updatedEdges}
         onNodeClick={onNodeClick} // Add event listener for node click
         nodeTypes={nodeTypes} // Register custom node types
@@ -38,6 +53,9 @@ const CurriculumVisualization = ({
         <Background />
         <Controls />
       </ReactFlow>
+      {modalData && (
+        <SubjectInfoModal data={modalData} closeModal={closeModal} />
+      )}
     </div>
   );
 };

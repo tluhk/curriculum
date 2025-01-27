@@ -7,7 +7,8 @@ import { FaInfoCircle } from "react-icons/fa"; // Import the info icon
 const SubjectNode = ({ data }) => {
   const onSubjecInfoClick = (event) => {
     event.stopPropagation(); // Prevent the node click behavior
-    console.log(`Subject ID: ${data.id}`);
+    // Pass the entire 'data' object to openModal
+    data.openModal(data);
   };
 
   return (
@@ -20,11 +21,11 @@ const SubjectNode = ({ data }) => {
         height: data.nodeHeight,
         width: 150,
         opacity: 1,
-        color: "black", // Set text color to black
-        whiteSpace: "pre-line", // Preserve line breaks
-        textAlign: "center", // Center
+        color: "black",
+        whiteSpace: "pre-line",
+        textAlign: "center",
         fontSize: "12px",
-        position: "relative", // Add relative positioning
+        position: "relative",
       }}
     >
       <div>{data.label}</div>
@@ -51,6 +52,7 @@ SubjectNode.propTypes = {
     backgroundColor: PropTypes.string.isRequired,
     nodeHeight: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
+    openModal: PropTypes.func.isRequired,
   }).isRequired,
 };
 

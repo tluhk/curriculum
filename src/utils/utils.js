@@ -14,6 +14,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
         id: course.id,
         backgroundColor: moduleColor,
         nodeHeight,
+        course,
       },
       position: {
         x: (course.order - 1) * 200,
