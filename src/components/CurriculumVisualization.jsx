@@ -4,8 +4,10 @@ import PropTypes from "prop-types";
 import { ReactFlow, Background, Controls } from "@xyflow/react"; // Import necessary components
 import SubjectNode from "./SubjectNode"; // Import SubjectNode component
 import SubjectInfoModal from "./SubjectInfoModal"; // Import the new modal component
+import SemesterNode from "./SemesterNode"; // Import SemesterNode component
 
 const nodeTypes = {
+  semesterNode: (props) => <SemesterNode {...props} />,
   subjectNode: (props) => <SubjectNode {...props} />,
 };
 
@@ -45,7 +47,10 @@ const CurriculumVisualization = ({
           ...node,
           data: { ...node.data, openModal },
         }))}
-        edges={updatedEdges}
+        edges={updatedEdges.map((edge) => ({
+          ...edge,
+          style: { ...edge.style, zIndex: 5 }, // Set zIndex for edges
+        }))}
         onNodeClick={onNodeClick} // Add event listener for node click
         nodeTypes={nodeTypes} // Register custom node types
         style={{ width: "100%", height: "100%" }}

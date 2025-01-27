@@ -102,12 +102,15 @@ const App = () => {
   };
 
   const filteredNodes = nodes.filter((node) => {
-    if (Object.keys(activeModules).length === 0 && !showRequiredOnly) {
+    // Always include semester nodes
+    if (node.type === "semesterNode") {
       return true;
     }
+
     if (showRequiredOnly && !node.required) {
       return false;
     }
+
     return activeModules[node.module];
   });
 

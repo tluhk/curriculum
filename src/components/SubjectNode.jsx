@@ -26,6 +26,7 @@ const SubjectNode = ({ data }) => {
         textAlign: "center",
         fontSize: "12px",
         position: "relative",
+        zIndex: 10, // Higher zIndex to be above edges
       }}
     >
       <div>{data.label}</div>
