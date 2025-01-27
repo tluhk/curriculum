@@ -6,6 +6,7 @@ import curriculum from "./data/curriculum"; // Updated import path
 import { transformCurriculum } from "./utils/utils"; // You can extract the transformation logic into a separate utils file
 import "@xyflow/react/dist/style.css";
 import "./styles.css";
+import { FaBars } from "react-icons/fa"; // Import icon
 
 const App = () => {
   const [selectedSubject, setSelectedSubject] = useState(null);
@@ -13,6 +14,11 @@ const App = () => {
   const [highlightedEdges, setHighlightedEdges] = useState([]);
   const [activeModules, setActiveModules] = useState({});
   const [showRequiredOnly, setShowRequiredOnly] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true); // New state
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   const moduleColors = {
     "Üleülikoolilised ained": "#A3C9E1",
@@ -130,6 +136,20 @@ const App = () => {
 
   return (
     <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+      {!isSidebarOpen && ( // Conditionally render the icon based on sidebar state
+        <FaBars
+          onClick={toggleSidebar}
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "10px",
+            zIndex: 1000,
+            fontSize: "24px",
+            cursor: "pointer",
+            color: "#4CAF50",
+          }}
+        />
+      )}
       <Sidebar
         moduleColors={moduleColors}
         activeModules={activeModules}
@@ -140,6 +160,8 @@ const App = () => {
         moduleECTS={moduleECTS}
         semesterECTS={semesterECTS}
         totalECTS={totalECTS}
+        isSidebarOpen={isSidebarOpen} // Pass new prop
+        toggleSidebar={toggleSidebar} // Pass new prop
       />
       <CurriculumVisualization
         updatedNodes={updatedNodes}
