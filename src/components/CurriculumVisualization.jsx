@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import PropTypes from "prop-types";
-import { ReactFlow } from "@xyflow/react";
+import { ReactFlow, Background, Controls } from "@xyflow/react"; // Import necessary components
 
 const CurriculumVisualization = ({
   updatedNodes,
@@ -28,10 +28,14 @@ const CurriculumVisualization = ({
         edges={updatedEdges}
         onNodeClick={onNodeClick} // Add event listener for node click
         style={{ width: "100%", height: "100%" }}
-      />
+      >
+        <Background />
+        <Controls />
+      </ReactFlow>
     </div>
   );
 };
+
 CurriculumVisualization.propTypes = {
   updatedNodes: PropTypes.array.isRequired,
   updatedEdges: PropTypes.array.isRequired,

@@ -8,7 +8,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
     const moduleColor = moduleColors[course.module] || "#cccccc";
     return {
       id: `subject-${course.id}`,
-      data: { label: `${course.name}` },
+      data: { label: `${course.name}\n${course.credits}EAP` }, // Include credits in node label
       position: {
         x: (course.order - 1) * 200,
         y: (course.semester - 1) * semesterSpacing,
@@ -24,6 +24,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
         height: nodeHeight,
         opacity: 1,
         color: "black", // Set text color to black
+        whiteSpace: "pre-line", // Preserve line breaks
       },
     };
   });
