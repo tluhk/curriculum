@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import PropTypes from "prop-types";
+import "./Sidebar.css"; // Import custom CSS
 
 const Sidebar = ({
   moduleColors,
@@ -90,6 +91,7 @@ const Sidebar = ({
             ].map((module) => (
               <label
                 key={module}
+                className="custom-checkbox"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -112,12 +114,22 @@ const Sidebar = ({
                     height: "20px",
                   }}
                 />
+                <span
+                  className="checkmark"
+                  style={{
+                    borderColor: moduleColors[module] || "#cccccc",
+                    backgroundColor: activeModules[module]
+                      ? moduleColors[module]
+                      : "transparent", // Change checked color to module color
+                  }}
+                ></span>
                 {module}
               </label>
             ))}
           </div>
           {/* Show Required Only Checkbox */}
           <label
+            className="custom-checkbox"
             style={{
               display: "flex",
               alignItems: "center",
@@ -140,6 +152,7 @@ const Sidebar = ({
                 height: "20px",
               }}
             />
+            <span className="checkmark"></span>
             Näita ainult kohustuslikke aineid
           </label>
           {/* ECTS by Module Table */}

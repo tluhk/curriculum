@@ -23,6 +23,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
         border: "1px solid #ddd",
         height: nodeHeight,
         opacity: 1,
+        color: "black", // Set text color to black
       },
     };
   });

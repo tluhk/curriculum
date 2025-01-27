@@ -1,4 +1,4 @@
-// App.jsx
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import CurriculumVisualization from "./components/CurriculumVisualization";
@@ -9,10 +9,20 @@ import "./styles.css";
 import { FaBars } from "react-icons/fa"; // Import icon
 
 const App = () => {
+  // Initialize activeModules with all modules selected
+  const initialActiveModules = {
+    "Üleülikoolilised ained": true,
+    "Eriala kohustuslikud ained": true,
+    "Eriala valikained": true,
+    Praktika: true,
+    "Erialane inglise keel": true,
+    Lõputöö: true,
+  };
+
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [highlightedSubjects, setHighlightedSubjects] = useState([]);
   const [highlightedEdges, setHighlightedEdges] = useState([]);
-  const [activeModules, setActiveModules] = useState({});
+  const [activeModules, setActiveModules] = useState(initialActiveModules); // Use initialActiveModules
   const [showRequiredOnly, setShowRequiredOnly] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // New state
 
