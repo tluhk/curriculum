@@ -1,7 +1,7 @@
-// CurriculumVisualization.jsx
+// eslint-disable-next-line no-unused-vars
 import React from "react";
+import PropTypes from "prop-types";
 import { ReactFlow } from "@xyflow/react";
-import { Controls } from "@xyflow/react";
 
 const CurriculumVisualization = ({
   updatedNodes,
@@ -31,6 +31,11 @@ const CurriculumVisualization = ({
       />
     </div>
   );
+};
+CurriculumVisualization.propTypes = {
+  updatedNodes: PropTypes.array.isRequired,
+  updatedEdges: PropTypes.array.isRequired,
+  onNodeClick: PropTypes.func.isRequired,
 };
 
 export default CurriculumVisualization;

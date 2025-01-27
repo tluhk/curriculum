@@ -1,5 +1,6 @@
-// Sidebar.jsx
+// eslint-disable-next-line no-unused-vars
 import React from "react";
+import PropTypes from "prop-types";
 
 const Sidebar = ({
   moduleColors,
@@ -201,6 +202,17 @@ const Sidebar = ({
       </div>
     </div>
   );
+};
+Sidebar.propTypes = {
+  moduleColors: PropTypes.object.isRequired,
+  activeModules: PropTypes.object.isRequired,
+  showRequiredOnly: PropTypes.bool.isRequired,
+  setShowRequiredOnly: PropTypes.func.isRequired,
+  handleModuleFilter: PropTypes.func.isRequired,
+  handleCheckAll: PropTypes.func.isRequired,
+  moduleECTS: PropTypes.object.isRequired,
+  semesterECTS: PropTypes.object.isRequired,
+  totalECTS: PropTypes.number.isRequired,
 };
 
 export default Sidebar;
