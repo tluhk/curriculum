@@ -52,6 +52,13 @@ const SubjectInfoModal = ({ data, closeModal }) => {
         </button>
         <h2 style={{ marginBottom: 10 }}>{course.name}</h2>
         <p>
+          <strong>
+            <a href={course.url} target="_blank" rel="noopener noreferrer">
+              Ainekaart
+            </a>
+          </strong>
+        </p>
+        <p>
           <strong>Moodul:</strong> {course.module}
         </p>
         <p>
@@ -104,6 +111,7 @@ SubjectInfoModal.propTypes = {
       name: PropTypes.string.isRequired,
       module: PropTypes.string.isRequired,
       credits: PropTypes.number.isRequired,
+      url: PropTypes.string.isRequired,
       assessment: PropTypes.string.isRequired,
       objective: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
