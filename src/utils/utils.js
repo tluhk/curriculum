@@ -84,7 +84,6 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
       id: `edge-${pId}-${course.id}`,
       source: `subject-${pId}`,
       target: `subject-${course.id}`,
-      style: { stroke: "#D3D3D3", strokeWidth: 1 }, // Edge color defined here
     }))
   );
 

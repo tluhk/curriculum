@@ -26,6 +26,13 @@ const CurriculumVisualization = ({
     setModalData(null);
   };
 
+  const handleNodeClick = (event, node) => {
+    if (node.type === "semesterNode") {
+      return; // Do nothing if a semester node is clicked
+    }
+    onNodeClick(event, node);
+  };
+
   return (
     <div
       style={{
@@ -49,14 +56,15 @@ const CurriculumVisualization = ({
         }))}
         edges={updatedEdges.map((edge) => ({
           ...edge,
-          style: { ...edge.style, zIndex: 5 }, // Set zIndex for edges
+          style: { ...edge.style, zIndex: 5 },
         }))}
-        onNodeClick={onNodeClick} // Add event listener for node click
+        onNodeClick={handleNodeClick} // Use custom handleNodeClick function
         nodeTypes={nodeTypes} // Register custom node types
         style={{ width: "100%", height: "100%" }}
       >
         <Background />
-        <Controls />
+        <Controls style={{ color: "black" }} />{" "}
+        {/* Change text color to black */}
       </ReactFlow>
       {modalData && (
         <SubjectInfoModal data={modalData} closeModal={closeModal} />
