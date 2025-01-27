@@ -36,14 +36,30 @@ const SemesterNode = ({ data }) => {
       >
         {data.semester}
       </div>
+      <div
+        style={{
+          position: "absolute",
+          top: 50,
+          left: 10,
+          backgroundColor: "#4CAF50",
+          color: "white",
+          borderRadius: "5px",
+          padding: "2px 5px",
+          fontSize: "12px",
+        }}
+      >
+        {data.credits} EAP
+      </div>
     </div>
   );
 };
+
 SemesterNode.propTypes = {
   data: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     semester: PropTypes.number.isRequired,
+    credits: PropTypes.number.isRequired,
   }).isRequired,
 };
 

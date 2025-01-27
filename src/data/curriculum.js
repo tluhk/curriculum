@@ -298,7 +298,7 @@ const curriculum = [
   {
     id: 14,
     semester: 3,
-    order: 2,
+    order: 4,
     url: '',
     name: 'Videomängude disain',
     module: 'Eriala valikained',
@@ -320,7 +320,7 @@ const curriculum = [
   {
     id: 15,
     semester: 3,
-    order: 3,
+    order: 5,
     url: '',
     name: 'Kasutajaliidese disain',
     module: 'Eriala valikained',
@@ -342,7 +342,7 @@ const curriculum = [
   {
     id: 16,
     semester: 3,
-    order: 4,
+    order: 2,
     url: '',
     name: 'Andmebaasid',
     module: 'Eriala kohustuslikud ained',
@@ -364,7 +364,7 @@ const curriculum = [
   {
     id: 17,
     semester: 3,
-    order: 5,
+    order: 3,
     url: '',
     name: 'Veebiraamistike rakendamine',
     module: 'Eriala kohustuslikud ained',
@@ -501,7 +501,7 @@ const curriculum = [
   {
     id: 23,
     semester: 4,
-    order: 5,
+    order: 6,
     url: '',
     name: 'Erialane inglise keel',
     module: 'Erialane inglise keel',
@@ -524,7 +524,7 @@ const curriculum = [
   {
     id: 24,
     semester: 4,
-    order: 6,
+    order: 5,
     url: '',
     name: 'Kujundustarkvara edasijõudnutele',
     module: 'Eriala valikained',
@@ -592,7 +592,7 @@ const curriculum = [
   {
     id: 27,
     semester: 5,
-    order: 3,
+    order: 6,
     url: '',
     name: 'Serverihaldus',
     module: 'Eriala valikained',
@@ -659,7 +659,7 @@ const curriculum = [
   {
     id: 30,
     semester: 5,
-    order: 6,
+    order: 3,
     url: '',
     name: 'Küberturve',
     module: 'Eriala kohustuslikud ained',

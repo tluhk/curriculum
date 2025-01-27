@@ -7,6 +7,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
 
   const semesterMaxHeights = {};
   const semesterCounts = {};
+  const semesterCredits = {};
 
   curriculumData.forEach((course) => {
     const nodeHeight = baseNodeHeight + course.credits * creditMultiplier;
@@ -17,6 +18,8 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
     );
     // Track number of courses in each semester
     semesterCounts[course.semester] = (semesterCounts[course.semester] || 0) + 1;
+    // Track total credits per semester
+    semesterCredits[course.semester] = (semesterCredits[course.semester] || 0) + course.credits;
   });
 
   // Find the maximum width needed for any semester
@@ -36,6 +39,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
         semester: semesterNumber,
         width: maxWidth,
         height,
+        credits: semesterCredits[semesterNumber], // Pass total credits
       },
       position,
       draggable: false,
