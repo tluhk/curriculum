@@ -7,15 +7,16 @@ const SemesterNode = ({ data }) => {
     <div
       style={{
         position: "relative",
-        zIndex: -10, // Lower zIndex to be behind edges
+        zIndex: -1000, // Lower zIndex to be behind edges
         width: data.width,
         height: data.height,
         backgroundColor: "#f0f0f0",
-        border: "1px solid black", // Valid border color
+        border: "1px solid gray", // Valid border color
         borderRadius: 8,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        opacity: 0.7,
       }}
     >
       <div
@@ -23,8 +24,8 @@ const SemesterNode = ({ data }) => {
           position: "absolute",
           top: 10,
           left: 10,
-          backgroundColor: "#4CAF50",
-          color: "white",
+          backgroundColor: "#A8D5BA",
+          color: "black",
           borderRadius: "50%",
           width: 30,
           height: 30,
@@ -41,8 +42,8 @@ const SemesterNode = ({ data }) => {
           position: "absolute",
           top: 50,
           left: 10,
-          backgroundColor: "#4CAF50",
-          color: "white",
+          backgroundColor: "#A8D5BA",
+          color: "black",
           borderRadius: "5px",
           padding: "2px 5px",
           fontSize: "12px",

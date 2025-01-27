@@ -41,7 +41,7 @@ const Sidebar = ({
               cursor: "pointer",
               fontSize: "20px",
               fontWeight: "bold",
-              color: "#333",
+              color: "black",
             }}
           >
             &times;
@@ -62,7 +62,7 @@ const Sidebar = ({
             style={{
               padding: "8px 18px",
               marginBottom: "20px",
-              backgroundColor: "#4CAF50",
+              backgroundColor: "#A8D5BA",
               color: "black",
               border: "none",
               borderRadius: "5px",

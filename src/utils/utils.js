@@ -23,7 +23,8 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
   });
 
   // Find the maximum width needed for any semester
-  const maxWidth = Math.max(...Object.values(semesterCounts)) * subjectSpacing + 100 + badgeWidth;
+  const maxCount = Math.max(...Object.values(semesterCounts));
+  const maxWidth = maxCount * subjectSpacing + margin + badgeWidth;
 
   // Calculate the vertical position for each semester
   let currentY = 0;
@@ -50,7 +51,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
   // Place subject nodes near the top with a uniform margin
   const subjectNodes = curriculumData.map((course) => {
     const nodeHeight = baseNodeHeight + course.credits * creditMultiplier;
-    const verticalOffset = margin; // Align subjects at the top
+    const verticalOffset = margin / 2 + 5; // Align subjects at the top
 
     return {
       id: `subject-${course.id}`,
@@ -83,7 +84,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
       id: `edge-${pId}-${course.id}`,
       source: `subject-${pId}`,
       target: `subject-${course.id}`,
-      style: { stroke: "#D3D3D3", strokeWidth: 1 },
+      style: { stroke: "#D3D3D3", strokeWidth: 1 }, // Edge color defined here
     }))
   );
 

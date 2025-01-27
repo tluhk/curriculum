@@ -176,7 +176,7 @@ const App = () => {
             zIndex: 1000,
             fontSize: "24px",
             cursor: "pointer",
-            color: "#4CAF50",
+            color: "black",
           }}
         />
       )}
