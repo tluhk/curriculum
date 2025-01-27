@@ -8,9 +8,12 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
     const moduleColor = moduleColors[course.module] || "#cccccc";
     return {
       id: `subject-${course.id}`,
+      type: 'subjectNode', // Use string key for custom node type
       data: {
         label: `${course.name}\n${course.credits}EAP`,
-        content: course.content.substring(0, 50) + "...",
+        id: course.id,
+        backgroundColor: moduleColor,
+        nodeHeight,
       },
       position: {
         x: (course.order - 1) * 200,
@@ -20,15 +23,6 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
       semester: course.semester,
       credits: course.credits,
       required: course.required,
-      style: {
-        backgroundColor: moduleColor,
-        padding: 10,
-        border: "1px solid #ddd",
-        height: nodeHeight,
-        opacity: 1,
-        color: "black", // Set text color to black
-        whiteSpace: "pre-line", // Preserve line breaks
-      },
     };
   });
 

@@ -86,10 +86,6 @@ const App = () => {
     }
   };
 
-  const onNodeMouseEnter = (event, node) => {
-    console.log(node.data.content);
-  };
-
   const handleModuleFilter = (module) => {
     setActiveModules((prev) => ({
       ...prev,
@@ -198,7 +194,6 @@ const App = () => {
         updatedNodes={updatedNodes}
         updatedEdges={updatedEdges}
         onNodeClick={onNodeClick}
-        onNodeMouseEnter={onNodeMouseEnter}
       />
     </div>
   );
