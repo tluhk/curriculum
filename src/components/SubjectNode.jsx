@@ -5,7 +5,8 @@ import { Handle } from "@xyflow/react";
 import { FaInfoCircle } from "react-icons/fa"; // Import the info icon
 
 const SubjectNode = ({ data }) => {
-  const onSubjecInfoClick = () => {
+  const onSubjecInfoClick = (event) => {
+    event.stopPropagation(); // Prevent the node click behavior
     console.log(`Subject ID: ${data.id}`);
   };
 
