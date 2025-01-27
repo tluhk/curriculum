@@ -117,7 +117,7 @@ const App = () => {
       ...node,
       style: {
         ...node.style,
-        opacity: isConnected || highlightedSubjects.length === 0 ? 1 : 0.1,
+        opacity: isConnected || highlightedSubjects.length === 0 ? 1 : 0.2,
         transition: "opacity 0.3s",
       },
     };
@@ -130,7 +130,7 @@ const App = () => {
       style: {
         ...edge.style,
         stroke: isConnected ? "#000000" : "#D3D3D3",
-        strokeWidth: isConnected ? 3 : 1,
+        strokeWidth: isConnected ? 2 : 1,
         transition: "stroke 0.3s, stroke-width 0.3s",
       },
     };
