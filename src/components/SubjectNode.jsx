@@ -27,6 +27,13 @@ const SubjectNode = ({ data }) => {
         fontSize: "12px",
         position: "relative",
         zIndex: 10, // Higher zIndex to be above edges
+        transition: "transform 0.3s", // Add transition for smooth scaling
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "scale(1.3)"; // Scale up on hover
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "scale(1)"; // Scale back to normal
       }}
     >
       <div>{data.label}</div>
