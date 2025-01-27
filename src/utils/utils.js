@@ -10,8 +10,8 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
       id: `subject-${course.id}`,
       data: { label: `${course.name}` },
       position: {
-        y: (course.semester - 1) * semesterSpacing,
         x: (course.order - 1) * 200,
+        y: (course.semester - 1) * semesterSpacing,
       },
       module: course.module,
       semester: course.semester,
