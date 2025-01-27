@@ -7,6 +7,7 @@ const CurriculumVisualization = ({
   updatedNodes,
   updatedEdges,
   onNodeClick,
+  onNodeMouseEnter,
 }) => {
   return (
     <div
@@ -27,6 +28,7 @@ const CurriculumVisualization = ({
         nodes={updatedNodes}
         edges={updatedEdges}
         onNodeClick={onNodeClick} // Add event listener for node click
+        onNodeMouseEnter={onNodeMouseEnter} // Log node ID on mouse enter
         style={{ width: "100%", height: "100%" }}
       >
         <Background />
@@ -40,6 +42,7 @@ CurriculumVisualization.propTypes = {
   updatedNodes: PropTypes.array.isRequired,
   updatedEdges: PropTypes.array.isRequired,
   onNodeClick: PropTypes.func.isRequired,
+  onNodeMouseEnter: PropTypes.func.isRequired,
 };
 
 export default CurriculumVisualization;

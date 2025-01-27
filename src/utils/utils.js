@@ -8,7 +8,10 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
     const moduleColor = moduleColors[course.module] || "#cccccc";
     return {
       id: `subject-${course.id}`,
-      data: { label: `${course.name}\n${course.credits}EAP` }, // Include credits in node label
+      data: {
+        label: `${course.name}\n${course.credits}EAP`,
+        content: course.content.substring(0, 50) + "...",
+      },
       position: {
         x: (course.order - 1) * 200,
         y: (course.semester - 1) * semesterSpacing,
