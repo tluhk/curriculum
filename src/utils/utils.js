@@ -6,6 +6,11 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
   const nodes = curriculumData.map((course) => {
     const nodeHeight = baseNodeHeight + course.credits * creditMultiplier;
     const moduleColor = moduleColors[course.module] || "#cccccc";
+    const prerequisites = course.prerequisites || [];
+    const dependents = curriculumData.filter((c) =>
+      c.prerequisites.includes(course.id)
+    ).map((c) => c.id);
+
     return {
       id: `subject-${course.id}`,
       type: 'subjectNode', // Use string key for custom node type
@@ -15,6 +20,8 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
         backgroundColor: moduleColor,
         nodeHeight,
         course,
+        prerequisites,
+        dependents,
       },
       position: {
         x: (course.order - 1) * 200,

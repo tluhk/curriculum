@@ -40,8 +40,8 @@ const SubjectNode = ({ data }) => {
         }}
         onClick={onSubjecInfoClick}
       />
-      <Handle type="target" position="top" />
-      <Handle type="source" position="bottom" />
+      {data.prerequisites.length > 0 && <Handle type="target" position="top" />}
+      {data.dependents.length > 0 && <Handle type="source" position="bottom" />}
     </div>
   );
 };
@@ -53,6 +53,8 @@ SubjectNode.propTypes = {
     nodeHeight: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
     openModal: PropTypes.func.isRequired,
+    prerequisites: PropTypes.array.isRequired,
+    dependents: PropTypes.array.isRequired,
   }).isRequired,
 };
 
