@@ -33,8 +33,8 @@ const SubjectNode = ({ data }) => {
       <FaInfoCircle
         style={{
           position: "absolute",
-          bottom: 5,
-          right: 5,
+          bottom: 10,
+          right: 10,
           cursor: "pointer",
           fontSize: 16,
           color: "#005555",

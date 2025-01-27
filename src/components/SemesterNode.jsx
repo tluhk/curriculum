@@ -22,8 +22,8 @@ const SemesterNode = ({ data }) => {
       <div
         style={{
           position: "absolute",
-          top: 10,
-          left: 10,
+          top: 20,
+          left: 15,
           backgroundColor: "#A8D5BA",
           color: "black",
           borderRadius: "50%",
@@ -40,8 +40,8 @@ const SemesterNode = ({ data }) => {
       <div
         style={{
           position: "absolute",
-          top: 50,
-          left: 10,
+          top: 60,
+          left: 15,
           backgroundColor: "#A8D5BA",
           color: "black",
           borderRadius: "5px",
