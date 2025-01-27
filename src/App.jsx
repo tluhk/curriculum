@@ -41,6 +41,34 @@ const App = () => {
 
   const { nodes, edges } = transformCurriculum(curriculum, moduleColors);
 
+  const findAllPrerequisites = (subjectId, edges) => {
+    const prerequisites = edges
+      .filter((edge) => edge.target === subjectId)
+      .map((edge) => edge.source);
+
+    return prerequisites.reduce(
+      (acc, prerequisite) => [
+        ...acc,
+        prerequisite,
+        ...findAllPrerequisites(prerequisite, edges),
+      ],
+      []
+    );
+  };
+
+  const findAllUpstreamEdges = (subjectId, edges) => {
+    const upstreamEdges = edges.filter((edge) => edge.target === subjectId);
+
+    return upstreamEdges.reduce(
+      (acc, edge) => [
+        ...acc,
+        edge,
+        ...findAllUpstreamEdges(edge.source, edges),
+      ],
+      []
+    );
+  };
+
   const onNodeClick = (event, node) => {
     const selectedNodeId = node.id;
 
@@ -49,23 +77,12 @@ const App = () => {
       setHighlightedEdges([]);
       setSelectedSubject(null);
     } else {
-      const connectedNodes = edges
-        .filter(
-          (edge) =>
-            edge.source === selectedNodeId || edge.target === selectedNodeId
-        )
-        .map((edge) =>
-          edge.source === selectedNodeId ? edge.target : edge.source
-        );
-
-      const connectedEdges = edges.filter(
-        (edge) =>
-          edge.source === selectedNodeId || edge.target === selectedNodeId
-      );
+      const allPrerequisites = findAllPrerequisites(selectedNodeId, edges);
+      const allUpstreamEdges = findAllUpstreamEdges(selectedNodeId, edges);
 
       setSelectedSubject(selectedNodeId);
-      setHighlightedSubjects([selectedNodeId, ...connectedNodes]);
-      setHighlightedEdges(connectedEdges.map((edge) => edge.id));
+      setHighlightedSubjects([selectedNodeId, ...allPrerequisites]);
+      setHighlightedEdges(allUpstreamEdges.map((edge) => edge.id));
     }
   };
 
