@@ -46,7 +46,6 @@ const SubjectInfoModal = ({ data, closeModal }) => {
             fontSize: 20,
             cursor: "pointer",
             color: "#000",
-            whiteSpace: "pre-line",
           }}
         >
           &times;
@@ -64,7 +63,7 @@ const SubjectInfoModal = ({ data, closeModal }) => {
         <p>
           <strong>Eesmärk:</strong> {course.objective}
         </p>
-        <p>
+        <p style={{ whiteSpace: "pre-line" }}>
           <strong>Sisu:</strong> {course.content}
         </p>
         <p>
@@ -75,20 +74,22 @@ const SubjectInfoModal = ({ data, closeModal }) => {
             <li key={index}>{outcome}</li>
           ))}
         </ul>
-        <button
-          onClick={closeModal}
-          style={{
-            marginTop: 20,
-            padding: "10px 20px",
-            backgroundColor: "#4CAF50",
-            color: "white",
-            border: "none",
-            borderRadius: 5,
-            cursor: "pointer",
-          }}
-        >
-          Sulge
-        </button>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button
+            onClick={closeModal}
+            style={{
+              marginTop: 20,
+              padding: "10px 20px",
+              backgroundColor: "#4CAF50",
+              color: "white",
+              border: "none",
+              borderRadius: 5,
+              cursor: "pointer",
+            }}
+          >
+            Sulge
+          </button>
+        </div>
       </div>
     </div>
   );
