@@ -3,13 +3,19 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - master 
+
+permissions:
+  contents: write
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
         
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -23,8 +29,12 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: List build directory contents
+        run: ls -la dist
+        
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # The branch the action should deploy to
           folder: dist # The folder the action should deploy
+          clean: true # Automatically remove deleted files from the deploy branch

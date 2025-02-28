@@ -5,4 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/Curriculum/', // Set the base to match your repository name
+  build: {
+    assetsDir: 'assets', // Ensure assets are placed in the assets directory
+    outDir: 'dist', // Output directory
+    emptyOutDir: true, // Clean the output directory before building
+    sourcemap: false, // Disable sourcemaps for production
+  }
 })
