@@ -70,6 +70,14 @@ const App = () => {
   };
 
   const onNodeClick = (event, node) => {
+    // If node is null or node.id is null, clear selection
+    if (!node || !node.id) {
+      setHighlightedSubjects([]);
+      setHighlightedEdges([]);
+      setSelectedSubject(null);
+      return;
+    }
+
     const selectedNodeId = node.id;
 
     if (selectedNodeId === selectedSubject) {

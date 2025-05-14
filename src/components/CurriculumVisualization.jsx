@@ -33,6 +33,11 @@ const CurriculumVisualization = ({
     onNodeClick(event, node);
   };
 
+  // Add handler to clear selection when clicking on pane background
+  const handlePaneClick = () => {
+    onNodeClick(null, { id: null });
+  };
+
   return (
     <div
       style={{
@@ -59,6 +64,7 @@ const CurriculumVisualization = ({
           style: { ...edge.style, zIndex: 5 },
         }))}
         onNodeClick={handleNodeClick} // Use custom handleNodeClick function
+        onPaneClick={handlePaneClick} // <-- Add this line
         nodeTypes={nodeTypes} // Register custom node types
         style={{ width: "100%", height: "100%" }}
       >
