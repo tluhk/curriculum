@@ -273,8 +273,8 @@ const curriculum = [
   },
   {
     id: 13,
-    semester: 3,
-    order: 1,
+    semester: 4,
+    order: 5,
     url: '',
     name: 'ELU',
     module: 'Üleülikoolilised ained',
@@ -523,8 +523,8 @@ const curriculum = [
   },
   {
     id: 24,
-    semester: 4,
-    order: 5,
+    semester: 3,
+    order: 1,
     url: '',
     name: 'Kujundustarkvara edasijõudnutele',
     module: 'Eriala valikained',
