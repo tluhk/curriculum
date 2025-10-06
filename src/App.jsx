@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import CurriculumVisualization from "./components/CurriculumVisualization";
 import curriculum from "./data/curriculum"; // Updated import path
@@ -199,6 +200,25 @@ const App = () => {
           }}
         />
       )}
+      <Link
+        to="/outcomes"
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "20px",
+          zIndex: 1000,
+          padding: "10px 20px",
+          background: "#4A90E2",
+          color: "white",
+          textDecoration: "none",
+          borderRadius: "6px",
+          fontSize: "14px",
+          fontWeight: "500",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+        }}
+      >
+        📊 Õpiväljundid
+      </Link>
       <Sidebar
         moduleConfig={moduleConfig}
         activeModules={activeModules}
