@@ -9,7 +9,7 @@ export const transformOutcomesData = (curriculum, moduleConfig) => {
   const headerNode = {
     id: 'curriculum-header',
     type: 'default',
-    data: { 
+    data: {
       label: `${curriculum.name} (${curriculum.version})`
     },
     position: { x: 0, y: 0 },
@@ -31,7 +31,7 @@ export const transformOutcomesData = (curriculum, moduleConfig) => {
   const curriculumOutcomes = curriculum.learningOutcomes || [];
   const curriculumY = 150; // Moved down to make room for header
 
-    curriculumOutcomes.forEach((outcome, index) => {
+  curriculumOutcomes.forEach((outcome, index) => {
     const totalWidth = (curriculumOutcomes.length - 1) * horizontalSpacing;
     const startX = -totalWidth / 2;
 

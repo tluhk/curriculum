@@ -6,7 +6,7 @@ import "@xyflow/react/dist/style.css";
 
 const OutcomesPage = () => {
   const curriculumData = curriculum[0];
-  
+
   const moduleConfig = {
     1: { name: "Praktika", color: "#F4A6A0" },
     2: { name: "Üleülikoolilised ained", color: "#A3C9E1" },
