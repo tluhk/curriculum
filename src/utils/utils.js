@@ -1,4 +1,4 @@
-export const transformCurriculum = (curriculumData, moduleColors) => {
+export const transformCurriculum = (curriculumData, moduleColors, moduleConfig) => {
   const baseNodeHeight = 10;
   const creditMultiplier = 15;
   const subjectSpacing = 200;
@@ -53,6 +53,24 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
     const nodeHeight = baseNodeHeight + course.credits * creditMultiplier;
     const verticalOffset = margin / 2 + 5; // Align subjects at the top
 
+    // Get module name from moduleConfig
+    const moduleName = moduleConfig[course.module]?.name || 'Unknown Module';
+
+    // Convert outcomes to array of strings for display
+    const outcomesArray = Array.isArray(course.outcomes)
+      ? course.outcomes.map(outcome =>
+        typeof outcome === 'object' && outcome.description
+          ? outcome.description
+          : outcome
+      )
+      : [];
+
+    // Find the semester node for this course
+    const semesterNode = semesterNodes.find((n) => n.data.semester === course.semester);
+
+    // Safety check: if semester node doesn't exist, use a default position
+    const semesterY = semesterNode ? semesterNode.position.y : 0;
+
     return {
       id: `subject-${course.id}`,
       type: "subjectNode",
@@ -61,7 +79,11 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
         id: course.id,
         backgroundColor: moduleColors[course.module] || "#cccccc",
         nodeHeight,
-        course,
+        course: {
+          ...course,
+          moduleName, // Add module name to course data
+          outcomes: outcomesArray, // Convert outcomes to strings
+        },
         prerequisites: course.prerequisites || [],
         dependents: curriculumData
           .filter((c) => (c.prerequisites || []).includes(course.id))
@@ -69,7 +91,7 @@ export const transformCurriculum = (curriculumData, moduleColors) => {
       },
       position: {
         x: ((course.order || 1) - 1) * subjectSpacing + 50 + badgeWidth,
-        y: semesterNodes.find((n) => n.data.semester === course.semester).position.y + verticalOffset,
+        y: semesterY + verticalOffset,
       },
       module: course.module,
       semester: course.semester,

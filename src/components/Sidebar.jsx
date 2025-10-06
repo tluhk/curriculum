@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./Sidebar.css"; // Import custom CSS
 
 const Sidebar = ({
-  moduleColors,
+  moduleConfig,
   activeModules,
   showRequiredOnly,
   setShowRequiredOnly,
@@ -16,6 +16,10 @@ const Sidebar = ({
   isSidebarOpen, // New prop
   toggleSidebar, // New prop
 }) => {
+  // Get sorted module entries
+  const moduleEntries = Object.entries(moduleConfig).sort(
+    (a, b) => parseInt(a[0]) - parseInt(b[0])
+  );
   return (
     <div
       style={{
@@ -81,51 +85,47 @@ const Sidebar = ({
               gap: "15px",
             }}
           >
-            {[
-              "Üleülikoolilised ained",
-              "Eriala kohustuslikud ained",
-              "Eriala valikained",
-              "Praktika",
-              "Erialane inglise keel",
-              "Lõputöö",
-            ].map((module) => (
-              <label
-                key={module}
-                className="custom-checkbox"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  fontWeight: "normal",
-                  fontSize: "14px",
-                  color: "#000", // Set text color to black
-                }}
-              >
-                <input
-                  type="checkbox"
-                  checked={activeModules[module] || false}
-                  onChange={() => handleModuleFilter(module)}
+            {moduleEntries.map(([moduleId, config]) => {
+              const id = parseInt(moduleId);
+              return (
+                <label
+                  key={id}
+                  className="custom-checkbox"
                   style={{
-                    accentColor: moduleColors[module] || "#cccccc",
-                    transform: "scale(1.2)",
-                    border: `2px solid ${moduleColors[module] || "#cccccc"}`,
-                    borderRadius: "4px",
-                    width: "20px",
-                    height: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontWeight: "normal",
+                    fontSize: "14px",
+                    color: "#000",
                   }}
-                />
-                <span
-                  className="checkmark"
-                  style={{
-                    borderColor: moduleColors[module] || "#cccccc",
-                    backgroundColor: activeModules[module]
-                      ? moduleColors[module]
-                      : moduleColors[module] || "#cccccc", // Change unchecked color to module color
-                  }}
-                ></span>
-                {module}
-              </label>
-            ))}
+                >
+                  <input
+                    type="checkbox"
+                    checked={activeModules[id] || false}
+                    onChange={() => handleModuleFilter(id)}
+                    style={{
+                      accentColor: config.color || "#cccccc",
+                      transform: "scale(1.2)",
+                      border: `2px solid ${config.color || "#cccccc"}`,
+                      borderRadius: "4px",
+                      width: "20px",
+                      height: "20px",
+                    }}
+                  />
+                  <span
+                    className="checkmark"
+                    style={{
+                      borderColor: config.color || "#cccccc",
+                      backgroundColor: activeModules[id]
+                        ? config.color
+                        : config.color || "#cccccc",
+                    }}
+                  ></span>
+                  {config.name}
+                </label>
+              );
+            })}
           </div>
           {/* Show Required Only Checkbox */}
           <label
@@ -177,12 +177,16 @@ const Sidebar = ({
                 </tr>
               </thead>
               <tbody>
-                {Object.keys(moduleECTS).map((module) => (
-                  <tr key={module}>
-                    <td>{module}</td>
-                    <td>{moduleECTS[module]}</td>
-                  </tr>
-                ))}
+                {Object.keys(moduleECTS).map((moduleId) => {
+                  const id = parseInt(moduleId);
+                  const moduleName = moduleConfig[id]?.name || `Module ${id}`;
+                  return (
+                    <tr key={moduleId}>
+                      <td>{moduleName}</td>
+                      <td>{moduleECTS[moduleId]}</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -232,7 +236,12 @@ const Sidebar = ({
 };
 
 Sidebar.propTypes = {
-  moduleColors: PropTypes.object.isRequired,
+  moduleConfig: PropTypes.objectOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      color: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   activeModules: PropTypes.object.isRequired,
   showRequiredOnly: PropTypes.bool.isRequired,
   setShowRequiredOnly: PropTypes.func.isRequired,

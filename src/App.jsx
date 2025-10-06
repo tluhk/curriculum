@@ -9,37 +9,48 @@ import "./styles.css";
 import { FaBars } from "react-icons/fa"; // Import icon
 
 const App = () => {
-  // Initialize activeModules with all modules selected
-  const initialActiveModules = {
-    "Üleülikoolilised ained": true,
-    "Eriala kohustuslikud ained": true,
-    "Eriala valikained": true,
-    Praktika: true,
-    "Erialane inglise keel": true,
-    Lõputöö: true,
+  // Get modules from curriculum data
+  const curriculumModules = curriculum[0].modules;
+
+  // Create module mapping: id -> { name, color }
+  const moduleConfig = {
+    1: { name: "Praktika", color: "#F4A6A0" },
+    2: { name: "Üleülikoolilised ained", color: "#A3C9E1" },
+    3: { name: "Eriala kohustuslikud ained", color: "#A8D5BA" },
+    4: { name: "Eriala valikained", color: "#D6AEDD" },
+    5: { name: "Vabaained", color: "#F4D1A1" },
+    6: { name: "Erialane inglise keel", color: "#F4D1C1" },
+    7: { name: "Lõputöö", color: "#FFE5B4" },
   };
+
+  // Initialize activeModules with all module IDs selected
+  const initialActiveModules = {};
+  curriculumModules.forEach((module) => {
+    initialActiveModules[module.id] = true;
+  });
 
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [highlightedSubjects, setHighlightedSubjects] = useState([]);
   const [highlightedEdges, setHighlightedEdges] = useState([]);
-  const [activeModules, setActiveModules] = useState(initialActiveModules); // Use initialActiveModules
+  const [activeModules, setActiveModules] = useState(initialActiveModules);
   const [showRequiredOnly, setShowRequiredOnly] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true); // New state
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const moduleColors = {
-    "Üleülikoolilised ained": "#A3C9E1",
-    "Eriala kohustuslikud ained": "#A8D5BA",
-    "Eriala valikained": "#D6AEDD",
-    Praktika: "#F4A6A0",
-    "Erialane inglise keel": "#F4D1C1",
-    Lõputöö: "#F4D1A1",
-  };
+  // Create moduleColors object for compatibility with existing code
+  const moduleColors = {};
+  Object.keys(moduleConfig).forEach((id) => {
+    moduleColors[parseInt(id)] = moduleConfig[id].color;
+  });
 
-  const { nodes, edges } = transformCurriculum(curriculum, moduleColors);
+  const { nodes, edges } = transformCurriculum(
+    curriculum[0].subjects,
+    moduleColors,
+    moduleConfig
+  );
 
   const findAllPrerequisites = (subjectId, edges) => {
     const prerequisites = edges
@@ -103,8 +114,8 @@ const App = () => {
 
   const handleCheckAll = () => {
     const newActiveModules = {};
-    Object.keys(moduleColors).forEach((module) => {
-      newActiveModules[module] = true;
+    curriculumModules.forEach((module) => {
+      newActiveModules[module.id] = true;
     });
     setActiveModules(newActiveModules);
   };
@@ -189,7 +200,7 @@ const App = () => {
         />
       )}
       <Sidebar
-        moduleColors={moduleColors}
+        moduleConfig={moduleConfig}
         activeModules={activeModules}
         showRequiredOnly={showRequiredOnly}
         setShowRequiredOnly={setShowRequiredOnly}

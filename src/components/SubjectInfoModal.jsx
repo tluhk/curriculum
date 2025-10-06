@@ -59,7 +59,7 @@ const SubjectInfoModal = ({ data, closeModal }) => {
           </strong>
         </p>
         <p>
-          <strong>Moodul:</strong> {course.module}
+          <strong>Moodul:</strong> {course.moduleName || course.module}
         </p>
         <p>
           <strong>Maht:</strong> {course.credits} EAP
@@ -109,7 +109,8 @@ SubjectInfoModal.propTypes = {
     course: PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      module: PropTypes.string.isRequired,
+      module: PropTypes.number.isRequired,
+      moduleName: PropTypes.string,
       credits: PropTypes.number.isRequired,
       url: PropTypes.string.isRequired,
       assessment: PropTypes.string.isRequired,
