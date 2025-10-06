@@ -100,26 +100,58 @@ const curriculums = [
           {
             id: 1,
             description: 'Analüüsib üksikisiku, organisatsiooni või kogukonna probleemi, kavandab ja viib läbi vajalikud uuringud ning kogutud andmete põhjal loob digilahenduse või selle prototüübi, kasutades agiilse tarkvaraarenduse ja disaini meetodeid.',
+            subjectOutcomes: [
+              { subjectId: 19, outcomeId: 80 },
+              { subjectId: 24, outcomeId: 113 },
+              { subjectId: 33, outcomeId: 177 }
+            ]
           },
           {
             id: 2,
             description: 'Vastavalt projekti oodatavale tulemusele püstitab eesmärgid, kasutab versioonihaldust ning projektijuhtimise tööriistu ja reflekteerib protsessi.',
+            subjectOutcomes: [
+              { subjectId: 19, outcomeId: 81 },
+              { subjectId: 19, outcomeId: 82 },
+              { subjectId: 24, outcomeId: 114 },
+              { subjectId: 24, outcomeId: 115 },
+              { subjectId: 33, outcomeId: 178 },
+              { subjectId: 33, outcomeId: 179 }
+            ]
           },
           {
             id: 3,
             description: 'Tagab lahenduse kasutajakesksuse, turvalisuse ja kestlikkuse rakendades kasutajakeskse disaini, küberturbe ja tarkvaraarenduse praktikaid.',
+            subjectOutcomes: [
+              { subjectId: 24, outcomeId: 116 },
+              { subjectId: 33, outcomeId: 177 }
+            ]
           },
           {
             id: 4,
             description: 'Kommunikeerib eesmärke, protsessi ja tulemusi sidusrühmadele, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise ning kogub ja võtab arvesse tagasisidet.',
+            subjectOutcomes: [
+              { subjectId: 19, outcomeId: 83 },
+              { subjectId: 24, outcomeId: 117 },
+              { subjectId: 33, outcomeId: 180 }
+            ]
           },
           {
             id: 5,
             description: 'Näitab üles initsiatiivi individuaal- ja meeskonnatöös, täites ülesandeid vastutustundlikult, loovalt ja eetiliselt.',
+            subjectOutcomes: [
+              { subjectId: 19, outcomeId: 80 },
+              { subjectId: 24, outcomeId: 113 },
+              { subjectId: 33, outcomeId: 178 }
+            ]
           },
           {
             id: 6,
             description: 'Tuleb toime võimalike pingeolukordadega, arvestades nii enda kui meeskonnakaaslaste füüsilist ja vaimset tervist mõjutavaid tegureid.',
+            subjectOutcomes: [
+              { subjectId: 19, outcomeId: 80 },
+              { subjectId: 24, outcomeId: 113 },
+              { subjectId: 33, outcomeId: 180 }
+            ]
           },
         ],
       },
@@ -131,19 +163,48 @@ const curriculums = [
         learningOucomes: [
           {
             id: 1,
-            description: 'omab akadeemilist lugemis- ja kirjaoskust erialaste õpingute edukaks sooritamiseks'
+            description: 'omab akadeemilist lugemis- ja kirjaoskust erialaste õpingute edukaks sooritamiseks',
+            subjectOutcomes: [
+              { subjectId: 1, outcomeId: 4 },
+              { subjectId: 1, outcomeId: 6 },
+              { subjectId: 7, outcomeId: 164 },
+              { subjectId: 13, outcomeId: 56 }
+            ]
           },
           {
             id: 2,
-            description: 'eesmärgistab, planeerib ja analüüsib õppetöö ning erialase valdkonnaga seotud protsesse'
+            description: 'eesmärgistab, planeerib ja analüüsib õppetöö ning erialase valdkonnaga seotud protsesse',
+            subjectOutcomes: [
+              { subjectId: 1, outcomeId: 1 },
+              { subjectId: 1, outcomeId: 3 },
+              { subjectId: 1, outcomeId: 7 },
+              { subjectId: 7, outcomeId: 163 },
+              { subjectId: 13, outcomeId: 53 },
+              { subjectId: 13, outcomeId: 55 },
+              { subjectId: 13, outcomeId: 56 }
+            ]
           },
           {
             id: 3,
-            description: 'seostab psühholoogia eri suundi nende rakendusvõimalustega, analüüsides inimkäitumise, õppimise ja ühiskondlike protsesside vahelisi seoseid;'
+            description: 'seostab psühholoogia eri suundi nende rakendusvõimalustega, analüüsides inimkäitumise, õppimise ja ühiskondlike protsesside vahelisi seoseid;',
+            subjectOutcomes: [
+              { subjectId: 7, outcomeId: 161 },
+              { subjectId: 7, outcomeId: 162 },
+              { subjectId: 7, outcomeId: 163 },
+              { subjectId: 13, outcomeId: 54 },
+              { subjectId: 13, outcomeId: 57 }
+            ]
           },
           {
             id: 4,
-            description: 'lahendab interdistsiplinaarseid probleeme, tegutsedes nii meeskonnas kui iseseisvalt, leides seoseid eri valdkondade vahel.'
+            description: 'lahendab interdistsiplinaarseid probleeme, tegutsedes nii meeskonnas kui iseseisvalt, leides seoseid eri valdkondade vahel.',
+            subjectOutcomes: [
+              { subjectId: 1, outcomeId: 5 },
+              { subjectId: 7, outcomeId: 164 },
+              { subjectId: 13, outcomeId: 53 },
+              { subjectId: 13, outcomeId: 55 },
+              { subjectId: 13, outcomeId: 58 }
+            ]
           },
         ],
       },
@@ -155,23 +216,116 @@ const curriculums = [
         learningOucomes: [
           {
             id: 1,
-            description: 'Selgitab, rakendab ja kommunikeerib valdkonna põhimõisteid ja teoreetilisi lähtekohti ning arengusuundi.'
+            description: 'Selgitab, rakendab ja kommunikeerib valdkonna põhimõisteid ja teoreetilisi lähtekohti ning arengusuundi.',
+            subjectOutcomes: [
+              { subjectId: 3, outcomeId: 11 },
+              { subjectId: 4, outcomeId: 25 },
+              { subjectId: 4, outcomeId: 26 },
+              { subjectId: 5, outcomeId: 31 },
+              { subjectId: 2, outcomeId: 8 },
+              { subjectId: 33, outcomeId: 175 },
+              { subjectId: 33, outcomeId: 176 },
+              { subjectId: 6, outcomeId: 39 },
+              { subjectId: 9, outcomeId: 47 },
+              { subjectId: 10, outcomeId: 59 },
+              { subjectId: 11, outcomeId: 69 },
+              { subjectId: 16, outcomeId: 97 },
+              { subjectId: 17, outcomeId: 104 },
+              { subjectId: 18, outcomeId: 109 },
+              { subjectId: 20, outcomeId: 84 },
+              { subjectId: 22, outcomeId: 119 },
+              { subjectId: 30, outcomeId: 143 },
+              { subjectId: 30, outcomeId: 144 },
+              { subjectId: 21, outcomeId: 88 }
+            ]
           },
           {
             id: 2,
-            description: 'Kasutab disaini-, tarkvaraarenduse- ja multimeediumi tööriistu ning rakendusi turvaliselt ja eetiliselt.'
+            description: 'Kasutab disaini-, tarkvaraarenduse- ja multimeediumi tööriistu ning rakendusi turvaliselt ja eetiliselt.',
+            subjectOutcomes: [
+              { subjectId: 3, outcomeId: 12 },
+              { subjectId: 3, outcomeId: 13 },
+              { subjectId: 4, outcomeId: 27 },
+              { subjectId: 4, outcomeId: 28 },
+              { subjectId: 5, outcomeId: 33 },
+              { subjectId: 6, outcomeId: 40 },
+              { subjectId: 9, outcomeId: 48 },
+              { subjectId: 10, outcomeId: 60 },
+              { subjectId: 11, outcomeId: 70 },
+              { subjectId: 16, outcomeId: 98 },
+              { subjectId: 17, outcomeId: 105 },
+              { subjectId: 18, outcomeId: 110 },
+              { subjectId: 22, outcomeId: 120 },
+              { subjectId: 21, outcomeId: 93 }
+            ]
           },
           {
             id: 3,
-            description: 'Kavandab, disainib, arendab ja testib agiilselt digilahendusi, mis on kasutajakesksed, kestlikud, turvalised ja visuaalselt atraktiivsed.'
+            description: 'Kavandab, disainib, arendab ja testib agiilselt digilahendusi, mis on kasutajakesksed, kestlikud, turvalised ja visuaalselt atraktiivsed.',
+            subjectOutcomes: [
+              { subjectId: 3, outcomeId: 14 },
+              { subjectId: 3, outcomeId: 15 },
+              { subjectId: 3, outcomeId: 12 },
+              { subjectId: 5, outcomeId: 32 },
+              { subjectId: 33, outcomeId: 175 },
+              { subjectId: 33, outcomeId: 176 },
+              { subjectId: 6, outcomeId: 41 },
+              { subjectId: 10, outcomeId: 61 },
+              { subjectId: 10, outcomeId: 62 },
+              { subjectId: 11, outcomeId: 71 },
+              { subjectId: 11, outcomeId: 72 },
+              { subjectId: 16, outcomeId: 99 },
+              { subjectId: 17, outcomeId: 106 },
+              { subjectId: 18, outcomeId: 110 },
+              { subjectId: 20, outcomeId: 85 },
+              { subjectId: 22, outcomeId: 120 },
+              { subjectId: 30, outcomeId: 143 },
+              { subjectId: 30, outcomeId: 144 }
+            ]
           },
           {
             id: 4,
-            description: 'Analüüsib lahenduse kestlikkust ning keskkonna- ja ühiskonnamõju, langetab ja dokumenteerib otsuseid andmepõhiselt ning vastutustundlikult.'
+            description: 'Analüüsib lahenduse kestlikkust ning keskkonna- ja ühiskonnamõju, langetab ja dokumenteerib otsuseid andmepõhiselt ning vastutustundlikult.',
+            subjectOutcomes: [
+              { subjectId: 4, outcomeId: 25 },
+              { subjectId: 4, outcomeId: 26 },
+              { subjectId: 5, outcomeId: 13 },
+              { subjectId: 2, outcomeId: 10 },
+              { subjectId: 33, outcomeId: 175 },
+              { subjectId: 33, outcomeId: 176 },
+              { subjectId: 9, outcomeId: 49 },
+              { subjectId: 10, outcomeId: 61 },
+              { subjectId: 11, outcomeId: 71 },
+              { subjectId: 17, outcomeId: 106 },
+              { subjectId: 18, outcomeId: 110 },
+              { subjectId: 22, outcomeId: 119 },
+              { subjectId: 30, outcomeId: 144 },
+              { subjectId: 21, outcomeId: 89 },
+              { subjectId: 21, outcomeId: 91 },
+              { subjectId: 21, outcomeId: 92 },
+              { subjectId: 21, outcomeId: 93 },
+              { subjectId: 21, outcomeId: 94 }
+            ]
           },
           {
             id: 5,
-            description: 'Viib läbi uurimistööd, analüüsib andmeid ning rakendab teaduslikke meetodeid tarkvaraarenduse ja disaini kontekstis.'
+            description: 'Viib läbi uurimistööd, analüüsib andmeid ning rakendab teaduslikke meetodeid tarkvaraarenduse ja disaini kontekstis.',
+            subjectOutcomes: [
+              { subjectId: 3, outcomeId: 14 },
+              { subjectId: 33, outcomeId: 175 },
+              { subjectId: 33, outcomeId: 176 },
+              { subjectId: 10, outcomeId: 61 },
+              { subjectId: 10, outcomeId: 62 },
+              { subjectId: 16, outcomeId: 100 },
+              { subjectId: 20, outcomeId: 87 },
+              { subjectId: 22, outcomeId: 119 },
+              { subjectId: 30, outcomeId: 144 },
+              { subjectId: 21, outcomeId: 88 },
+              { subjectId: 21, outcomeId: 89 },
+              { subjectId: 21, outcomeId: 91 },
+              { subjectId: 21, outcomeId: 93 },
+              { subjectId: 21, outcomeId: 95 }
+            ]
           },
         ],
       },
@@ -182,15 +336,68 @@ const curriculums = [
         learningOucomes: [
           {
             id: 189,
-            description: 'Analüüsib ja teeb põhjendatud valiku valdkonnaspetsiifilise või uudse lähenemisviisi osas,  seostab oma valiku teoreetiliste käsitluste ja praktiliste rakendustega.'
+            description: 'Analüüsib ja teeb põhjendatud valiku valdkonnaspetsiifilise või uudse lähenemisviisi osas,  seostab oma valiku teoreetiliste käsitluste ja praktiliste rakendustega.',
+            subjectOutcomes: [
+              { subjectId: 14, outcomeId: 59 },
+              { subjectId: 14, outcomeId: 60 },
+              { subjectId: 15, outcomeId: 63 },
+              { subjectId: 15, outcomeId: 64 },
+              { subjectId: 8, outcomeId: 165 },
+              { subjectId: 12, outcomeId: 48 },
+              { subjectId: 12, outcomeId: 49 },
+              { subjectId: 23, outcomeId: 123 },
+              { subjectId: 23, outcomeId: 124 },
+              { subjectId: 27, outcomeId: 134 },
+              { subjectId: 27, outcomeId: 135 },
+              { subjectId: 29, outcomeId: 145 },
+              { subjectId: 31, outcomeId: 153 },
+              { subjectId: 31, outcomeId: 154 },
+              { subjectId: 32, outcomeId: 157 }
+            ]
           },
           {
             id: 190,
-            description: 'Rakendab omandatud teadmisi ja oskusi praktilistes disaini- või tarkvaraarenduse projektides.'
+            description: 'Rakendab omandatud teadmisi ja oskusi praktilistes disaini- või tarkvaraarenduse projektides.',
+            subjectOutcomes: [
+              { subjectId: 14, outcomeId: 61 },
+              { subjectId: 14, outcomeId: 62 },
+              { subjectId: 15, outcomeId: 65 },
+              { subjectId: 15, outcomeId: 66 },
+              { subjectId: 8, outcomeId: 166 },
+              { subjectId: 12, outcomeId: 48 },
+              { subjectId: 12, outcomeId: 50 },
+              { subjectId: 23, outcomeId: 125 },
+              { subjectId: 23, outcomeId: 126 },
+              { subjectId: 27, outcomeId: 136 },
+              { subjectId: 27, outcomeId: 137 },
+              { subjectId: 27, outcomeId: 138 },
+              { subjectId: 29, outcomeId: 146 },
+              { subjectId: 29, outcomeId: 147 },
+              { subjectId: 31, outcomeId: 155 },
+              { subjectId: 32, outcomeId: 158 }
+            ]
           },
           {
             id: 191,
-            description: 'Demonstreerib praktiliste ülesannete täitmisel loovust ja probleemilahendusoskusi.'
+            description: 'Demonstreerib praktiliste ülesannete täitmisel loovust ja probleemilahendusoskusi.',
+            subjectOutcomes: [
+              { subjectId: 14, outcomeId: 62 },
+              { subjectId: 15, outcomeId: 64 },
+              { subjectId: 15, outcomeId: 66 },
+              { subjectId: 8, outcomeId: 167 },
+              { subjectId: 12, outcomeId: 48 },
+              { subjectId: 12, outcomeId: 50 },
+              { subjectId: 23, outcomeId: 125 },
+              { subjectId: 23, outcomeId: 126 },
+              { subjectId: 23, outcomeId: 127 },
+              { subjectId: 27, outcomeId: 136 },
+              { subjectId: 27, outcomeId: 137 },
+              { subjectId: 29, outcomeId: 146 },
+              { subjectId: 29, outcomeId: 148 },
+              { subjectId: 31, outcomeId: 156 },
+              { subjectId: 31, outcomeId: 154 },
+              { subjectId: 32, outcomeId: 159 }
+            ]
           }
 
         ],
@@ -221,15 +428,29 @@ const curriculums = [
         learningOucomes: [
           {
             id: 195,
-            description: 'Kasutab erialast inglisekeelset terminoloogiat.'
+            description: 'Kasutab erialast inglisekeelset terminoloogiat.',
+            subjectOutcomes: [
+              { subjectId: 25, outcomeId: 100 },
+              { subjectId: 25, outcomeId: 103 }
+            ]
           },
           {
             id: 196,
-            description: 'Mõistab ja koostab erialaseid inglisekeelseid tekste.'
+            description: 'Mõistab ja koostab erialaseid inglisekeelseid tekste.',
+            subjectOutcomes: [
+              { subjectId: 25, outcomeId: 102 },
+              { subjectId: 25, outcomeId: 103 },
+              { subjectId: 25, outcomeId: 104 }
+            ]
           },
           {
             id: 197,
-            description: 'Väljendab ladusalt suuliselt ja kirjalikult inglise keeles oma seisukohti.'
+            description: 'Väljendab ladusalt suuliselt ja kirjalikult inglise keeles oma seisukohti.',
+            subjectOutcomes: [
+              { subjectId: 25, outcomeId: 101 },
+              { subjectId: 25, outcomeId: 103 },
+              { subjectId: 25, outcomeId: 104 }
+            ]
           }
         ],
       },
@@ -240,23 +461,38 @@ const curriculums = [
         learningOucomes: [
           {
             id: 198,
-            description: 'Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti.'
+            description: 'Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti.',
+            subjectOutcomes: [
+              { subjectId: 34, outcomeId: 176 }
+            ]
           },
           {
             id: 199,
-            description: 'Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi.'
+            description: 'Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi.',
+            subjectOutcomes: [
+              { subjectId: 34, outcomeId: 177 }
+            ]
           },
           {
             id: 200,
-            description: 'Valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest.'
+            description: 'Valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest.',
+            subjectOutcomes: [
+              { subjectId: 34, outcomeId: 178 }
+            ]
           },
           {
             id: 201,
-            description: 'Kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi.'
+            description: 'Kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi.',
+            subjectOutcomes: [
+              { subjectId: 34, outcomeId: 179 }
+            ]
           },
           {
             id: 202,
-            description: 'Hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust.'
+            description: 'Hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust.',
+            subjectOutcomes: [
+              { subjectId: 34, outcomeId: 180 }
+            ]
           }
         ],
       },
