@@ -6,35 +6,88 @@ const curriculums = [
     learningOutcomes: [
       {
         id: 181,
-        description: 'Selgitab ja rakendab tarkvaraarenduse ja disaini teoreetilisi lähtekohti ning arengusuundi, eristades fakte arvamustest ja põhjendades valikuid andmepõhise otsustamise abil.'
+        description: 'Selgitab ja rakendab tarkvaraarenduse ja disaini teoreetilisi lähtekohti ning arengusuundi, eristades fakte arvamustest ja põhjendades valikuid andmepõhise otsustamise abil.',
+        moduleOutcomes: [
+          { moduleId: 3, outcomeId: 1 },
+          { moduleId: 6, outcomeId: 195 },
+          { moduleId: 6, outcomeId: 196 },
+          { moduleId: 6, outcomeId: 197 },
+          { moduleId: 7, outcomeId: 198 },
+          { moduleId: 7, outcomeId: 200 }
+        ]
       },
       {
         id: 182,
-        description: 'Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleeme, kavandab andmete kogumise- ja analüüsiprotsessi ning loob tulemuste põhjal kasutaja­keskseid ja kestlikke digilahendusi.'
+        description: 'Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleeme, kavandab andmete kogumise- ja analüüsiprotsessi ning loob tulemuste põhjal kasutaja­keskseid ja kestlikke digilahendusi.',
+        moduleOutcomes: [
+          { moduleId: 3, outcomeId: 5 },
+          { moduleId: 3, outcomeId: 3 },
+          { moduleId: 4, outcomeId: 191 },
+          { moduleId: 1, outcomeId: 1 },
+          { moduleId: 7, outcomeId: 199 }
+        ]
       },
       {
         id: 183,
-        description: 'Kommunikeerib erialaseid ideid ja lahendusi eesti või inglise keeles, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise.'
+        description: 'Kommunikeerib erialaseid ideid ja lahendusi eesti või inglise keeles, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise.',
+        moduleOutcomes: [
+          { moduleId: 2, outcomeId: 1 },
+          { moduleId: 3, outcomeId: 1 },
+          { moduleId: 1, outcomeId: 4 },
+          { moduleId: 6, outcomeId: 195 },
+          { moduleId: 6, outcomeId: 196 },
+          { moduleId: 6, outcomeId: 197 },
+          { moduleId: 7, outcomeId: 201 }
+        ]
       },
       {
         id: 184,
-        description: 'Osaleb tarkvara disaini- ja arendusprojektides iseseisvalt ja meeskonnas kogu tarkvaraarenduse elutsükli vältel, rakendades agiilseid tööviise, väärtustades innovatsiooni ja ettevõtlikkust ning luues kasutajakeskseid, turvalisi ja visuaalselt atraktiivseid interdistsiplinaarseid digilahendusi.'
+        description: 'Osaleb tarkvara disaini- ja arendusprojektides iseseisvalt ja meeskonnas kogu tarkvaraarenduse elutsükli vältel, rakendades agiilseid tööviise, väärtustades innovatsiooni ja ettevõtlikkust ning luues kasutajakeskseid, turvalisi ja visuaalselt atraktiivseid interdistsiplinaarseid digilahendusi.',
+        moduleOutcomes: [
+          { moduleId: 3, outcomeId: 3 },
+          { moduleId: 4, outcomeId: 190 },
+          { moduleId: 1, outcomeId: 1 },
+          { moduleId: 1, outcomeId: 5 },
+          { moduleId: 5, outcomeId: 192 }
+        ]
       },
       {
         id: 185,
-        description: 'Täidab erialaseid ülesandeid vastutustundlikult, loovalt ja eetiliselt, tulles toime võimalike pingeolukordadega ning arvestades füüsilist ja vaimset tervist mõjutavaid tegureid.'
+        description: 'Täidab erialaseid ülesandeid vastutustundlikult, loovalt ja eetiliselt, tulles toime võimalike pingeolukordadega ning arvestades füüsilist ja vaimset tervist mõjutavaid tegureid.',
+        moduleOutcomes: [
+          { moduleId: 3, outcomeId: 4 },
+          { moduleId: 4, outcomeId: 191 },
+          { moduleId: 1, outcomeId: 5 },
+          { moduleId: 1, outcomeId: 6 },
+          { moduleId: 5, outcomeId: 192 }
+        ]
       },
       {
         id: 186,
-        description: 'Arvestab tööriistade kasutamisel, erialaste ülesannete täitmisel ja lahenduste loomisel turvalisuse ja eetilisusega.'
+        description: 'Arvestab tööriistade kasutamisel, erialaste ülesannete täitmisel ja lahenduste loomisel turvalisuse ja eetilisusega.',
+        moduleOutcomes: [
+          { moduleId: 3, outcomeId: 2 },
+          { moduleId: 1, outcomeId: 3 },
+          { moduleId: 7, outcomeId: 200 }
+        ]
       },
       {
         id: 187,
-        description: 'Seab isiklikud õpieesmärgid, hindab ja reflekteerib oma õppeprotsessi ning planeerib teadlikult oma õpet ja karjääri.'
+        description: 'Seab isiklikud õpieesmärgid, hindab ja reflekteerib oma õppeprotsessi ning planeerib teadlikult oma õpet ja karjääri.',
+        moduleOutcomes: [
+          { moduleId: 2, outcomeId: 2 },
+          { moduleId: 4, outcomeId: 189 },
+          { moduleId: 1, outcomeId: 2 },
+          { moduleId: 5, outcomeId: 192 }
+        ]
       },
       {
         id: 188,
-        description: 'Tegutseb erialaspetsialisti ja kodanikuna kestliku arengu põhimõtteid järgides, hindab oma digilahenduste keskkonna- ja ühiskonnamõju ning teeb vastutustundlikke otsuseid.'
+        description: 'Tegutseb erialaspetsialisti ja kodanikuna kestliku arengu põhimõtteid järgides, hindab oma digilahenduste keskkonna- ja ühiskonnamõju ning teeb vastutustundlikke otsuseid.',
+        moduleOutcomes: [
+          { moduleId: 3, outcomeId: 4 },
+          { moduleId: 7, outcomeId: 202 }
+        ]
       }
     ],
     version: '2025',
