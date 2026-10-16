@@ -1714,11 +1714,8 @@ const curriculums = [
       },
     ],
   },
-  {
-    ...curriculums[0],
-    id: 2,
-    version: '2026',
-  },
 ];
+
+curriculums.push({ ...curriculums[0], id: 2, version: '2026' });
 
 export default curriculums;
