@@ -118,7 +118,7 @@ const App = () => {
   );
 
   return (
-    <div style={{ display: "flex", height: "100vh", width: "100%" }}>
+    <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
       {!isSidebarOpen && (
         <button
           type="button"
