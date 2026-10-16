@@ -8,86 +8,117 @@ import {
 } from "@xyflow/react";
 import PropTypes from "prop-types";
 
-const OutcomesVisualization = ({
-  nodes: initialNodes,
-  edges: initialEdges,
-}) => {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const [selectedNode, setSelectedNode] = useState(null);
+const OutcomesVisualization = ({ allNodes, allEdges, relationships }) => {
+  // Start with only header and curriculum outcomes visible
+  const initialVisibleNodes = allNodes.map((node) => ({
+    ...node,
+    hidden: node.data.level !== "header" && node.data.level !== "curriculum",
+  }));
+
+  const initialVisibleEdges = allEdges.map((edge) => ({
+    ...edge,
+    hidden: !edge.source.includes("header"),
+  }));
+
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialVisibleNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialVisibleEdges);
+  const [expandedNodes, setExpandedNodes] = useState(new Set());
 
   const onNodeClick = useCallback(
-    (event, node) => {
-      if (selectedNode === node.id) {
-        // Deselect - reset all nodes and edges
-        setSelectedNode(null);
+    (event, clickedNode) => {
+      if (!clickedNode.data.clickable) return;
+
+      const nodeId = clickedNode.id;
+      const isExpanded = expandedNodes.has(nodeId);
+
+      if (isExpanded) {
+        // Collapse: hide children and all descendants
+        const newExpandedNodes = new Set(expandedNodes);
+        newExpandedNodes.delete(nodeId);
+
+        const nodesToHide = new Set();
+
+        // Recursively find all descendants
+        const findDescendants = (id) => {
+          const children = relationships[id]?.children || [];
+          children.forEach((childId) => {
+            nodesToHide.add(childId);
+            newExpandedNodes.delete(childId);
+            findDescendants(childId);
+          });
+        };
+
+        findDescendants(nodeId);
+
+        // Hide nodes
         setNodes((nds) =>
           nds.map((n) => ({
             ...n,
-            style: {
-              ...n.style,
-              opacity:
-                n.data.level === "curriculum"
-                  ? 1
-                  : n.data.level === "module"
-                  ? 0.9
-                  : 0.8,
+            hidden: nodesToHide.has(n.id) ? true : n.hidden,
+            data: {
+              ...n.data,
+              expanded: n.id === nodeId ? false : n.data.expanded,
             },
           }))
         );
+
+        // Hide edges
         setEdges((eds) =>
-          eds.map((e) => ({
-            ...e,
-            style: {
-              ...e.style,
-              opacity: 1,
-            },
-            animated: e.source.startsWith("curriculum-"),
-          }))
+          eds.map((e) => {
+            const shouldHide =
+              nodesToHide.has(e.source) || nodesToHide.has(e.target);
+            return {
+              ...e,
+              hidden: shouldHide ? true : e.hidden,
+            };
+          })
         );
+
+        setExpandedNodes(newExpandedNodes);
       } else {
-        // Select node and highlight connections
-        setSelectedNode(node.id);
+        // Expand: show immediate children only
+        const newExpandedNodes = new Set(expandedNodes);
+        newExpandedNodes.add(nodeId);
 
-        // Find connected nodes
-        const connectedNodeIds = new Set([node.id]);
-        const connectedEdgeIds = new Set();
+        const children = relationships[nodeId]?.children || [];
 
-        // Find all edges connected to this node
-        initialEdges.forEach((edge) => {
-          if (edge.source === node.id || edge.target === node.id) {
-            connectedNodeIds.add(edge.source);
-            connectedNodeIds.add(edge.target);
-            connectedEdgeIds.add(edge.id);
-          }
-        });
-
-        // Update nodes opacity
+        // Show immediate children nodes
         setNodes((nds) =>
-          nds.map((n) => ({
-            ...n,
-            style: {
-              ...n.style,
-              opacity: connectedNodeIds.has(n.id) ? 1 : 0.2,
-            },
-          }))
+          nds.map((n) => {
+            if (n.id === nodeId) {
+              return {
+                ...n,
+                data: { ...n.data, expanded: true },
+                style: {
+                  ...n.style,
+                  border:
+                    n.data.level === "curriculum"
+                      ? "3px solid #2196f3"
+                      : n.style.border,
+                },
+              };
+            }
+            if (children.includes(n.id)) {
+              return { ...n, hidden: false };
+            }
+            return n;
+          })
         );
 
-        // Update edges
+        // Show edges to immediate children
         setEdges((eds) =>
-          eds.map((e) => ({
-            ...e,
-            style: {
-              ...e.style,
-              opacity: connectedEdgeIds.has(e.id) ? 1 : 0.1,
-              strokeWidth: connectedEdgeIds.has(e.id) ? 3 : 1.5,
-            },
-            animated: connectedEdgeIds.has(e.id),
-          }))
+          eds.map((e) => {
+            if (e.source === nodeId && children.includes(e.target)) {
+              return { ...e, hidden: false };
+            }
+            return e;
+          })
         );
+
+        setExpandedNodes(newExpandedNodes);
       }
     },
-    [selectedNode, initialEdges, setNodes, setEdges]
+    [expandedNodes, relationships, setNodes, setEdges]
   );
 
   return (
@@ -109,8 +140,9 @@ const OutcomesVisualization = ({
 };
 
 OutcomesVisualization.propTypes = {
-  nodes: PropTypes.array.isRequired,
-  edges: PropTypes.array.isRequired,
+  allNodes: PropTypes.array.isRequired,
+  allEdges: PropTypes.array.isRequired,
+  relationships: PropTypes.object.isRequired,
 };
 
 export default OutcomesVisualization;

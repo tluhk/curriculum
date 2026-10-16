@@ -1,16 +1,21 @@
-export const transformOutcomesData = (curriculum, moduleConfig) => {
-  const nodes = [];
-  const edges = [];
+// Build a complete graph structure for progressive reveal
+export const buildOutcomesGraph = (curriculum, moduleConfig) => {
+  const allNodes = [];
+  const allEdges = [];
+  const relationships = {}; // Store parent-child relationships
+  const createdEdges = new Set(); // Track created edge IDs to avoid duplicates
 
-  const horizontalSpacing = 300;
-  const levelHeight = 250;
+  const levelHeight = 200;
+  const compactSpacing = 250;
 
   // Level 0: Curriculum Header (root node)
   const headerNode = {
     id: 'curriculum-header',
     type: 'default',
     data: {
-      label: `${curriculum.name} (${curriculum.version})`
+      label: `${curriculum.name} (${curriculum.version})`,
+      level: 'header',
+      clickable: false,
     },
     position: { x: 0, y: 0 },
     style: {
@@ -23,24 +28,31 @@ export const transformOutcomesData = (curriculum, moduleConfig) => {
       fontSize: '18px',
       fontWeight: 'bold',
       textAlign: 'center',
+      cursor: 'default',
     },
   };
-  nodes.push(headerNode);
+  allNodes.push(headerNode);
+  relationships['curriculum-header'] = { children: [], parent: null };
 
-  // Level 1: Curriculum Learning Outcomes (top)
+  // Level 1: Curriculum Learning Outcomes
   const curriculumOutcomes = curriculum.learningOutcomes || [];
-  const curriculumY = 150; // Moved down to make room for header
+  const curriculumY = 150;
 
   curriculumOutcomes.forEach((outcome, index) => {
-    const totalWidth = (curriculumOutcomes.length - 1) * horizontalSpacing;
+    const totalWidth = (curriculumOutcomes.length - 1) * compactSpacing;
     const startX = -totalWidth / 2;
-
     const nodeId = `curriculum-${outcome.id}`;
-    nodes.push({
+
+    allNodes.push({
       id: nodeId,
       type: "default",
-      data: { label: `ÕV ${outcome.id}: ${outcome.description}` },
-      position: { x: startX + index * horizontalSpacing, y: curriculumY },
+      data: {
+        label: `ÕV ${outcome.id}: ${outcome.description}`,
+        level: 'curriculum',
+        clickable: true,
+        expanded: false,
+      },
+      position: { x: startX + index * compactSpacing, y: curriculumY },
       style: {
         background: "#e3f2fd",
         border: "2px solid #2196f3",
@@ -48,11 +60,11 @@ export const transformOutcomesData = (curriculum, moduleConfig) => {
         padding: "10px",
         minWidth: "200px",
         fontSize: "12px",
+        cursor: 'pointer',
       },
     });
 
-    // Connect header to each curriculum outcome
-    edges.push({
+    allEdges.push({
       id: `header-to-${nodeId}`,
       source: 'curriculum-header',
       target: nodeId,
@@ -61,107 +73,149 @@ export const transformOutcomesData = (curriculum, moduleConfig) => {
       style: { stroke: '#4A90E2', strokeWidth: 2 },
     });
 
-    // Create edges to module outcomes
+    relationships[nodeId] = { children: [], parent: 'curriculum-header' };
+    relationships['curriculum-header'].children.push(nodeId);
+
+    // Build module outcome nodes
     if (outcome.moduleOutcomes) {
-      outcome.moduleOutcomes.forEach(({ moduleId, outcomeId }) => {
-        edges.push({
+      outcome.moduleOutcomes.forEach(({ moduleId, outcomeId }, mIndex) => {
+        const module = curriculum.modules.find(m => m.id === moduleId);
+        if (!module) return;
+
+        const moduleLO = module.learningOucomes.find(lo => lo.id === outcomeId);
+        if (!moduleLO) return;
+
+        const moduleNodeId = `module-${moduleId}-${outcomeId}`;
+        const moduleColor = moduleConfig[moduleId]?.color || '#cccccc';
+
+        // Calculate compact position for modules under this curriculum outcome
+        const moduleX = startX + index * compactSpacing + (mIndex - (outcome.moduleOutcomes.length - 1) / 2) * 200;
+        const moduleY = curriculumY + levelHeight;
+
+        if (!allNodes.find(n => n.id === moduleNodeId)) {
+          allNodes.push({
+            id: moduleNodeId,
+            type: 'default',
+            data: {
+              label: `M${moduleId}.${outcomeId}: ${moduleLO.description.substring(0, 50)}...`,
+              fullDescription: moduleLO.description,
+              moduleName: module.name,
+              level: 'module',
+              clickable: true,
+              expanded: false,
+              parentCurriculum: nodeId,
+            },
+            position: { x: moduleX, y: moduleY },
+            style: {
+              background: moduleColor,
+              border: '2px solid ' + moduleColor,
+              borderRadius: '8px',
+              padding: '8px',
+              width: 200,
+              fontSize: '11px',
+              cursor: 'pointer',
+            },
+            hidden: true, // Initially hidden
+          });
+
+          relationships[moduleNodeId] = { children: [], parent: nodeId };
+        }
+
+        allEdges.push({
           id: `edge-curriculum-${outcome.id}-module-${moduleId}-${outcomeId}`,
-          source: `curriculum-${outcome.id}`,
-          target: `module-${moduleId}-${outcomeId}`,
+          source: nodeId,
+          target: moduleNodeId,
           type: 'smoothstep',
           animated: true,
-          style: { stroke: '#4A90E2', strokeWidth: 2 }
+          style: { stroke: '#4A90E2', strokeWidth: 2 },
+          hidden: true, // Initially hidden
         });
+        createdEdges.add(`edge-curriculum-${outcome.id}-module-${moduleId}-${outcomeId}`);
+
+        relationships[nodeId].children.push(moduleNodeId);
+
+        // Build subject outcome nodes
+        if (moduleLO.subjectOutcomes) {
+          moduleLO.subjectOutcomes.forEach(({ subjectId, outcomeId: subOutcomeId }, sIndex) => {
+            const subject = curriculum.subjects.find(s => s.id === subjectId);
+            if (!subject) {
+              console.warn(`Subject ${subjectId} not found`);
+              return;
+            }
+
+            const subjectOutcome = subject.outcomes.find(o => o.id === subOutcomeId);
+            if (!subjectOutcome) {
+              console.warn(`Subject ${subject.name} (ID: ${subjectId}) does not have outcome ID ${subOutcomeId}. Valid IDs: ${subject.outcomes.map(o => o.id).join(', ')}`);
+              return;
+            }
+
+            const subjectNodeId = `subject-${subjectId}-${subOutcomeId}`;
+            const subjectColor = moduleConfig[subject.module]?.color || '#cccccc';
+            const edgeId = `edge-module-${moduleId}-${outcomeId}-subject-${subjectId}-${subOutcomeId}`;
+
+            // Calculate compact position for subjects under this module
+            const subjectX = moduleX + (sIndex - (moduleLO.subjectOutcomes.length - 1) / 2) * 180;
+            const subjectY = moduleY + levelHeight;
+
+            // Create subject node if it doesn't exist
+            if (!allNodes.find(n => n.id === subjectNodeId)) {
+              allNodes.push({
+                id: subjectNodeId,
+                type: 'default',
+                data: {
+                  label: `${subject.name}: ${subjectOutcome.description.substring(0, 35)}...`,
+                  fullDescription: subjectOutcome.description,
+                  subjectName: subject.name,
+                  level: 'subject',
+                  clickable: false,
+                  parentModule: moduleNodeId,
+                },
+                position: { x: subjectX, y: subjectY },
+                style: {
+                  background: '#ffffff',
+                  border: '2px solid ' + subjectColor,
+                  borderRadius: '6px',
+                  padding: '6px',
+                  width: 170,
+                  fontSize: '10px',
+                  cursor: 'default',
+                },
+                hidden: true, // Initially hidden
+              });
+
+              // Initialize relationships for new subject node with array of parents
+              relationships[subjectNodeId] = { children: [], parents: [moduleNodeId] };
+            } else {
+              // Subject node exists, add this module as additional parent if not already there
+              if (!relationships[subjectNodeId].parents) {
+                relationships[subjectNodeId].parents = [moduleNodeId];
+              } else if (!relationships[subjectNodeId].parents.includes(moduleNodeId)) {
+                relationships[subjectNodeId].parents.push(moduleNodeId);
+              }
+            }
+
+            // Only add edge if it hasn't been created yet
+            if (!createdEdges.has(edgeId)) {
+              allEdges.push({
+                id: edgeId,
+                source: moduleNodeId,
+                target: subjectNodeId,
+                type: 'smoothstep',
+                style: { stroke: moduleColor, strokeWidth: 1.5 },
+                hidden: true, // Initially hidden
+              });
+              createdEdges.add(edgeId);
+            }
+
+            // Always add subject to module's children if not already there
+            if (!relationships[moduleNodeId].children.includes(subjectNodeId)) {
+              relationships[moduleNodeId].children.push(subjectNodeId);
+            }
+          });
+        }
       });
     }
   });
 
-  // Level 2: Module Learning Outcomes (middle)
-  const modules = curriculum.modules || [];
-  const moduleY = curriculumY + levelHeight;
-  let moduleIndex = 0;
-
-  modules.forEach((module) => {
-    const moduleOutcomes = module.learningOucomes || [];
-    const moduleColor = moduleConfig[module.id]?.color || '#cccccc';
-
-    moduleOutcomes.forEach((outcome) => {
-      const xOffset = (moduleIndex - 15) * (horizontalSpacing / 2) + 400;
-
-      nodes.push({
-        id: `module-${module.id}-${outcome.id}`,
-        type: 'default',
-        data: {
-          label: `M${module.id}.${outcome.id}: ${outcome.description.substring(0, 60)}...`,
-          fullDescription: outcome.description,
-          moduleName: module.name,
-          level: 'module'
-        },
-        position: { x: xOffset, y: moduleY },
-        style: {
-          background: moduleColor,
-          border: '2px solid ' + moduleColor,
-          borderRadius: '8px',
-          padding: '8px',
-          width: 220,
-          fontSize: '11px',
-          opacity: 0.9
-        }
-      });
-
-      // Create edges to subject outcomes
-      if (outcome.subjectOutcomes) {
-        outcome.subjectOutcomes.forEach(({ subjectId, outcomeId }) => {
-          edges.push({
-            id: `edge-module-${module.id}-${outcome.id}-subject-${subjectId}-${outcomeId}`,
-            source: `module-${module.id}-${outcome.id}`,
-            target: `subject-${subjectId}-${outcomeId}`,
-            type: 'smoothstep',
-            style: { stroke: moduleColor, strokeWidth: 1.5 }
-          });
-        });
-      }
-
-      moduleIndex++;
-    });
-  });
-
-  // Level 3: Subject Learning Outcomes (bottom)
-  const subjects = curriculum.subjects || [];
-  const subjectY = moduleY + levelHeight;
-  let subjectOutcomeIndex = 0;
-
-  subjects.forEach((subject) => {
-    const subjectOutcomes = subject.outcomes || [];
-    const moduleColor = moduleConfig[subject.module]?.color || '#cccccc';
-
-    subjectOutcomes.forEach((outcome) => {
-      const xOffset = (subjectOutcomeIndex - 60) * 120 + 1000;
-
-      nodes.push({
-        id: `subject-${subject.id}-${outcome.id}`,
-        type: 'default',
-        data: {
-          label: `${subject.name}: ${outcome.description.substring(0, 40)}...`,
-          fullDescription: outcome.description,
-          subjectName: subject.name,
-          level: 'subject'
-        },
-        position: { x: xOffset, y: subjectY },
-        style: {
-          background: '#ffffff',
-          border: '2px solid ' + moduleColor,
-          borderRadius: '6px',
-          padding: '6px',
-          width: 180,
-          fontSize: '10px',
-          opacity: 0.8
-        }
-      });
-
-      subjectOutcomeIndex++;
-    });
-  });
-
-  return { nodes, edges };
+  return { allNodes, allEdges, relationships };
 };

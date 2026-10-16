@@ -15,6 +15,8 @@ const Sidebar = ({
   totalECTS,
   isSidebarOpen, // New prop
   toggleSidebar, // New prop
+  year,
+  onYearChange,
 }) => {
   // Get sorted module entries
   const moduleEntries = Object.entries(moduleConfig).sort(
@@ -58,8 +60,20 @@ const Sidebar = ({
               fontSize: "20px",
             }}
           >
-            Rakendusinformaatika õppekava 2025
+            Rakendusinformaatika õppekava {year}
           </h2>
+          <label style={{ display: "block", marginBottom: "16px", fontSize: "14px" }}>
+            Õppeaasta
+            <select
+              aria-label="Vali õppeaasta"
+              value={year}
+              onChange={(event) => onYearChange(event.target.value)}
+              style={{ display: "block", width: "100%", marginTop: "6px", padding: "8px" }}
+            >
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+          </label>
           {/* "Check All" Button */}
           <button
             onClick={handleCheckAll}

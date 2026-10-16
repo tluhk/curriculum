@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import CurriculumVisualization from "./components/CurriculumVisualization";
 import curriculum from "./data/curriculum"; // Updated import path
@@ -10,8 +10,11 @@ import "./styles.css";
 import { FaBars } from "react-icons/fa"; // Import icon
 
 const App = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const year = searchParams.get("year") === "2026" ? "2026" : "2025";
+  const curriculumData = curriculum.find((item) => item.version === year) || curriculum[0];
   // Get modules from curriculum data
-  const curriculumModules = curriculum[0].modules;
+  const curriculumModules = curriculumData.modules;
 
   // Create module mapping: id -> { name, color }
   const moduleConfig = {
@@ -41,6 +44,13 @@ const App = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const handleYearChange = (nextYear) => {
+    setSearchParams({ year: nextYear });
+    setSelectedSubject(null);
+    setHighlightedSubjects([]);
+    setHighlightedEdges([]);
+  };
+
   // Create moduleColors object for compatibility with existing code
   const moduleColors = {};
   Object.keys(moduleConfig).forEach((id) => {
@@ -48,7 +58,7 @@ const App = () => {
   });
 
   const { nodes, edges } = transformCurriculum(
-    curriculum[0].subjects,
+    curriculumData.subjects,
     moduleColors,
     moduleConfig
   );
@@ -201,7 +211,7 @@ const App = () => {
         />
       )}
       <Link
-        to="/outcomes"
+        to={`/outcomes?year=${year}`}
         style={{
           position: "absolute",
           top: "10px",
@@ -220,6 +230,8 @@ const App = () => {
         📊 Õpiväljundid
       </Link>
       <Sidebar
+        year={year}
+        onYearChange={handleYearChange}
         moduleConfig={moduleConfig}
         activeModules={activeModules}
         showRequiredOnly={showRequiredOnly}

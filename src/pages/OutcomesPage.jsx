@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import OutcomesVisualization from "../components/OutcomesVisualization";
 import curriculum from "../data/curriculum";
-import { transformOutcomesData } from "../utils/outcomesUtils";
+import { buildOutcomesGraph } from "../utils/outcomesUtils";
 import "@xyflow/react/dist/style.css";
 
 const OutcomesPage = () => {
-  const curriculumData = curriculum[0];
+  const [searchParams, setSearchParams] = useSearchParams();
+  const year = searchParams.get("year") === "2026" ? "2026" : "2025";
+  const curriculumData = curriculum.find((item) => item.version === year) || curriculum[0];
 
   const moduleConfig = {
     1: { name: "Praktika", color: "#F4A6A0" },
@@ -17,7 +19,10 @@ const OutcomesPage = () => {
     7: { name: "Lõputöö", color: "#FFE5B4" },
   };
 
-  const { nodes, edges } = transformOutcomesData(curriculumData, moduleConfig);
+  const { allNodes, allEdges, relationships } = buildOutcomesGraph(
+    curriculumData,
+    moduleConfig
+  );
 
   return (
     <div
@@ -46,8 +51,20 @@ const OutcomesPage = () => {
             Õpiväljundite visualiseering
           </p>
         </div>
+        <label style={{ marginLeft: "auto", marginRight: "16px", fontSize: "14px" }}>
+          Õppeaasta
+          <select
+            aria-label="Vali õppeaasta"
+            value={year}
+            onChange={(event) => setSearchParams({ year: event.target.value })}
+            style={{ marginLeft: "8px", padding: "7px" }}
+          >
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+          </select>
+        </label>
         <Link
-          to="/"
+          to={`/?year=${year}`}
           style={{
             padding: "8px 16px",
             background: "#4A90E2",
@@ -69,24 +86,33 @@ const OutcomesPage = () => {
           fontSize: "13px",
         }}
       >
-        <div style={{ display: "flex", gap: "30px", flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "30px",
+            flexWrap: "wrap",
+            alignItems: "center",
+          }}
+        >
           <div>
-            <strong>Ülemine rida:</strong> Õppekava õpiväljundid (8)
+            <strong>Kuidas kasutada:</strong>
           </div>
           <div>
-            <strong>Keskmine rida:</strong> Mooduli õpiväljundid (värviliselt)
+            1️⃣ Klõpsa õppekava õpiväljundil → näed seotud mooduli õpiväljundeid
           </div>
           <div>
-            <strong>Alumine rida:</strong> Aine õpiväljundid
+            2️⃣ Klõpsa mooduli õpiväljundil → näed seotud ainete õpiväljundeid
           </div>
-          <div style={{ marginLeft: "auto", color: "#666" }}>
-            💡 Klõpsa sõlmel seose esiletõstmiseks
-          </div>
+          <div>3️⃣ Klõpsa uuesti sama sõlme peal → peidab alamsõlmed</div>
         </div>
       </div>
 
       <div style={{ flex: 1 }}>
-        <OutcomesVisualization nodes={nodes} edges={edges} />
+        <OutcomesVisualization
+          allNodes={allNodes}
+          allEdges={allEdges}
+          relationships={relationships}
+        />
       </div>
 
       <div
