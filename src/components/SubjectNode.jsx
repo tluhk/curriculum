@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import PropTypes from "prop-types";
 import { Handle } from "@xyflow/react";
 import { FaInfoCircle } from "react-icons/fa"; // Import the info icon

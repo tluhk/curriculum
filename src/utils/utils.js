@@ -23,7 +23,7 @@ export const transformCurriculum = (curriculumData, moduleColors, moduleConfig) 
   });
 
   // Find the maximum width needed for any semester
-  const maxCount = Math.max(...Object.values(semesterCounts));
+  const maxCount = Math.max(0, ...Object.values(semesterCounts));
   const maxWidth = maxCount * subjectSpacing + margin + badgeWidth;
 
   // Calculate the vertical position for each semester
@@ -113,4 +113,60 @@ export const transformCurriculum = (curriculumData, moduleColors, moduleConfig) 
     nodes: [...semesterNodes, ...subjectNodes],
     edges,
   };
+};
+
+// All subjects (transitively) required before `subjectId`, without duplicates.
+// Safe against circular prerequisites.
+export const findAllPrerequisites = (subjectId, edges) => {
+  const visited = new Set();
+  const stack = [subjectId];
+  while (stack.length) {
+    const current = stack.pop();
+    edges.forEach((edge) => {
+      if (edge.target === current && !visited.has(edge.source)) {
+        visited.add(edge.source);
+        stack.push(edge.source);
+      }
+    });
+  }
+  visited.delete(subjectId);
+  return [...visited];
+};
+
+// All edges on any prerequisite path leading to `subjectId`.
+export const findAllUpstreamEdges = (subjectId, edges) => {
+  const visitedNodes = new Set([subjectId]);
+  const result = new Map();
+  const stack = [subjectId];
+  while (stack.length) {
+    const current = stack.pop();
+    edges.forEach((edge) => {
+      if (edge.target !== current) return;
+      result.set(edge.id, edge);
+      if (!visitedNodes.has(edge.source)) {
+        visitedNodes.add(edge.source);
+        stack.push(edge.source);
+      }
+    });
+  }
+  return [...result.values()];
+};
+
+export const calculateECTS = (nodes, activeModules) => {
+  const moduleECTS = {};
+  const semesterECTS = {};
+
+  nodes.forEach((node) => {
+    if (node.type === "semesterNode" || !activeModules[node.module]) return;
+    moduleECTS[node.module] = (moduleECTS[node.module] || 0) + node.credits;
+    semesterECTS[node.semester] =
+      (semesterECTS[node.semester] || 0) + node.credits;
+  });
+
+  const totalECTS = Object.values(semesterECTS).reduce(
+    (total, current) => total + current,
+    0
+  );
+
+  return { moduleECTS, semesterECTS, totalECTS };
 };

@@ -1,44 +1,39 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import CurriculumVisualization from "./components/CurriculumVisualization";
-import curriculum from "./data/curriculum"; // Updated import path
-import { transformCurriculum } from "./utils/utils"; // You can extract the transformation logic into a separate utils file
+import curriculum from "./data/curriculum";
+import {
+  transformCurriculum,
+  findAllPrerequisites,
+  findAllUpstreamEdges,
+  calculateECTS,
+} from "./utils/utils";
+import { moduleConfig, moduleColors, parseYear } from "./constants";
 import "@xyflow/react/dist/style.css";
 import "./styles.css";
-import { FaBars } from "react-icons/fa"; // Import icon
+import { FaBars } from "react-icons/fa";
 
 const App = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const year = searchParams.get("year") === "2026" ? "2026" : "2025";
+  const year = parseYear(searchParams.get("year"));
   const curriculumData = curriculum.find((item) => item.version === year) || curriculum[0];
-  // Get modules from curriculum data
-  const curriculumModules = curriculumData.modules;
-
-  // Create module mapping: id -> { name, color }
-  const moduleConfig = {
-    1: { name: "Praktika", color: "#F4A6A0" },
-    2: { name: "Üleülikoolilised ained", color: "#A3C9E1" },
-    3: { name: "Eriala kohustuslikud ained", color: "#A8D5BA" },
-    4: { name: "Eriala valikained", color: "#D6AEDD" },
-    5: { name: "Vabaained", color: "#F4D1A1" },
-    6: { name: "Erialane inglise keel", color: "#F4D1C1" },
-    7: { name: "Lõputöö", color: "#FFE5B4" },
-  };
-
-  // Initialize activeModules with all module IDs selected
-  const initialActiveModules = {};
-  curriculumModules.forEach((module) => {
-    initialActiveModules[module.id] = true;
-  });
 
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [highlightedSubjects, setHighlightedSubjects] = useState([]);
   const [highlightedEdges, setHighlightedEdges] = useState([]);
-  const [activeModules, setActiveModules] = useState(initialActiveModules);
+  // Modules the user switched off; everything else is active
+  const [disabledModules, setDisabledModules] = useState({});
   const [showRequiredOnly, setShowRequiredOnly] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const activeModules = useMemo(() => {
+    const active = {};
+    curriculumData.modules.forEach((module) => {
+      active[module.id] = !disabledModules[module.id];
+    });
+    return active;
+  }, [curriculumData, disabledModules]);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -51,49 +46,14 @@ const App = () => {
     setHighlightedEdges([]);
   };
 
-  // Create moduleColors object for compatibility with existing code
-  const moduleColors = {};
-  Object.keys(moduleConfig).forEach((id) => {
-    moduleColors[parseInt(id)] = moduleConfig[id].color;
-  });
-
-  const { nodes, edges } = transformCurriculum(
-    curriculumData.subjects,
-    moduleColors,
-    moduleConfig
+  const { nodes, edges } = useMemo(
+    () => transformCurriculum(curriculumData.subjects, moduleColors, moduleConfig),
+    [curriculumData]
   );
-
-  const findAllPrerequisites = (subjectId, edges) => {
-    const prerequisites = edges
-      .filter((edge) => edge.target === subjectId)
-      .map((edge) => edge.source);
-
-    return prerequisites.reduce(
-      (acc, prerequisite) => [
-        ...acc,
-        prerequisite,
-        ...findAllPrerequisites(prerequisite, edges),
-      ],
-      []
-    );
-  };
-
-  const findAllUpstreamEdges = (subjectId, edges) => {
-    const upstreamEdges = edges.filter((edge) => edge.target === subjectId);
-
-    return upstreamEdges.reduce(
-      (acc, edge) => [
-        ...acc,
-        edge,
-        ...findAllUpstreamEdges(edge.source, edges),
-      ],
-      []
-    );
-  };
 
   const onNodeClick = (event, node) => {
     // If node is null or node.id is null, clear selection
-    if (!node || !node.id) {
+    if (!node || !node.id || node.id === selectedSubject) {
       setHighlightedSubjects([]);
       setHighlightedEdges([]);
       setSelectedSubject(null);
@@ -101,93 +61,56 @@ const App = () => {
     }
 
     const selectedNodeId = node.id;
+    const allPrerequisites = findAllPrerequisites(selectedNodeId, edges);
+    const allUpstreamEdges = findAllUpstreamEdges(selectedNodeId, edges);
 
-    if (selectedNodeId === selectedSubject) {
-      setHighlightedSubjects([]);
-      setHighlightedEdges([]);
-      setSelectedSubject(null);
-    } else {
-      const allPrerequisites = findAllPrerequisites(selectedNodeId, edges);
-      const allUpstreamEdges = findAllUpstreamEdges(selectedNodeId, edges);
-
-      setSelectedSubject(selectedNodeId);
-      setHighlightedSubjects([selectedNodeId, ...allPrerequisites]);
-      setHighlightedEdges(allUpstreamEdges.map((edge) => edge.id));
-    }
+    setSelectedSubject(selectedNodeId);
+    setHighlightedSubjects([selectedNodeId, ...allPrerequisites]);
+    setHighlightedEdges(allUpstreamEdges.map((edge) => edge.id));
   };
 
   const handleModuleFilter = (module) => {
-    setActiveModules((prev) => ({
-      ...prev,
-      [module]: !prev[module],
-    }));
+    setDisabledModules((prev) => ({ ...prev, [module]: !prev[module] }));
   };
 
   const handleCheckAll = () => {
-    const newActiveModules = {};
-    curriculumModules.forEach((module) => {
-      newActiveModules[module.id] = true;
-    });
-    setActiveModules(newActiveModules);
+    setDisabledModules({});
   };
 
-  const filteredNodes = nodes.filter((node) => {
-    // Always include semester nodes
-    if (node.type === "semesterNode") {
-      return true;
-    }
+  const updatedNodes = useMemo(() => {
+    const highlighted = new Set(highlightedSubjects);
+    return nodes
+      .filter((node) => {
+        // Always include semester nodes
+        if (node.type === "semesterNode") return true;
+        if (showRequiredOnly && !node.required) return false;
+        return activeModules[node.module];
+      })
+      .map((node) => ({
+        ...node,
+        style: {
+          ...node.style,
+          opacity: highlighted.has(node.id) || highlighted.size === 0 ? 1 : 0.2,
+          transition: "opacity 0.3s",
+        },
+      }));
+  }, [nodes, highlightedSubjects, showRequiredOnly, activeModules]);
 
-    if (showRequiredOnly && !node.required) {
-      return false;
-    }
-
-    return activeModules[node.module];
-  });
-
-  const updatedNodes = filteredNodes.map((node) => {
-    const isConnected = highlightedSubjects.includes(node.id);
-    return {
-      ...node,
-      style: {
-        ...node.style,
-        opacity: isConnected || highlightedSubjects.length === 0 ? 1 : 0.2,
-        transition: "opacity 0.3s",
-      },
-    };
-  });
-
-  const updatedEdges = edges.map((edge) => {
-    const isConnected = highlightedEdges.includes(edge.id);
-    return {
-      ...edge,
-      style: {
-        ...edge.style,
-        stroke: isConnected ? "#000000" : "#D3D3D3",
-        strokeWidth: isConnected ? 2 : 1,
-        transition: "stroke 0.3s, stroke-width 0.3s",
-      },
-    };
-  });
-
-  const calculateECTS = (nodes, activeModules) => {
-    const moduleECTS = {};
-    const semesterECTS = {};
-
-    nodes.forEach((node) => {
-      if (activeModules[node.module]) {
-        moduleECTS[node.module] = (moduleECTS[node.module] || 0) + node.credits;
-        semesterECTS[node.semester] =
-          (semesterECTS[node.semester] || 0) + node.credits;
-      }
+  const updatedEdges = useMemo(() => {
+    const highlighted = new Set(highlightedEdges);
+    return edges.map((edge) => {
+      const isConnected = highlighted.has(edge.id);
+      return {
+        ...edge,
+        style: {
+          ...edge.style,
+          stroke: isConnected ? "#000000" : "#D3D3D3",
+          strokeWidth: isConnected ? 2 : 1,
+          transition: "stroke 0.3s, stroke-width 0.3s",
+        },
+      };
     });
-
-    const totalECTS = Object.values(semesterECTS).reduce(
-      (total, current) => total + current,
-      0
-    );
-
-    return { moduleECTS, semesterECTS, totalECTS };
-  };
+  }, [edges, highlightedEdges]);
 
   const { moduleECTS, semesterECTS, totalECTS } = calculateECTS(
     updatedNodes,
@@ -195,10 +118,12 @@ const App = () => {
   );
 
   return (
-    <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
-      {!isSidebarOpen && ( // Conditionally render the icon based on sidebar state
-        <FaBars
+    <div style={{ display: "flex", height: "100vh", width: "100%" }}>
+      {!isSidebarOpen && (
+        <button
+          type="button"
           onClick={toggleSidebar}
+          aria-label="Ava külgpaneel"
           style={{
             position: "absolute",
             top: "10px",
@@ -207,8 +132,14 @@ const App = () => {
             fontSize: "24px",
             cursor: "pointer",
             color: "black",
+            background: "none",
+            border: "none",
+            padding: 0,
+            lineHeight: 0,
           }}
-        />
+        >
+          <FaBars />
+        </button>
       )}
       <Link
         to={`/outcomes?year=${year}`}

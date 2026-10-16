@@ -96,7 +96,7 @@ const curriculums = [
         id: 1,
         name: 'Praktika',
         objective: 'Mooduli läbinud üliõpilasel on terviklikud teadmised ja praktilised oskused digilahenduste loomiseks ning valdkondliku uurimistöö läbiviimiseks.',
-        learningOucomes: [
+        learningOutcomes: [
           {
             id: 1,
             description: 'Analüüsib üksikisiku, organisatsiooni või kogukonna probleemi, kavandab ja viib läbi vajalikud uuringud ning kogutud andmete põhjal loob digilahenduse või selle prototüübi, kasutades agiilse tarkvaraarenduse ja disaini meetodeid.',
@@ -160,7 +160,7 @@ const curriculums = [
         id: 2,
         name: 'Üleülikoolilised ained',
         objective: 'Mooduli läbinud üliõpilasel on integreeritud teadmised psühholoogiast,  akadeemiline lugemis- ja kirjutamisoskus ning oskus rakendada projekti- ja meeskonnatöö põhimõtteid. Ta planeerib oma õpi- ja erialast tegevust eesmärgipäraselt, ennastjuhtivalt ja kriitiliselt mõeldes.',
-        learningOucomes: [
+        learningOutcomes: [
           {
             id: 1,
             description: 'omab akadeemilist lugemis- ja kirjaoskust erialaste õpingute edukaks sooritamiseks',
@@ -213,7 +213,7 @@ const curriculums = [
         id: 3,
         name: 'Eriala kohustuslikud ained',
         objective: 'Mooduli läbinud üliõpilasel on terviklikud teadmised ja praktilised oskused digilahenduste loomiseks ning valdkondliku uurimistöö läbiviimiseks.',
-        learningOucomes: [
+        learningOutcomes: [
           {
             id: 1,
             description: 'Selgitab, rakendab ja kommunikeerib valdkonna põhimõisteid ja teoreetilisi lähtekohti ning arengusuundi.',
@@ -333,7 +333,7 @@ const curriculums = [
         id: 4,
         name: 'Eriala valikained',
         objective: 'Õpilane süvendab teadmisi ja oskusi valdkonna spetsiifilistes või uudsetes teemades.',
-        learningOucomes: [
+        learningOutcomes: [
           {
             id: 189,
             description: 'Analüüsib ja teeb põhjendatud valiku valdkonnaspetsiifilise või uudse lähenemisviisi osas,  seostab oma valiku teoreetiliste käsitluste ja praktiliste rakendustega.',
@@ -406,7 +406,7 @@ const curriculums = [
         id: 5,
         name: 'Vabaained',
         objective: 'Üliõpilane leiab võimalusi enesearenguks lähtudes individuaalsest huvist ja arendab oma võõrkeele- ja arvutikasutamise oskusi.',
-        learningOucomes: [
+        learningOutcomes: [
           {
             id: 192,
             description: 'süvendab erialaseid teadmisi ja oskusi;'
@@ -425,7 +425,7 @@ const curriculums = [
         id: 6,
         name: 'Erialane inglise keel',
         objective: 'Õpilane arendab oma erialast inglise keelt.',
-        learningOucomes: [
+        learningOutcomes: [
           {
             id: 195,
             description: 'Kasutab erialast inglisekeelset terminoloogiat.',
@@ -458,7 +458,7 @@ const curriculums = [
         id: 7,
         name: 'Lõputöö',
         objective: 'Üliõpilane viib läbi erialase uurimuse, analüüsib uurimistulemusi, vormistab tulemuse lõputööks ja kaitseb valminud lõputööd.',
-        learningOucomes: [
+        learningOutcomes: [
           {
             id: 198,
             description: 'Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti.',

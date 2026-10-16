@@ -1,9 +1,16 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+import { useEffect } from "react";
 import PropTypes from "prop-types";
 
 const SubjectInfoModal = ({ data, closeModal }) => {
   const { course } = data;
+
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [closeModal]);
 
   return (
     <div
@@ -20,6 +27,9 @@ const SubjectInfoModal = ({ data, closeModal }) => {
       onClick={closeModal}
     >
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={course.name}
         style={{
           position: "absolute",
           top: "50%",
@@ -36,7 +46,9 @@ const SubjectInfoModal = ({ data, closeModal }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button
+          type="button"
           onClick={closeModal}
+          aria-label="Sulge"
           style={{
             position: "absolute",
             top: 10,

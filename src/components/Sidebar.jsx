@@ -1,7 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import PropTypes from "prop-types";
-import "./Sidebar.css"; // Import custom CSS
+import { YEARS } from "../constants";
+import "./Sidebar.css";
 
 const Sidebar = ({
   moduleConfig,
@@ -13,8 +12,8 @@ const Sidebar = ({
   moduleECTS,
   semesterECTS,
   totalECTS,
-  isSidebarOpen, // New prop
-  toggleSidebar, // New prop
+  isSidebarOpen,
+  toggleSidebar,
   year,
   onYearChange,
 }) => {
@@ -38,8 +37,10 @@ const Sidebar = ({
     >
       {isSidebarOpen && ( // Conditionally render content based on isSidebarOpen
         <>
-          <span
-            onClick={toggleSidebar} // Toggle sidebar on click
+          <button
+            type="button"
+            onClick={toggleSidebar}
+            aria-label="Sulge külgpaneel"
             style={{
               position: "absolute",
               top: "10px",
@@ -48,10 +49,13 @@ const Sidebar = ({
               fontSize: "20px",
               fontWeight: "bold",
               color: "black",
+              background: "none",
+              border: "none",
+              padding: 0,
             }}
           >
             &times;
-          </span>
+          </button>
           <h2
             style={{
               textAlign: "center",
@@ -70,8 +74,11 @@ const Sidebar = ({
               onChange={(event) => onYearChange(event.target.value)}
               style={{ display: "block", width: "100%", marginTop: "6px", padding: "8px" }}
             >
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
+              {YEARS.map((y) => (
+                <option key={y} value={y}>
+                  {y}
+                </option>
+              ))}
             </select>
           </label>
           {/* "Check All" Button */}
@@ -264,8 +271,10 @@ Sidebar.propTypes = {
   moduleECTS: PropTypes.object.isRequired,
   semesterECTS: PropTypes.object.isRequired,
   totalECTS: PropTypes.number.isRequired,
-  isSidebarOpen: PropTypes.bool.isRequired, // New prop type
-  toggleSidebar: PropTypes.func.isRequired, // New prop type
+  isSidebarOpen: PropTypes.bool.isRequired,
+  toggleSidebar: PropTypes.func.isRequired,
+  year: PropTypes.string.isRequired,
+  onYearChange: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

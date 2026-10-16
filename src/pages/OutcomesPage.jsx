@@ -1,33 +1,25 @@
+import { useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import OutcomesVisualization from "../components/OutcomesVisualization";
 import curriculum from "../data/curriculum";
 import { buildOutcomesGraph } from "../utils/outcomesUtils";
+import { moduleConfig, parseYear, YEARS } from "../constants";
 import "@xyflow/react/dist/style.css";
 
 const OutcomesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const year = searchParams.get("year") === "2026" ? "2026" : "2025";
+  const year = parseYear(searchParams.get("year"));
   const curriculumData = curriculum.find((item) => item.version === year) || curriculum[0];
 
-  const moduleConfig = {
-    1: { name: "Praktika", color: "#F4A6A0" },
-    2: { name: "Üleülikoolilised ained", color: "#A3C9E1" },
-    3: { name: "Eriala kohustuslikud ained", color: "#A8D5BA" },
-    4: { name: "Eriala valikained", color: "#D6AEDD" },
-    5: { name: "Vabaained", color: "#F4D1A1" },
-    6: { name: "Erialane inglise keel", color: "#F4D1C1" },
-    7: { name: "Lõputöö", color: "#FFE5B4" },
-  };
-
-  const { allNodes, allEdges, relationships } = buildOutcomesGraph(
-    curriculumData,
-    moduleConfig
+  const { allNodes, allEdges, relationships } = useMemo(
+    () => buildOutcomesGraph(curriculumData, moduleConfig),
+    [curriculumData]
   );
 
   return (
     <div
       style={{
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -59,8 +51,11 @@ const OutcomesPage = () => {
             onChange={(event) => setSearchParams({ year: event.target.value })}
             style={{ marginLeft: "8px", padding: "7px" }}
           >
-            <option value="2025">2025</option>
-            <option value="2026">2026</option>
+            {YEARS.map((y) => (
+              <option key={y} value={y}>
+                {y}
+              </option>
+            ))}
           </select>
         </label>
         <Link
@@ -109,6 +104,7 @@ const OutcomesPage = () => {
 
       <div style={{ flex: 1 }}>
         <OutcomesVisualization
+          key={year}
           allNodes={allNodes}
           allEdges={allEdges}
           relationships={relationships}

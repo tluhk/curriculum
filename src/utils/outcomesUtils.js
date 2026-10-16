@@ -4,6 +4,9 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
   const allEdges = [];
   const relationships = {}; // Store parent-child relationships
   const createdEdges = new Set(); // Track created edge IDs to avoid duplicates
+  const nodeIds = new Set(); // Track created node IDs for O(1) duplicate checks
+  const modulesById = new Map(curriculum.modules.map((m) => [m.id, m]));
+  const subjectsById = new Map(curriculum.subjects.map((s) => [s.id, s]));
 
   const levelHeight = 200;
   const compactSpacing = 250;
@@ -32,6 +35,7 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
     },
   };
   allNodes.push(headerNode);
+  nodeIds.add(headerNode.id);
   relationships['curriculum-header'] = { children: [], parent: null };
 
   // Level 1: Curriculum Learning Outcomes
@@ -43,6 +47,7 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
     const startX = -totalWidth / 2;
     const nodeId = `curriculum-${outcome.id}`;
 
+    nodeIds.add(nodeId);
     allNodes.push({
       id: nodeId,
       type: "default",
@@ -79,10 +84,10 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
     // Build module outcome nodes
     if (outcome.moduleOutcomes) {
       outcome.moduleOutcomes.forEach(({ moduleId, outcomeId }, mIndex) => {
-        const module = curriculum.modules.find(m => m.id === moduleId);
+        const module = modulesById.get(moduleId);
         if (!module) return;
 
-        const moduleLO = module.learningOucomes.find(lo => lo.id === outcomeId);
+        const moduleLO = module.learningOutcomes.find(lo => lo.id === outcomeId);
         if (!moduleLO) return;
 
         const moduleNodeId = `module-${moduleId}-${outcomeId}`;
@@ -92,7 +97,8 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
         const moduleX = startX + index * compactSpacing + (mIndex - (outcome.moduleOutcomes.length - 1) / 2) * 200;
         const moduleY = curriculumY + levelHeight;
 
-        if (!allNodes.find(n => n.id === moduleNodeId)) {
+        if (!nodeIds.has(moduleNodeId)) {
+          nodeIds.add(moduleNodeId);
           allNodes.push({
             id: moduleNodeId,
             type: 'default',
@@ -121,8 +127,9 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
           relationships[moduleNodeId] = { children: [], parent: nodeId };
         }
 
-        allEdges.push({
-          id: `edge-curriculum-${outcome.id}-module-${moduleId}-${outcomeId}`,
+        const cmEdgeId = `edge-curriculum-${outcome.id}-module-${moduleId}-${outcomeId}`;
+        if (!createdEdges.has(cmEdgeId)) allEdges.push({
+          id: cmEdgeId,
           source: nodeId,
           target: moduleNodeId,
           type: 'smoothstep',
@@ -130,14 +137,16 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
           style: { stroke: '#4A90E2', strokeWidth: 2 },
           hidden: true, // Initially hidden
         });
-        createdEdges.add(`edge-curriculum-${outcome.id}-module-${moduleId}-${outcomeId}`);
+        createdEdges.add(cmEdgeId);
 
-        relationships[nodeId].children.push(moduleNodeId);
+        if (!relationships[nodeId].children.includes(moduleNodeId)) {
+          relationships[nodeId].children.push(moduleNodeId);
+        }
 
         // Build subject outcome nodes
         if (moduleLO.subjectOutcomes) {
           moduleLO.subjectOutcomes.forEach(({ subjectId, outcomeId: subOutcomeId }, sIndex) => {
-            const subject = curriculum.subjects.find(s => s.id === subjectId);
+            const subject = subjectsById.get(subjectId);
             if (!subject) {
               console.warn(`Subject ${subjectId} not found`);
               return;
@@ -158,7 +167,8 @@ export const buildOutcomesGraph = (curriculum, moduleConfig) => {
             const subjectY = moduleY + levelHeight;
 
             // Create subject node if it doesn't exist
-            if (!allNodes.find(n => n.id === subjectNodeId)) {
+            if (!nodeIds.has(subjectNodeId)) {
+              nodeIds.add(subjectNodeId);
               allNodes.push({
                 id: subjectNodeId,
                 type: 'default',

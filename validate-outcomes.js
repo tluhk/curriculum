@@ -1,127 +1,82 @@
-// Script to validate outcome ID references in curriculum data
+// Validates references inside the curriculum data.
+// Structural problems (missing subjects/modules, bad or circular prerequisites) are errors
+// and exit with code 1. Dangling subject-outcome references are known content debt, so they
+// are reported as warnings; pass --strict to treat them as errors, --verbose to list them.
+// Usage: npm run validate [-- --strict] [-- --verbose]
+import process from 'node:process';
 import curriculums from './src/data/curriculum.js';
 
-const curriculum = curriculums[0]; // Use first curriculum
-
-console.log('=== Validating Curriculum Outcome References ===\n');
-console.log(`Curriculum: ${curriculum.name}\n`);
-
-// Build a map of subject ID -> array of valid outcome IDs
-const subjectOutcomesMap = new Map();
-curriculum.subjects.forEach(subject => {
-  const outcomeIds = subject.outcomes.map(o => o.id);
-  subjectOutcomesMap.set(subject.id, outcomeIds);
-});
-
-// Track all errors
+const strict = process.argv.includes('--strict');
+const verbose = process.argv.includes('--verbose');
 const errors = [];
-let totalReferences = 0;
-let validReferences = 0;
+const warnings = [];
 
-// Check all module learning outcomes
-curriculum.modules.forEach(module => {
-  module.learningOucomes.forEach(moduleLO => {
-    if (moduleLO.subjectOutcomes) {
-      moduleLO.subjectOutcomes.forEach(({ subjectId, outcomeId }) => {
-        totalReferences++;
+curriculums.forEach((curriculum) => {
+  const label = `${curriculum.name} ${curriculum.version}`;
+  const err = (message) => errors.push(`[${label}] ${message}`);
+  const warn = (message) => (strict ? err : (m) => warnings.push(`[${label}] ${m}`))(message);
 
-        // Check if subject exists
-        const validOutcomeIds = subjectOutcomesMap.get(subjectId);
-        if (!validOutcomeIds) {
-          errors.push({
-            module: module.name,
-            moduleId: module.id,
-            moduleLOId: moduleLO.id,
-            moduleLODesc: moduleLO.description.substring(0, 50) + '...',
-            subjectId,
-            outcomeId,
-            error: `Subject ${subjectId} not found`
-          });
-          return;
-        }
+  const subjects = new Map(curriculum.subjects.map((s) => [s.id, s]));
+  const modules = new Map(curriculum.modules.map((m) => [m.id, m]));
 
-        // Check if outcome ID exists in that subject
-        if (!validOutcomeIds.includes(outcomeId)) {
-          const subject = curriculum.subjects.find(s => s.id === subjectId);
-          errors.push({
-            module: module.name,
-            moduleId: module.id,
-            moduleLOId: moduleLO.id,
-            moduleLODesc: moduleLO.description.substring(0, 50) + '...',
-            subjectId,
-            subjectName: subject.name,
-            outcomeId,
-            validOutcomeIds: validOutcomeIds.join(', '),
-            error: `Outcome ${outcomeId} not found in subject ${subjectId}`
-          });
-        } else {
-          validReferences++;
+  if (subjects.size !== curriculum.subjects.length) err('duplicate subject ids');
+
+  // Subject -> module outcome references (module learning outcomes -> subject outcomes)
+  curriculum.modules.forEach((module) => {
+    module.learningOutcomes.forEach((moduleLO) => {
+      (moduleLO.subjectOutcomes || []).forEach(({ subjectId, outcomeId }) => {
+        const subject = subjects.get(subjectId);
+        if (!subject) {
+          err(`module ${module.id} LO ${moduleLO.id}: subject ${subjectId} not found`);
+        } else if (!subject.outcomes.some((o) => o.id === outcomeId)) {
+          warn(
+            `module ${module.id} LO ${moduleLO.id}: subject ${subjectId} (${subject.name}) has no outcome ${outcomeId}. ` +
+              `Valid: ${subject.outcomes.map((o) => o.id).join(', ')}`
+          );
         }
       });
-    }
+    });
   });
+
+  // Curriculum outcomes -> module outcomes
+  (curriculum.learningOutcomes || []).forEach((lo) => {
+    (lo.moduleOutcomes || []).forEach(({ moduleId, outcomeId }) => {
+      const module = modules.get(moduleId);
+      if (!module) err(`curriculum LO ${lo.id}: module ${moduleId} not found`);
+      else if (!module.learningOutcomes.some((x) => x.id === outcomeId)) {
+        err(`curriculum LO ${lo.id}: module ${moduleId} has no outcome ${outcomeId}`);
+      }
+    });
+  });
+
+  // Prerequisites exist and are acyclic
+  curriculum.subjects.forEach((s) => {
+    (s.prerequisites || []).forEach((p) => {
+      if (!subjects.has(p)) err(`subject ${s.id} (${s.name}): prerequisite ${p} not found`);
+    });
+  });
+  const state = new Map(); // 1 = in progress, 2 = done
+  const visit = (id, path) => {
+    if (state.get(id) === 2) return;
+    if (state.get(id) === 1) {
+      err(`circular prerequisites: ${[...path, id].join(' -> ')}`);
+      return;
+    }
+    state.set(id, 1);
+    (subjects.get(id)?.prerequisites || []).forEach((p) => subjects.has(p) && visit(p, [...path, id]));
+    state.set(id, 2);
+  };
+  curriculum.subjects.forEach((s) => visit(s.id, []));
 });
 
-console.log(`Total outcome references: ${totalReferences}`);
-console.log(`Valid references: ${validReferences}`);
-console.log(`Invalid references: ${errors.length}\n`);
-
-if (errors.length > 0) {
-  console.log('=== ERRORS FOUND ===\n');
-
-  // Group errors by module
-  const errorsByModule = new Map();
-  errors.forEach(error => {
-    if (!errorsByModule.has(error.moduleId)) {
-      errorsByModule.set(error.moduleId, []);
-    }
-    errorsByModule.get(error.moduleId).push(error);
-  });
-
-  errorsByModule.forEach((moduleErrors, moduleId) => {
-    const moduleName = moduleErrors[0].module;
-    console.log(`\n📌 Module ${moduleId}: ${moduleName}`);
-    console.log('─'.repeat(80));
-
-    moduleErrors.forEach(err => {
-      console.log(`\n  Module LO ${err.moduleLOId}: ${err.moduleLODesc}`);
-      console.log(`  ❌ References: subjectId=${err.subjectId}, outcomeId=${err.outcomeId}`);
-      if (err.subjectName) {
-        console.log(`     Subject: ${err.subjectName}`);
-        console.log(`     Valid outcome IDs for this subject: ${err.validOutcomeIds}`);
-      } else {
-        console.log(`     ${err.error}`);
-      }
-    });
-  });
-
-  console.log('\n\n=== SUMMARY BY SUBJECT ===\n');
-
-  // Group errors by subject
-  const errorsBySubject = new Map();
-  errors.forEach(error => {
-    if (error.subjectId) {
-      if (!errorsBySubject.has(error.subjectId)) {
-        errorsBySubject.set(error.subjectId, {
-          subjectName: error.subjectName || 'Unknown',
-          validIds: error.validOutcomeIds || 'N/A',
-          errors: []
-        });
-      }
-      errorsBySubject.get(error.subjectId).errors.push(error);
-    }
-  });
-
-  errorsBySubject.forEach((data, subjectId) => {
-    console.log(`\nSubject ${subjectId}: ${data.subjectName}`);
-    console.log(`Valid outcome IDs: ${data.validIds}`);
-    console.log(`Invalid references: ${data.errors.length}`);
-    data.errors.forEach(err => {
-      console.log(`  - Module ${err.moduleId} LO ${err.moduleLOId} tries to use outcome ${err.outcomeId}`);
-    });
-  });
-} else {
-  console.log('✅ All outcome references are valid!');
+if (warnings.length) {
+  console.warn(`⚠️  ${warnings.length} dangling subject-outcome reference(s)` + (verbose ? ':\n' : ' (run with -- --verbose to list)'));
+  if (verbose) warnings.forEach((w) => console.warn(`  - ${w}`));
 }
 
-console.log('\n');
+if (errors.length) {
+  console.error(`Found ${errors.length} problem(s):\n`);
+  errors.forEach((e) => console.error(`  - ${e}`));
+  process.exit(1);
+}
+console.log(`✅ Curriculum data is valid (${curriculums.length} curricula checked)`);

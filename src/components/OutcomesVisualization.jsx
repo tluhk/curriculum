@@ -1,133 +1,85 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import {
   ReactFlow,
   Controls,
   Background,
   useNodesState,
-  useEdgesState,
 } from "@xyflow/react";
 import PropTypes from "prop-types";
 
+const ROOT_LEVELS = new Set(["header", "curriculum"]);
+
 const OutcomesVisualization = ({ allNodes, allEdges, relationships }) => {
-  // Start with only header and curriculum outcomes visible
-  const initialVisibleNodes = allNodes.map((node) => ({
-    ...node,
-    hidden: node.data.level !== "header" && node.data.level !== "curriculum",
-  }));
+  // Nodes keep their (draggable) positions in state; visibility is derived
+  // from the set of expanded nodes so shared children stay visible as long as
+  // at least one expanded parent still points to them.
+  const [nodes, , onNodesChange] = useNodesState(allNodes);
+  const [expandedNodes, setExpandedNodes] = useState(() => new Set());
 
-  const initialVisibleEdges = allEdges.map((edge) => ({
-    ...edge,
-    hidden: !edge.source.includes("header"),
-  }));
+  const visibleIds = useMemo(() => {
+    const visible = new Set(
+      allNodes.filter((n) => ROOT_LEVELS.has(n.data.level)).map((n) => n.id)
+    );
+    const queue = [...visible];
+    while (queue.length) {
+      const id = queue.pop();
+      if (!expandedNodes.has(id)) continue;
+      (relationships[id]?.children || []).forEach((childId) => {
+        if (!visible.has(childId)) {
+          visible.add(childId);
+          queue.push(childId);
+        }
+      });
+    }
+    return visible;
+  }, [allNodes, relationships, expandedNodes]);
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialVisibleNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialVisibleEdges);
-  const [expandedNodes, setExpandedNodes] = useState(new Set());
-
-  const onNodeClick = useCallback(
-    (event, clickedNode) => {
-      if (!clickedNode.data.clickable) return;
-
-      const nodeId = clickedNode.id;
-      const isExpanded = expandedNodes.has(nodeId);
-
-      if (isExpanded) {
-        // Collapse: hide children and all descendants
-        const newExpandedNodes = new Set(expandedNodes);
-        newExpandedNodes.delete(nodeId);
-
-        const nodesToHide = new Set();
-
-        // Recursively find all descendants
-        const findDescendants = (id) => {
-          const children = relationships[id]?.children || [];
-          children.forEach((childId) => {
-            nodesToHide.add(childId);
-            newExpandedNodes.delete(childId);
-            findDescendants(childId);
-          });
-        };
-
-        findDescendants(nodeId);
-
-        // Hide nodes
-        setNodes((nds) =>
-          nds.map((n) => ({
-            ...n,
-            hidden: nodesToHide.has(n.id) ? true : n.hidden,
-            data: {
-              ...n.data,
-              expanded: n.id === nodeId ? false : n.data.expanded,
-            },
-          }))
-        );
-
-        // Hide edges
-        setEdges((eds) =>
-          eds.map((e) => {
-            const shouldHide =
-              nodesToHide.has(e.source) || nodesToHide.has(e.target);
-            return {
-              ...e,
-              hidden: shouldHide ? true : e.hidden,
-            };
-          })
-        );
-
-        setExpandedNodes(newExpandedNodes);
-      } else {
-        // Expand: show immediate children only
-        const newExpandedNodes = new Set(expandedNodes);
-        newExpandedNodes.add(nodeId);
-
-        const children = relationships[nodeId]?.children || [];
-
-        // Show immediate children nodes
-        setNodes((nds) =>
-          nds.map((n) => {
-            if (n.id === nodeId) {
-              return {
-                ...n,
-                data: { ...n.data, expanded: true },
-                style: {
-                  ...n.style,
-                  border:
-                    n.data.level === "curriculum"
-                      ? "3px solid #2196f3"
-                      : n.style.border,
-                },
-              };
-            }
-            if (children.includes(n.id)) {
-              return { ...n, hidden: false };
-            }
-            return n;
-          })
-        );
-
-        // Show edges to immediate children
-        setEdges((eds) =>
-          eds.map((e) => {
-            if (e.source === nodeId && children.includes(e.target)) {
-              return { ...e, hidden: false };
-            }
-            return e;
-          })
-        );
-
-        setExpandedNodes(newExpandedNodes);
-      }
-    },
-    [expandedNodes, relationships, setNodes, setEdges]
+  const displayNodes = useMemo(
+    () =>
+      nodes.map((n) => ({
+        ...n,
+        hidden: !visibleIds.has(n.id),
+        data: { ...n.data, expanded: expandedNodes.has(n.id) },
+        style:
+          n.data.level === "curriculum" && expandedNodes.has(n.id)
+            ? { ...n.style, border: "3px solid #2196f3" }
+            : n.style,
+      })),
+    [nodes, visibleIds, expandedNodes]
   );
+
+  const displayEdges = useMemo(
+    () =>
+      allEdges.map((e) => ({
+        ...e,
+        hidden: !(
+          visibleIds.has(e.source) &&
+          visibleIds.has(e.target) &&
+          (e.source === "curriculum-header" || expandedNodes.has(e.source))
+        ),
+      })),
+    [allEdges, visibleIds, expandedNodes]
+  );
+
+  const onNodeClick = useCallback((event, clickedNode) => {
+    if (!clickedNode.data.clickable) return;
+    setExpandedNodes((prev) => {
+      const next = new Set(prev);
+      if (next.has(clickedNode.id)) {
+        next.delete(clickedNode.id);
+      } else {
+        next.add(clickedNode.id);
+      }
+      return next;
+    });
+  }, []);
 
   return (
     <div style={{ width: "100%", height: "100%" }}>
       <ReactFlow
-        nodes={nodes}
-        edges={edges}
+        nodes={displayNodes}
+        edges={displayEdges}
         onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
         onNodeClick={onNodeClick}
         fitView
         fitViewOptions={{ padding: 0.2 }}

@@ -1,14 +1,14 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import { useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { ReactFlow, Background, Controls } from "@xyflow/react"; // Import necessary components
 import SubjectNode from "./SubjectNode"; // Import SubjectNode component
 import SubjectInfoModal from "./SubjectInfoModal"; // Import the new modal component
 import SemesterNode from "./SemesterNode"; // Import SemesterNode component
 
+// Defined outside the component so React Flow gets stable references
 const nodeTypes = {
-  semesterNode: (props) => <SemesterNode {...props} />,
-  subjectNode: (props) => <SubjectNode {...props} />,
+  semesterNode: SemesterNode,
+  subjectNode: SubjectNode,
 };
 
 const CurriculumVisualization = ({
@@ -18,13 +18,24 @@ const CurriculumVisualization = ({
 }) => {
   const [modalData, setModalData] = useState(null);
 
-  const openModal = (data) => {
-    setModalData(data);
-  };
+  const closeModal = () => setModalData(null);
 
-  const closeModal = () => {
-    setModalData(null);
-  };
+  const nodes = useMemo(
+    () =>
+      updatedNodes.map((node) => ({
+        ...node,
+        data: { ...node.data, openModal: setModalData },
+      })),
+    [updatedNodes]
+  );
+  const edges = useMemo(
+    () =>
+      updatedEdges.map((edge) => ({
+        ...edge,
+        style: { ...edge.style, zIndex: 5 },
+      })),
+    [updatedEdges]
+  );
 
   const handleNodeClick = (event, node) => {
     if (node.type === "semesterNode") {
@@ -55,14 +66,8 @@ const CurriculumVisualization = ({
             });
           }, 0);
         }}
-        nodes={updatedNodes.map((node) => ({
-          ...node,
-          data: { ...node.data, openModal },
-        }))}
-        edges={updatedEdges.map((edge) => ({
-          ...edge,
-          style: { ...edge.style, zIndex: 5 },
-        }))}
+        nodes={nodes}
+        edges={edges}
         onNodeClick={handleNodeClick} // Use custom handleNodeClick function
         onPaneClick={handlePaneClick} // <-- Add this line
         nodeTypes={nodeTypes} // Register custom node types

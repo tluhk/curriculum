@@ -26,8 +26,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
+      - name: Lint
+        run: npm run lint
+
+      - name: Validate curriculum data
+        run: npm run validate
+
       - name: Build
         run: npm run build
+
+      # GitHub Pages serves 404.html for unknown paths; reusing the SPA entry point
+      # makes deep links such as /curriculum/outcomes work after a page reload.
+      - name: Add SPA fallback
+        run: cp dist/index.html dist/404.html
         
       - name: List build directory contents
         run: ls -la dist
