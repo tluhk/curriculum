@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useCurriculum } from "../state/CurriculumContext";
-import { checkCurriculum } from "../utils/checks";
+import { checkCurriculum, issuesFor } from "../utils/checks";
 import { NO_MODULE } from "../constants";
 import { SubjectEditor, ModuleEditor, OutcomeEditor } from "../components/admin/Editors";
 import Rail from "../components/shell/Rail";
@@ -24,7 +24,8 @@ function Admin() {
   useEffect(() => () => clearTimeout(timer.current), []);
 
   const issues = useMemo(() => checkCurriculum(curriculum), [curriculum]);
-  const warnSubjects = new Set(issues.filter((i) => i.target.type === "subject" && i.sev !== "info").map((i) => i.target.id));
+  const warnSubjects = new Set(issues.filter((i) => i.sev !== "info")
+    .flatMap((i) => [i.target, ...i.related]).filter((t) => t.type === "subject").map((t) => t.id));
   const nWarn = issues.filter((i) => i.sev !== "info").length;
   const mod = (id) => palette[id] || NO_MODULE;
 
@@ -127,7 +128,8 @@ function Admin() {
       )}
 
       {Editor && (
-        <Editor key={ed.type + ":" + ed.id} curriculum={curriculum} id={ed.id} palette={palette} onCommit={commit} onClose={() => setEd(null)} />
+        <Editor key={ed.type + ":" + ed.id} curriculum={curriculum} id={ed.id} palette={palette} onCommit={commit} onClose={() => setEd(null)}
+          issues={ed.id === "new" ? [] : issuesFor(issues, ed.type, ed.id)} />
       )}
       {toast && <div className="atoast" role="status">{toast}</div>}
     </div>
