@@ -2,19 +2,27 @@
 import { NO_MODULE, SEMESTER_EAP } from "../../constants";
 import { useCurriculum } from "../../state/CurriculumContext";
 import Rail from "../shell/Rail";
+import useRailTip from "../shell/useRailTip";
 
 export default function FilterRail({ modules, subjects, off, reqOnly, onToggle, onReqOnly, total }) {
   const { palette } = useCurriculum();
+  const eapOf = (id) => subjects.filter((s) => s.module === id).reduce((a, s) => a + s.credits, 0);
+  const { tipProps, tipEl } = useRailTip((id) => {
+    const m = modules.find((x) => x.id === id);
+    return m && <>{m.name}<small>{eapOf(id)} EAP{off[id] ? " · peidetud" : ""}</small></>;
+  });
   const summary = (
     <div className="railmini">
       <b>{total}</b><span className="mono">EAP</span>
       {modules.map((m) => {
         const cfg = palette[m.id] || NO_MODULE;
         return (
-          <button key={m.id} className="minidot" aria-pressed={!off[m.id]} title={m.name} aria-label={m.name}
-            onClick={() => onToggle(m.id)} style={{ "--tint": cfg.color, "--stripe": cfg.stripe }} />
+          <button key={m.id} className="minidot" aria-pressed={!off[m.id]} aria-label={m.name}
+            onClick={() => onToggle(m.id)} style={{ "--tint": cfg.color, "--stripe": cfg.stripe }}
+            {...tipProps(m.id)} />
         );
       })}
+      {tipEl}
     </div>
   );
   return (
@@ -27,7 +35,7 @@ export default function FilterRail({ modules, subjects, off, reqOnly, onToggle, 
         <div className="label">Moodulid</div>
         {modules.map((m) => {
           const cfg = palette[m.id] || NO_MODULE;
-          const eap = subjects.filter((s) => s.module === m.id).reduce((a, s) => a + s.credits, 0);
+          const eap = eapOf(m.id);
           return (
             <button key={m.id} className="chip" aria-pressed={!off[m.id]} onClick={() => onToggle(m.id)}
               style={{ "--tint": cfg.color, "--stripe": cfg.stripe }}>
