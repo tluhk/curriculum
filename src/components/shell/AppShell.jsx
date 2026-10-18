@@ -13,7 +13,7 @@ function TopBar() {
       <div className="seg" role="group" aria-label="Õppeaasta">
         {YEARS.map((y) => <button key={y} aria-pressed={y === year} onClick={() => setYear(y)}>{y}</button>)}
       </div>
-      <nav className="tabs">{tab("/", "Ained")}{tab("/outcomes", "Õpiväljundid")}{tab("/admin", "Haldus")}</nav>
+      <nav className="tabs">{tab("/", "Ained")}{tab("/outcomes", "Õpiväljundid")}{tab("/schedule", "Ajakava")}{tab("/admin", "Haldus")}</nav>
       {dirty && (
         <div className="draft">
           <span>Mustand (ainult selles brauseris)</span>

@@ -7,6 +7,8 @@ Curriculum development tool for Rakendusinformaatika (TLÜ HK), with three tabs 
   panel, and drag-and-drop that blocks moves breaking a prerequisite (crowded semesters only warn).
 - **Õpiväljundid** – coverage matrix of curriculum outcomes × subjects with a drill-down to module outcomes,
   KHS outcomes and data-health notes.
+- **Ajakava** – contact-week timeline per subject and a Thursday–Saturday week view with session details
+  (teacher, room, notes), from the ÕIS schedule export in `src/data/schedule-2026.json`.
 - **Haldus** – add / edit / delete subjects, modules and curriculum outcomes, plus a live data check. See [RAKENDUSE_ULEVAADE.md](RAKENDUSE_ULEVAADE.md) for the product overview (Estonian).
 
 ## Development
@@ -27,7 +29,7 @@ npm run build      # production build into dist/
 - `src/state/CurriculumContext.jsx` – current year, browser drafts, export
 - `src/components/shell/` – top bar and layout; `src/pages/` – `BoardPage`, `OutcomesPage`, `AdminPage`
 - `src/utils/graph.js` – prerequisite traversal and move rules; `outcomes.js` – coverage matrix;
-  `checks.js` – data checks; `adminOps.js` – create/update/delete keeping links consistent
+  `checks.js` – data checks; `schedule.js` – Ajakava timeline and week view; `adminOps.js` – create/update/delete keeping links consistent
 
 ## Updating the data
 
