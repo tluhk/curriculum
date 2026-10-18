@@ -15,7 +15,9 @@ const Field = ({ label, children }) => (
 );
 
 // Header, scrolling body and footer (errors, delete confirmation, Salvesta / Tühista / Kustuta) shared by all editors
-function Frame({ isNew, heading, errors, deleteLabel, canDelete, confirmText, onSave, onClose, onDelete, children }) {
+const SEV_CLASS = { viga: "bad", hoiatus: "warn", info: "info" };
+
+function Frame({ isNew, heading, issues = [], errors, deleteLabel, canDelete, confirmText, onSave, onClose, onDelete, children }) {
   const [confirm, setConfirm] = useState(false);
   return (
     <aside className="editor" aria-label={heading}>
@@ -23,7 +25,17 @@ function Frame({ isNew, heading, errors, deleteLabel, canDelete, confirmText, on
         <div><div className="label">{isNew ? "Lisa" : "Muuda"}</div><div className="edtitle">{heading}</div></div>
         <button onClick={onClose} aria-label="Sulge" className="x">×</button>
       </div>
-      <div className="edbody">{children}</div>
+      <div className="edbody">
+        {issues.length > 0 && (
+          <div className="edissues" role="note">
+            <span className="label">Kontroll ({issues.length})</span>
+            {issues.map((i) => (
+              <div key={i.text} className="edissue"><span className={"sev mono " + SEV_CLASS[i.sev]}>{i.sev}</span><span>{i.text}</span></div>
+            ))}
+          </div>
+        )}
+        {children}
+      </div>
       <div className="edfoot">
         {errors.length > 0 && <div className="errors">{errors.map((e) => <div key={e} className="err">{e}</div>)}</div>}
         {confirm && (
@@ -64,7 +76,7 @@ const OutcomeList = ({ items, onChange, onRemove }) =>
     </div>
   ));
 
-export function SubjectEditor({ curriculum, id, onCommit, onClose }) {
+export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
   const { subjects, modules } = curriculum;
   const [d, setD0] = useState(() => (id === "new" ? newSubject(modules) : clone(subjects.find((s) => s.id === id))));
   const setD = (patch) => setD0((x) => ({ ...x, ...patch }));
@@ -78,7 +90,7 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose }) {
 
   return (
     <Frame
-      isNew={id === "new"} heading={d.name || "Uus aine"} errors={errors} deleteLabel="Kustuta aine" canDelete
+      issues={issues} isNew={id === "new"} heading={d.name || "Uus aine"} errors={errors} deleteLabel="Kustuta aine" canDelete
       confirmText={(deps.length ? `Kustutamisel eemaldatakse eeldus ainetelt: ${deps.map((s) => s.name).join(", ")}. ` : "") +
         (links ? `Eemaldatakse ${links} seost mooduli väljunditega. ` : "") + `Kas kustutada aine „${d.name}“?`}
       onSave={() => onCommit(saveSubject(curriculum, id, d), id === "new" ? "Aine lisatud" : "Aine salvestatud")}
@@ -107,9 +119,11 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose }) {
         <div className="pills">
           {d.prerequisites.map((p) => {
             const y = subj[p] || { name: "?", semester: "?" }, bad = y.semester >= d.semester;
+            const elective = d.required && y.required === false;
             return (
-              <button key={p} className={"pill" + (bad ? " bad" : "")} title="Eemalda" onClick={() => setD({ prerequisites: d.prerequisites.filter((x) => x !== p) })}>
-                {y.name} · S{y.semester} ×
+              <button key={p} className={"pill" + (bad ? " bad" : elective ? " warn" : "")} onClick={() => setD({ prerequisites: d.prerequisites.filter((x) => x !== p) })}
+                title={elective ? "Valikaine kohustusliku aine eeldusena — klõpsa eemaldamiseks" : "Eemalda"}>
+                {y.name} · S{y.semester}{elective ? " · valik" : ""} ×
               </button>
             );
           })}
@@ -131,7 +145,7 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose }) {
   );
 }
 
-export function ModuleEditor({ curriculum, id, palette, onCommit, onClose }) {
+export function ModuleEditor({ curriculum, id, palette, onCommit, onClose, issues }) {
   const { subjects } = curriculum;
   const [d, setD0] = useState(() => {
     if (id === "new") { const [color, stripe] = SWATCHES[SWATCHES.length - 1]; return { name: "", objective: "", learningOutcomes: [], color, stripe }; }
@@ -148,7 +162,7 @@ export function ModuleEditor({ curriculum, id, palette, onCommit, onClose }) {
 
   return (
     <Frame
-      isNew={id === "new"} heading={d.name || "Uus moodul"} errors={errors} deleteLabel="Kustuta moodul" canDelete={!used.length}
+      issues={issues} isNew={id === "new"} heading={d.name || "Uus moodul"} errors={errors} deleteLabel="Kustuta moodul" canDelete={!used.length}
       confirmText={`Kas kustutada moodul „${d.name}“? Selle väljundite seosed õppekava väljunditega eemaldatakse.`}
       onSave={() => onCommit(saveModule(curriculum, id, d), id === "new" ? "Moodul lisatud" : "Moodul salvestatud")}
       onDelete={() => onCommit(deleteModule(curriculum, id), "Moodul kustutatud")}
@@ -204,7 +218,7 @@ export function ModuleEditor({ curriculum, id, palette, onCommit, onClose }) {
   );
 }
 
-export function OutcomeEditor({ curriculum, id, palette, onCommit, onClose }) {
+export function OutcomeEditor({ curriculum, id, palette, onCommit, onClose, issues }) {
   const { modules } = curriculum;
   const [d, setD0] = useState(() => (id === "new" ? { description: "", khsOutcome: "", moduleOutcomes: [] } : clone(curriculum.learningOutcomes.find((x) => x.id === id))));
   const setD = (patch) => setD0((x) => ({ ...x, ...patch }));
@@ -216,7 +230,7 @@ export function OutcomeEditor({ curriculum, id, palette, onCommit, onClose }) {
 
   return (
     <Frame
-      isNew={id === "new"} heading={id === "new" ? "Uus õppekava väljund" : "ÕV " + id} errors={errors} deleteLabel="Kustuta õpiväljund" canDelete
+      issues={issues} isNew={id === "new"} heading={id === "new" ? "Uus õppekava väljund" : "ÕV " + id} errors={errors} deleteLabel="Kustuta õpiväljund" canDelete
       confirmText={`Kas kustutada õppekava väljund ÕV ${id}?`}
       onSave={() => onCommit(saveOutcome(curriculum, id, d), id === "new" ? "Õpiväljund lisatud" : "Õpiväljund salvestatud")}
       onDelete={() => onCommit(deleteOutcome(curriculum, id), "Õpiväljund kustutatud")}

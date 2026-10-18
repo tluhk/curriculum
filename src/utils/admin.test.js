@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import curriculums from "../data/curriculum";
-import { checkCurriculum, subjectErrors } from "./checks";
+import { checkCurriculum, issuesFor, subjectErrors } from "./checks";
 import { saveSubject, deleteSubject, saveModule, deleteModule, saveOutcome } from "./adminOps";
 import { coverage, moduleOutcomeIndex } from "./outcomes";
 
@@ -24,6 +24,12 @@ describe("checks", () => {
   it("flags semesters that are not 30 EAP", () => expect(checkCurriculum(C).map((i) => i.text)).toContain("Semester 1 maht on 15 EAP (eeldatav 30)."));
   it("blocks moving a prerequisite after its dependent", () =>
     expect(subjectErrors(C.subjects, 1, { ...C.subjects[0], semester: 2 })).toHaveLength(1));
+  it("required → elective warning shows on both subjects", () => {
+    const C2 = { ...C, subjects: C.subjects.map((s) => (s.id === 1 ? { ...s, required: false } : s)) };
+    const issues = checkCurriculum(C2).filter((i) => i.sev === "hoiatus");
+    expect(issuesFor(issues, "subject", 2)).toHaveLength(1);
+    expect(issuesFor(issues, "subject", 1)).toEqual(issuesFor(issues, "subject", 2));
+  });
   it("2026 data has no errors", () =>
     expect(checkCurriculum(curriculums.find((c) => c.version === "2026")).filter((i) => i.sev === "viga")).toEqual([]));
 });

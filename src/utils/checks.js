@@ -1,12 +1,13 @@
 // Data checks for Haldus → Kontroll. Pure: takes one curriculum version, returns issues sorted by severity.
-// Each issue: { sev: "viga" | "hoiatus" | "info", text, target: { type: "subject"|"module"|"co"|"semester", id } }
+// Each issue: { sev: "viga" | "hoiatus" | "info", text, target: { type: "subject"|"module"|"co"|"semester", id }, related: [{ type, id }] }
+// `related` lists other records the issue is also about (e.g. the elective a required subject depends on).
 import { SEMESTER_EAP } from "../constants";
 
 const ORDER = { viga: 0, hoiatus: 1, info: 2 };
 
 export const checkCurriculum = ({ subjects, modules, learningOutcomes }) => {
   const issues = [];
-  const add = (sev, text, type, id) => issues.push({ sev, text, target: { type, id } });
+  const add = (sev, text, type, id, related = []) => issues.push({ sev, text, target: { type, id }, related });
   const subj = Object.fromEntries(subjects.map((s) => [s.id, s]));
   const soExists = (sid, oid) => !!subj[sid]?.outcomes.some((o) => o.id === oid);
 
@@ -15,8 +16,11 @@ export const checkCurriculum = ({ subjects, modules, learningOutcomes }) => {
       const y = subj[p];
       if (!y) return add("viga", `${s.name} viitab olematule eeldusainele #${p}.`, "subject", s.id);
       if (y.semester >= s.semester)
-        add("viga", `${s.name} (S${s.semester}) eeldab ainet ${y.name} (S${y.semester}) — eeldus peab olema varasemas semestris.`, "subject", s.id);
-      if (s.required && !y.required) add("hoiatus", `Kohustuslik aine ${s.name} eeldab valikainet ${y.name}.`, "subject", s.id);
+        add("viga", `${s.name} (S${s.semester}) eeldab ainet ${y.name} (S${y.semester}) — eeldus peab olema varasemas semestris.`, "subject", s.id,
+          [{ type: "subject", id: y.id }]);
+      if (s.required && !y.required)
+        add("hoiatus", `Kohustuslik aine „${s.name}“ eeldab valikainet „${y.name}“. Kui tudeng seda valikainet ei vali, ei saa ta eeldust täita. Tee „${y.name}“ kohustuslikuks või eemalda see eeldus.`,
+          "subject", s.id, [{ type: "subject", id: y.id }]);
     })
   );
 
@@ -59,6 +63,10 @@ export const checkCurriculum = ({ subjects, modules, learningOutcomes }) => {
 
   return issues.sort((a, b) => ORDER[a.sev] - ORDER[b.sev]);
 };
+
+// Issues about one record: where it is the target or one of the related records
+export const issuesFor = (issues, type, id) =>
+  issues.filter((i) => (i.target.type === type && i.target.id === id) || i.related.some((r) => r.type === type && r.id === id));
 
 // Errors that block saving a subject draft (prerequisites earlier, dependents later)
 export const subjectErrors = (subjects, id, draft) => {

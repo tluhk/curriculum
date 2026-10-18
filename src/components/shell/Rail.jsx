@@ -20,3 +20,4 @@ export default function Rail({ id, as: Tag = "aside", className, label, summary,
     </Tag>
   );
 }
+
