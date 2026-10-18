@@ -11,3 +11,17 @@
 .draft button{border:0;background:#fff;border-radius:4px;padding:4px 10px;cursor:pointer;font-size:13px}
 .main{flex:1;min-height:0;display:flex}
 @media(max-width:900px){.title{display:none}.draft span{display:none}}
+.siderail{position:relative}
+.siderail.closed{width:48px;padding:12px 0;align-items:center;gap:12px;overflow:hidden auto}
+.railtoggle{position:absolute;top:10px;right:8px;z-index:1;width:28px;height:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);color:var(--ink-3);cursor:pointer;font-size:14px;line-height:1}
+.railtoggle:hover{color:var(--ink);border-color:var(--line-2)}
+.railtoggle:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.siderail.closed .railtoggle{position:static;flex:none}
+.railmini{display:flex;flex-direction:column;align-items:center;gap:6px}
+.railmini .mono{font-size:11px;color:var(--ink-3)}
+.railmini b{font-size:15px;font-weight:600;line-height:1}
+.minidot{width:20px;height:20px;padding:0;border-radius:4px;border:1.5px solid var(--stripe);background:color-mix(in srgb,var(--tint) 60%,#fff);cursor:pointer}
+.minidot[aria-pressed=false]{background:transparent;border-color:var(--line);opacity:.55}
+.mininav{width:36px;padding:5px 0;border:0;border-radius:var(--radius);background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:500}
+.mininav.on{background:var(--sunken);font-weight:600}
+.mininav .count{font-size:10px;padding:0 5px}
