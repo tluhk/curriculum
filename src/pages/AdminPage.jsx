@@ -3,6 +3,7 @@ import { useCurriculum } from "../state/CurriculumContext";
 import { checkCurriculum } from "../utils/checks";
 import { NO_MODULE } from "../constants";
 import { SubjectEditor, ModuleEditor, OutcomeEditor } from "../components/admin/Editors";
+import Rail from "../components/shell/Rail";
 import "../components/admin/admin.css";
 
 const clip = (t = "", n) => (t.length > n ? t.slice(0, n) + "…" : t);
@@ -55,16 +56,25 @@ function Admin() {
   }
 
   const nav = [
-    ["subjects", "Ained", subjects.length],
-    ["modules", "Moodulid", modules.length],
-    ["outcomes", "Õppekava väljundid", learningOutcomes.length],
-    ["check", "Kontroll", nWarn, nWarn > 0],
+    ["subjects", "Ained", subjects.length, false, "Ai"],
+    ["modules", "Moodulid", modules.length, false, "Mo"],
+    ["outcomes", "Õppekava väljundid", learningOutcomes.length, false, "ÕV"],
+    ["check", "Kontroll", nWarn, nWarn > 0, "✓"],
   ];
   const Editor = ed && EDITOR[ed.type];
 
   return (
     <div className="admin">
-      <nav className="anav" aria-label="Haldus">
+      <Rail id="admin" as="nav" className="anav" label="Haldus" summary={
+        <div className="railmini">
+          {nav.map(([v, label, count, warn, short]) => (
+            <button key={v} className={"mininav" + (view === v ? " on" : "")} title={label} aria-label={label}
+              aria-current={view === v ? "page" : undefined} onClick={() => go(v)}>
+              {short}<span className={"count mono" + (warn ? " warn" : "")}>{count}</span>
+            </button>
+          ))}
+        </div>
+      }>
         <div className="label">Õppekava andmed</div>
         {nav.map(([v, label, count, warn]) => (
           <button key={v} className={"anavitem" + (view === v ? " on" : "")} aria-current={view === v ? "page" : undefined} onClick={() => go(v)}>
@@ -76,7 +86,7 @@ function Admin() {
           <button className="b primary" onClick={exportAll}>Ekspordi curriculum.js</button>
           <button className="b ghost" onClick={() => { if (window.confirm(`Visata ${year} mustand ära ja laadida andmed failist?`)) { reset(); setEd(null); say(`${year} andmed laaditud failist`); } }}>Lähtesta failist</button>
         </div>
-      </nav>
+      </Rail>
 
       {view === "check" ? (
         <section className="alist">
