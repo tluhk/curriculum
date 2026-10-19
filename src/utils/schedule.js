@@ -28,7 +28,9 @@ export const buildSchedule = (json, palette = {}) => {
       }),
     })),
   }));
-  return { rows, weeks };
+  // Drop the intro row when the schedule has no intro events (e.g. a second-year schedule)
+  const hasIntro = weeks.some((w) => w.days.some((d) => d.sessions.some((q) => q.isIntro)));
+  return { rows: hasIntro ? rows : rows.slice(1), weeks };
 };
 
 export const weekSessions = (week) => week.days.flatMap((d) => d.sessions);
