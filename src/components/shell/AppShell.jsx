@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { CurriculumProvider, useCurriculum } from "../../state/CurriculumContext";
 import { YEARS } from "../../constants";
+import Logo from "./Logo";
 import "./shell.css";
 
 function TopBar() {
@@ -9,7 +10,10 @@ function TopBar() {
   const tab = (to, label) => <NavLink key={to} to={{ pathname: to, search }} end className={({ isActive }) => "tab" + (isActive ? " on" : "")}>{label}</NavLink>;
   return (
     <header className="topbar">
-      <div className="title">{curriculum.name} õppekava</div>
+      <NavLink to={{ pathname: "/", search }} className="brand" aria-label={`${curriculum.name} õppekava – avaleht`}>
+        <Logo size={28} />
+        <span className="title">{curriculum.name} õppekava</span>
+      </NavLink>
       <div className="seg" role="group" aria-label="Õppeaasta">
         {YEARS.map((y) => <button key={y} aria-pressed={y === year} onClick={() => setYear(y)}>{y}</button>)}
       </div>
