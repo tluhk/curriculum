@@ -8,7 +8,7 @@ Curriculum development tool for Rakendusinformaatika (TLÜ HK), with three tabs 
 - **Õpiväljundid** – coverage matrix of curriculum outcomes × subjects with a drill-down to module outcomes,
   KHS outcomes and data-health notes.
 - **Ajakava** – contact-week timeline per subject and a Thursday–Saturday week view with session details
-  (teacher, room, notes), from the ÕIS schedule export in `src/data/schedule-2026.json`.
+  (teacher, room, notes), from ÕIS schedule exports in `src/data/schedule-<year>.json`.
 - **Haldus** – add / edit / delete subjects, modules and curriculum outcomes, plus a live data check. See [RAKENDUSE_ULEVAADE.md](RAKENDUSE_ULEVAADE.md) for the product overview (Estonian).
 
 ## Development
@@ -40,6 +40,16 @@ bar then shows **Mustand** with *Ekspordi curriculum.js* (downloads both years) 
 You can also edit `src/data/curriculum.js` by hand, then run `npm run validate`. Structural errors (unknown subjects/modules,
 missing or circular prerequisites) fail the check and the deploy. Dangling subject-outcome references
 are reported as warnings; fix them and then use `--strict` to enforce.
+
+## Adding a schedule
+
+Copy the timetable from ÕIS as plain text into a file, then convert it and register it in `src/data/schedules.js`:
+
+```bash
+npm run schedule:import -- ajakava.txt 2025 src/data/schedule-2025.json
+```
+
+Subjects are matched to that curriculum version by name (for module colours); the script lists any it can't match.
 
 ## Deployment
 

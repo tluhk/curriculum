@@ -1,0 +1,789 @@
+{
+  "year": "2025",
+  "source": "TLÜ ÕIS ajakava",
+  "subjects": {
+    "HKM5084": {
+      "name": "Graafilise disaini alused",
+      "module": 3,
+      "label": "HKM5084.HK"
+    },
+    "HKI5122": {
+      "name": "Veebiraamistike rakendamine",
+      "module": 3,
+      "label": "HKI5122.HK"
+    },
+    "HKI5121": {
+      "name": "Andmebaasid",
+      "module": 3,
+      "label": "HKI5121.HK"
+    },
+    "HKI5060": {
+      "name": "Videomängude disain",
+      "module": 4,
+      "label": "HKI5060.HK"
+    },
+    "HKI5123": {
+      "name": "Tagarakenduste arendamine",
+      "module": 4,
+      "label": "HKI5123.HK"
+    },
+    "HKI5120": {
+      "name": "Kasutajaliidese disain",
+      "module": 4,
+      "label": "HKI5120.HK"
+    },
+    "HKI5090": {
+      "name": "Erialane inglise keel II",
+      "module": 6,
+      "label": "HKI5090.HK"
+    }
+  },
+  "weeks": [
+    {
+      "week": 36,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-09-03",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKM5084",
+              "teacher": "Laura Hein",
+              "hours": 4,
+              "room": "Auditoorium 307",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-09-04",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKM5084",
+              "teacher": "Laura Hein",
+              "hours": 4,
+              "room": "Auditoorium 206",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-09-05",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5060",
+              "teacher": "Argo Ilves",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 38,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-09-17",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKM5084",
+              "teacher": "Laura Hein",
+              "hours": 4,
+              "room": "Arvutilabor 204",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-09-18",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5123",
+              "teacher": "Martti Raavel",
+              "hours": 4,
+              "room": "Teams",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5060",
+              "teacher": "Argo Ilves",
+              "hours": 4,
+              "room": "Arvutilabor 205",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-09-19",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5060",
+              "teacher": "Argo Ilves",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 40,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-10-01",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKM5084",
+              "teacher": "Laura Hein",
+              "hours": 4,
+              "room": "Arvutilabor 205",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-10-02",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKM5084",
+              "teacher": "Laura Hein",
+              "hours": 4,
+              "room": "Arvutilabor 205",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-10-03",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 42,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-10-15",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKM5084",
+              "teacher": "Laura Hein",
+              "hours": 4,
+              "room": "Arvutilabor 205",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-10-16",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5123",
+              "teacher": "Martti Raavel",
+              "hours": 4,
+              "room": "Arvutilabor 205",
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": "Arvutilabor 203",
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-10-17",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5060",
+              "teacher": "Argo Ilves",
+              "hours": 4,
+              "room": "Zoom",
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 44,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-10-29",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5120",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-10-30",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5120",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-10-31",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5060",
+              "teacher": "Argo Ilves",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 46,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-11-12",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5120",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-11-13",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5123",
+              "teacher": "Martti Raavel",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-11-14",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5060",
+              "teacher": "Argo Ilves",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 48,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-11-26",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5120",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-11-27",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5123",
+              "teacher": "Martti Raavel",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-11-28",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKM5084",
+              "teacher": "Laura Hein",
+              "hours": 4,
+              "room": null,
+              "note": "Kirjalik test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 50,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2026-12-10",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5120",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2026-12-11",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5123",
+              "teacher": "Martti Raavel",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Laupäev",
+          "date": "2026-12-12",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 1,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-01-07",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5122",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5120",
+              "teacher": "Juho Kalberg",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        },
+        {
+          "day": "Reede",
+          "date": "2027-01-08",
+          "sessions": [
+            {
+              "start": "10:00",
+              "end": "13:15",
+              "code": "HKI5123",
+              "teacher": "Martti Raavel",
+              "hours": 4,
+              "room": null,
+              "note": null
+            },
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5121",
+              "teacher": "Priidu Paomets",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-02-11",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5090",
+              "teacher": "Mari Kuli",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-02-25",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5090",
+              "teacher": "Mari Kuli",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-03-11",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5090",
+              "teacher": "Mari Kuli",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-03-25",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5090",
+              "teacher": "Mari Kuli",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-04-08",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5090",
+              "teacher": "Mari Kuli",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-04-22",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5090",
+              "teacher": "Mari Kuli",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "days": [
+        {
+          "day": "Neljapäev",
+          "date": "2027-05-13",
+          "sessions": [
+            {
+              "start": "14:15",
+              "end": "17:30",
+              "code": "HKI5090",
+              "teacher": "Mari Kuli",
+              "hours": 4,
+              "room": null,
+              "note": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
