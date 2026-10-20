@@ -2,13 +2,13 @@
 import { useMemo, useState } from "react";
 import { NO_MODULE, SWATCHES } from "../../constants";
 import { subjectErrors } from "../../utils/checks";
+import { semesterCount } from "../../utils/curricula";
 import {
   newSubject, saveSubject, deleteSubject, saveModule, deleteModule, saveOutcome, deleteOutcome,
 } from "../../utils/adminOps";
 
 const clone = (o) => JSON.parse(JSON.stringify(o));
 const clip = (t = "", n) => (t.length > n ? t.slice(0, n) + "…" : t);
-const SEMESTERS = [1, 2, 3, 4, 5, 6];
 
 const Field = ({ label, children }) => (
   <label className="field"><span className="label">{label}</span>{children}</label>
@@ -78,6 +78,7 @@ const OutcomeList = ({ items, onChange, onRemove }) =>
 
 export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
   const { subjects, modules } = curriculum;
+  const semesters = Array.from({ length: semesterCount(curriculum) }, (_, i) => i + 1);
   const [d, setD0] = useState(() => (id === "new" ? newSubject(modules) : clone(subjects.find((s) => s.id === id))));
   const setD = (patch) => setD0((x) => ({ ...x, ...patch }));
   const subj = useMemo(() => Object.fromEntries(subjects.map((s) => [s.id, s])), [subjects]);
@@ -106,7 +107,7 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
         </Field>
         <Field label="Semester">
           <select value={d.semester} onChange={(e) => setD({ semester: +e.target.value })}>
-            {SEMESTERS.map((s) => <option key={s} value={s}>{s}</option>)}
+            {semesters.map((s) => <option key={s} value={s}>{s}</option>)}
           </select>
         </Field>
         <Field label="Maht (EAP)"><input type="number" min="1" value={d.credits} onChange={(e) => setD({ credits: +e.target.value })} /></Field>

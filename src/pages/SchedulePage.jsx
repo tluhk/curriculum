@@ -168,14 +168,15 @@ function Schedule({ json, palette }) {
 }
 
 export default function SchedulePage() {
-  const { palette, year } = useCurriculum();
-  const json = schedules[year];
+  const { palette, year, code, curriculum } = useCurriculum();
+  const json = schedules[code]?.[year];
   if (!json) {
+    const have = Object.keys(schedules[code] || {});
     return (
       <div className="schedule">
-        <div className="ohead"><div><h1>Millal mis ainet õpetatakse?</h1><p>{year}. aasta ajakava andmeid pole. Ajakava on olemas: {Object.keys(schedules).join(", ")}.</p></div></div>
+        <div className="ohead"><div><h1>Millal mis ainet õpetatakse?</h1><p>{curriculum.name} {year} ajakava andmeid pole.{have.length ? ` Ajakava on olemas: ${have.join(", ")}.` : ""} Lisa ajakava ÕIS-ist (vt README, „Adding a schedule“).</p></div></div>
       </div>
     );
   }
-  return <Schedule key={year} json={json} palette={palette} />;
+  return <Schedule key={code + year} json={json} palette={palette} />;
 }

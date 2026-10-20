@@ -2,6 +2,9 @@ const curriculums = [
   {
     "id": 1,
     "name": "Rakendusinformaatika",
+    "code": "RIF",
+    "level": "rakenduskõrgharidus",
+    "semesters": 6,
     "objective": "Õppekava lõpetaja on IT-valdkonna spetsialist, kes osaleb ja vajadusel juhib veebipõhiste digilahenduste kõiki tarkvaraarenduse elutsükli etappe, luues andmepõhiseid, turvalisi ja kestlikku arengut toetavaid lahendusi, tegutsedes interdistsiplinaarsetes meeskondades ning täiustades oma professionaalseid pädevusi kogu karjääri vältel.",
     "learningOutcomes": [
       {
@@ -2411,6 +2414,9 @@ const curriculums = [
   {
     "id": 2,
     "name": "Rakendusinformaatika",
+    "code": "RIF",
+    "level": "rakenduskõrgharidus",
+    "semesters": 6,
     "objective": "Õppekava lõpetaja on IT-valdkonna spetsialist, kes osaleb ja vajadusel juhib veebipõhiste digilahenduste kõiki tarkvaraarenduse elutsükli etappe, luues andmepõhiseid, turvalisi ja kestlikku arengut toetavaid lahendusi, tegutsedes interdistsiplinaarsetes meeskondades ning täiustades oma professionaalseid pädevusi kogu karjääri vältel.",
     "learningOutcomes": [
       {

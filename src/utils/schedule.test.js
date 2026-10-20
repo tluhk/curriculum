@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import json from "../data/schedule-2026.json";
-import json2025 from "../data/schedule-2025.json";
+import json from "../data/schedules/RIF-2026.json";
+import json2025 from "../data/schedules/RIF-2025.json";
 import { buildSchedule, weekCell, weekNotes, timeRange, INTRO } from "./schedule";
 
 const { rows, weeks } = buildSchedule(json, { 2: { stripe: "#5E9CC4" }, 3: { stripe: "#4F9C72" } });

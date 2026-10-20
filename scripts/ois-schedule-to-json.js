@@ -1,6 +1,6 @@
 // Converts a schedule copied from ÕIS (plain text) into the JSON used by the Ajakava tab.
-// Usage: node scripts/ois-schedule-to-json.js <ois.txt> <version> [out.json]
-//   e.g. node scripts/ois-schedule-to-json.js ajakava.txt 2025 src/data/schedule-2025.json
+// Usage: node scripts/ois-schedule-to-json.js <ois.txt> <code> <version> [out.json]
+//   e.g. node scripts/ois-schedule-to-json.js ajakava.txt RIF 2025   (writes src/data/schedules/RIF-2025.json)
 // Then register the file in src/data/schedules.js.
 //
 // Expected input, as ÕIS prints it ("NN. nädal" lines are optional; the week is taken from the date):
@@ -17,14 +17,14 @@ const MONTHS = ['jaanuar', 'veebruar', 'märts', 'aprill', 'mai', 'juuni', 'juul
 // ÕIS name -> curriculum name, where they differ
 const ALIASES = { 'Graafilise disaini alused': 'Graafiline disain' };
 
-const [input, version, out] = process.argv.slice(2);
-if (!input || !version) {
-  console.error('Usage: node scripts/ois-schedule-to-json.js <ois.txt> <version> [out.json]');
+const [input, code, version, out = `src/data/schedules/${code}-${version}.json`] = process.argv.slice(2);
+if (!input || !code || !version) {
+  console.error('Usage: node scripts/ois-schedule-to-json.js <ois.txt> <code> <version> [out.json]');
   process.exit(1);
 }
-const curriculum = curriculums.find((c) => c.version === version);
+const curriculum = curriculums.find((c) => c.code === code && c.version === version);
 if (!curriculum) {
-  console.error(`No curriculum version ${version} in src/data/curriculum.js`);
+  console.error(`No curriculum ${code} ${version} in src/data/curriculum.js (export it from the app first if it is new)`);
   process.exit(1);
 }
 
@@ -90,10 +90,10 @@ lines.forEach((raw, i) => {
   console.warn(`Line ${i + 1} skipped: ${line}`);
 });
 
-const json = { year: version, source: 'TLÜ ÕIS ajakava', subjects, weeks };
+const json = { code, year: version, source: 'TLÜ ÕIS ajakava', subjects, weeks };
 const text = JSON.stringify(json, null, 2) + '\n';
-if (out) fs.writeFileSync(out, text);
-else process.stdout.write(text);
+fs.writeFileSync(out, text);
+console.error(`Wrote ${out}`);
 
 const n = weeks.reduce((a, w) => a + w.days.reduce((b, d) => b + d.sessions.length, 0), 0);
 console.error(`${weeks.length} weeks, ${n} sessions, ${Object.keys(subjects).length} subjects`);

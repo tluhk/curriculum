@@ -1,4 +1,4 @@
-// Pure helpers for the Ajakava view. Input is an ÕIS schedule export (see src/data/schedule-2026.json):
+// Pure helpers for the Ajakava view. Input is an ÕIS schedule export (see src/data/schedules/RIF-2026.json):
 // { subjects: { code: { name, module, label } }, weeks: [{ week, days: [{ day, date, sessions: [...] }] }] }
 export const DAYS = ["Neljapäev", "Reede", "Laupäev"];
 export const INTRO = "INTRO"; // all events without a module (aktus, infotund, paigutustest) share one row
