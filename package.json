@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "validate": "node validate-outcomes.js",
     "test": "vitest run",
-    "schedule:import": "node scripts/ois-schedule-to-json.js"
+    "schedule:import": "node scripts/ois-schedule-to-json.js",
+    "curriculum:import": "node scripts/ois-curriculum-to-json.js"
   },
   "dependencies": {
     "react": "^18.3.1",

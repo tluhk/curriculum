@@ -18,7 +18,17 @@ All curricula live in `src/data/curriculum.js`, one entry per curriculum version
 semester rows (6 / 4 by default). Pick a curriculum from the menu next to the logo; the URL carries it as
 `?c=RIF&year=2026`.
 
-To add one, open **Haldus → Õppekavad → Uus õppekava** (or *Uus aasta* to start a new year as a copy).
+To import one from ÕIS, open the curriculum version page in ÕIS (Õppekavad → curriculum), save it as HTML and run
+
+```bash
+npm run curriculum:import -- TLU_OIS_TJ.html TJ   # adds or replaces TJ <year> in src/data/curriculum.js
+```
+
+It takes the name, level, semesters, objective, curriculum and module outcomes, modules and subjects (code, EAP,
+exam/pass, required/elective, semester from the nominal plan). Prerequisites, subject outcomes and the links between
+outcome levels are not on that page; add them in Haldus.
+
+To start one by hand, open **Haldus → Õppekavad → Uus õppekava** (or *Uus aasta* to start a new year as a copy).
 It stays in this browser until you export `curriculum.js` and commit it.
 
 ## Development

@@ -7,7 +7,7 @@ const master = newCurriculum(curriculums, { code: "MAG", name: "Magistrikava", l
 describe("curricula", () => {
   it("groups versions by code, applied curricula before master's", () => {
     const list = listCurricula([...curriculums, master]);
-    expect(list.map((g) => g.code)).toEqual(["RIF", "MAG"]);
+    expect(list.map((g) => g.code)).toEqual(["RIF", "TJ", "MAG"]);
     expect(list[0].versions.map((v) => v.version)).toEqual(["2025", "2026"]);
   });
   it("uses the semester count of the curriculum", () => {
@@ -16,7 +16,7 @@ describe("curricula", () => {
   });
   it("new curricula and years get unique ids and keys", () => {
     const copy = copyVersion(curriculums, curriculums[1], "2027");
-    expect(copy.id).toBe(3);
+    expect(copy.id).toBe(Math.max(...curriculums.map((c) => c.id)) + 1);
     expect(keyOf(copy)).toBe("RIF.2027");
     expect(copy.subjects).toEqual(curriculums[1].subjects);
     expect(copy.subjects).not.toBe(curriculums[1].subjects);
