@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { useCurriculum } from "../state/CurriculumContext";
 import { checkCurriculum, issuesFor } from "../utils/checks";
 import { NO_MODULE } from "../constants";
 import { SubjectEditor, ModuleEditor, OutcomeEditor } from "../components/admin/Editors";
+import CurriculumSettings from "../components/admin/CurriculumSettings";
 import Rail from "../components/shell/Rail";
 import useRailTip from "../components/shell/useRailTip";
 import "../components/admin/admin.css";
@@ -11,11 +13,14 @@ const clip = (t = "", n) => (t.length > n ? t.slice(0, n) + "…" : t);
 const VIEW_OF = { subject: "subjects", module: "modules", co: "outcomes" };
 const EDITOR = { subject: SubjectEditor, module: ModuleEditor, co: OutcomeEditor };
 const SEV_CLASS = { viga: "bad", hoiatus: "warn", info: "info" };
+let lastView = "subjects"; // survives the remount when switching curriculum or year
 
 function Admin() {
-  const { curriculum, palette, update, reset, exportAll, year } = useCurriculum();
+  const { curriculum, curricula, palette, update, reset, exportAll, year, isNew } = useCurriculum();
   const { subjects, modules, learningOutcomes } = curriculum;
-  const [view, setView] = useState("subjects");
+  const { state } = useLocation();
+  const [view, setView0] = useState(() => state?.view || lastView);
+  const setView = (v) => { lastView = v; setView0(v); };
   const [q, setQ] = useState("");
   const [ed, setEd] = useState(null); // { type, id }
   const [toast, setToast] = useState("");
@@ -59,6 +64,7 @@ function Admin() {
   }
 
   const nav = [
+    ["curriculum", "Õppekavad", curricula.length, false, "Õk"],
     ["subjects", "Ained", subjects.length, false, "Ai"],
     ["modules", "Moodulid", modules.length, false, "Mo"],
     ["outcomes", "Õppekava väljundid", learningOutcomes.length, false, "ÕV"],
@@ -86,13 +92,19 @@ function Admin() {
           </button>
         ))}
         <div className="anavfoot">
-          <p>Andmed on laetud failist src/data/curriculum.js ({year}). Muudatused salvestatakse brauseris; ekspordi uus curriculum.js ja pane see repositooriumi.</p>
+          <p>{isNew
+            ? `${curriculum.name} ${year} on uus ja ainult selles brauseris. Ekspordi curriculum.js ja pane see repositooriumi.`
+            : `Andmed on laetud failist src/data/curriculum.js (${curriculum.name} ${year}). Muudatused salvestatakse brauseris; ekspordi uus curriculum.js ja pane see repositooriumi.`}</p>
           <button className="b primary" onClick={exportAll}>Ekspordi curriculum.js</button>
-          <button className="b ghost" onClick={() => { if (window.confirm(`Visata ${year} mustand ära ja laadida andmed failist?`)) { reset(); setEd(null); say(`${year} andmed laaditud failist`); } }}>Lähtesta failist</button>
+          {isNew
+            ? <button className="b ghost" onClick={() => { if (window.confirm(`Kustutada ${curriculum.name} ${year}? Seda pole veel eksporditud.`)) reset(); }}>Kustuta uus {year}</button>
+            : <button className="b ghost" onClick={() => { if (window.confirm(`Visata ${year} mustand ära ja laadida andmed failist?`)) { reset(); setEd(null); say(`${year} andmed laaditud failist`); } }}>Lähtesta failist</button>}
         </div>
       </Rail>
 
-      {view === "check" ? (
+      {view === "curriculum" ? (
+        <CurriculumSettings onDone={say} />
+      ) : view === "check" ? (
         <section className="alist">
           <h1>Andmete kontroll</h1>
           <p className="lead">Reeglid arvutatakse iga muudatusega uuesti. Klõpsa kirjel, et see avada.</p>
@@ -137,7 +149,7 @@ function Admin() {
 }
 
 export default function AdminPage() {
-  const { year } = useCurriculum();
-  // Remount on year switch so an open editor never saves into the other version
-  return <Admin key={year} />;
+  const { code, year } = useCurriculum();
+  // Remount on curriculum or year switch so an open editor never saves into another version
+  return <Admin key={code + "." + year} />;
 }

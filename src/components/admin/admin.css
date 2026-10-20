@@ -69,3 +69,17 @@
 .edissue{display:flex;gap:10px;align-items:baseline;font-size:13px;line-height:1.45}
 .edissues .sev{background:#fff}
 .editor .pill.warn{border-color:var(--warn);background:var(--warn-bg)}
+.csettings .scroll{gap:16px}
+.ctable{display:flex;flex-direction:column;gap:4px}
+.crow{display:grid;grid-template-columns:60px minmax(0,1.4fr) minmax(0,1fr) 110px 200px;gap:12px;align-items:baseline;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:var(--radius);padding:10px 14px;cursor:pointer;font-size:14px}
+.crow.on{border-color:var(--ink)}
+.crow .code{font-weight:600}
+.cname{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ccards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;align-items:start}
+.ccard{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.ccard h2{margin:0;font-size:16px;font-weight:600}
+.ccard h2 .mono{font-weight:400;margin-left:6px}
+.ccard p{margin:0}
+.ccard input,.ccard select,.ccard textarea{width:100%;border:1px solid var(--line-2);border-radius:var(--radius);padding:8px 10px;font-size:14px;background:#fff}
+.ccard input:focus,.ccard select:focus,.ccard textarea:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.ccard .b:disabled{opacity:.4;cursor:not-allowed}

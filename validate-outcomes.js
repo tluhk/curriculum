@@ -12,7 +12,7 @@ const errors = [];
 const warnings = [];
 
 curriculums.forEach((curriculum) => {
-  const label = `${curriculum.name} ${curriculum.version}`;
+  const label = `${curriculum.code || curriculum.name} ${curriculum.version}`;
   const err = (message) => errors.push(`[${label}] ${message}`);
   const warn = (message) => (strict ? err : (m) => warnings.push(`[${label}] ${m}`))(message);
 
@@ -79,4 +79,4 @@ if (errors.length) {
   errors.forEach((e) => console.error(`  - ${e}`));
   process.exit(1);
 }
-console.log(`✅ Curriculum data is valid (${curriculums.length} curricula checked)`);
+console.log(`✅ Curriculum data is valid (${curriculums.length} curriculum versions checked)`);

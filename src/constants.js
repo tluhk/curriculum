@@ -9,9 +9,6 @@ export const moduleConfig = {
   7: { name: "Lõputöö", color: "#FFE5B4", stripe: "#D9A93F" },
 };
 export const moduleColors = Object.fromEntries(Object.entries(moduleConfig).map(([id, { color }]) => [id, color]));
-export const YEARS = ["2025", "2026"];
-export const DEFAULT_YEAR = "2025";
-export const parseYear = (v) => (YEARS.includes(v) ? v : DEFAULT_YEAR);
 export const SEMESTER_EAP = 30;
 export const SEMESTER_SOFT_LIMIT = 6; // subjects per semester before a warning (never blocks)
 

@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { useCurriculum } from "../state/CurriculumContext";
 import { byId, dependentsMap, upstream, downstream, checkMove, moveSubject, creditsBy } from "../utils/graph";
 import { SEMESTER_SOFT_LIMIT } from "../constants";
+import { semesterCount } from "../utils/curricula";
 import FilterRail from "../components/board/FilterRail";
 import SemesterRow from "../components/board/SemesterRow";
 import SubjectPanel from "../components/board/SubjectPanel";
@@ -23,7 +24,8 @@ export default function BoardPage() {
   const related = (id) => !focus || id === focus || up.has(id) || down.has(id);
 
   const visible = (s) => !off[s.module] && (!reqOnly || s.required);
-  const semesters = [...new Set(subjects.map((s) => s.semester))].sort((a, b) => a - b);
+  // Every semester of the curriculum gets a row, so subjects can be dragged into an empty one
+  const semesters = [...new Set([...Array.from({ length: semesterCount(curriculum) }, (_, i) => i + 1), ...subjects.map((s) => s.semester)])].sort((a, b) => a - b);
   const cols = Math.max(6, ...Object.values(subjects.reduce((a, s) => ((a[s.semester] = (a[s.semester] || 0) + 1), a), {})));
   const credits = creditsBy(subjects.filter(visible), "semester");
 

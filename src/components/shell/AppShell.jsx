@@ -1,28 +1,32 @@
+import { useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { CurriculumProvider, useCurriculum } from "../../state/CurriculumContext";
-import { YEARS } from "../../constants";
 import Logo from "./Logo";
+import CurriculumSwitcher from "./CurriculumSwitcher";
 import "./shell.css";
 
 function TopBar() {
-  const { year, setYear, curriculum, dirty, reset, exportAll } = useCurriculum();
+  const { year, setYear, curriculum, group, dirty, isNew, reset, exportAll } = useCurriculum();
   const { search } = useLocation();
+  useEffect(() => { document.title = `${curriculum.name} ${year} · Õppekava`; }, [curriculum.name, year]);
   const tab = (to, label) => <NavLink key={to} to={{ pathname: to, search }} end className={({ isActive }) => "tab" + (isActive ? " on" : "")}>{label}</NavLink>;
   return (
     <header className="topbar">
-      <NavLink to={{ pathname: "/", search }} className="brand" aria-label={`${curriculum.name} õppekava – avaleht`}>
+      <NavLink to={{ pathname: "/", search }} className="brand" aria-label="Ained – avaleht">
         <Logo size={28} />
-        <span className="title">{curriculum.name} õppekava</span>
       </NavLink>
+      <CurriculumSwitcher />
       <div className="seg" role="group" aria-label="Õppeaasta">
-        {YEARS.map((y) => <button key={y} aria-pressed={y === year} onClick={() => setYear(y)}>{y}</button>)}
+        {group.versions.map((v) => <button key={v.version} aria-pressed={v.version === year} onClick={() => setYear(v.version)}>{v.version}</button>)}
       </div>
       <nav className="tabs">{tab("/", "Ained")}{tab("/outcomes", "Õpiväljundid")}{tab("/schedule", "Ajakava")}{tab("/admin", "Haldus")}</nav>
       {dirty && (
         <div className="draft">
-          <span>Mustand (ainult selles brauseris)</span>
+          <span>{isNew ? "Uus, ainult selles brauseris" : "Mustand (ainult selles brauseris)"}</span>
           <button onClick={exportAll}>Ekspordi curriculum.js</button>
-          <button onClick={() => window.confirm("Visata mustand ära?") && reset()}>Lähtesta</button>
+          {isNew
+            ? <button onClick={() => window.confirm(`Kustutada ${curriculum.name} ${year}? Seda pole veel eksporditud.`) && reset()}>Kustuta</button>
+            : <button onClick={() => window.confirm("Visata mustand ära?") && reset()}>Lähtesta</button>}
         </div>
       )}
     </header>
