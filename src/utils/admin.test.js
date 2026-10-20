@@ -30,8 +30,8 @@ describe("checks", () => {
     expect(issuesFor(issues, "subject", 2)).toHaveLength(1);
     expect(issuesFor(issues, "subject", 1)).toEqual(issuesFor(issues, "subject", 2));
   });
-  it("2026 data has no errors", () =>
-    expect(checkCurriculum(curriculums.find((c) => c.code === "RIF" && c.version === "2026")).filter((i) => i.sev === "viga")).toEqual([]));
+  it.each([["RIF", "2026"], ["TJ", "2026"]])("%s %s data has no errors", (code, version) =>
+    expect(checkCurriculum(curriculums.find((c) => c.code === code && c.version === version)).filter((i) => i.sev === "viga")).toEqual([]));
 });
 
 describe("adminOps", () => {
