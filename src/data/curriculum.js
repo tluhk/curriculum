@@ -5277,9 +5277,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Valitud ettevõttes või organisatsioonis koostöiselt praktika juhendaja(te) ja praktika partneri(te)ga ning mentoritega valdkondliku tegevuse meeskondlik planeerimine, eesmärgistamine ja läbiviimine.",
+        "objective": "Üliõpilane saab praktilise kogemuse professionaalset arengut toetavate erialaste teadmiste ja oskuste sidumisest ning meeskonnatööst.",
+        "outcomes": [
+          {
+            "id": 95,
+            "description": "meeskondlikult planeerib ja viib ellu praktika tegevusi lähtuvalt praktikapartneri ja sihtrühma ootustest, määratletud probleemidest ja eesmärkidest"
+          },
+          {
+            "id": 96,
+            "description": "seostab praktika eesmärki täites tegevused tervisedenduse valdkonnaga"
+          },
+          {
+            "id": 97,
+            "description": "loob seoseid erialase teoreetilise materjali ning praktika kogemuse vahel"
+          },
+          {
+            "id": 98,
+            "description": "analüüsib ning esitleb praktikal kogetut, õpitut ning mõistab selles professionaalse arengu konteksti."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5294,9 +5311,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 8,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Koostöiselt praktika juhendaja(te) ja praktika partneri(te)ga vastavalt institutsiooni ning sihtrühma spetsiifikale probleemi, sekkumisvajaduste ja -võimaluste määratlemine, võimalusel ka elluviimine tuginedes varasematele terviseuuringutele ja TLÜ HK lõputöödele.",
+        "objective": "Üliõpilane seob professionaalset arengut toetavaid erialaseid teadmisi ja oskusi tuginedes tõenduspõhistele allikatele.",
+        "outcomes": [
+          {
+            "id": 37,
+            "description": "loob seoseid varasemate teadusuuringute, praktiliste sekkumisvajaduste ning -võimaluste vahel sihtrühma tervisliku eluviisi toetamiseks"
+          },
+          {
+            "id": 38,
+            "description": "leiab, loeb ja mõistab erinevaid tegevusi reguleerivaid õigusakte"
+          },
+          {
+            "id": 39,
+            "description": "planeerib koostöiselt praktika juhendaja või praktika partneriga ja võimalusel viib ellu eesmärgistatud sekkumisi sihtrühma tervisliku eluviisiga seotud hoiakute, teadmiste ja käitumise kujundamiseks"
+          },
+          {
+            "id": 40,
+            "description": "analüüsib oma teoreetiliste teadmiste ja praktiliste oskuste taset."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5311,9 +5345,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 8,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Korduv individuaalne liikumise ja/või toitumise nõustamise protsessi läbiviimine kasutades efektiivseid muutuste esilekutsumise meetodeid ning katsetades ja analüüsides nõustamiseks sobivaid digitehnoloogilisi lahendusi. Vajaduspõhiste digitehnoloogiliste loovlahenduste väljatöötamine. Tervisesõnumite jagamine meedias.",
+        "objective": "Üliõpilane viib läbi liikumise ja toitumise nõustamist katsetades digitehnoloogilisi lahendusi ning jagab tervisesõnumeid meedias.",
+        "outcomes": [
+          {
+            "id": 109,
+            "description": "viib läbi liikumise ja/või toitumise nõustamist tuginedes teoreetilistele teadmistele, eneseanalüüsile ja tagades andmetöötluse turvalisuse"
+          },
+          {
+            "id": 110,
+            "description": "omab ülevaadet tervisetehnoloogiatest ja digitehnoloogilistest lahendustest elukvaliteedi parandamiseks ja tervise edendamiseks"
+          },
+          {
+            "id": 111,
+            "description": "töötab välja idee või kontseptsiooni digilahenduse loomiseks arvestades ühiskondlikke ja eetilisi aspekte ning erialast rolli"
+          },
+          {
+            "id": 112,
+            "description": "jagab tervisesõnumeid meedias ja analüüsib nende õnnestumist."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5328,9 +5379,34 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 8,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Organisatsioonis toimivate terviseprotsesside analüüsimine, probleemide ja sihtrühmade määratlemine. Koostöiselt praktikaasutuse juhtkonnaga tuvastatud probleemidest tervist edendavate tegevuste kavandamine ning elluviimine.",
+        "objective": "Üliõpilane planeerib ja viib ellu era- või avaliku sektori organisatsioonis tervist edendavaid tegevusi ning kinnistab tegevuse seostamist eelnevalt õpitud teoreetiliste teadmistega.",
+        "outcomes": [
+          {
+            "id": 55,
+            "description": "analüüsib tuginedes varasematele teadusuuringutele era- või avaliku sektori organisatsiooni personali/sihtrühma terviseprotsesse"
+          },
+          {
+            "id": 56,
+            "description": "määratleb probleemid, sekkumisvajadused ja -võimalused"
+          },
+          {
+            "id": 57,
+            "description": "teeb koostööd praktikaasutuse juhtkonnaga"
+          },
+          {
+            "id": 58,
+            "description": "planeerib ja viib ellu eesmärgistatud sekkumisi sihtrühma tervise edendamiseks"
+          },
+          {
+            "id": 59,
+            "description": "analüüsib võimalike pingeolukordi arvestades füüsilist ja vaimset tervist mõjutavate teguritega"
+          },
+          {
+            "id": 60,
+            "description": "hindab kriitiliselt oma teoreetiliste teadmiste ja praktiliste oskuste taset ning reflekteerib oma professionaalset arengut."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5345,9 +5421,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Õppekorraldus TLÜs, juhtumianalüüsidepõhine õppekorralduslike dokumentidega tutvumine.\nÕpioskused: õpistiilid ja -strateegiad, õppimise planeerimine, ajajuhtimine, enesejuhtimine, eksamiteks ja arvestusteks valmistumine, vaimse ja füüsilise tervise hoidmine.\nEneseanalüüs „Mina õppijana“, õpingute planeerimine ja teadvustamine.\nGrupis õppimine, grupiprotsesside mõistmine ja koostöö planeerimine ning juhtimine.\nTeadusandmebaasid, infopäringu sõnastamine, otsingutehnikad, sobilike infoallikate määratlemine, leidmine ja valik. Erinevate informatsiooniallikate kriitiline hindamine, faktide eristamine arvamustest. ning loogiliselt põhjendatud argumentide loomine. Kriitilise mõtlemise, lugemise ja kirjutamise meetodite ja strateegiate rakendamine.\nAakadeemilise teksti liigid, kriitiline lugemine ja kirjutamine, konspekteerimine, esinemine ja ettekannete tegemine, kirjalike tööde vormistamine, viitamine.\nDigipädevus õppetöös ja erialases tegevuses enamkasutatavad e-keskkonnad, eriala toetavad IKT vahendid ja levinumad programmid (esitlus, pilverakendused, sotsiaalne meedia, õpikeskkonnad).",
+        "objective": "Üliõpilane omandab akadeemilises keskkonnas ja erialaseks tegutsemiseks vajalikud baasteadmised ning arendab eesmärgistamise ja enesejuhtimise oskusi.",
+        "outcomes": [
+          {
+            "id": 1,
+            "description": "teab Tallinna Ülikooli õppekorralduslikke dokumente ja oskab leida infot võimalikele õppekorralduslikele küsimuste lahendamiseks"
+          },
+          {
+            "id": 2,
+            "description": "kasutab kriitilise mõtlemise, lugemise, kirjutamise meetodeid ja strateegiaid, analüüsib argumentide sisulist külge ning esitab oma seisukohti nii suuliselt kui kirjalikult (vormistabja viidab nõuetekohaselt)"
+          },
+          {
+            "id": 3,
+            "description": "analüüsib kriitiliselt oma õpistiile ja -strateegiaid, on teadlik ja kasutab tõhusaid aja- ja enesejuhtimise meetodeid, et tagada toimetulek pingeolukorras"
+          },
+          {
+            "id": 4,
+            "description": "valdab õppetöös kasutatavaid õpikeskkondi (ÕIS, Moodle) ja kasutab õppetegevust toetavaid enamlevinuid programme."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5362,11 +5455,28 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Erinevate psühholoogia lähemiste tutvustus. Psüühika bioloogilised alused. Närvisüsteemi struktuurid ja funktsioneerimine. Tunnetusprotsessid: aistingud, taju, mälu, tähelepanu. Mõtlemine. Keel. Emotsioonid ja motivatsioon. Arenguteooriad. Intelligentsuse erinevad mudelid ja mõõtmine. Isiksuseteooriad. Kliiniline psühholoogia, psühhoteraapia ja psühhopatoloogia. Erinevate sotsiaalpsühholoogia uurimisvaldkondade tutvustus: eneseteadvus ja identiteet, sotsiaalne taju ja hoiakud, suhtlemine, inimestevahelised suhted ja sotsiaalne mõju, grupid ja grupiprotsessid. Samuti käsitletakse sotsiaalpsühholoogia kujunemislugu, uurimissuundi ja meetodeid, selle teadusharu rakendusvaldkondi. Käsitletakse grupi mõju inimese käitumisele, sotsiaalseid eelarvamusi, sotsiaalseid rolle. Tutvutakse ekstreemsete käitumisviisidega grupis, agressiivsuse ja altruismiga.",
+        "objective": "Kujundada integreeritud teadmine psühholoogia eri suundadest ja rakendamise võimalustest. Toetada arusaamise kujunemist inimesest kui biopsühhosotsiaalsest reaalsust mõtestavast tervikust.",
+        "outcomes": [
+          {
+            "id": 84,
+            "description": "omab ülevaadet tänapäevasest teaduslikust psühholoogiast"
+          },
+          {
+            "id": 85,
+            "description": "mõistab inimese psüühika funktsioneerimise põhilisi seaduspärasusi ja nende seotust keskkondlike teguritega"
+          },
+          {
+            "id": 86,
+            "description": "seostab teaduslikku psühholoogiat rakenduslike väljunditega"
+          },
+          {
+            "id": 87,
+            "description": "analüüsib iseennast ja ümbritsevat maailma teadusliku psühholoogia printsiipidest ja käsitlustest lähtuvalt."
+          }
+        ],
         "assessment": "Eksam",
-        "comment": "",
+        "comment": "Tabelis: ei saa muuta (üleülikooliline aine)",
         "nonUnique": false
       },
       {
@@ -5379,9 +5489,34 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Õppetegevus toimub 6-liikmelistes rühmades. ELU õppeaines moodustavad projektirühma üliõpilased vähemalt kolmelt akadeemiliselt suunalt.\n\nELU õppeaines teostatakse projekte juhendaja(te) ja üliõpilaste koostööl, mis sisaldab ühise teema või probleemi mõtestamist, eesmärkide püstitamist, tegevuskava koostamist ning selle eesmärgipärast täitmist.\n\nELU õppeaines osalemist toetavad üliõpilastele mõeldud töötoad ja seminarid.",
+        "objective": "ELU õppeaine eesmärk on toetada üliõpilaste üldpädevuste süvendamist ja selle kaudu tõsta õppijate interdistsiplinaarsete probleemide lahendamise pädevuse kujunemist.",
+        "outcomes": [
+          {
+            "id": 31,
+            "description": "loob seoseid ja analüüsib ELU projektis seatud eesmärke ja nende lahendusvõimalusi nii enda kui teiste erialade perspektiividest lähtudes"
+          },
+          {
+            "id": 32,
+            "description": "kasutab ELU projekti elluviimise käigus omandatud uusi erialaseid ja erialade vahelisi teadmisi ning tunneb ära nende rakendamisvõimalused"
+          },
+          {
+            "id": 33,
+            "description": "rakendab projekti- ja meeskonnatöö toimimise põhimõtteid, sh rollide jaotamine, vastutuse võtmine, panustamine grupitöösse ning on omandanud ajajuhtimise oskused"
+          },
+          {
+            "id": 34,
+            "description": "analüüsib projekti edenemist ja selle tulemuslikkust, hinnates oma tegevusi kriitiliselt ja kavandades parendusmeetmeid"
+          },
+          {
+            "id": 35,
+            "description": "analüüsib enda ja teiste rolli ja vastutust projekti tegevuste ja eesmärkide elluviimisel"
+          },
+          {
+            "id": 36,
+            "description": "tutvustab projekti tulemusi sidusrühmadele ja/või avalikkusele."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5396,9 +5531,22 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 3,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Põhjalik tutvumine varem kaitstud erialaste lõputööde ja empiiriliste materjalidega. Läbi ühiste arutelude erialaste teemade, uurimisprobleemide, -küsimuste ja metodoloogiliste plaanide analüüsimine. Uurimisprotsessi täpsem planeerimine, erialase lõputöö lähteülesande kinnitamine ja lõputöö esimese etapi valmimine.",
+        "objective": "Üliõpilane genereerib ideid ja valib sobiva uurimismeetodi erialase lõputööga seotud uurimistöö kavandamisel ning lõputöö koostamise esimese etapi valmimisel.",
+        "outcomes": [
+          {
+            "id": 61,
+            "description": "analüüsib erialaseid probleeme ja varasemaid uurimistöid, sõnastab oma lõputöö uurimisprobleemi, eesmärgi ja uurimisküsimused"
+          },
+          {
+            "id": 62,
+            "description": "valib ja põhjendab uurimisstrateegia ning meetodite valikut, järgib uurimiseetika ja andmekaitse põhimõtteid"
+          },
+          {
+            "id": 63,
+            "description": "planeerib ja viib ellu vastavalt püstitatud eesmärgile pilootuurimuse ning töötab kriitiliselt erialase kirjandusega."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5413,9 +5561,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 3,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Uurimisprotsessi elluviimine ja lõputöö koostamine lähtuvalt kinnitatud erialase lõputöö lähteülesandest. Lahenduste leidmine ühistes aruteludes tekkinud probleemküsimustele ning argumenteerimisoskuse arendamine.",
+        "objective": "Üliõpilane viib läbi nõuetele vastava uurimistöö tervisedenduse valdkonnas, analüüsib uurimistulemusi, leiab lahendusi uurimistöös tekkinud kitsaskohtadele, vormistab lõputööks ning saab praktilise kogemuse kaitsmise protseduurist.",
+        "outcomes": [
+          {
+            "id": 133,
+            "description": "piiritleb ja fokuseerib erialase lõputöö teema ning sõnastab selged eesmärgid"
+          },
+          {
+            "id": 134,
+            "description": "valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid ja põhjendab nende valikut kriitiliselt"
+          },
+          {
+            "id": 135,
+            "description": "rakendab andmete kogumise ja algallikatega töötamise oskusi"
+          },
+          {
+            "id": 136,
+            "description": "kirjutab analüütilisel teemakäsitlusel põhinevat lõputööd."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5430,9 +5595,38 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 7,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Toitumisuuringud ja toitumise uurimise meetodid. Organismi füsioloogia: vereringesüsteem, hingamissüsteem, endokriinne süsteem, seedimisprotsessi üldiseloomustus jne. Aine- ja energiavahetus. Erinevate toitainete tähtsus toitumisel: energiarikkad toitained, vesi, mineraalained, vitamiinid. Eesti toitumis- ja toidusoovitused, soovitused eri gruppidele. Söömishäired, toitumisega seotud iseärasused, toiduohutus. Toidumenüüde analüüs ja koostamine internetipõhise toitumisprogrammi NutriData abil.",
+        "objective": "Üliõpilane valib ja kasutab meetodeid ning vahendeid toidualase informatsiooni kogumiseks, analüüsib ja tõlgendab seda kriitiliselt ja loovalt. Kasutab toitumisalaseid arvutusmeetodeid toitumisülesannete lahendamiseks ning põhjendab toitumise ja ainevahetusega tihedamalt seotud elundkondade tööd, makro- ja mikrotoitainete vajadust, riiklike toitumis- ja liikumissoovitustusi ning toitumisega seotud peamisi seisundeid-probleeme.",
+        "outcomes": [
+          {
+            "id": 41,
+            "description": "kasutab korrektseid toitumisalaseid termineid-mõisteid"
+          },
+          {
+            "id": 42,
+            "description": "kasutab Nutridata toitumisprogrammi kõiki võimalusi oma 10 päeva toidupäeviku pidamiseks ning ideaalmenüü koostamiseks"
+          },
+          {
+            "id": 43,
+            "description": "analüüsib toidupäevikust saadud tulemusi, kasutades selleks teaduspõhist kirjandust"
+          },
+          {
+            "id": 44,
+            "description": "kirjeldab elundkondade toimimist ning seostab nende tegevust toitumise ja ainevahetusega"
+          },
+          {
+            "id": 45,
+            "description": "kirjeldab makro- ja mikrotoitainete olulisust organismile ning kasutab toitumise analüüsimisel riiklikke toitumis- ja toidusoovitusi"
+          },
+          {
+            "id": 46,
+            "description": "selgitab toitumisega seotud seisundeid-probleeme ning hindab nende mõju tervisele"
+          },
+          {
+            "id": 47,
+            "description": "võrdleb etteantud toiduvalikut ja toitainete saamist toidu- ja toitumissoovitustega, kirjeldab võimalikke toitumisriske ning annab soovitusi toitumise parandamiseks"
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5447,9 +5641,18 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 4,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Epidemioloogia ajalooline areng. Epidemioloogia kui metoodiline alus rahvatervises ja meditsiinis läbiviidavatele uuringutele.\nEpidemioloogiliste uuringute liigid (kirjeldav, analüütiline, eksperimentaalne). Epidemioloogiliste uuringute näited.\nEpidemioloogia kui metoodiline alus tõenduspõhisele arstiabile ja tõenduspõhisele otsustamisele rahvatervishoius.\nTervisestatistika olemus ja indikaatorid. Tervisestatistika Eestis.\nAndmeallikad ja andmete reaalne olemasolu ja kättesaadavus Eestis ja Euroopas.",
+        "objective": "Üliõpilane saab ülevaate epidemioloogiliste uurimistööde planeerimisest ja tulemuste tõlgendamistest.",
+        "outcomes": [
+          {
+            "id": 77,
+            "description": "omab ülevaadet epidemiloogiliste uurimistööde planeerimisest, tulemuste tõlgendamisest ja kasutamisest"
+          },
+          {
+            "id": 78,
+            "description": "analüüsib ja tõlgendab epidemiloogilisi uurimistöid."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5464,9 +5667,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 5,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Tervise erinevad kontseptsioonid ja nende kujunemine, seotud mõisted, riski- ja kaitsefaktorid. Tervist mõjutavad tegurid. Pikaaelisus ja tervena elatud aastad. Tervisedenduse põhimõtted. Tervisekirjaoskus ja selle arendamine. Terviseharidus ja muutuste elluviimine. tervisekäitumise teooriad ja mudelid. Rahvastiku tervis. Tõenduspõhine ennetus: teoreetilised alused ja praktilised näited, sekkumised, ennetustasandid.",
+        "objective": "Üliõpilane omandab baasteadmised tervisedendusest, rahvatervishoiu suundumustest ja peamistest näitajatest, tervisemõjurite määratlustest ja mudelitest ning probleemide lahendamise tõlgendustest.",
+        "outcomes": [
+          {
+            "id": 5,
+            "description": "tõlgendab tervise ja tervisedenduse käsitlusi, suundumusi, peamiseid tervisemõjureid ja mudeleid"
+          },
+          {
+            "id": 6,
+            "description": "kirjeldab erinevaid tervise- ja riskikätumise mõjutamise võimalusi"
+          },
+          {
+            "id": 7,
+            "description": "analüüsib tervisekirjaoskuse suurendamise olulisust ning võimestamise vajadust"
+          },
+          {
+            "id": 8,
+            "description": "kasutab teaduslikke tervisedenduse allikaid ja teoreetilisi teadmisi vastava ettekande ja sekkumise koostamisel."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5481,9 +5701,30 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 5,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Tervise olemus. Tervis kui ressurss ja vaimne tervis. Tervisemõjurite omavahelised seosed. Enamlevinud vaimse tervise probleemid ja sümptomid. Vaimne tervis ja elukaar. Vaimse tervise toe ja ravi korraldus Eestis. Tõenduspõhised vaimse tervise infoallikad. Psüühiline kaitse ja stressiga toimetulek. Salutogenees. Konfliktid, emotsioonid ja toimetulekustrateegiad. Läbipõlemine ja vaimne töötervishoid. Vaimse tervise ning toitumise jt eluviisitegurite vahelised\nseosed. Vaimse tervise esmaabi. Märkamine ja ennetamine, eneseabikirjandus ja -grupid.",
+        "objective": "Üliõpilane märkab vaimse tervisega seotud ohutegureid ja eneseabi vajadust erinevatel eluetappidel, seostab toitumist jt eluviisitegureid mittenakkuslike haiguste väljakujunemise riskiga ning vaimse tervisega.",
+        "outcomes": [
+          {
+            "id": 137,
+            "description": "selgitab tervise terviklikku olemust ning vaimse tervise rolli selles"
+          },
+          {
+            "id": 138,
+            "description": "märkab inimese vaimse tervise tegureid elukaare erinevates etappides"
+          },
+          {
+            "id": 139,
+            "description": "kirjeldab enam levinud vaimse tervise probleeme, sümptomeid ja toimetuleku mehhanisme"
+          },
+          {
+            "id": 140,
+            "description": "seostab toitumist jt eluviisitegureid mittenakkuslike haiguste väljakujunemise riskiga ning vaimse tervisega"
+          },
+          {
+            "id": 141,
+            "description": "märkab eneseabi vajadust ning annab vaimse tervise esmaabi."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5498,9 +5739,30 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Allikate usaldusväärsus. Toitumise ja liikumise põhimõisted ja põhialused. Eluviis ja harjumused. Toitumise jälgimine ja hindamine. Tervise seosed toitumise ja liikumisega. Toitumise tulevikusuunad (koostis, toiteväärtus, seos inimese tervise ja keskkonnaga).",
+        "objective": "Üliõpilane omandab baasteadmised toitumise ja liikumise põhimõistetest ja põhimõtetest, arendab temaatiliste allikate kriitilist hindamisoskust, allikate leidmist ja kasutamist ning proovib toitumise jälgimise ja hindamise võimalusi.",
+        "outcomes": [
+          {
+            "id": 9,
+            "description": "hindab toitumis- ja liikumisalaseid autoriteetseid allikaid"
+          },
+          {
+            "id": 10,
+            "description": "kasutab õigeid toitumise ja liikumise mõisteid"
+          },
+          {
+            "id": 11,
+            "description": "selgitab toitumise ja liikumise vajalikkust tervisele"
+          },
+          {
+            "id": 12,
+            "description": "kasutab toidupäevikut ning analüüsib tulemusi"
+          },
+          {
+            "id": 13,
+            "description": "kirjeldab mittetraditsioonilisi toitumise viise ja toitumisega seotud kultuurikeskkondi"
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5515,9 +5777,30 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 5,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Nõustamise olemus, eesmärgid ja ülesanded. Nõustamisruumi ja -suhte loomine, motivatsiooni kujundamine (sh motiveeriva intervjueerimise vaimsus). Eetilised aspektid. Erinevad nõustamiskoolkonnad (praegu käitumis-kognitiivne teraapia, motiveeriv intervjueerimine ja lahenduskeskne lühiteraapia kui kõige rakendatavamad eluviisi nõustamise kontekstis). Nõustamise läbiviimiseks vajalikud oskused ja isikuomadused. Nõustamise protsess ja meetodid. Sekkumiste harjutamine ning enesehindamise oskuste omandamine. Vaimse tervise ABC. Ülevaade nõustamisteenuste olemasolust ja kättesaadavusest Eestis.",
+        "objective": "Üliõpilane omandab baasteadmised ja esmased oskused klientide nõustamiseks ning võimaluse eneseanalüüsiks nõustamisalaste hoiakute kujundamisel.",
+        "outcomes": [
+          {
+            "id": 26,
+            "description": "rakendab vajalikke oskusi ja teadmisi, et olla esmaseks nõuandjaks"
+          },
+          {
+            "id": 27,
+            "description": "analüüsib enda tugevaid ja nõrgemaid külgi nõustajana"
+          },
+          {
+            "id": 28,
+            "description": "teadvustab edasise väljaõppe ja supervisiooni vajadust"
+          },
+          {
+            "id": 29,
+            "description": "kirjeldab põhilisi nõustamiskoolkondi ja nende sobivust erinevates olukordades"
+          },
+          {
+            "id": 30,
+            "description": "leiab Eestis olemasolevaid kvaliteetseid nõustamisteenuseid ja suunab vajadusel abivajajat sobiva spetsialisti või teenuseni."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5532,9 +5815,34 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Toitumis- ja liikumissoovitused erinevas eas ja tervisehäirete korral (k.a mitmekultuuriline keskkond). Nõustamise eesmärk, eeldused, võimalused, piirangud ja probleemid. Individuaalne söömis- ja liikumisharjumuste hindamine ja analüüs. Nõustamis- ja sekkumismeetodid ning protsess. Tõenduspõhine nõustamismeetod motiveeriv intervjueerimine ning selle kasutamine kliendi tegutsemisvõime toetamisel.",
+        "objective": "Üliõpilane kinnistab teadmisi toitumis- ja liikumisharjumuste hindamisest, muutuste esilekutsumise meetoditest, nõustamise protsessist ning kasutab nõustamistehnikaid ja motiveerivat intervjueerimist.",
+        "outcomes": [
+          {
+            "id": 113,
+            "description": "analüüsib individuaalseid toitumis- ja liikumisprogramme rakendades teoreetilisi teadmisi"
+          },
+          {
+            "id": 114,
+            "description": "hindab individuaalseid vajadusi ja kasutab tõenduspõhiseid abivahendeid nende määratlemiseks"
+          },
+          {
+            "id": 115,
+            "description": "mõistab motivatsiooni olemust ning nõustaja rolli muutuse esilekutsumisel ja toetamisel (k.a mitmekultuurilises keskkonnas)"
+          },
+          {
+            "id": 116,
+            "description": "kasutab tõenduspõhiseid nõustamise meetodeid ja andmekaitse põhimõtteid"
+          },
+          {
+            "id": 117,
+            "description": "hindab liikumise ja toitumise nõustamisprotsessi ning analüüsib ennast nõustajana"
+          },
+          {
+            "id": 118,
+            "description": "loob erialast võrgustikku ja väärtustab ettevõtlikkust."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5549,9 +5857,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 5,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Mõisted kehaline kirjaoskus ja selle praktiline väljund. Kehalise kirjaoskuse kontseptsiooni mudelid erinevates riikides. Kehalise kirjaoskuse mõju isiku füüsilisele ja vaimsele tervisele. Kehalise kirjaoskuse ühiskondlik mõju. Kehalise kirjaoskuse komponendid. Liikumisoskused ja kehalised võimed. Põhiliikumisoskuste kujunemine lapse- ja noorukieas. Kehaliste võimete arendamise üldpõhimõtted. Psühholoogiline komponent. Motivatsioon ja selle kujunemine. Liikumisharjumuste kujundamine. Emotsionaalsed aspektid. Sotsiaalne komponent. Kognitiivne komponent. Kehalise kirjaoskuse arendamine läbi elukaare. Kehalise kirjaoskuse arengut toetavad institutsioonid. Kõnnikoosoleku formaadi praktiline rakendamine. Kehalise kirjaoskuse väljendumine liikumisaktiivsuses ja liikumisharrastuses. Argiliikumise tähtsus ja võimalused. WHO liikumissoovitused. Treeningu üldpõhimõtted: regulaarsus, kestus, intensiivsus.",
+        "objective": "Üliõpilane tutvub kehalise kirjaoskuse elementidega, seostab neid elukaareülese kehalise aktiivsuse ja liikumisharrastusega ning integreerib teadlikult liikumise oma igapäevaellu järgides WHO liikumissoovitusi.",
+        "outcomes": [
+          {
+            "id": 99,
+            "description": "kirjeldab kehalise kirjaoskuse olemust"
+          },
+          {
+            "id": 100,
+            "description": "leiab kehalise kirjaoskuse arendamisega kokkupuutuvad institutsioonid ning analüüsib nende tegevust inimese kehalise kirjaoskuse arendamisel/toetamisel"
+          },
+          {
+            "id": 101,
+            "description": "analüüsib kehalist aktiivsust toetavaid tegevusi ja nende integreerimise võimalusi igapäevaellu"
+          },
+          {
+            "id": 102,
+            "description": "annab soovitusi harjumuste kohandamiseks ning liikumisaktiivsuse suurendamiseks."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5566,9 +5891,34 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Teaduslikule uurimistööle esitatavad nõuded. Uurimistöö ülesehitus. Tutvumine eriala valdkonna kirjanduse, teoreetiliste lähtekohtade ja arengusuundadega, faktide eristamine arvamustest. Uurimisprobleemi ja -eesmärgi sõnastamine. Uurimismeetodid. Uurimuse kavandamine ja läbiviimine. Statistiline andmestik, andmete kogumine ja töötlemine. Statistiliste tunnuste tüübid. Kirjeldav statistika ehk andmete kokkuvõtmise ja esitlemise meetodid: erinevad tabelid, diagrammid ja arvnäitajad. Korrelatsioon, standardhälve ja dispersioon, aritmeetiline keskmine, mediaan ja mood. Seoste kirjeldamine risttabelitega. Andmete esitamine keeleliselt korrektselt nii kirjalikult kui suuliselt. Õppeaine käigus koostab üliõpilane oma uurimistöö teemast lähtuva uurimisprojekti ning esitleb seda arvestusel.\n\nMailiisile: Uurimisprojekti koostamisel üliõpilane järgib kestliku arengu põhimõtteid, hindab digilahenduste keskkonna- ja ühiskonnamõju ning teeb vastutustundlikke otsuseid.",
+        "objective": "Üliõpilane kujundab tänapäevast arusaama teadusliku uurimistöö meetoditest, uurimisprojekti koostamisest, andmete kogumise, töötlemise, statistilise analüüsi läbiviimisest ning tõlgendab ja esitleb tulemusi.",
+        "outcomes": [
+          {
+            "id": 103,
+            "description": "kirjeldab uurimistöö olemust ja sellele esitatavaid nõudeid"
+          },
+          {
+            "id": 104,
+            "description": "teab eriala valdkonna teoreetilisi lähtekohti ja arengusuundi ning suudab eristada fakte arvamustest; akadeemilise kirjanduse alusel"
+          },
+          {
+            "id": 105,
+            "description": "püstitab ja sõnastab probleemist lähtuva eesmärgi ja sobivad uurimisküsimused"
+          },
+          {
+            "id": 106,
+            "description": "eristab andmete/tunnuste tüüpe ning valib vastavalt andmete tüübile ja püstitatud uurimisküsimustele sobivad analüüsimeetodid"
+          },
+          {
+            "id": 107,
+            "description": "järgib uurimisprojekti koostamisel kestliku arengu põhimõtteid, hindab digilahenduste keskkonna- ja ühiskonnamõju ning teeb teadlikke ja vastutustundlikke otsuseid."
+          },
+          {
+            "id": 108,
+            "description": "koostab kirjalikult korrektse uurimisprojekti ja esitleb seda suulisel arvestusel."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5583,9 +5933,22 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Disainiprotsess ja disainmõtlemine. Tervisedenduse strateegiad. Disaini teooriad ja meetodid. Universaalne disain. Disainiuuringu ettevalmistamine ja läbiviimine, kvalitatiivsed uurimis- ja andmeanalüüsimeetodid. Disainiprotsessi lähtepositsiooni määratlemine. Probleemi defineerimine ja kitsendamine. Sihtrühma profileerimine, kasutajakogemus ja -teekond. Ideeloome. Väärtuspakkumise väljatöötamine, prototüüpimine ja testimine.",
+        "objective": "Üliõpilane tutvub tervisedenduse strateegiate ning disaini teooriate ja töövõtetega, viib läbi kvalitatiivse disainiuuringu ning loob erialase innovatiivse toote või teenuse väärtuspakkumise.",
+        "outcomes": [
+          {
+            "id": 48,
+            "description": "kirjeldab disainiprotsessi, disainmõtlemise, universaalse disaini ja väärtuspakkumise põhimõtteid"
+          },
+          {
+            "id": 49,
+            "description": "kombineerib tervisedenduse strateegiad disaini töövõtetega"
+          },
+          {
+            "id": 50,
+            "description": "kasutab kvalitatiivse disainiuuringu meetodeid ja disaini praktikaid probleemi määratlemisel ning sihtrühma vajadustele sobiva innovatiivse toote või teenuse väärtuspakkumise loomisel, prototüüpimisel ning testimisel"
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5600,9 +5963,38 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Tervise valdkond, tervisepoliitika kujundamine eri tasanditel, tervisepoliitika osapooled ning nende rollid. Globaalne tervis. Rahvatervishoid, elukeskkond ja selle jaotused, riskikäitumine, riski ja kaitsetegurid eri keskkondades, nende tervisemõju suurendamise ja vähendamise võimalused, elukeskkond ja selle kujundamine. Linnakeskkonna ja maakeskkonna erinevused. Kliimamuutused, nende olemus ja (tervise)mõju, kliimamuudatustega kohanemine. Salutogenees. Tervisemõjudega arvestamine poliitikas ja elukeskkonna kujundamisel. Tervise- ja heaoluprofiilid, nende kasutamise võimalused elukeskkonna kujundamisel.",
+        "objective": "Üliõpilane omandab baasteadmised elukeskkonna mõjust tervisele, saab ülevaate tervist toetava elukeskkonna kujundamise võimalustest erinevatel otsustustasanditel ning elukeskkonna ja inimese tervise vaheliste seostest.",
+        "outcomes": [
+          {
+            "id": 14,
+            "description": "kirjeldab elukeskkonnaga kaasneda võivaid terviseriske ja nende vähendamise võimalusi"
+          },
+          {
+            "id": 15,
+            "description": "hindab elukeskkonna erinevate aspektide võimalikku mõju inimese tervisele"
+          },
+          {
+            "id": 16,
+            "description": "selgitab elukeskkonna (linna-, maa-, töö- ja kodukeskkonna) olulisust ja mõju inimese tervisele"
+          },
+          {
+            "id": 17,
+            "description": "kirjeldab kliimamuudatusi ja nendega kohanemist"
+          },
+          {
+            "id": 18,
+            "description": "analüüsib erinevate otsustustasandite rolle ning võimalusi elukeskkonna kujundamisel"
+          },
+          {
+            "id": 19,
+            "description": "analüüsib keskkonna ja tervise seoseid ning tervise- ja heaoluprofiile"
+          },
+          {
+            "id": 20,
+            "description": "kirjeldab viise jätkusuutliku ja tervisliku elukeskkonna planeerimiseks ning edendamiseks."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5617,9 +6009,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Peamised muudatuste mudelid ja tööriistad. Muutuste disain erinevate strateegiate planeerimise, elluviimise ja rakendamise näitel. Juhtimisteadus ja -teooriad. Kaasav juhtimine. Enese- ja grupiprotsessi juhtimine. Meeskonnatöö alused. Tervisepoliitika kujunemine ja selle mõjutamine ning globaalsed trendid. Huvikaitse olemus ja elluviimine.",
+        "objective": "Üliõpilane omandab tervikliku arusaama teadlikust juhtimisest tervisedenduses ning muutuste elluviimisest ja eestvedamisest nii kogukonna, riigi kui globaalsel tasandil.",
+        "outcomes": [
+          {
+            "id": 88,
+            "description": "kirjeldab tõhusa juhtimise ja eestvedamise võimalusi ning tervisepoliitika võtmestrateegiaid"
+          },
+          {
+            "id": 89,
+            "description": "kirjeldab juhtimise erinevaid etappe ja võimalusi tervise edendamisel"
+          },
+          {
+            "id": 90,
+            "description": "hindab ja rakendab toimivaid mudeleid ning süsteemseid lähenemisi muutuste planeerimisel ja elluviimisel"
+          },
+          {
+            "id": 91,
+            "description": "analüüsib globaalseid trende tervisedenduses."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5634,9 +6043,26 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Kommunikatsiooni, meedia ja tervisekommunikatsiooni alusteooriad. Sotsiaalne turundus. Allikakriitika ja eetika. Tervisekommunikatsiooni planeerimine ja tervisesõnumite koostamine.",
+        "objective": "Üliõpilane tutvub tervisekommunikatsiooni ja sotsiaalse turunduse olulisemate teooriatega, planeerib tervisekommunikatsiooni ja konstrueerib tervisesõnumeid ning sotsiaalse turunduse töövõtete praktiseerimist.",
+        "outcomes": [
+          {
+            "id": 122,
+            "description": "järgib tervisesõnumite koostamisel tervisekommunikatsiooni ja sotsiaalse turunduse põhimõtteid"
+          },
+          {
+            "id": 123,
+            "description": "planeerib tervisekommunikatsiooni strateegiliselt, koostades ning kasutades kommunikatsiooni- ja meediaplaani"
+          },
+          {
+            "id": 124,
+            "description": "loob tervisesõnumeid lähtuvalt kehtivatest tehnilistest nõuetest, meediasuhtluse headest tavadest ja õpitud teooriatest"
+          },
+          {
+            "id": 125,
+            "description": "rakendab eetika ja allikakriitika põhimõtteid meedias ja tervisekommunikatsioonis."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5651,9 +6077,30 @@ const curriculums = [
         "required": true,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Inimkeha ehituse põhialused - rakud, koed, organid, organsüsteemid, nende ehituslikud elemendid ja põhifunktsioonid. Füsioloogia põhiprintsiibid. Südame veresoonkonna ehitus, vere, vereringe ja südametalitluse füsioloogia. Hingamis-, seede-, kuse-suguelundkonna ehitus ja füsioloogia. Liikumiselundkonna (skelett, liigesed, lihased) ehituse ja talitluse põhiprintsiibid. Lihastalitluse füsioloogia. Organismi regulatsioonimehhanismid: endokriinsüsteemi ja närvisüsteemi ehituse ja talitluse põhiprintsiibid. Meeleelundite ehituse ja talitluse ülevaade.",
+        "objective": "Anda baasteadmised inimese keha ehitusest ehk anatoomiast ja talitlusest ehk füsioloogiast. Kujundada arusaam inimkeha organite ja organsüsteemide koostööst.\nTutvustada kõiki organeid nii eesti kui ka ladina keeles.",
+        "outcomes": [
+          {
+            "id": 21,
+            "description": "loetleb üles kõikide organsüsteemide koostises olevad elundid ja nimetab nende ülesanded"
+          },
+          {
+            "id": 22,
+            "description": "kirjeldab iga elundi ehitust, nimetades ära selle koostises olevad koed, mis on seotud tema funktsiooniga"
+          },
+          {
+            "id": 23,
+            "description": "toob välja liigeste liikumisvõimalused ja süstematiseerib lihased gruppideks eeltoodu järgi"
+          },
+          {
+            "id": 24,
+            "description": "kirjeldab erinevate elundite tööd, vastates küsimusele kuidas nad funktsioneerivad"
+          },
+          {
+            "id": 25,
+            "description": "selgitab organismi kui terviku toimimist, seostades seda regulatiivsete süsteemide ning südame-veresoonkonna ja hingamiselundite tööga."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5702,9 +6149,38 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 5,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Toidu seadusandlus toiduohutuse tagamisel ja tarbija tervise kaitsel. Toiduohutuse mõiste ja sellega seonduvad terminid. Toidumikrobioloogia, toidutoksikoloogia, joogivesi, toiduhügieen; toidumärgistus; toidu lisaained. Rahvusvaheliselt tunnustatud HACCP kontseptsiooni põhimõtted. Füüsikalised, keemilised ja bioloogilised (bakterid, hallitusseened, viirused) ohud toidus. Mikroorganismide tähtsus toidu ohutuse tagamisel. Mikroorganismide põhigrupid. Bakterite, seente ja viiruste põhiomadused. Tegurid, mis mõjutavad mikroorganismide kasvu ja paljunemist. Toidu riknemine, säilitamine ja töötlemine. Toidu sensoorne kvaliteet.Nõuded märgistusele. Patogeenid toidus, nende kasvu ja paljunemist mõjutavad tegurid. Toiduga levivad haigused: infektsioonid, toidumürgistused ja helmintaasid. Hügieeninõuded ettevõttele ja töötajatele.",
+        "objective": "Üliõpilane selgitab toiduohutuse põhimõtteid, toidupakenditel olevat infot ning kestliku toitumise ja\neluviisi peamisi põhimõtteid.",
+        "outcomes": [
+          {
+            "id": 126,
+            "description": "leiab toiduohutuse kohta kehtivad seadusandlused, toiduhügieeni põhimõtteid ja toiduainetes esinevate riskidega seotud tõenduspõhised allikaid"
+          },
+          {
+            "id": 127,
+            "description": "kirjeldab mikrobioloogia põhialuseid (mikroorganismide erinevad grupid, nende põhiomadused, mis on otseselt seotud toiduhügieeniga, mikroorganismide elutegevust mõjutavad tegurid ja nende kasutamine toidu riknemise ärahoidmiseks)"
+          },
+          {
+            "id": 128,
+            "description": "nimetab toiduga levida võivaid haigusteid, neid põhjustavaid haigustekitajate omadusi, nende vältimise ja elimineerimise võimalusi"
+          },
+          {
+            "id": 129,
+            "description": "kasutab erialast terminoloogiat ning orienteerub toiduainealases seadusandluses"
+          },
+          {
+            "id": 130,
+            "description": "järgib enesekontrolliplaani väljatöötamise põhimõtteid toiduohutuse tagamisel ja rakendab neid reaalsetes olukordades (koostab toidu valmistamise kohta detailseid tehnoloogilisi skeeme, mille alusel läbi viia ohtude analüüsi; määrab kriitilisi kontrollpunkte ja nende ohjamiseks sobivaid seiretegevusi)"
+          },
+          {
+            "id": 131,
+            "description": "analüüsib toiduohutuse tagamiseks rakendatavaid eeltingimusprogramme"
+          },
+          {
+            "id": 132,
+            "description": "selgitab toidu sensoorse kvaliteedi hindamise aluseid ja kvaliteedi ning ohutuse tagamise põhimõtteid vastavalt standardite EVS-ISO 9001 ja EVS-ISO 22000 nõuetele kvaliteedi- ja toiduohutuse juhtimissüsteemide väljatöötamiseks toidukäitlemisettevõtetes."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5719,9 +6195,26 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 4,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Õppeaine edukal läbimisel üliõpilane:\n- kirjeldab disainiprotsessi, disainmõtlemise, universaalse disaini ja väärtuspakkumise põhimõtteid;\n- kombineerib tervisedenduse strateegiad disaini töövõtetega;\n- kasutab kvalitatiivse disainiuuringu meetodeid ja disaini praktikaid probleemi määratlemisel ning sihtrühma vajadustele sobiva innovatiivse toote või teenuse väärtuspakkumise loomisel, prototüüpimisel ning testimisel;",
+        "objective": "Üliõpilane omandab baasteadmised taastusravi ja rehabilitatsiooni süsteemist ning korraldusest Eestis, inimkesksest lähenemisest, lisaks erinevate taastusravi ja rehabilitatsiooni spetsialistide rollist meeskonnas.",
+        "outcomes": [
+          {
+            "id": 51,
+            "description": "kirjeldab tervishoiuteenuste (lisan tulevikus THsüsteemi?), taastusravi ja rehabilitatsiooni olemust ja korraldust Eestis"
+          },
+          {
+            "id": 52,
+            "description": "analüüsib inimkeskse lähenemise vajalikkust ja võimalusi"
+          },
+          {
+            "id": 53,
+            "description": "omab ülevaadet erinevate taastusravi ja rehabilitatsiooni spetsialistide tööst ning rollist meeskonnas"
+          },
+          {
+            "id": 54,
+            "description": "loob erialast võrgustikku."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "",
         "nonUnique": false
@@ -5736,9 +6229,22 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 4,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Ülevaade toitumisest eri eluetappides. Lapseootel naised, imetavad emad. Imikud, lapsed, noorukid. Keskealised - kaalulangetus, liikumisharrastusega tegelemine. Vanemaealised. Toitumine vahetustega tööaja korral. Vastavate kehtivate määruste tutvustamine ühiskondlikuks toitlustamiseks. Vähekindlustatud inimeste toitumine. Menüüde koostamine ja juhtumianalüüside teostamine lähtuvalt ealistest vm eripäradest.",
+        "objective": "Üliõpilane annab toitumissoovitusi erinevas eas inimestele toitumiseks ja toitlustamiseks, koostab menüüsid erinevas eas inimestele, toetab inimeste elukvaliteeti võimalike toitainete imendumishäirete ning ealiste protsesside korral toitumisvigade vältimisega.",
+        "outcomes": [
+          {
+            "id": 119,
+            "description": "iseloomustab söömiskäitumisega seonduvaid terviseriske ja toetab eri vanuses inimesi vältimaks toitumisvigadest tulenevaid riske"
+          },
+          {
+            "id": 120,
+            "description": "annab toitumissoovitusi eri vanuses inimestele"
+          },
+          {
+            "id": 121,
+            "description": "koostab menüüsid eri vanuses ja vajadustega inimestele"
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5753,9 +6259,30 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Terviseteadlikkuse tõstmine läbi rahva- ja tervisespordi ning kogukonda kaasava liikumisharrastuse. Toitumine, kehaline aktiivsus ja tervis. Liikumisaparaadi arengulised protsessid, ealised iseärasused ja nende seosed kehaliste võimete, aktiivsuse ning liikumisharjumustega. Põhiteadmised kehaliste võimete arendamisest läbi elukaare. Jõuharjutuste kategoriseerimine inimese keha liikumismustritest lähtuvalt ning harjutuste kohandamine sõltuvalt keskkonnast. Inimese põhiliikumise funktsionaalne analüüs ja asendite, liigutuste kirjeldamisel kasutatav eriala terminoloogia. Organismi võimekuse hindamise meetodid. Lihaste düsbalanss ja lihaspinge. Liigutustegevuse mõjul arenenud kõrvalekalded normaalfüsioloogilisest liigutusmustrist ning nende korrigeerimise alused. Psühholoogilised ja sotsiaalsed aspektid treeneritöös. Kehaliste võimete arendamine läbi käimise, jooksu- ja jõuharjutuste tehnika (praktiliste tundidena). Liikumisharrastuse treeningu ülesehitus, protsess ja juhendamine. Juhtumipõhine tasakaalustatud harjutuskava ja liikumis- või treeningplaani koostamine võttes arvesse kehalist kirjaoskust ja ealisi iseärasusi.\n\n\nMailiisile teadmiseks nõustamise ainest võtan üle aasta välja - liikumisvaeguse ja ülekoormuse seostest tervise ning töövõimega, Liikumisharrastus, liikumisvaegus ja ülekoormus. Sobiv kehaline koormus, treeningkoormuse optimeerimine, taastumine. NEID TEEMASID SAAB SIIS SIIN.",
+        "objective": "Üliõpilane tõstab teadlikkust liikumise tervist toetavast rollist, ealistest iseärasustest ja nende seostest kehaliste võimete, aktiivsuse, liikumisharjumustega läbi elukaare ning kavandab ja juhendab liikumisplaani ja harjutuskava.",
+        "outcomes": [
+          {
+            "id": 79,
+            "description": "kirjeldab liikumisaparaadi arenguetappe ja kehaliste võimete arendamist läbi elukaare"
+          },
+          {
+            "id": 80,
+            "description": "seostab kehalist võimeid ja liikumisaktiivsust organismi füsioloogiliste näitajatega (kehakoostis, südamelöögisagedus jms)"
+          },
+          {
+            "id": 81,
+            "description": "analüüsib inimese põhiliikumist ja juhendab jõuharjutuse sooritust kasutades erialast terminoloogiat"
+          },
+          {
+            "id": 82,
+            "description": "koostab harjutuste ja liikumisplaani arvestades inimese kehalise kirjaoskuse taset"
+          },
+          {
+            "id": 83,
+            "description": "valmistab ette ja viib läbi kepikõnni-, jooksu- või jõutreeningu ning analüüsib selle õnnestumist."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5770,9 +6297,22 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Õpetamise roll harjumustes muutuste juhtimiseks. Õpetamise didaktilised põhimõtted lähtuvalt erinevatest haridusfilosoofilistest käsitustest (liberalism, biheiviorism, progressivism, humanism, radikalism). Õppeprotsessi kavandamine, läbiviimine, hindamine. Õpikeskkonna kujundamine ja õppimise toetamine. Õpimotivatsiooni kujundamine õppeprotsessis. Õppematerjalide koostamine. Õppeülesannete funktsioonid.",
+        "objective": "Üliõpilane saab ülevaate õppimise ja õpetamise põhimõtetest, soodsa õpikeskkonna loomisest ning kujundab esmase valmisoleku õpetamistegevuse planeerimiseks, läbiviimiseks ja analüüsimiseks.",
+        "outcomes": [
+          {
+            "id": 92,
+            "description": "kasutab õpetamise didaktilisi põhimõtteid"
+          },
+          {
+            "id": 93,
+            "description": "rakendab eesmärgipäraseid meetodeid õppimist toetava keskkonna loomisel"
+          },
+          {
+            "id": 94,
+            "description": "planeerib, viib ellu ja analüüsib õppeprotsessi harjumustes muutuste juhtimiseks."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5787,9 +6327,22 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 4,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Visuaalse kommunikatsiooni disain. Tüpograafia, kompositsiooni, värviteooria ja värvipsühholoogia põhialused. Ülevaade reklaami teooriast ja praktikast. Sotsiaalmeedia reklaami põhialused. Reklaamide / kujutiste silmapaistvust ja loetavust mõjutavad tegurid. Veebigraafika põhialused. Intellektuaalomand ja autoriõigused, pildipangad. Generatiivse tehisintellekti kasutamine. Veebirakendustes staatiliste ja visuaalsete materjalide loomine lähtuvalt tervisesõnumite eripärast.",
+        "objective": "Üliõpilane loob visuaalseid tervisesõnumeid ja reklaame, tutvub graafilise disaini ja visuaalse kommunikatsiooni põhialustega ning arendab digivahendite käsitsemisoskusi.\n\nSee on Mailiisi jaoks: Loob ja muudab erinevates formaatides digitaalset sisu (eesmärgis ja õpiväljundites olemas teise sõnastusega): postitused - terviseüleskutse, statistika ja teaduseamps (uuringud), liikuv stoori - mida siis praktika III raames aastaringselt regulaarselt postitama hakata.",
+        "outcomes": [
+          {
+            "id": 64,
+            "description": "järgib visuaalse sõnumi loomisel selle silmapaistvust ning loetavust mõjutavaid printsiipe"
+          },
+          {
+            "id": 65,
+            "description": "rakendab kompositsiooni, tüpograafia, värviteooria ja -psühholoogia põhimõtteid visuaalsete sõnumite kujundamisel"
+          },
+          {
+            "id": 66,
+            "description": "loob sobiva tarkvara abil visuaalseid tervisesõnumeid ja reklaame, lähtudes kehtivatest tehnilistest nõuetest ja autorikaitseseadusest."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5804,9 +6357,30 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Erialase keeleoskuse taseme tõstmine. Erialase inglise keele omandamine ja vastava terminoloogiaga tutvumine.\nÜldkeeleoskuse saavutamise lõpptase: lugemis-, kuulamis- , kõnelemis- ja kirjutamisokus B2.1 tasemel.\n\nKõigi nelja võõrkeele osaoskuse (kuulamine, lugemine, kõnelemine, kirjutamine) integreeritud arendamine juhindudes Euroopa Nõukogu keeleoskustasemete skaala B2 sisust. Tähelepanu eriala valdkonnaga seotud inglisekeelsel sõnavaral. Inglisekeelsete erialaste tekstide lugemine, mõistmine ja refereerimine ning audiomaterjali mõistmine ja refereerimine. Kõnelemisoskuse ja kirjutamisoskust arendamine erialastel teemadel.",
+        "objective": "Erialaterminoloogia omandamine inglise keeles ja erialase suulise ning kirjaliku väljendusoskuse süvendamine.\n\n\nMailiisile tulevikuks: Üliõpilane omandab erialaterminoloogia, arendab erialast suulist ja kirjalikku väljendusoskust, mõistab erialast inglise keelt läbi tekstide lugemise, tõlkimise, refereerimise ja audiomaterjali kuulamise.",
+        "outcomes": [
+          {
+            "id": 67,
+            "description": "on teadlik erialasest terminoloogiast"
+          },
+          {
+            "id": 68,
+            "description": "suudab vestelda semestri jooksul läbitud teemadel"
+          },
+          {
+            "id": 69,
+            "description": "mõistab erialaseid tekste"
+          },
+          {
+            "id": 70,
+            "description": "oskab kasutada erialaseid sõnaraamatuid ja koostada erialast ettekannet ja seda kaasüliõpilaste ees ette kanda"
+          },
+          {
+            "id": 71,
+            "description": "on saavutanud Euroopa Nõukogu keeleoskustasemete süsteemis erialases inglise keeles taseme B2.1."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
@@ -5821,9 +6395,30 @@ const curriculums = [
         "required": false,
         "prerequisites": [],
         "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
+        "content": "Erialase keeleoskuse taseme tõstmine. Erialase inglise keele omandamine ja vastava terminoloogiaga tutvumine.\nÜldkeeleoskuse saavutamise lõpptase: lugemis-, kuulamis- , kõnelemis- ja kirjutamisokus B2.1 tasemel.\n\nKõigi nelja võõrkeele osaoskuse (kuulamine, lugemine, kõnelemine, kirjutamine) integreeritud arendamine juhindudes Euroopa Nõukogu keeleoskustasemete skaala B2 sisust. Tähelepanu eriala valdkonnaga seotud inglisekeelsel sõnavaral. Inglisekeelsete erialaste tekstide lugemine, mõistmine ja refereerimine ning audiomaterjali mõistmine ja refereerimine. Kõnelemisoskuse ja kirjutamisoskust arendamine erialastel teemadel.",
+        "objective": "Erialaterminoloogia omandamine inglise keeles ja erialase suulise ning kirjaliku väljendusoskuse süvendamine.\n\n\nMailiisile tulevikuks: Üliõpilane omandab erialaterminoloogia, arendab erialast suulist ja kirjalikku väljendusoskust, mõistab erialast inglise keelt läbi tekstide lugemise, tõlkimise, refereerimise ja audiomaterjali kuulamise.",
+        "outcomes": [
+          {
+            "id": 72,
+            "description": "on teadlik erialasest terminoloogiast"
+          },
+          {
+            "id": 73,
+            "description": "suudab vestelda semestri jooksul läbitud teemadel"
+          },
+          {
+            "id": 74,
+            "description": "mõistab erialaseid tekste"
+          },
+          {
+            "id": 75,
+            "description": "oskab kasutada erialaseid sõnaraamatuid ja koostada erialast ettekannet ja seda kaasüliõpilaste ees ette kanda"
+          },
+          {
+            "id": 76,
+            "description": "on saavutanud Euroopa Nõukogu keeleoskustasemete süsteemis erialases inglise keeles taseme B2.1."
+          }
+        ],
         "assessment": "Arvestus",
         "comment": "ÕIS: toimumise semestrit ei määrata",
         "nonUnique": false
@@ -5840,7 +6435,28 @@ const curriculums = [
         "credits": 6,
         "content": "",
         "objective": "",
-        "outcomes": [],
+        "outcomes": [
+          {
+            "id": 142,
+            "description": "tugineb erialasele kirjandusele ja viib lõpule Uurimistöö I ja II alustatud lõputöö"
+          },
+          {
+            "id": 143,
+            "description": "koostab ja vormistab valitud teemal tervikliku struktuuriga, keeleliselt korrektse ja kirjalike tööde vormistamise juhendile vastava lõputöö"
+          },
+          {
+            "id": 144,
+            "description": "hindab uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust"
+          },
+          {
+            "id": 145,
+            "description": "analüüsib ja põhjendab töö väärtust ning kitsaskohti"
+          },
+          {
+            "id": 146,
+            "description": "esitleb ja argumenteerib töös esitatud seisukohti ning vastab avalikul kaitsmisel esitatud küsimustele."
+          }
+        ],
         "assessment": "Eksam",
         "comment": "Lisatud mooduli põhjal; ÕIS-is ainet pole",
         "nonUnique": false
