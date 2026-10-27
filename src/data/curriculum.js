@@ -6717,6 +6717,916 @@ const curriculums = [
         "nonUnique": false
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "Liiklusohutus",
+    "code": "LO",
+    "level": "rakenduskõrgharidus",
+    "semesters": 6,
+    "objective": "Õppekava lõpetaja on liiklusohutuse valdkonna spetsialist, kes osaleb ja vajadusel juhib liiklusohutuse arendustegevusi, rakendades interdistsiplinaarseid teadmisi ning analüüsi- ja uurimisoskusi. Ta kavandab ja viib ellu andmepõhiseid, turvalisust edendavaid ning kestlikku arengut toetavaid liikluslahendusi, tegutsedes koostöös erinevate valdkondade ekspertidega, mõistes liiklusohutuse põhimõtteid ning täiustades oma professionaalseid pädevusi kogu karjääri vältel.",
+    "learningOutcomes": [
+      {
+        "id": 1,
+        "description": "hindab kriitiliselt erinevate allikate usaldusväärsust, eristab neis esitatud fakte, tõenduspõhiseid seisukohti subjektiivsetest arvamustest ning põhjendab oma hinnangut",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 2,
+        "description": "tuvastab ja analüüsib liiklusohutuse seotud probleeme ühiskonna, organisatsiooni või üksikisiku tasandil, kogub ja analüüsib andmeid ning teeb tulemuste põhjal ettepanekuid ohutuse parandamiseks",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 3,
+        "description": "kasutab andmete kogumisel ja analüüsimisel tehisintellekti ja masinõppe võimalusi, rakendab omandatud teadmisi ja oskusi turvaliselt, sh erinevate digi- jm tehniliste vahendite abil",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 4,
+        "description": "valib ning rakendab digitaalseid vahendeid ja tehnoloogiad ülesannete täitmiseks turvaliselt, järgides digitaalse infoturbe põhimõtteid",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 5,
+        "description": "kavandab ja viib läbi teooria- ja sõiduõpet, rakendades kaasaegseid pedagoogilisi ja andragoogilisi põhimõtteid, kohandades õpetamisviise õppijate vajaduste, taseme ja õpistiiliga",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 6,
+        "description": "kasutab teooria - ja sõiduõppes sõidukite täiustatud juhiabisüsteeme (ADAS)",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 7,
+        "description": "kommunikeerib liiklusohutuse valdkonna ideid ja lahendusi õppevaldkonnale olulises (võõr)keeles kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 8,
+        "description": "osaleb liiklusohutusega seotud projektides iseseisvalt ja meeskonnas kogu õppe vältel, rakendades asjakohaseid tööviise, väärtustades innovatsiooni ja ettevõtlikkust ning luues turvalisi ja kestlike lahendusi",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 9,
+        "description": "seab isiklikud õpieesmärgid ja professionaalse arengu sihid, hindab ja reflekteerib oma õpetamise praktikat ning planeerib teadlikult oma erialast arengut ja karjääri",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 10,
+        "description": "arendab teenuseid ja viib läbi liiklusohutusalast õpet erialaspetsialisti ja kodanikuna viisidel, mis toetavad keskkonna ja ühiskonna jätkusuutlikkust",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 11,
+        "description": "täidab erialaseid ülesandeid vastutustundlikult ja eetiliselt, maandab võimalikke pingeolukordi ning rakendab teadlikult strateegiaid oma füüsilise ja vaimse tervise hoidmiseks",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 12,
+        "description": "analüüsib ja valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, põhjendab kriitiliselt nende valikut ning rakendab andmete kogumise ja algallikatega töötamise oskusi",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 13,
+        "description": "analüüsib ühiskonna muutusi ning kujundab nende põhjal teadlikult oma karjääri- ja arenguteed.",
+        "moduleOutcomes": []
+      }
+    ],
+    "version": "2026",
+    "modules": [
+      {
+        "id": 1,
+        "name": "Praktika",
+        "objective": "Üliõpilane rakendab oma erialased teadmised, oskused ja kogemused praktilises tegevuses liiklusohutuse, mootorsõidukijuhi õpetaja, eksamineerija, liiklusohutuse spetsialisti ja ennetustöö valdkonnas.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "analüüsib ja hindab liiklusohutuse valdkonna tegevusi asutuse, organisatsiooni ja omavalitsuse tasandil, koostades arengukavasid ning hinnates nende tulemuslikkust ja edasisi vajadusi",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "täidab erialaseid ülesandeid loovalt ja eetiliselt, tuleb toime võimalike pingeolukordadega ning arvestab füüsilist ja vaimset tervist mõjutavaid tegureid; analüüsib oma erialaseid tugevusi ja arenguvajadusi ja teeb teadlikke otsuseid karjäärivalikul",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "rakendab praktilisi kogemusi ja erialaseid teadmisi, et tegutseda liiklusohutuse spetsialisti, koolitaja või õpetajana, arvestades sihtrühma eripära ja valdkonna regulatsioone",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "kavandab ja viib läbi liiklusteooria- ja sõidutunde, lähtudes õppija vajadustest, õppekava eesmärkidest ning ohutu, keskkonnasäästliku ja jätkusuutliku õppekorralduse põhimõtetest.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Üleülikoolilised ained",
+        "objective": "Üliõpilane omandab integreeritud psühholoogiateadmised, arendab akadeemilist lugemis- ja kirjutamisoskust ning rakendab projekti- ja meeskonnatöö põhimõtteid. Lisaks õpib ta kriitiliselt mõtlema ja ennast juhtima, et oma õpi- ja erialast tegevust eesmärgipäraselt planeerida.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "omab integreeritud teadmisi psühholoogia eri suundadest ja rakendamise võimalustest",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "arendab akadeemilist lugemis-ja kirjutamisoskust erialaste õpingute edukaks sooritamiseks",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "kasutab kriitilise mõtlemise, lugemise, kirjutamise meetodeid ja strateegiaid, analüüsib argumentide sisulist külge ning esitab oma seisukohti nii suuliselt kui kirjalikult",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "lahendab interdistsiplinaarseid probleeme, tegutsedes nii meeskonnas kui iseseisvalt, leides seoseid eri valdkondade vahel",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "hindab kriitiliselt erinevaid informatsiooniallikaid, eristab fakte arvamustest ning loob loogiliselt põhjendatud argumente",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 6,
+            "description": "püstitab iseseisvalt õpi- ja erialaseid eesmärke, planeerib oma aega tõhusalt ning kohandab oma tegevust muutuvate oludega.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Eriala kohustuslikud ained",
+        "objective": "Üliõpilane omandab teadmised ja oskused, mis aitavad mõista ja mõjutada liikluskäitumist ning arendada tõhusaid õpetamismeetodeid, keskendudes ohutu liikluskeskkonna kujundamisele, liiklusjärelevalve tähtsusele, liikluse korralduse ja infrastruktuuri elementidele ning riskide ennetamisele.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "tunneb liiklusohutuse põhialuseid ning rakendab liikluskasvatuses ja -õpetuses omandatud teadmisi ja meetodeid erinevates kontekstides, et parandada liikluskäitumist, selgitab õppevaldkonna aktuaalseid teemasid, kohandades oma suhtlusstiili sihtrühmale vastavaks",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "oskab koguda, hinnata ja kriitiliselt tõlgendada liikluskasvatuse alast teavet, arvestades selle usaldusväärsust, kvaliteeti ja rakendatavust erinevates sihtrühmades, toetudes teaduslikule metodoloogiale",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "mõistab psühhoaktiivsete ainete mõju liikluskäitumisele ning omab oskusi käsitleda seda teemat liikluskasvatuse kontekstis",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "tunneb liiklusõigusaktide ja -normide aluseid ning suudab neid teadlikult rakendada õpetamis- ja kasvatustegevustes, järgides eetilisi ja õiguslikke nõudeid, mis toetavad keskkonna ja ühiskonna jätkusuutlikkust; -arendab õpetamisvõimekust, suhtlemisoskusi ja eneseanalüüsivõimet, et tagada kvaliteetne mootorsõidukijuhi õpetamine, mis põhineb pedagoogilistel ja psühholoogilistel teadmistel, täidab vastutustundlikult, loovalt ja eetiliselt erialaseid ülesandeid, tulles toime pingeolukordadega ning füüsilist ja vaimset tervist mõjutavate teguritega; -mõistab ohutu, keskkonda toetava ja säästliku liikluskeskkonna kujundamise aluseid, oskab analüüsida liiklusohutusega seotud institutsioonide ja partnerluse rolli ning prognoosida inimeste käitumist liikluskeskkonnas; -valib ja kasutab sobivat arvutigraafika tarkvara, et luua, redigeerida ja esitleda visuaalset materjali (nt 2D, 3D jooniseid), järgides visuaalse selguse ja tehniliste nõuete põhimõtteid, rakendab omandatud teadmisi ja oskusi turvaliselt, sh erinevate digi- jm tehniliste vahendite abil",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "tunneb avaliku teenuste toimimise, innovatsiooni ja ettevõtluse põhimõtteid ning seostab neid erialaga, töötab meeskonnas, jagades ideid ja panustades ühise eesmärgi saavutamisse, oskab algatada ja ellu viia projekte; -oskab valida sobivaid uurimismeetodeid teadusliku uurimistöö eesmärgi saavutamiseks, koostada uurimistöö kavandi ning viia läbi uurimistöö, analüüsides ja tõlgendades saadud tulemusi teaduslikult ja objektiivselt.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Eriala valikained",
+        "objective": "Üliõpilane omandab süvendatud teadmised ja oskused lähtuvalt individuaalsest erialasest huvist.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "omab laialdasi teadmisi valitud valikainetest",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "omab teadmisi ja kogemusi valdkonna projektide juhtimisest",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "oskab selgitada ja kommunikeerida valdkonna tähtsust ühiskonnas",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "on teadlik ettevõtluse võimalustest, arendab oma oskusi individuaalsetest huvidest lähtuvalt",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "põhjendab, analüüsib ja kasutab TI-põhiseid tööriistu oma erialaga seotud ülesannete lahendamisel.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Erialane inglise keel",
+        "objective": "Üliõpilane arendab erialast inglise keelt nii kõnes kui kirjas, et mõista ja analüüsida erialast kirjandust ning aktiivselt osaleda rahvusvahelistes koostööprojektides",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "tunneb ja kasutab erialast terminoloogiat",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "mõistab ja koostab erialaseid ingliskeelseid tekste",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "väljendab oma seisukohti ladusalt suuliselt ja kirjalikult.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Vabaained",
+        "objective": "Üliõpilane leiab võimalusi enesearenguks lähtudes individuaalsest huvist ja vajadusel arendab oma võõrkeele- ja arvutikasutamise oskusi.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "Mooduli läbinud üliõpilane oskab leida ja kasutada efektiivselt erinevaid võimalusi oma enesearengu toetamiseks.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Lõputöö",
+        "objective": "Üliõpilane viib läbi uurimistöö liikluse valdkonnas, analüüsib uurimistulemusi ja vormistab ning kaitseb lõputöö.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "tugineb erialastele teadmistele ja kirjandusele ning viib lõpule Uurimistöö II aines alustatud lõputöö",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "järgib uurimiseetika ja andmekaitse põhimõtteid, koostab ja vormistab valitud teemal tervikliku struktuuriga, keeleliselt korrektse ja kirjalike tööde vormistamise juhendile vastava lõputöö",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "esitleb ja argumenteerib töös esitatud seisukohti ning vastab avalikul kaitsmisel esitatud küsimustele.",
+            "subjectOutcomes": []
+          }
+        ]
+      }
+    ],
+    "subjects": [
+      {
+        "id": 1,
+        "semester": 3,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5097.HK",
+        "name": "Mootorsõidukijuhi õpetaja praktika",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 8,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 2,
+        "semester": 5,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5130.HK",
+        "name": "Mootorsõidukijuhi eksamineerija praktika",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 3,
+        "semester": 6,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5131.HK",
+        "name": "Liikluskorralduse ja kohaliku omavalitsuse praktika",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 4,
+        "semester": 2,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5132.HK",
+        "name": "Mootorsõidukijuhi õpetaja vaatluspraktika",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 5,
+        "semester": 5,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5133.HK",
+        "name": "Liiklushariduse praktika",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 6,
+        "semester": 1,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5080.HK",
+        "name": "Õppimine kõrgkoolis",
+        "module": 2,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 7,
+        "semester": 2,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/PSP6066.LT",
+        "name": "Üld- ja sotsiaalpsühholoogia",
+        "module": 2,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 8,
+        "semester": 3,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/YID6001.YM",
+        "name": "ELU - Erialasid Lõimiv Uuendus",
+        "module": 2,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 9,
+        "semester": 4,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5003.HK",
+        "name": "Ohutu liikluskeskkonna planeerimine ja korraldamine",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 10,
+        "semester": 1,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5078.HK",
+        "name": "Liiklusohutusalased uuringud ja andmebaasid",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 11,
+        "semester": 5,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5085.HK",
+        "name": "Sõltuvusainete olemus ja riskeeriva käitumise ennetamine",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 12,
+        "semester": 5,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5100.HK",
+        "name": "Uurimistöö I",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 3,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 13,
+        "semester": 6,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5101.HK",
+        "name": "Uurimistöö II",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 3,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 14,
+        "semester": 2,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5102.HK",
+        "name": "Liiklusohutusalase töö alused",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 15,
+        "semester": 6,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5114.HK",
+        "name": "Avalikud teenused",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 16,
+        "semester": 2,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5117.HK",
+        "name": "Õppematerjalide koostamine",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 17,
+        "semester": 3,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5118.HK",
+        "name": "Arengutreeningul põhinevad aktiivõppmeetodid",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 18,
+        "semester": 1,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5119.HK",
+        "name": "Liiklusohutusele suunatud hoiakute kujundamine",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 19,
+        "semester": 5,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5122.HK",
+        "name": "Mootorsõidukijuhi eksamineerija",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 20,
+        "semester": 3,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5123.HK",
+        "name": "Liiklusharidus",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 21,
+        "semester": 1,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5124.HK",
+        "name": "Liiklusalased õigusaktid ja avalik õigus",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 22,
+        "semester": 5,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5126.HK",
+        "name": "Arvutigraafika alused",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 23,
+        "semester": 1,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5135.HK",
+        "name": "Liikluskommunikatsioon",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 24,
+        "semester": 2,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5137.HK",
+        "name": "Suhtlemine õppeprotsessis ja sõidueksamil",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 25,
+        "semester": 4,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT5097.HK",
+        "name": "Uurimistöö alused ja andmeanalüüs",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 26,
+        "semester": 1,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5114.HK",
+        "name": "Tehisintellekti kasutamise alused",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 27,
+        "semester": 6,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5129.HK",
+        "name": "Välispraktika",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 9,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
+        "nonUnique": false
+      },
+      {
+        "id": 28,
+        "semester": 4,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5110.HK",
+        "name": "Koolitaja stressijuhtimine",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 3,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 29,
+        "semester": 2,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5112.HK",
+        "name": "Protsessi- ja projektijuhtimine",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 30,
+        "semester": 4,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5120.HK",
+        "name": "Sõiduki ehitus ning aktiivne ja passiivne turvalisus",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 31,
+        "semester": 4,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5127.HK",
+        "name": "Ettevõtluse alused",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 32,
+        "semester": 3,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5136.HK",
+        "name": "Õppija toetamine õppeprotsessis",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 33,
+        "semester": 5,
+        "order": 7,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5138.HK",
+        "name": "Liikuvuse planeerimine",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 34,
+        "semester": 5,
+        "order": 8,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT5099.HK",
+        "name": "Väärtuspakkumise disain",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 35,
+        "semester": 4,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT5105.HK",
+        "name": "Koolituse kavandamine ja läbiviimine",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 36,
+        "semester": 4,
+        "order": 7,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5081.HK",
+        "name": "Erialane inglise keel I",
+        "module": 6,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 37,
+        "semester": 6,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5090.HK",
+        "name": "Erialane inglise keel II",
+        "module": 6,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
+        "nonUnique": false
+      },
+      {
+        "id": 38,
+        "semester": 6,
+        "order": 6,
+        "url": "",
+        "name": "Lõputöö",
+        "module": 7,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "Lisatud mooduli põhjal; ÕIS-is ainet pole",
+        "nonUnique": false
+      }
+    ]
   }
 ];
 

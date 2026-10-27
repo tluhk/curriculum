@@ -30,9 +30,11 @@ const text = (h) =>
 // The "Kuva rohkem" toggle can split a level code like "B1.2" across two lines; join those back
 const oneLine = (t) => t.replace(/\s*\n\s*/g, ' ').replace(/([A-C][12]\.) (\d)/g, '$1$2').trim();
 // "- a;\n- b" or "Mooduli läbinud üliõpilane: - a; - b" -> ["a", "b"]; a paragraph without dashes stays one item
+// A dash starts an item only at a line start or after punctuation, so "teooria - ja sõiduõpe" stays one item
 const items = (t) => {
-  const body = oneLine(t).replace(/^Mooduli läbinud üliõpilane:\s*/i, '');
-  const parts = body.split(/(?:^|\s)-\s+(?=\S)/).map((p) => p.trim().replace(/[;,]$/, '').trim()).filter(Boolean);
+  const marked = t.replace(/(^|\n)\s*-\s+/g, '$1\u0001');
+  const body = oneLine(marked).replace(/([:;,.])\s+-\s+(?=\S)/g, '$1\u0001').replace(/^Mooduli läbinud üliõpilane:\s*/i, '');
+  const parts = body.split('\u0001').map((p) => p.trim().replace(/[;,]$/, '').trim()).filter(Boolean);
   return parts.length ? parts : [body];
 };
 // Value cell of a "label | value" row in the general info block
