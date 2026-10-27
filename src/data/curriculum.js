@@ -5846,6 +5846,877 @@ const curriculums = [
         "nonUnique": false
       }
     ]
+  },
+  {
+    "id": 4,
+    "name": "Käsitöötehnoloogiad ja disain",
+    "code": "KTD",
+    "level": "rakenduskõrgharidus",
+    "semesters": 6,
+    "objective": "Õppekava valmistab ette tootedisainereid, kes oskavad ühendada Inimeste vajadused, tehnoloogia ja ettevõtluse. Õppekava lõpetaja ühendab oskuslikult oma töös traditsioonilised käsitööoskused ja tänapäevaseid digitehnoloogiaid lähtudes kasutajakesksetest ja jätkusuutlikest põhimõtetest.",
+    "learningOutcomes": [
+      {
+        "id": 1,
+        "description": "hindab kriitiliselt erinevate allikate usaldusväärsust, eristab neis esitatud fakte, tõenduspõhiseid seisukohti subjektiivsetest arvamustest ning põhjendab oma hinnangut",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 2,
+        "description": "demonstreerib traditsiooniliste käsitöövõtete ja kaasaegsete tehnoloogiate praktilist valdamist, rakendades neid disaini- ja tootmisprotsessis",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 3,
+        "description": "sünteesib loomingus traditsioonilisi käsitöötehnoloogiaid ja tänapäevaseid disainitrende, argumenteerib oma disainilahendusi veenvalt nii eesti kui ka inglise keeles",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 4,
+        "description": "rakendab erialast teooriat disainiprobleemide analüüsimisel ja lahendamisel, pakkudes välja innovaatilisi ja teostatavaid loovlahendusi ja lähenemisviise",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 5,
+        "description": "arendab tooteid ja loob lahendusi, valides materjalid ja tehnikad vastavalt kasutajakesksetele ja jätkusuutlikele põhimõtetele",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 6,
+        "description": "juhib projekte ideest teostuseni, demonstreerides ettevõtlikku initsiatiivi ja strateegilist mõtlemist, töötab tulemuslikult iseseisvana ja interdistsiplinaarse meeskonna liikmena, kohandab oma suhtlust sihtrühmale vastavalt",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 7,
+        "description": "valib ning rakendab digitaalseid vahendeid ja tehnoloogiad ülesannete täitmiseks turvaliselt, järgides digitaalse infoturbe põhimõtteid",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 8,
+        "description": "analüüsib ja valib erialaprojekti või uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, põhjendab kriitiliselt nende valikut ning rakendab andmete kogumise ja algallikatega töötamise oskusi",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 9,
+        "description": "täidab erialaseid ülesandeid vastutustundlikult ja eetiliselt, maandab võimalikke pingeolukordi ning rakendab teadlikult strateegiaid oma tervise hoidmiseks",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 10,
+        "description": "analüüsib ühiskonna muutusi ning kujundab nende põhjal teadlikult oma karjääri- ja arenguteed.",
+        "moduleOutcomes": []
+      }
+    ],
+    "version": "2026",
+    "modules": [
+      {
+        "id": 1,
+        "name": "Praktika",
+        "objective": "Üliõpilane rakendab oma erialased teadmised, oskused ja kogemused praktilises tegevuses käsitöötehnoloogiate, disaini ja tootearenduse valdkonnas ning arendab oma professionaalseks arenguks vajalikku koostööoskust, analüüsivõimet ja oskust ennast juhtida.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "püstitab lähteülesande ja kasutab sobivat tehnoloogiat ning materjali vastutustundlikult esteetilise toote loomisel, lähtudes kasutajakeskuse ja jätkusuutlikkuse põhimõtetest",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "täidab erialaseid ülesandeid loovalt ja eetiliselt, tuleb toime võimalike pingeolukordadega ning arvestab füüsilist ja vaimset tervist mõjutavaid tegureid",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "analüüsib oma erialaseid tugevusi ja arenguvajadusi, lähtub ühiskonna muutustest ning kujundab nende põhjal teadlikult oma karjääri-ja arenguteed.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Üleülikoolilised ained",
+        "objective": "Üliõpilane omandab integreeritud teadmised psühholoogiast, arendab suulist ja kirjalikku eneseväljendusoskust, õppetööks vajalikku faktipõhist infootsingut. Lisaks arendab oma õpi- ja erialase tegevuse eesmärgipärast planeerimist, ennastjuhtivust ja meeskonnatööd.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "omab integreeritud teadmisi psühholoogia eri suundadest ja rakendamise võimalustest",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "arendab suulist ja kirjalikku eneseväljendusoskust",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "hindab kriitiliselt erinevaid informatsiooniallikaid, eristab fakte arvamustest ning loob loogiliselt põhjendatud argumente",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "lahendab interdistsiplinaarseid probleeme, tegutsedes nii meeskonnas kui iseseisvalt, leides seoseid eri valdkondade vahel",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "püstitab iseseisvalt õpi- ja erialaseid eesmärke, planeerib oma aega tõhusalt ning kohandab oma tegevust muutuvate oludega.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Eriala kohustuslikud ained",
+        "objective": "Üliõpilane omandab teadmised disaini teooriast ja protsessist, erinevate materjalide omadustest ja nende kasutamise võimalustest, käsitöö- ja digitehnoloogiatest. Üliõpilane arendab pädevusi oma loomingu esitlemiseks ning ettevõtlikkust erialaprojektide ja uurimistöö algatamiseks ning läbiviimiseks.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "omab teadmisi disaini teoreetilistest alustest ja arengusuundadest, eristab fakte arvamustest, mõistab disainiprotsessi etappe, arvestab jätkusuutlikkuse ja kasutajakesksuse põhimõtetega",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "analüüsib ja tõlgendab traditsioonilisi käsitöötehnoloogiad",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "on teadlik ja lähtub innovaatilistest ja teostatavatest loovlahendustest ning lähenemisviisidest",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "rakendab toote/teenuse arendamisel disainiprotsessi, valib ning kasutab vastutustundlikult ja turvaliselt sobivaid materjale, traditsioonilisi käsitöö- ja tänapäevaseid digitehnoloogiaid",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "mõistab ja selgitab valdkonna aktuaalseid teemasid, dokumenteerib ja esitleb oma loomingut kohandades oma suhtlust sihtrühmale vastavalt",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 6,
+            "description": "kavandab ja viib ellu erialaprojekte eetiliselt, tegutseb ennastjuhtivalt iseseisvalt ja meeskonna liikmena, rakendab teadlikult strateegiaid oma füüsilise ja vaimse tervise hoidmiseks",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 7,
+            "description": "valib erialaprojekti ja uurimistöö teemaks ühiskonnas aktuaalse probleemi, eesmärgi saavutamiseks sobivad uurimismeetodid, kavandab uurimistöö, rakendab andmete kogumise ja algallikatega töötamise oskusi, et saada sisendit potentsiaalse prototüübi esialgseks kontseptsiooniks",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 8,
+            "description": "on teadlik loomemajanduse valdkondadest valdkondadest ja ettevõtlusvõimalustest ning kujundab teadlikult oma karjääriteed.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Eriala valikained",
+        "objective": "Üliõpilane omandab süvendatud teadmised ja oskused lähtuvalt individuaalsest erialasest huvist.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "valib ja rakendab kriitiliselt ning turvaliselt erinevaid digi- ja tehnoloogilisi vahendeid, optimeerib nendega tööprotsesse ja lahendab efektiivselt spetsiifilisemaid ülesandeid",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "põhjendab, analüüsib ja kasutab TI-põhiseid tööriistu oma erialaga seotud ülesannete lahendamisel",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "arendab oma oskusi individuaalsetest huvidest lähtuvalt.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Erialane inglise keel",
+        "objective": "Üliõpilane arendab erialast inglise keelt nii kõnes kui kirjas, et mõista ja analüüsida erialast kirjandust ning aktiivselt osaleda rahvusvahelistes koostööprojektides.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "tunneb ja kasutab erialast terminoloogiat",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "mõistab ja koostab erialaseid ingliskeelseid tekste",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "väljendab oma seisukohti ladusalt suuliselt ja kirjalikult.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Vabaained",
+        "objective": "Üliõpilane leiab võimalusi enesearenguks lähtudes individuaalsest huvist ja arendab oma võõrkeele- ja arvutikasutamise oskusi.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "süvendab erialaseid teadmisi ja oskusi",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "on tõstnud oma võõrkeeleoskuse vähemalt B1.2 tasemele",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "muu keelega kooli lõpetanu on tõstnud eesti keele oskuse C1 tasemele.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Lõputöö",
+        "objective": "Üliõpilane viib läbi uurimistöö loomevaldkonnas, analüüsib selle tulemusi ja vormistab lõputööks, mille lahutamatu osana valmib praktiline prototüüp.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "rakendab andmete kogumise ja algallikatega töötamise oskusi, tugineb erialasele kirjandusele ja viib lõpule Uurimistöö I ja II alustatud lõputöö",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "järgib uurimiseetika ja andmekaitse põhimõtteid, koostab ja vormistab valitud teemal tervikliku struktuuriga, keeleliselt korrektse ja kirjalike tööde vormistamise juhendile vastava lõputöö, mille osa on praktiline väljund prototüübi näol",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "analüüsib ja põhjendab töö väärtust ning kitsaskohti, hindab loodud prototüübi efektiivsust, funktsionaalsust ja potentsiaalset mõju",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "esitleb ja argumenteerib töös esitatud seisukohti, demonstreerib prototüübi toimimist ning vastab avalikul kaitsmisel esitatud küsimustele.",
+            "subjectOutcomes": []
+          }
+        ]
+      }
+    ],
+    "subjects": [
+      {
+        "id": 1,
+        "semester": 4,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5114.HK",
+        "name": "Meistritöökoja praktika I",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 2,
+        "semester": 4,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5115.HK",
+        "name": "Meistritöökoja praktika II",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 3,
+        "semester": 5,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5116.HK",
+        "name": "Meistritöökoja praktika III",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 4,
+        "semester": 5,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5117.HK",
+        "name": "Näituse korraldamine",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 5,
+        "semester": 5,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5118.HK",
+        "name": "Ettevõttepraktika",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 6,
+        "semester": 1,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5080.HK",
+        "name": "Õppimine kõrgkoolis",
+        "module": 2,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 7,
+        "semester": 2,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/PSP6066.LT",
+        "name": "Üld- ja sotsiaalpsühholoogia",
+        "module": 2,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 8,
+        "semester": 3,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/YID6001.YM",
+        "name": "ELU - Erialasid Lõimiv Uuendus",
+        "module": 2,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 9,
+        "semester": 3,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5117.HK",
+        "name": "Kasutajakogemuse disain",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 10,
+        "semester": 5,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5100.HK",
+        "name": "Uurimistöö I",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 3,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 11,
+        "semester": 6,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKL5101.HK",
+        "name": "Uurimistöö II",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 3,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 12,
+        "semester": 1,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5010.HK",
+        "name": "Materjaliõpetus I: puit- ja saematerjalid",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 13,
+        "semester": 3,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5011.HK",
+        "name": "Materjaliõpetus II: metallid ja sulamid",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 14,
+        "semester": 1,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5092.HK",
+        "name": "Kompositsiooni alused",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 15,
+        "semester": 3,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5097.HK",
+        "name": "Loomeettevõtlus",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 16,
+        "semester": 1,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5100.HK",
+        "name": "Erialaprojekt I",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 17,
+        "semester": 2,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5101.HK",
+        "name": "Erialaprojekt II",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 18,
+        "semester": 4,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5102.HK",
+        "name": "Erialaprojekt III",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 5,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 19,
+        "semester": 5,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5111.HK",
+        "name": "Materjaliõpetus III",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 20,
+        "semester": 2,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5112.HK",
+        "name": "Sissejuhatus disaini",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 21,
+        "semester": 2,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5120.HK",
+        "name": "Etnograafia",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 3,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 22,
+        "semester": 1,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5121.HK",
+        "name": "Joonistamine ja värvusõpetus",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 23,
+        "semester": 3,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5122.HK",
+        "name": "3D modelleerimine",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 24,
+        "semester": 6,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5123.HK",
+        "name": "Portfoolio koostamine",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 25,
+        "semester": 2,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5124.HK",
+        "name": "Kujundustarkvara",
+        "module": 3,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 26,
+        "semester": 1,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5114.HK",
+        "name": "Tehisintellekti kasutamise alused",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 27,
+        "semester": 4,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5125.HK",
+        "name": "Kujundustarkvara edasijõudnutele",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 28,
+        "semester": 6,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5129.HK",
+        "name": "Välispraktika",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 9,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
+        "nonUnique": false
+      },
+      {
+        "id": 29,
+        "semester": 2,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5005.HK",
+        "name": "Joonistamine II",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 30,
+        "semester": 3,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5047.HK",
+        "name": "Pärandvara restaureerimine",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 31,
+        "semester": 3,
+        "order": 7,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5084.HK",
+        "name": "Graafilise disaini alused",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 32,
+        "semester": 4,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5105.HK",
+        "name": "3D modelleerimine II",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 33,
+        "semester": 4,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5113.HK",
+        "name": "Materjaliõpetus IV",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 34,
+        "semester": 4,
+        "order": 7,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5081.HK",
+        "name": "Erialane inglise keel I",
+        "module": 6,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 35,
+        "semester": 6,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5090.HK",
+        "name": "Erialane inglise keel II",
+        "module": 6,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
+        "nonUnique": false
+      },
+      {
+        "id": 36,
+        "semester": 6,
+        "order": 5,
+        "url": "",
+        "name": "Lõputöö",
+        "module": 7,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "Lisatud mooduli põhjal; ÕIS-is ainet pole",
+        "nonUnique": false
+      }
+    ]
   }
 ];
 

@@ -7,8 +7,8 @@ const master = newCurriculum(curriculums, { code: "MAG", name: "Magistrikava", l
 describe("curricula", () => {
   it("groups versions by code, applied curricula before master's", () => {
     const list = listCurricula([...curriculums, master]);
-    expect(list.map((g) => g.code)).toEqual(["RIF", "TJ", "MAG"]);
-    expect(list[0].versions.map((v) => v.version)).toEqual(["2025", "2026"]);
+    expect(list.map((g) => g.code)).toEqual(["KTD", "RIF", "TJ", "MAG"]);
+    expect(list.find((g) => g.code === "RIF").versions.map((v) => v.version)).toEqual(["2025", "2026"]);
   });
   it("uses the semester count of the curriculum", () => {
     expect(semesterCount(master)).toBe(4);
