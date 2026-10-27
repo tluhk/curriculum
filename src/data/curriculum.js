@@ -5026,42 +5026,238 @@ const curriculums = [
       {
         "id": 1,
         "description": "selgitab tervisedenduse teoreetilisi lähtekohti ja arengusuundi, eristab fakte arvamustest ning väljendab oma seisukohti erinevates kultuurikeskkondades nii suuliselt kui kirjalikult.",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 1,
+            "outcomeId": 4
+          },
+          {
+            "moduleId": 2,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 5,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 5,
+            "outcomeId": 3
+          },
+          {
+            "moduleId": 6,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 6,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 6,
+            "outcomeId": 3
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 4
+          }
+        ]
       },
       {
         "id": 2,
         "description": "kohandab suhtlusviisi sihtrühmale vastavaks kasutades visuaalseid ja andmepõhiseid esitusviise",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 3,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 6
+          },
+          {
+            "moduleId": 4,
+            "outcomeId": 3
+          },
+          {
+            "moduleId": 6,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 4
+          }
+        ]
       },
       {
         "id": 3,
         "description": "hindab, kavandab ja viib ellu tõenduspõhiseid sekkumisi inimeste tervise ja heaolu parandamiseks ning muutuste esilekutsumiseks nii üksikisiku, kogukonna kui organisatsiooni tasandil",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 1,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 1,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 1,
+            "outcomeId": 3
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 3
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 4
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 5
+          },
+          {
+            "moduleId": 4,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 4,
+            "outcomeId": 2
+          }
+        ]
       },
       {
         "id": 4,
         "description": "töötab iseseisvalt ja meeskonnas algatades interdistsiplinaarset koostööd, luues tervist toetavaid võrgustikke",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 1,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 2,
+            "outcomeId": 1
+          }
+        ]
       },
       {
         "id": 5,
         "description": "arendab innovaatilisi loovlahendusi kasutades väärtuspakkumise disaini, kestliku arengu põhimõtteid ja digitehnoloogiaid ning tagades andmetöötluse turvalisuse",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 1,
+            "outcomeId": 3
+          },
+          {
+            "moduleId": 1,
+            "outcomeId": 5
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 6
+          },
+          {
+            "moduleId": 4,
+            "outcomeId": 2
+          }
+        ]
       },
       {
         "id": 6,
         "description": "tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleeme, kasutab nende lahendamiseks ja uurimistöö eesmärgi saavutamiseks andmete kogumise- ja analüüsiprotsessi, põhjendab kriitiliselt uurimismeetodite valikut ning rakendab andmete kogumise ja algallikatega töötamise oskusi",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 1,
+            "outcomeId": 4
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 4
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 8
+          },
+          {
+            "moduleId": 4,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 2
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 3
+          }
+        ]
       },
       {
         "id": 7,
         "description": "täidab erialaseid ülesandeid loovalt, vastutustundlikult ja eetiliselt, tulles toime võimalike pingeolukordadega ning arvestades füüsilist ja vaimset tervist mõjutavaid tegureid",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 1,
+            "outcomeId": 7
+          },
+          {
+            "moduleId": 4,
+            "outcomeId": 3
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 3
+          }
+        ]
       },
       {
         "id": 8,
         "description": "analüüsib oma professionaalset arengut lähtuvalt ühiskonna vajadustest, teeb vastutustundlikke otsuseid arvestades keskkonna- ja ühiskonnamõju ning kujundades nende põhjal teadlikult ja ettevõtlikult oma karjääri- ja arenguteed.",
-        "moduleOutcomes": []
+        "moduleOutcomes": [
+          {
+            "moduleId": 1,
+            "outcomeId": 5
+          },
+          {
+            "moduleId": 1,
+            "outcomeId": 6
+          },
+          {
+            "moduleId": 2,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 3,
+            "outcomeId": 7
+          },
+          {
+            "moduleId": 5,
+            "outcomeId": 1
+          },
+          {
+            "moduleId": 7,
+            "outcomeId": 5
+          }
+        ]
       }
     ],
     "version": "2026",
@@ -5074,37 +5270,128 @@ const curriculums = [
           {
             "id": 1,
             "description": "koostab ja analüüsib tervist toetavaid tegevusplaane",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 2,
+                "outcomeId": 39
+              },
+              {
+                "subjectId": 4,
+                "outcomeId": 55
+              },
+              {
+                "subjectId": 4,
+                "outcomeId": 56
+              },
+              {
+                "subjectId": 1,
+                "outcomeId": 95
+              },
+              {
+                "subjectId": 1,
+                "outcomeId": 96
+              }
+            ]
           },
           {
             "id": 2,
             "description": "juhib tervist toetavate muutuste protsesse korraldades ennetustegevusi nii individuaalselt kui meeskonnas",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 2,
+                "outcomeId": 39
+              },
+              {
+                "subjectId": 4,
+                "outcomeId": 57
+              },
+              {
+                "subjectId": 4,
+                "outcomeId": 58
+              },
+              {
+                "subjectId": 1,
+                "outcomeId": 95
+              },
+              {
+                "subjectId": 3,
+                "outcomeId": 112
+              }
+            ]
           },
           {
             "id": 3,
             "description": "viib läbi nõustamisprotsessi lähtudes tõenduspõhistest soovitustest tervise hoidmiseks, edendamiseks ja haiguste ennetamiseks, kasutades tõenduspõhiseid nõustamise meetodeid ja sobivaid digitehnoloogilisi lahendusi ning tagades andmetöötluse turvalisuse",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 3,
+                "outcomeId": 109
+              }
+            ]
           },
           {
             "id": 4,
             "description": "seostab tervisedendaja, liikumise ja toitumise nõustaja tegevusi teadusuuringutega ning mõistab erinevaid tegevusi reguleerivaid õigusakte",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 2,
+                "outcomeId": 37
+              },
+              {
+                "subjectId": 2,
+                "outcomeId": 38
+              },
+              {
+                "subjectId": 4,
+                "outcomeId": 55
+              },
+              {
+                "subjectId": 1,
+                "outcomeId": 97
+              }
+            ]
           },
           {
             "id": 5,
             "description": "töötab välja kontseptsiooni innovaatilise digilahenduse loomiseks ja hindab oma tegevuse ühiskondlikke ja eetilisi aspekte arvestades erialase tegevuse rolle ja tagajärgi ühiskonnale",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 3,
+                "outcomeId": 110
+              },
+              {
+                "subjectId": 3,
+                "outcomeId": 111
+              }
+            ]
           },
           {
             "id": 6,
             "description": "analüüsib ja hindab kriitiliselt oma teoreetiliste teadmiste ja praktiliste oskuste taset ning reflekteerib oma professionaalset arengut",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 2,
+                "outcomeId": 40
+              },
+              {
+                "subjectId": 4,
+                "outcomeId": 60
+              },
+              {
+                "subjectId": 1,
+                "outcomeId": 98
+              }
+            ]
           },
           {
             "id": 7,
             "description": "täidab erialaseid ülesandeid loovalt ja eetiliselt, tuleb toime võimalike pingeolukordadega ning arvestab füüsilist ja vaimset tervist mõjutavaid tegureid.",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 4,
+                "outcomeId": 59
+              }
+            ]
           }
         ]
       },
@@ -5116,7 +5403,64 @@ const curriculums = [
           {
             "id": 1,
             "description": "Üliõpilane omandab integreeritud teadmised psühholoogiast, arendab suulist ja kirjalikku eneseväljendusoskust, õppetööks vajalikku faktipõhist infootsingut. Lisaks arendab oma õpi- ja erialase tegevuse eesmärgipärast planeerimist, ennastjuhtivust ja meeskonnatööd.",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 5,
+                "outcomeId": 1
+              },
+              {
+                "subjectId": 5,
+                "outcomeId": 2
+              },
+              {
+                "subjectId": 5,
+                "outcomeId": 3
+              },
+              {
+                "subjectId": 5,
+                "outcomeId": 4
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 31
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 32
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 33
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 34
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 35
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 36
+              },
+              {
+                "subjectId": 6,
+                "outcomeId": 84
+              },
+              {
+                "subjectId": 6,
+                "outcomeId": 85
+              },
+              {
+                "subjectId": 6,
+                "outcomeId": 86
+              },
+              {
+                "subjectId": 6,
+                "outcomeId": 87
+              }
+            ]
           }
         ]
       },
@@ -5128,42 +5472,358 @@ const curriculums = [
           {
             "id": 1,
             "description": "selgitab, kasutab ja kommunikeerib valdkonna põhimõisteid, teoreetilisi lähtekohti ning arengusuundi eristades fakte arvamustest ja arvestades erinevate kultuurikeskkondadega",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 12,
+                "outcomeId": 5
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 8
+              },
+              {
+                "subjectId": 14,
+                "outcomeId": 9
+              },
+              {
+                "subjectId": 14,
+                "outcomeId": 10
+              },
+              {
+                "subjectId": 14,
+                "outcomeId": 13
+              },
+              {
+                "subjectId": 23,
+                "outcomeId": 21
+              },
+              {
+                "subjectId": 23,
+                "outcomeId": 22
+              },
+              {
+                "subjectId": 23,
+                "outcomeId": 23
+              },
+              {
+                "subjectId": 23,
+                "outcomeId": 24
+              },
+              {
+                "subjectId": 23,
+                "outcomeId": 25
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 41
+              },
+              {
+                "subjectId": 21,
+                "outcomeId": 88
+              },
+              {
+                "subjectId": 21,
+                "outcomeId": 91
+              },
+              {
+                "subjectId": 17,
+                "outcomeId": 99
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 104
+              },
+              {
+                "subjectId": 22,
+                "outcomeId": 125
+              }
+            ]
           },
           {
             "id": 2,
             "description": "seostab inimese tervist ja heaolu kehalise, vaimse ning sotsiaalse keskkonna teguritega",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 14,
+                "outcomeId": 11
+              },
+              {
+                "subjectId": 20,
+                "outcomeId": 14
+              },
+              {
+                "subjectId": 20,
+                "outcomeId": 15
+              },
+              {
+                "subjectId": 20,
+                "outcomeId": 16
+              },
+              {
+                "subjectId": 20,
+                "outcomeId": 17
+              },
+              {
+                "subjectId": 20,
+                "outcomeId": 19
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 44
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 46
+              },
+              {
+                "subjectId": 17,
+                "outcomeId": 100
+              },
+              {
+                "subjectId": 17,
+                "outcomeId": 101
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 137
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 138
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 139
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 140
+              }
+            ]
           },
           {
             "id": 3,
             "description": "hindab, kavandab ja viib ellu tõenduspõhiseid sekkumisi inimeste tervise ja heaolu parandamiseks ning muutuste esilekutsumiseks nii indiviidi, kogukonna kui ka organisatsiooni tasandil",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 12,
+                "outcomeId": 6
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 7
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 8
+              },
+              {
+                "subjectId": 20,
+                "outcomeId": 18
+              },
+              {
+                "subjectId": 20,
+                "outcomeId": 20
+              },
+              {
+                "subjectId": 21,
+                "outcomeId": 89
+              },
+              {
+                "subjectId": 21,
+                "outcomeId": 90
+              },
+              {
+                "subjectId": 17,
+                "outcomeId": 102
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 141
+              }
+            ]
           },
           {
             "id": 4,
             "description": "analüüsib tervisesekkumisi ja selgitab tulemusi",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 20,
+                "outcomeId": 19
+              },
+              {
+                "subjectId": 11,
+                "outcomeId": 78
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 117
+              }
+            ]
           },
           {
             "id": 5,
             "description": "hindab liikumise ja toitumise nõustamisprotsessi ning rakendab tõenduspõhiseid nõustamise meetodeid",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 14,
+                "outcomeId": 12
+              },
+              {
+                "subjectId": 15,
+                "outcomeId": 26
+              },
+              {
+                "subjectId": 15,
+                "outcomeId": 27
+              },
+              {
+                "subjectId": 15,
+                "outcomeId": 29
+              },
+              {
+                "subjectId": 15,
+                "outcomeId": 30
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 42
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 43
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 45
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 47
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 113
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 114
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 115
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 116
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 117
+              }
+            ]
           },
           {
             "id": 6,
             "description": "kasutab tervisekommunikatsioonis väärtuspakkumise disaini põhimõtteid",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 19,
+                "outcomeId": 48
+              },
+              {
+                "subjectId": 19,
+                "outcomeId": 49
+              },
+              {
+                "subjectId": 19,
+                "outcomeId": 50
+              },
+              {
+                "subjectId": 22,
+                "outcomeId": 122
+              },
+              {
+                "subjectId": 22,
+                "outcomeId": 123
+              },
+              {
+                "subjectId": 22,
+                "outcomeId": 124
+              }
+            ]
           },
           {
             "id": 7,
             "description": "kujundab teadlikult oma karjääri- ja arenguteed väärtustades ettevõtlikkust ning keskkonna ja ühiskonna jätkusuutlikkust",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 15,
+                "outcomeId": 28
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 107
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 118
+              }
+            ]
           },
           {
             "id": 8,
             "description": "kavandab ja viib läbi valdkondlikku teaduspõhise uurimistöö, kogudes ning analüüsides andmeid ja sidudes neid teoreetiliste lähtekohtadega.",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 8,
+                "outcomeId": 61
+              },
+              {
+                "subjectId": 8,
+                "outcomeId": 62
+              },
+              {
+                "subjectId": 8,
+                "outcomeId": 63
+              },
+              {
+                "subjectId": 11,
+                "outcomeId": 77
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 103
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 105
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 106
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 108
+              },
+              {
+                "subjectId": 9,
+                "outcomeId": 133
+              },
+              {
+                "subjectId": 9,
+                "outcomeId": 134
+              },
+              {
+                "subjectId": 9,
+                "outcomeId": 135
+              },
+              {
+                "subjectId": 9,
+                "outcomeId": 136
+              }
+            ]
           }
         ]
       },
@@ -5175,17 +5835,120 @@ const curriculums = [
           {
             "id": 1,
             "description": "analüüsib inimese vajadusi, määrab kohalduvaid tervisemõjureid ning seostab neid tervist edendavate sekkumisvajadustega",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 27,
+                "outcomeId": 52
+              },
+              {
+                "subjectId": 29,
+                "outcomeId": 80
+              },
+              {
+                "subjectId": 29,
+                "outcomeId": 82
+              },
+              {
+                "subjectId": 28,
+                "outcomeId": 119
+              },
+              {
+                "subjectId": 26,
+                "outcomeId": 128
+              }
+            ]
           },
           {
             "id": 2,
             "description": "rakendab süvendatult tervisedenduslikke teadmisi ja oskusi arvestades individuaalseid eripärasid ning kasutades digitehnoloogilisi lahendusi",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 27,
+                "outcomeId": 51
+              },
+              {
+                "subjectId": 27,
+                "outcomeId": 53
+              },
+              {
+                "subjectId": 27,
+                "outcomeId": 54
+              },
+              {
+                "subjectId": 31,
+                "outcomeId": 66
+              },
+              {
+                "subjectId": 29,
+                "outcomeId": 79
+              },
+              {
+                "subjectId": 30,
+                "outcomeId": 92
+              },
+              {
+                "subjectId": 28,
+                "outcomeId": 120
+              },
+              {
+                "subjectId": 28,
+                "outcomeId": 121
+              },
+              {
+                "subjectId": 26,
+                "outcomeId": 126
+              },
+              {
+                "subjectId": 26,
+                "outcomeId": 127
+              },
+              {
+                "subjectId": 26,
+                "outcomeId": 129
+              },
+              {
+                "subjectId": 26,
+                "outcomeId": 131
+              },
+              {
+                "subjectId": 26,
+                "outcomeId": 132
+              }
+            ]
           },
           {
             "id": 3,
             "description": "demonstreerib praktiliste ülesannete täitmisel loovust, suhtlusstiili kohandamist ja probleemilahendusoskusi.",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 31,
+                "outcomeId": 64
+              },
+              {
+                "subjectId": 31,
+                "outcomeId": 65
+              },
+              {
+                "subjectId": 29,
+                "outcomeId": 81
+              },
+              {
+                "subjectId": 29,
+                "outcomeId": 83
+              },
+              {
+                "subjectId": 30,
+                "outcomeId": 93
+              },
+              {
+                "subjectId": 30,
+                "outcomeId": 94
+              },
+              {
+                "subjectId": 26,
+                "outcomeId": 130
+              }
+            ]
           }
         ]
       },
@@ -5197,17 +5960,68 @@ const curriculums = [
           {
             "id": 1,
             "description": "tunneb ja kasutab erialast terminoloogiat",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 32,
+                "outcomeId": 67
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 72
+              }
+            ]
           },
           {
             "id": 2,
             "description": "mõistab ja koostab erialaseid ingliskeelseid tekste",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 32,
+                "outcomeId": 69
+              },
+              {
+                "subjectId": 32,
+                "outcomeId": 70
+              },
+              {
+                "subjectId": 32,
+                "outcomeId": 71
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 74
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 75
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 76
+              }
+            ]
           },
           {
             "id": 3,
             "description": "väljendab oma seisukohti ladusalt suuliselt ja kirjalikult.",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 32,
+                "outcomeId": 68
+              },
+              {
+                "subjectId": 32,
+                "outcomeId": 70
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 73
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 75
+              }
+            ]
           }
         ]
       },
@@ -5241,27 +6055,56 @@ const curriculums = [
           {
             "id": 1,
             "description": "analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 34,
+                "outcomeId": 142
+              }
+            ]
           },
           {
             "id": 2,
             "description": "tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 34,
+                "outcomeId": 142
+              }
+            ]
           },
           {
             "id": 3,
             "description": "valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 34,
+                "outcomeId": 145
+              }
+            ]
           },
           {
             "id": 4,
             "description": "kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 34,
+                "outcomeId": 143
+              },
+              {
+                "subjectId": 34,
+                "outcomeId": 146
+              }
+            ]
           },
           {
             "id": 5,
             "description": "hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust.",
-            "subjectOutcomes": []
+            "subjectOutcomes": [
+              {
+                "subjectId": 34,
+                "outcomeId": 144
+              }
+            ]
           }
         ]
       }
