@@ -15,12 +15,17 @@ export const SEMESTER_SOFT_LIMIT = 6; // subjects per semester before a warning 
 // Colour choices offered in Haldus → Moodulid; [tint, stripe]. The last one is the default for new modules.
 export const SWATCHES = [...Object.values(moduleConfig).map((m) => [m.color, m.stripe]), ["#C9D3F2", "#5B72C4"]];
 
-// Module styles for a curriculum: an explicit color/stripe on the module wins, then moduleConfig, then grey.
-export const modulePalette = (modules) =>
-  Object.fromEntries(
+// Module styles for a curriculum: an explicit color/stripe on the module wins, then moduleConfig; modules beyond
+// those (e.g. a master's specialisation) get the swatches no other module of the curriculum uses, then grey.
+export const modulePalette = (modules) => {
+  const fixed = (m) => (m.color ? [m.color, m.stripe] : moduleConfig[m.id] ? [moduleConfig[m.id].color, moduleConfig[m.id].stripe] : null);
+  const used = new Set(modules.map(fixed).filter(Boolean).map(([c]) => c));
+  const free = SWATCHES.filter(([c]) => !used.has(c));
+  return Object.fromEntries(
     modules.map((m) => {
-      const cfg = moduleConfig[m.id] || {};
-      return [m.id, { name: m.name, color: m.color || cfg.color || "#ddd", stripe: m.stripe || cfg.stripe || "#999" }];
+      const [color, stripe] = fixed(m) || free.shift() || ["#ddd", "#999"];
+      return [m.id, { name: m.name, color, stripe: stripe || "#999" }];
     })
   );
+};
 export const NO_MODULE = { name: "—", color: "#ddd", stripe: "#999" };

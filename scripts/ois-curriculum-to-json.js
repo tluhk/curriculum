@@ -35,6 +35,8 @@ const items = (t) => {
   const marked = t.replace(/(^|\n)\s*-\s+/g, '$1\u0001');
   const body = oneLine(marked).replace(/([:;,.])\s+-\s+(?=\S)/g, '$1\u0001').replace(/^Mooduli läbinud üliõpilane:\s*/i, '');
   const parts = body.split('\u0001').map((p) => p.trim().replace(/[;,]$/, '').trim()).filter(Boolean);
+  // A short lead-in such as "Üliõpilane:" is a heading, not an outcome
+  if (parts.length > 1 && parts[0].length < 60 && parts[0].endsWith(':')) parts.shift();
   return parts.length ? parts : [body];
 };
 // Value cell of a "label | value" row in the general info block
@@ -61,7 +63,7 @@ const objective = oneLine(field('Õppekava eesmärgid'));
 const learningOutcomes = items(field('Õppekava õpiväljundid')).map((description, i) => ({ id: i + 1, description, moduleOutcomes: [] }));
 
 // Modules map onto the same ids as Rakendusinformaatika so colours and Haldus behave the same
-const MODULE_IDS = [[/praktika/i, 1], [/üleülikool/i, 2], [/valik/i, 4], [/kohustuslik/i, 3], [/vabaain/i, 5], [/inglise/i, 6], [/lõputöö/i, 7]];
+const MODULE_IDS = [[/praktika/i, 1], [/üleülikool/i, 2], [/valik/i, 4], [/kohustuslik/i, 3], [/vabaain/i, 5], [/inglise/i, 6], [/lõputöö|magistritöö/i, 7]];
 const blocks = html.split(/<li><a href="javascript: hide_show_pm\(/).slice(1);
 const modules = [];
 const subjects = [];
@@ -116,16 +118,17 @@ const entrySubjects = subjects.map((s, i) => {
     required: s.required, prerequisites: [], credits: s.credits, content: '', objective: '', outcomes: [], assessment: s.assessment, comment, nonUnique: false,
   };
 });
-// Thesis modules list no subject, but the plan gives their EAP and semester; add the thesis as a subject
+// Thesis modules (Lõputöö / Magistritöö) list no subject, but the plan gives their EAP and semester; add one
 const thesis = modules.find((m) => m.id === 7);
-const thesisRow = plan.match(/Moodul: Lõputöö<\/span><\/div><div[^>]*>(\d+)<\/div>((?:<div[^>]*>\d+<\/div>)+)/);
+const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const thesisRow = thesis && plan.match(new RegExp(`Moodul: ${esc(thesis.name)}</span></div><div[^>]*>(\\d+)</div>((?:<div[^>]*>\\d+</div>)+)`));
 if (thesis && !entrySubjects.some((s) => s.module === 7) && thesisRow) {
   const cols = [...thesisRow[2].matchAll(/>(\d+)</g)].map((x) => Number(x[1]));
   const semester = cols.findIndex((v) => v > 0) + 1 || semesters;
   order[semester] = (order[semester] || 0) + 1;
-  entrySubjects.push({ id: entrySubjects.length + 1, semester, order: order[semester], url: '', name: 'Lõputöö', module: 7, required: true, prerequisites: [],
+  entrySubjects.push({ id: entrySubjects.length + 1, semester, order: order[semester], url: '', name: thesis.name, module: 7, required: true, prerequisites: [],
     credits: Number(thesisRow[1]), content: '', objective: '', outcomes: [], assessment: 'Eksam', comment: 'Lisatud mooduli põhjal; ÕIS-is ainet pole', nonUnique: false });
-  notes.push(`Added a "Lõputöö" subject (${thesisRow[1]} EAP, S${semester}) for the thesis module.`);
+  notes.push(`Added a "${thesis.name}" subject (${thesisRow[1]} EAP, S${semester}) for the thesis module.`);
 }
 modules.filter((m) => !entrySubjects.some((s) => s.module === m.id)).forEach((m) => notes.push(`Module "${m.name}" has no subjects (free choice).`));
 

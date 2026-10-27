@@ -7627,6 +7627,594 @@ const curriculums = [
         "nonUnique": false
       }
     ]
+  },
+  {
+    "id": 6,
+    "name": "Kogukonnatöö vananevas ühiskonnas",
+    "code": "KVM",
+    "level": "magistriõpe",
+    "semesters": 4,
+    "objective": "Õppija omandab laiapõhjalised teoreetilised teadmised tervena vananemise ja easõbraliku keskkonna tõenduspõhiseks arendamiseks kogukonnas ning professionaalsed oskused vanemaealiste kaasamise eetiliseks, loovaks ja vastutustundlikuks korraldamiseks koostöövõrgustike kaudu. Õppekava läbinu on valmis jätkama õpinguid, sh doktoriõppes.",
+    "learningOutcomes": [
+      {
+        "id": 1,
+        "description": "omab laiapõhjalisi teadmisi eriala mõistetest, teoreetilistest lähtekohtadest, arengusuundadest, uurimismeetoditest ja nende rakendamise võimalustest Eestis ja maailmas",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 2,
+        "description": "kasutab nii avalikus-, era- kui kolmandas sektoris põlvkondadevahelise lõimumise komplekssete ülesannete lahendamiseks kaasaegseid interdistsiplinaarseid meetodeid, näidates tõenduspõhiselt pakutavate lahenduste mõju",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 3,
+        "description": "rakendab omandatud teadmisi kestlikult ja strateegiliselt põlvkondi lõimiva kogukonna identiteedi, kultuuri ning tervena vananemise keskkonna kujundamisel, näidates üles algatusvõimet, loovust ja kasutades meeskonna juhtimise oskusi",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 4,
+        "description": "hindab kriitiliselt, kontseptualiseerib ning analüüsib kogukonnatööd, sh tervena vananemise keskkonna võimalusi ning põlvkondadevahelise lõimumise protsesse avalikus, era- ja kolmandas sektoris nii Eestis kui teistes riikides",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 5,
+        "description": "juhib põlvkondade lõimingu korraldajate võrgustikutööd, hinnates seejuures enda ja teiste arenguvajadusi ja -võimalusi ning toetades teiste õppimist neid juhendades või muul viisil",
+        "moduleOutcomes": []
+      },
+      {
+        "id": 6,
+        "description": "tegutseb eetiliselt ja sotsiaalselt vastutustundlikult inimeste, sh vanemate inimeste kaasamisel kogukonda ja tööturule, suhtudes sallivalt hoiakute ja väärtuste mitmekesisusse.",
+        "moduleOutcomes": []
+      }
+    ],
+    "version": "2026",
+    "modules": [
+      {
+        "id": 1,
+        "name": "Praktika",
+        "objective": "Üliõpilane rakendab oma üld- ja eriaalaseid teadmisi ja oskusi ning arendab neid edasi kogukonnatöö ja vananemise valdkonnas kas avalikus, era- või kolmandas sektoris.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "analüüsib arendustöö vajadust ning kavandab ja rakendab tõenduspõhiseid sekkumisi kogukonnatöös vanemaealistega",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "analüüsib enda tööd, sh eetilistest kriteeriumitest lähtuvalt, ja määratleb oma erialase ja ametikasvu vajadust",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "näitab erialases töös algatusvõimet ja rakendab koostöö- ja digioskusi, korraldab tööprotsesse ja juhib meeskonnatööd.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Üleülikooliline aine",
+        "objective": "Üliõpilane rakendab eestvedamise nüüdisaegseid strateegiaid aktuaalsete probleemide koostöiseks lahendamiseks ning analüüsib tegevuse tulemusi eetilisest, professionaalsest ja ühiskondliku kasu vaatenurgast, rakendades tulevikutrendidega seotud üldoskusi.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "kasutab üldoskusi asjakohaste ühiskondlikult aktuaalsete probleemide koostöiseks lahendamiseks ja arendustööks",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "rakendab sobivaid eestvedamisstrateegiaid meeskonna- ja koostööprotsesside juhtimiseks, sealhulgas rollide ja ülesannete jaotamisel, inimeste motiveerimisel ning tulemuste tagasisidestamisel",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "analüüsib oma rolli ja tegevust eestvedajana, seostades kogemusi teoreetiliste käsitustega ning arvestades eetilisi kategooriaid, professionaalsuse põhimõtteid ja kasu ühiskonnale.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Eriala valikained",
+        "objective": "Üliõpilane laiendab erialateadmisi ja -oskusi.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "Üliõpilane süvendab valdkondlikke teadmisi ja oskusi inimeste tervena vananemise toetamiseks kogukonnas ja hõbemajandusse panustamiseks; rakendab valdkondlikke oskusi ja annab edasi teadmisi kasutades piirnevate valdkondade metoodikaid.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Põlvkondi lõimiv kogukonnatöö",
+        "objective": "Üliõpilane väljendab teadmisi ühiskonna, kogukonna ja indiviidi vananemisest ja kujundab tervena vananemist toetavaid kogukondikaasamise ja võrgustikutöö kaudu.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "seob iseseisvad praktilised ülesanded vananemise kultuuri ja filosoofia ning kogukonna toimimise teoreetiliste käsitluste ja arengusuundadega",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "analüüsib põlvkondade staatuse ja rolli muutusi ühiskonnas ning vanuselise stereotüpiseerimise tekkemehhanisme",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "rakendab kogukonnatöö, põlvkondadevahelise koostöö ja hõbemajanduse arendamise interdistsiplinaarseid põhimõtteid avalikus, era- või kolmandas sektoris",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "analüüsib poliitikakujundamise protsessi ja loogikat ning organisatsiooni rolli hõbemajanduses",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "korraldab eetiliselt siht- ja sidusrühmade võrgustumist, põlvkondade vahelist koostööd, hõbemajanduse arendamist ja ennetuspoliitikat avalikus, era- või kolmandas sektoris",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 6,
+            "description": "viib läbi valdkondlikke tõenduspõhiseid uurimusi, tuginedes rahvusvahelisele teaduskirjandusele ja rakendades teaduslikke meetodeid ning esitleb neid nii eesti kui inglise keeles.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Tervis ja vananemine",
+        "objective": "Üliõpilane mõtestab vanuseliste muutuste, tervise ja keskkonna vahelisi seoseid; kujundab tervist toetavat keskkonda; analüüsib ja arendab enda ja teiste ametialast kasvu.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "väljendab süvendatud teadmisi inimese füüsilise, vaimse ja sotsiaalse tervise olemusest ja vanuselistest muutustest, tuginedes valdkondlikele tõenduspõhistele uurimustele",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "analüüsib vananemisega kaasnevaid muutusi ning nende mõjutegureid, valides ja kasutades uurimiseks sobivaid teaduslikke meetodeid ja tehnoloogiaid",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "hindab tõenduspõhiselt keskkonna easõbralikkust vanemas eas inimeste vaimse, füüsilise ja sotsiaalse tervise säilitamisel ja arendamisel",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "kujundab tervena vananemist toetavat kaasaegset keskkonda kogukonnas ja organisatsioonis, tuginedes rahvusvahelistele praktikatele ja uurimistulemustele",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "hindab valdkonna eestvedajana kriitiliselt iseenda ja teiste tööalaseid arenguvõimalusi ja -vajadusi ning arendab neid.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Vabaained",
+        "objective": "Üliõplane planeerib ja juhib oma õpiteed, komplekteerides eesmärgistatud valiku õppeainetest, mis vastavad tema isiklikule arengukavale ja toetavad elukestvat õpet ning ettevõtlikku eluhoiakut.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "on omandanud täiendavaid erialaseid või üldpädevusi, mis tugevdavad tema valmisolekut iseseisvaks professionaalseks tööks, juhtimiseks või õpingute jätkamiseks doktoriõppes.",
+            "subjectOutcomes": []
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Magistritöö",
+        "objective": "Üliõpilane viib iseseisvalt läbi probleemipõhise põhjendatud uurimuse, tuginedes valdkonna usaldusväärsetele allikatele ja uurimuse kontseptsiooniga seostuvatele uurimismeetoditele.",
+        "learningOutcomes": [
+          {
+            "id": 1,
+            "description": "orienteerub eriala allikates",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 2,
+            "description": "püstitab uurimisküsimusi, kasutab tänapäevaseid ja tõenduspõhiseid uurimismeetodeid",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 3,
+            "description": "kogub ja tõlgendab teoreetilisi ja empiirilisi andmeid",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "esitab kirjalikult uurimuse teoreetilised ja empiirilised tulemused vastavalt uurimistöödele esitatavatele (sh eetilistele) nõuetele",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 5,
+            "description": "kaitseb magistritööd ja osaleb akadeemilises disskussioonis.",
+            "subjectOutcomes": []
+          }
+        ]
+      }
+    ],
+    "subjects": [
+      {
+        "id": 1,
+        "semester": 3,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7015.HK",
+        "name": "Praktika",
+        "module": 1,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 2,
+        "semester": 2,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/YID6001.YM",
+        "name": "ELU - Erialasid Lõimiv Uuendus",
+        "module": 2,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 3,
+        "semester": 2,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7011.HK",
+        "name": "Kogukonna digimentorid",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 4,
+        "semester": 2,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7013.HK",
+        "name": "Organisatsiooni juhtimise alused",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 5,
+        "semester": 4,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7014.HK",
+        "name": "Välispraktika",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 9,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
+        "nonUnique": false
+      },
+      {
+        "id": 6,
+        "semester": 3,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7019.HK",
+        "name": "Teenused vananevale ühiskonnale",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 7,
+        "semester": 2,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7025.HK",
+        "name": "Uurimistöö alused",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 8,
+        "semester": 1,
+        "order": 1,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7032.HK",
+        "name": "Digivahendite kasutamine õppimisel ja kaasamisel",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 9,
+        "semester": 1,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7033.HK",
+        "name": "Kommunikatsioon",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 10,
+        "semester": 1,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7002.HK",
+        "name": "Vanuselise diskrimineerimise vähendamine",
+        "module": 8,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 11,
+        "semester": 1,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7003.HK",
+        "name": "Poliitikakujundus ja koosloome kohalikul tasandil",
+        "module": 8,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 12,
+        "semester": 2,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7016.HK",
+        "name": "Põlvkondadevaheline koostöö kogukonnas ja organisatsioonis I",
+        "module": 8,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 13,
+        "semester": 1,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7026.HK",
+        "name": "Vananemise kultuur ja filosoofia",
+        "module": 8,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 14,
+        "semester": 2,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7029.HK",
+        "name": "Erialane inglise keel",
+        "module": 8,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 15,
+        "semester": 3,
+        "order": 3,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7030.HK",
+        "name": "Põlvkondadevaheline koostöö kogukonnas ja organisatsioonis II",
+        "module": 8,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 16,
+        "semester": 3,
+        "order": 4,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7035.HK",
+        "name": "Magistriseminar",
+        "module": 8,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 17,
+        "semester": 3,
+        "order": 5,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7005.HK",
+        "name": "Vaimne tervis ja ennetustöö korraldamine",
+        "module": 9,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 18,
+        "semester": 1,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7008.HK",
+        "name": "Lahenduskesksed põhimõtted enesejuhtimises ja nõustamises",
+        "module": 9,
+        "required": true,
+        "prerequisites": [],
+        "credits": 3,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 19,
+        "semester": 1,
+        "order": 7,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7027.HK",
+        "name": "Vananemise kognitiivsed ja füsioloogilised muutused",
+        "module": 9,
+        "required": true,
+        "prerequisites": [],
+        "credits": 4,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 20,
+        "semester": 4,
+        "order": 2,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7028.HK",
+        "name": "Liikumis- ja tegevusvõime säilitamine ning toitumine vanemas eas",
+        "module": 9,
+        "required": true,
+        "prerequisites": [],
+        "credits": 9,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 21,
+        "semester": 3,
+        "order": 6,
+        "url": "https://ois2.tlu.ee/tluois/aine/HKT7031.HK",
+        "name": "Tervisekeskkonna kujundamine kogukonnas ja töökohal",
+        "module": 9,
+        "required": true,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 22,
+        "semester": 4,
+        "order": 3,
+        "url": "",
+        "name": "Magistritöö",
+        "module": 7,
+        "required": true,
+        "prerequisites": [],
+        "credits": 24,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Eksam",
+        "comment": "Lisatud mooduli põhjal; ÕIS-is ainet pole",
+        "nonUnique": false
+      }
+    ]
   }
 ];
 
