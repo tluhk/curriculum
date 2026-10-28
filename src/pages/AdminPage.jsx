@@ -6,6 +6,7 @@ import { NO_MODULE } from "../constants";
 import { SubjectEditor, ModuleEditor, OutcomeEditor } from "../components/admin/Editors";
 import CurriculumSettings from "../components/admin/CurriculumSettings";
 import Rail from "../components/shell/Rail";
+import { subjectCode } from "../utils/subjectCode";
 import useRailTip from "../components/shell/useRailTip";
 import "../components/admin/admin.css";
 
@@ -47,7 +48,7 @@ function Admin() {
     items = [...subjects]
       .sort((a, b) => a.semester - b.semester || a.order - b.order)
       .filter((s) => !needle || s.name.toLowerCase().includes(needle))
-      .map((s) => ({ key: s.id, title: s.name, sub: `S${s.semester} · ${s.credits} EAP · ${mod(s.module).name}`, stripe: mod(s.module).stripe,
+      .map((s) => ({ key: s.id, title: s.name, sub: `${subjectCode(s) ? subjectCode(s) + " · " : ""}S${s.semester} · ${s.credits} EAP · ${mod(s.module).name}`, stripe: mod(s.module).stripe,
         tag: s.required ? "" : "valik", warn: warnSubjects.has(s.id), sel: isSel("subject", s.id), on: () => setEd({ type: "subject", id: s.id }) }));
   } else if (view === "modules") {
     title = "Moodulid"; addType = "module";

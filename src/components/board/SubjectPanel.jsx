@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { NO_MODULE } from "../../constants";
 import { useCurriculum } from "../../state/CurriculumContext";
+import { subjectCode } from "../../utils/subjectCode";
 
 export default function SubjectPanel({ subject: s, idx, up, down, onPick, onClose }) {
   const { palette } = useCurriculum();
@@ -18,7 +19,7 @@ export default function SubjectPanel({ subject: s, idx, up, down, onPick, onClos
         <button onClick={onClose} aria-label="Sulge" className="x">×</button>
       </div>
       <h2>{s.name}</h2>
-      <div className="muted">Semester {s.semester} · {s.credits} EAP · {s.required ? "kohustuslik" : "valikaine"}</div>
+      <div className="muted">{subjectCode(s) && <span className="mono">{subjectCode(s)} · </span>}Semester {s.semester} · {s.credits} EAP · {s.required ? "kohustuslik" : "valikaine"}</div>
       <div><div className="label">Eeldab ({up.size})</div>{list(up, "up")}</div>
       <div><div className="label">Avab ({down.size})</div>{list(down, "down")}</div>
       {s.objective && <div><div className="label">Eesmärk</div><p>{s.objective}</p></div>}
