@@ -1214,7 +1214,7 @@ const curriculums = [
         "order": 2,
         "code": "HKI5062.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5062.HK",
-        "name": "Sissejuhatus Informaatikasse",
+        "name": "Sissejuhatus informaatikasse",
         "module": 3,
         "required": true,
         "prerequisites": [],
@@ -1520,11 +1520,11 @@ const curriculums = [
       },
       {
         "id": 11,
-        "semester": 2,
-        "order": 5,
+        "semester": 3,
+        "order": 6,
         "code": "HKM5084.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKM5084.HK",
-        "name": "Graafiline disain",
+        "name": "Graafilise disaini alused",
         "module": 3,
         "required": true,
         "prerequisites": [],
@@ -1556,7 +1556,7 @@ const curriculums = [
       {
         "id": 12,
         "semester": 2,
-        "order": 6,
+        "order": 5,
         "code": "HKI5118.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5118.HK",
         "name": "Veebirakenduste arendamine",
@@ -1597,11 +1597,11 @@ const curriculums = [
       },
       {
         "id": 13,
-        "semester": 4,
-        "order": 5,
+        "semester": 3,
+        "order": 7,
         "code": "YID6001.YM",
         "url": "https://ois2.tlu.ee/tluois/aine/YID6001.YM",
-        "name": "ELU",
+        "name": "ELU - Erialasid Lõimiv Uuendus",
         "module": 2,
         "required": true,
         "prerequisites": [],
@@ -1634,14 +1634,14 @@ const curriculums = [
             "description": "Tutvustab projekti tulemusi sidusrühmadele ja/või avalikkusele."
           }
         ],
-        "assessment": "Üleülikooliline aine, kus me ise ei saa midagi muuta",
-        "comment": "",
+        "assessment": "Arvestus",
+        "comment": "Üleülikooliline aine, kus me ise ei saa midagi muuta",
         "nonUnique": true
       },
       {
         "id": 14,
         "semester": 3,
-        "order": 4,
+        "order": 3,
         "code": "HKI5060.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5060.HK",
         "name": "Videomängude disain",
@@ -1676,7 +1676,7 @@ const curriculums = [
       {
         "id": 15,
         "semester": 3,
-        "order": 5,
+        "order": 4,
         "code": "HKI5120.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5120.HK",
         "name": "Kasutajaliidese disain",
@@ -1714,7 +1714,7 @@ const curriculums = [
       {
         "id": 16,
         "semester": 3,
-        "order": 2,
+        "order": 1,
         "code": "HKI5121.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5121.HK",
         "name": "Andmebaasid",
@@ -1752,7 +1752,7 @@ const curriculums = [
       {
         "id": 17,
         "semester": 3,
-        "order": 3,
+        "order": 2,
         "code": "HKI5122.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5122.HK",
         "name": "Veebiraamistike rakendamine",
@@ -1790,7 +1790,7 @@ const curriculums = [
       {
         "id": 18,
         "semester": 3,
-        "order": 6,
+        "order": 5,
         "code": "HKI5123.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5123.HK",
         "name": "Tagarakenduste arendamine",
@@ -1953,14 +1953,14 @@ const curriculums = [
             "description": "Kasutab tabelarvutusprogrammi lihtsama andmetöötluse ja -analüüsi läbiviimiseks."
           }
         ],
-        "assessment": "Arvestus",
+        "assessment": "Eksam",
         "comment": "",
         "nonUnique": true
       },
       {
         "id": 22,
-        "semester": 4,
-        "order": 4,
+        "semester": 2,
+        "order": 6,
         "code": "HKL5112.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKL5112.HK",
         "name": "Protsessi- ja projektijuhtimine",
@@ -1994,13 +1994,13 @@ const curriculums = [
       },
       {
         "id": 23,
-        "semester": 4,
-        "order": 6,
+        "semester": 6,
+        "order": 5,
         "code": "HKI5081.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5081.HK",
-        "name": "Erialane inglise keel",
+        "name": "Erialane inglise keel I",
         "module": 6,
-        "required": true,
+        "required": false,
         "prerequisites": [],
         "credits": 6,
         "content": "Erialase keeleoskuse taseme tõstmine. Erialase inglise keele omandamine ja vastava terminoloogiaga tutvumine. Üldkeeleoskuse saavutamise lõpptase: lugemis-, kuulamis- , kõnelemis- ja kirjutamisokus B2.1 tasemel.",
@@ -2028,13 +2028,13 @@ const curriculums = [
           }
         ],
         "assessment": "Arvestus",
-        "comment": "",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
         "nonUnique": true
       },
       {
         "id": 24,
-        "semester": 3,
-        "order": 1,
+        "semester": 4,
+        "order": 4,
         "code": "HKI5125.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5125.HK",
         "name": "Kujundustarkvara edasijõudnutele",
@@ -2064,7 +2064,7 @@ const curriculums = [
             "description": "Kavandab ja teostab juhiste alusel või iseseisva loovtööna kujunduse elemente ja/või tervikkujundusi."
           }
         ],
-        "assessment": "Arvestus",
+        "assessment": "Eksam",
         "comment": "",
         "nonUnique": true
       },
@@ -2101,7 +2101,7 @@ const curriculums = [
             "description": "Dokumenteerib oma tegevused projekti jooksul ning esitab individuaalse aruande vastavalt praktikajuhendile."
           }
         ],
-        "assessment": "Eksam",
+        "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
       },
@@ -2146,7 +2146,7 @@ const curriculums = [
             "description": "Oskab töös kirjeldatud seisukohti esitleda ja argumenteerida ning avalikul kaitsmisel küsimustele vastata."
           }
         ],
-        "assessment": "",
+        "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
       },
@@ -2235,7 +2235,7 @@ const curriculums = [
         "prerequisites": [
           5
         ],
-        "credits": 6,
+        "credits": 4,
         "content": "Õppeaine annab põhjaliku ülevaate mobiilirakenduste arenduse põhialustest, keskendudes mobiilsete platvormide ja seadmete eripäradele, mobiilirakenduste ajaloole ja nende rollile kaasaegses äris ning igapäevaelus. Kursusel käsitletakse mobiilirakenduste arendamise kõiki etappe, sealhulgas planeerimist, arhitektuuri kavandamist, arendamist, testimist ja vigade käsitlemist. Erilist tähelepanu pööratakse turvalisusele ja privaatsusele, rakendades parimaid tavasid usaldusväärsete lahenduste loomiseks. Õppijad omandavad praktilised oskused React Native’i arenduskeskkonnas, alustades seadistamisest ja integreerimisest teiste tööriistade ja teekidega (nt Expo, Redux). Kursusel käsitletakse ka andmete pärimist välisest API-st, nende töötlemist ja kuvamist mobiilirakendustes. Samuti võrreldakse alternatiivseid lahendusi, nagu veebipõhised rakendused, hübriidlahendused ja progressiivsed veebirakendused (PWA). Praktiliste ülesannete raames loovad õppijad React Native’i abil mobiilirakenduse, rakendades seisundihaldust, andmevooge ja API-de integreerimist. Lisaks pööratakse tähelepanu dokumenteerimisele ja versioonihalduse (nt Git, GitHub) kasutamisele, et toetada arendusprotsessi läbipaistvust ja meeskonnatööd.",
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused mobiilirakenduste arendamiseks React Native’i abil, keskendudes rakenduste planeerimisele, arendamisele, testimisele, andmete integreerimisele välisest API-st ning dokumenteerimisele ja versioonihalduse kasutamisele. Kursus laiendab õppijate arusaama mobiilirakenduste rollist ja võimalustest kaasaegses maailmas, tutvustades ka alternatiivseid lahendusi ja tulevikusuundi.",
         "outcomes": [
@@ -2260,7 +2260,7 @@ const curriculums = [
             "description": "Kasutab versioonihaldust programmikoodi ja dokumentatsiooni haldamiseks."
           }
         ],
-        "assessment": "Eksam",
+        "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
       },
@@ -2270,7 +2270,7 @@ const curriculums = [
         "order": 3,
         "code": "HKI5126.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5126.HK",
-        "name": "Andmeturve",
+        "name": "Küberturve",
         "module": 3,
         "required": true,
         "prerequisites": [],
@@ -2365,7 +2365,7 @@ const curriculums = [
             "description": "Analüüsib e-äri, IT-süütegude ja tööstusomandi õiguslikke aspekte."
           }
         ],
-        "assessment": "",
+        "assessment": "Eksam",
         "comment": "",
         "nonUnique": true
       },
@@ -2377,7 +2377,7 @@ const curriculums = [
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5128.HK",
         "name": "Erialaseminar",
         "module": 4,
-        "required": true,
+        "required": false,
         "prerequisites": [],
         "credits": 4,
         "content": "Õppeaine eesmärk on pakkuda paindlikku võimalust süvendada teadmisi IT-sektorist ja osaleda valdkonnaga seotud praktilistes tegevustes, mis toetavad õppija isiklikku arengut ja huve. Kursus hõlmab mitmeid võimalikke komponente, millest õppija saab valida endale sobivaimad, et laiendada oma teadmisi ja kogemusi IT-sektoris.\n\nValikute hulka kuuluvad:\n\n- IT-sektori hetkeseisu ja arengutrendide analüüs, tuginedes kaasaegsetele tehnoloogiatele ja innovatsioonivaldkondadele.\n- Osalemine IT-konverentsidel, seminaridel, töötubades, häkatonidel või vabavara projektides.\n- Praktiline kokkupuude IT-sektoriga IT-ettevõtete külastuste ja spetsialistidega kohtumiste kaudu.\n- Ettekannete ettevalmistamine ja esitamine IT-valdkonna huvipakkuvatel teemadel.\n- Eneseanalüüsi ja arenguplaani koostamine, kaardistades oma tugevused ja arenguvajadused ning planeerides karjääriteed.\n- Osalemine erinevates IT-sektorit puudutavates uuringutes.\n- jms\n\nÕppeaine annab võimaluse keskenduda neile teemadele ja tegevustele, mis on õppija arengu ja eesmärkide saavutamise seisukohalt kõige olulisemad, pakkudes paindlikkust õppekava täitmisel.",
@@ -2439,6 +2439,42 @@ const curriculums = [
           }
         ],
         "assessment": "Eksam",
+        "comment": "",
+        "nonUnique": false
+      },
+      {
+        "id": 35,
+        "semester": 6,
+        "order": 6,
+        "code": "HKI5129.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5129.HK",
+        "name": "Välispraktika",
+        "module": 4,
+        "required": false,
+        "prerequisites": [],
+        "credits": 9,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
+        "nonUnique": false
+      },
+      {
+        "id": 36,
+        "semester": 4,
+        "order": 5,
+        "code": "HKI5090.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5090.HK",
+        "name": "Erialane inglise keel II",
+        "module": 6,
+        "required": false,
+        "prerequisites": [],
+        "credits": 6,
+        "content": "",
+        "objective": "",
+        "outcomes": [],
+        "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
       }
