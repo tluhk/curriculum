@@ -114,7 +114,7 @@ const entrySubjects = subjects.map((s, i) => {
   }
   order[semester] = (order[semester] || 0) + 1;
   return {
-    id: i + 1, semester, order: order[semester], url: `https://ois2.tlu.ee/tluois/aine/${s.code}`, name: s.name, module: s.module,
+    id: i + 1, semester, order: order[semester], code: s.code, url: `https://ois2.tlu.ee/tluois/aine/${s.code}`, name: s.name, module: s.module,
     required: s.required, prerequisites: [], credits: s.credits, content: '', objective: '', outcomes: [], assessment: s.assessment, comment, nonUnique: false,
   };
 });

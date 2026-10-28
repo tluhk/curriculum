@@ -22,8 +22,14 @@ describe("coverage", () => {
 
 describe("checks", () => {
   it("flags semesters that are not 30 EAP", () => expect(checkCurriculum(C).map((i) => i.text)).toContain("Semester 1 maht on 15 EAP (eeldatav 30)."));
-  it("blocks moving a prerequisite after its dependent", () =>
-    expect(subjectErrors(C.subjects, 1, { ...C.subjects[0], semester: 2 })).toHaveLength(1));
+  it("blocks moving a prerequisite after its dependent, but allows the same semester", () => {
+    expect(subjectErrors(C.subjects, 1, { ...C.subjects[0], semester: 3 })).toHaveLength(1);
+    expect(subjectErrors(C.subjects, 1, { ...C.subjects[0], semester: 2 })).toHaveLength(0);
+  });
+  it("a prerequisite in the same semester is not flagged", () => {
+    const C3 = { ...C, subjects: C.subjects.map((s) => (s.id === 1 ? { ...s, semester: 2 } : s)) };
+    expect(checkCurriculum(C3).filter((i) => i.sev === "viga")).toEqual([]);
+  });
   it("required → elective warning shows on both subjects", () => {
     const C2 = { ...C, subjects: C.subjects.map((s) => (s.id === 1 ? { ...s, required: false } : s)) };
     const issues = checkCurriculum(C2).filter((i) => i.sev === "hoiatus");

@@ -13,7 +13,7 @@ const mapModuleLinks = (modules, keep) =>
   }));
 
 export const newSubject = (modules) => ({
-  name: "", module: modules[0]?.id ?? 1, semester: 1, credits: 3, required: true, prerequisites: [],
+  name: "", code: "", module: modules[0]?.id ?? 1, semester: 1, credits: 3, required: true, prerequisites: [],
   assessment: "", url: "", objective: "", content: "", comment: "", nonUnique: false, outcomes: [],
 });
 

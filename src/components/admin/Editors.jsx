@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { NO_MODULE, SWATCHES } from "../../constants";
 import { subjectErrors } from "../../utils/checks";
 import { semesterCount } from "../../utils/curricula";
+import { subjectCode, withCode } from "../../utils/subjectCode";
 import {
   newSubject, saveSubject, deleteSubject, saveModule, deleteModule, saveOutcome, deleteOutcome,
 } from "../../utils/adminOps";
@@ -119,7 +120,7 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
         <span className="label">Eeldusained</span>
         <div className="pills">
           {d.prerequisites.map((p) => {
-            const y = subj[p] || { name: "?", semester: "?" }, bad = y.semester >= d.semester;
+            const y = subj[p] || { name: "?", semester: "?" }, bad = y.semester > d.semester;
             const elective = d.required && y.required === false;
             return (
               <button key={p} className={"pill" + (bad ? " bad" : elective ? " warn" : "")} onClick={() => setD({ prerequisites: d.prerequisites.filter((x) => x !== p) })}
@@ -131,9 +132,10 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
           {!d.prerequisites.length && <span className="muted">Eeldusaineid pole</span>}
         </div>
         <AddSelect placeholder="+ Lisa eeldusaine…" onPick={(v) => setD({ prerequisites: [...d.prerequisites, +v] })}
-          options={sorted.filter((s) => s.id !== id && !d.prerequisites.includes(s.id) && s.semester < d.semester).map((s) => ({ key: s.id, label: `S${s.semester} · ${s.name}` }))} />
+          options={sorted.filter((s) => s.id !== id && !d.prerequisites.includes(s.id) && s.semester <= d.semester).map((s) => ({ key: s.id, label: `S${s.semester} · ${s.name}` }))} />
       </div>
       <Field label="Hindamisvorm"><input value={d.assessment} onChange={(e) => setD({ assessment: e.target.value })} /></Field>
+      <Field label="ÕIS kood"><input value={subjectCode(d)} placeholder="nt HKI5025.HK" onChange={(e) => setD0((x) => withCode(x, e.target.value.trim().toUpperCase()))} /></Field>
       <Field label="Ainekaardi URL"><input value={d.url} placeholder="https://" onChange={(e) => setD({ url: e.target.value })} /></Field>
       <Field label="Eesmärk"><textarea rows={3} value={d.objective} onChange={(e) => setD({ objective: e.target.value })} /></Field>
       <Field label="Sisu"><textarea rows={3} value={d.content} onChange={(e) => setD({ content: e.target.value })} /></Field>

@@ -45,7 +45,7 @@ export default function FilterRail({ modules, subjects, off, reqOnly, onToggle, 
         })}
       </div>
       <button className="switch" role="switch" aria-checked={reqOnly} onClick={onReqOnly}><i />Ainult kohustuslikud</button>
-      <p className="hint">Lohista aine teise semestrisse. Eeldused peavad jääma varasemasse ja sõltuvad ained hilisemasse semestrisse. Semestri sihtmaht on {SEMESTER_EAP} EAP.</p>
+      <p className="hint">Lohista aine teise semestrisse. Eeldus võib olla samas semestris, aga mitte hilisemas; sõltuv aine mitte varasemas semestris. Semestri sihtmaht on {SEMESTER_EAP} EAP.</p>
     </Rail>
   );
 }

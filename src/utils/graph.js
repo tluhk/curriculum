@@ -16,13 +16,14 @@ const walk = (start, next) => {
 export const upstream = (id, idx) => walk(id, (x) => idx[x]?.prerequisites);
 export const downstream = (id, deps) => walk(id, (x) => deps[x]);
 
-// Can subject `id` move to `semester`? Prerequisites must stay earlier, dependents later.
+// Can subject `id` move to `semester`? Prerequisites must stay in the same or an earlier semester, dependents in the same or a later one
+// (a prerequisite can start earlier within the semester, so sharing a semester is fine).
 export const checkMove = (subjects, id, semester) => {
   const idx = byId(subjects), deps = dependentsMap(subjects), s = idx[id];
   if (!s || s.semester === semester) return { ok: true };
-  for (const p of s.prerequisites || []) if (idx[p] && idx[p].semester >= semester)
+  for (const p of s.prerequisites || []) if (idx[p] && idx[p].semester > semester)
     return { ok: false, reason: `Eeldab: ${idx[p].name} (S${idx[p].semester})` };
-  for (const d of deps[id] || []) if (idx[d].semester <= semester)
+  for (const d of deps[id] || []) if (idx[d].semester < semester)
     return { ok: false, reason: `Avab: ${idx[d].name} (S${idx[d].semester})` };
   return { ok: true };
 };
