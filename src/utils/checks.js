@@ -15,8 +15,8 @@ export const checkCurriculum = ({ subjects, modules, learningOutcomes }) => {
     (s.prerequisites || []).forEach((p) => {
       const y = subj[p];
       if (!y) return add("viga", `${s.name} viitab olematule eeldusainele #${p}.`, "subject", s.id);
-      if (y.semester >= s.semester)
-        add("viga", `${s.name} (S${s.semester}) eeldab ainet ${y.name} (S${y.semester}) — eeldus peab olema varasemas semestris.`, "subject", s.id,
+      if (y.semester > s.semester)
+        add("viga", `${s.name} (S${s.semester}) eeldab ainet ${y.name} (S${y.semester}) — eeldus peab olema samas või varasemas semestris.`, "subject", s.id,
           [{ type: "subject", id: y.id }]);
       if (s.required && !y.required)
         add("hoiatus", `Kohustuslik aine „${s.name}“ eeldab valikainet „${y.name}“. Kui tudeng seda valikainet ei vali, ei saa ta eeldust täita. Tee „${y.name}“ kohustuslikuks või eemalda see eeldus.`,
@@ -68,7 +68,7 @@ export const checkCurriculum = ({ subjects, modules, learningOutcomes }) => {
 export const issuesFor = (issues, type, id) =>
   issues.filter((i) => (i.target.type === type && i.target.id === id) || i.related.some((r) => r.type === type && r.id === id));
 
-// Errors that block saving a subject draft (prerequisites earlier, dependents later)
+// Errors that block saving a subject draft (prerequisites in the same or an earlier semester, dependents in the same or a later one)
 export const subjectErrors = (subjects, id, draft) => {
   const errors = [];
   const subj = Object.fromEntries(subjects.map((s) => [s.id, s]));
@@ -76,12 +76,12 @@ export const subjectErrors = (subjects, id, draft) => {
   if (!(draft.credits > 0)) errors.push("Maht peab olema suurem kui 0.");
   draft.prerequisites.forEach((p) => {
     const y = subj[p];
-    if (y && y.semester >= draft.semester)
-      errors.push(`Eeldus „${y.name}“ (S${y.semester}) peab olema varasemas semestris kui S${draft.semester}.`);
+    if (y && y.semester > draft.semester)
+      errors.push(`Eeldus „${y.name}“ (S${y.semester}) peab olema samas või varasemas semestris kui S${draft.semester}.`);
   });
   if (id !== "new")
     subjects
-      .filter((s) => (s.prerequisites || []).includes(id) && s.semester <= draft.semester)
-      .forEach((s) => errors.push(`Sõltuv aine „${s.name}“ (S${s.semester}) peab jääma hilisemasse semestrisse kui S${draft.semester}.`));
+      .filter((s) => (s.prerequisites || []).includes(id) && s.semester < draft.semester)
+      .forEach((s) => errors.push(`Sõltuv aine „${s.name}“ (S${s.semester}) peab jääma samasse või hilisemasse semestrisse kui S${draft.semester}.`));
   return errors;
 };
