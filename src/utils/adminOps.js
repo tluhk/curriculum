@@ -3,6 +3,7 @@
 import { moduleConfig } from "../constants";
 
 const nextId = (items, floor = 0) => Math.max(floor, ...items.map((x) => x.id)) + 1;
+export const nextSubjectId = (c) => nextId(c.subjects);
 const lastOrder = (subjects, semester) => Math.max(0, ...subjects.filter((s) => s.semester === semester).map((s) => s.order));
 const mapModuleLinks = (modules, keep) =>
   modules.map((m) => ({
@@ -20,7 +21,7 @@ export const newSubject = (modules) => ({
 export const saveSubject = (c, id, draft) => {
   const row = { ...draft, name: draft.name.trim() };
   if (id === "new") {
-    const subject = { ...row, id: nextId(c.subjects), order: lastOrder(c.subjects, row.semester) + 1 };
+    const subject = { ...row, id: nextSubjectId(c), order: lastOrder(c.subjects, row.semester) + 1 };
     return { ...c, subjects: [...c.subjects, subject] };
   }
   const old = c.subjects.find((s) => s.id === id);
@@ -72,7 +73,7 @@ export const deleteModule = (c, id) => ({
 export const saveOutcome = (c, id, draft) => {
   const row = { ...draft };
   if (!row.khsOutcome?.trim()) delete row.khsOutcome;
-  if (id === "new") return { ...c, learningOutcomes: [...c.learningOutcomes, { id: nextId(c.learningOutcomes, 180), ...row }] };
+  if (id === "new") return { ...c, learningOutcomes: [...c.learningOutcomes, { id: nextId(c.learningOutcomes), ...row }] };
   return { ...c, learningOutcomes: c.learningOutcomes.map((lo) => (lo.id === id ? { id, ...row } : lo)) };
 };
 

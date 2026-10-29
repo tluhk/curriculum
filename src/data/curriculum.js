@@ -455,7 +455,7 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 11
+                "outcomeId": 181
               },
               {
                 "subjectId": 4,
@@ -1258,7 +1258,7 @@ const curriculums = [
         "objective": "Eesmärk on luua eeldused programmeerimise olemuse, baasmõistete ja põhimeetodite tundmiseks. Kursus toetab protseduurse programmeerimise aluste omandamist, tüüpiliste keeletarindite mõistmist, probleemide analüüsioskuse ja algoritmilise mõtlemise arengut. Samuti valmistatakse õppijaid ette teiste programmeerimisega seotud ainete edukaks läbimiseks.",
         "outcomes": [
           {
-            "id": 11,
+            "id": 181,
             "description": "Kasutab programmikoodi töötlemiseks, silumiseks ja testimiseks sobivat keskkonda."
           },
           {
@@ -3055,7 +3055,7 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 11
+                "outcomeId": 226
               },
               {
                 "subjectId": 3,
@@ -3133,7 +3133,7 @@ const curriculums = [
               },
               {
                 "subjectId": 3,
-                "outcomeId": 11
+                "outcomeId": 226
               },
               {
                 "subjectId": 29,
@@ -3850,7 +3850,7 @@ const curriculums = [
             "description": "Tunneb protseduurse programmeerimise põhimõtteid, mõisteid ja keelt ning mõistab programmeerimise olemust"
           },
           {
-            "id": 11,
+            "id": 226,
             "description": "Kasutab programmikoodi töötlemiseks, silumiseks ja testimiseks sobivat keskkonda"
           },
           {

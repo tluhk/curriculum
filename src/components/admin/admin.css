@@ -83,3 +83,8 @@
 .ccard input,.ccard select,.ccard textarea{width:100%;border:1px solid var(--line-2);border-radius:var(--radius);padding:8px 10px;font-size:14px;background:#fff}
 .ccard input:focus,.ccard select:focus,.ccard textarea:focus{outline:2px solid var(--accent);outline-offset:-1px}
 .ccard .b:disabled{opacity:.4;cursor:not-allowed}
+.outblock{display:flex;flex-direction:column;gap:5px}
+.outlinks{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding-left:2px}
+.outlinks select{width:auto;max-width:100%;padding:4px 8px;font-size:12px}
+.check{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)}
+.check input{width:auto}
