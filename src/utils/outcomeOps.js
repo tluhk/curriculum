@@ -122,3 +122,40 @@ export const moduleOutcomeUsage = (c, moduleId, outcomeId) => ({
   curriculum: c.learningOutcomes.filter((lo) => hasModuleLink(lo, moduleId, outcomeId)).length,
   subject: (c.modules.find((m) => m.id === moduleId)?.learningOutcomes.find((o) => o.id === outcomeId)?.subjectOutcomes || []).length,
 });
+
+// Renumbers every outcome id consecutively, keeping order, texts and links: ÕV 1..n, module outcomes 1..n per module, subject outcomes
+// 1..n across the curriculum (in subject order). Links that already pointed at a missing subject outcome stay dangling (they are never
+// re-pointed at a real outcome by the new numbers).
+export const renumberOutcomes = (c) => {
+  const loMap = new Map(c.learningOutcomes.map((l, i) => [l.id, i + 1]));
+  const moMap = new Map(c.modules.flatMap((m) => m.learningOutcomes.map((o, i) => [m.id + "." + o.id, i + 1])));
+  const soMap = new Map();
+  let n = 0;
+  c.subjects.forEach((s) => s.outcomes.forEach((o) => soMap.set(s.id + "." + o.id, ++n)));
+  const taken = new Set([...soMap.keys()].map((k) => { const [sid] = k.split("."); return sid + "." + soMap.get(k); }));
+  const DANGLING_SHIFT = 100000;
+  return {
+    ...c,
+    learningOutcomes: c.learningOutcomes.map((l) => ({
+      ...l,
+      id: loMap.get(l.id),
+      moduleOutcomes: (l.moduleOutcomes || []).map((x) => ({ ...x, outcomeId: moMap.get(x.moduleId + "." + x.outcomeId) ?? x.outcomeId + DANGLING_SHIFT })),
+    })),
+    modules: c.modules.map((m) => ({
+      ...m,
+      learningOutcomes: m.learningOutcomes.map((o) => ({
+        ...o,
+        id: moMap.get(m.id + "." + o.id),
+        ...(o.subjectOutcomes ? {
+          subjectOutcomes: o.subjectOutcomes.map((x) => {
+            const id = soMap.get(x.subjectId + "." + x.outcomeId);
+            if (id) return { ...x, outcomeId: id };
+            // missing outcome: keep it dangling, moving it aside if its old number now belongs to a real outcome of that subject
+            return { ...x, outcomeId: taken.has(x.subjectId + "." + x.outcomeId) ? x.outcomeId + DANGLING_SHIFT : x.outcomeId };
+          }),
+        } : {}),
+      })),
+    })),
+    subjects: c.subjects.map((s) => ({ ...s, outcomes: s.outcomes.map((o) => ({ ...o, id: soMap.get(s.id + "." + o.id) })) })),
+  };
+};

@@ -8,7 +8,7 @@ const curriculums = [
     "objective": "Õppekava lõpetaja on IT-valdkonna spetsialist, kes osaleb ja vajadusel juhib veebipõhiste digilahenduste kõiki tarkvaraarenduse elutsükli etappe, luues andmepõhiseid, turvalisi ja kestlikku arengut toetavaid lahendusi, tegutsedes interdistsiplinaarsetes meeskondades ning täiustades oma professionaalseid pädevusi kogu karjääri vältel.",
     "learningOutcomes": [
       {
-        "id": 181,
+        "id": 1,
         "description": "Selgitab ja rakendab tarkvaraarenduse ja disaini teoreetilisi lähtekohti ning arengusuundi, eristades fakte arvamustest ja põhjendades valikuid andmepõhise otsustamise abil.",
         "moduleOutcomes": [
           {
@@ -17,28 +17,28 @@ const curriculums = [
           },
           {
             "moduleId": 6,
-            "outcomeId": 195
+            "outcomeId": 1
           },
           {
             "moduleId": 6,
-            "outcomeId": 196
+            "outcomeId": 2
           },
           {
             "moduleId": 6,
-            "outcomeId": 197
+            "outcomeId": 3
           },
           {
             "moduleId": 7,
-            "outcomeId": 198
+            "outcomeId": 1
           },
           {
             "moduleId": 7,
-            "outcomeId": 200
+            "outcomeId": 3
           }
         ]
       },
       {
-        "id": 182,
+        "id": 2,
         "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleeme, kavandab andmete kogumise- ja analüüsiprotsessi ning loob tulemuste põhjal kasutaja­keskseid ja kestlikke digilahendusi.",
         "moduleOutcomes": [
           {
@@ -51,7 +51,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 191
+            "outcomeId": 3
           },
           {
             "moduleId": 1,
@@ -59,12 +59,12 @@ const curriculums = [
           },
           {
             "moduleId": 7,
-            "outcomeId": 199
+            "outcomeId": 2
           }
         ]
       },
       {
-        "id": 183,
+        "id": 3,
         "description": "Kommunikeerib erialaseid ideid ja lahendusi eesti või inglise keeles, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise.",
         "moduleOutcomes": [
           {
@@ -81,24 +81,24 @@ const curriculums = [
           },
           {
             "moduleId": 6,
-            "outcomeId": 195
+            "outcomeId": 1
           },
           {
             "moduleId": 6,
-            "outcomeId": 196
+            "outcomeId": 2
           },
           {
             "moduleId": 6,
-            "outcomeId": 197
+            "outcomeId": 3
           },
           {
             "moduleId": 7,
-            "outcomeId": 201
+            "outcomeId": 4
           }
         ]
       },
       {
-        "id": 184,
+        "id": 4,
         "description": "Osaleb tarkvara disaini- ja arendusprojektides iseseisvalt ja meeskonnas kogu tarkvaraarenduse elutsükli vältel, rakendades agiilseid tööviise, väärtustades innovatsiooni ja ettevõtlikkust ning luues kasutajakeskseid, turvalisi ja visuaalselt atraktiivseid interdistsiplinaarseid digilahendusi.",
         "moduleOutcomes": [
           {
@@ -107,7 +107,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 190
+            "outcomeId": 2
           },
           {
             "moduleId": 1,
@@ -119,12 +119,12 @@ const curriculums = [
           },
           {
             "moduleId": 5,
-            "outcomeId": 192
+            "outcomeId": 1
           }
         ]
       },
       {
-        "id": 185,
+        "id": 5,
         "description": "Täidab erialaseid ülesandeid vastutustundlikult, loovalt ja eetiliselt, tulles toime võimalike pingeolukordadega ning arvestades füüsilist ja vaimset tervist mõjutavaid tegureid.",
         "moduleOutcomes": [
           {
@@ -133,7 +133,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 191
+            "outcomeId": 3
           },
           {
             "moduleId": 1,
@@ -145,12 +145,12 @@ const curriculums = [
           },
           {
             "moduleId": 5,
-            "outcomeId": 192
+            "outcomeId": 1
           }
         ]
       },
       {
-        "id": 186,
+        "id": 6,
         "description": "Arvestab tööriistade kasutamisel, erialaste ülesannete täitmisel ja lahenduste loomisel turvalisuse ja eetilisusega.",
         "moduleOutcomes": [
           {
@@ -163,12 +163,12 @@ const curriculums = [
           },
           {
             "moduleId": 7,
-            "outcomeId": 200
+            "outcomeId": 3
           }
         ]
       },
       {
-        "id": 187,
+        "id": 7,
         "description": "Seab isiklikud õpieesmärgid, hindab ja reflekteerib oma õppeprotsessi ning planeerib teadlikult oma õpet ja karjääri.",
         "moduleOutcomes": [
           {
@@ -177,7 +177,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 189
+            "outcomeId": 1
           },
           {
             "moduleId": 1,
@@ -185,12 +185,12 @@ const curriculums = [
           },
           {
             "moduleId": 5,
-            "outcomeId": 192
+            "outcomeId": 1
           }
         ]
       },
       {
-        "id": 188,
+        "id": 8,
         "description": "Tegutseb erialaspetsialisti ja kodanikuna kestliku arengu põhimõtteid järgides, hindab oma digilahenduste keskkonna- ja ühiskonnamõju ning teeb vastutustundlikke otsuseid.",
         "moduleOutcomes": [
           {
@@ -199,7 +199,7 @@ const curriculums = [
           },
           {
             "moduleId": 7,
-            "outcomeId": 202
+            "outcomeId": 5
           }
         ]
       }
@@ -217,7 +217,7 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 19,
-                "outcomeId": 80
+                "outcomeId": 78
               },
               {
                 "subjectId": 24,
@@ -235,11 +235,11 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 19,
-                "outcomeId": 81
+                "outcomeId": 79
               },
               {
                 "subjectId": 19,
-                "outcomeId": 82
+                "outcomeId": 80
               },
               {
                 "subjectId": 24,
@@ -279,7 +279,7 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 19,
-                "outcomeId": 83
+                "outcomeId": 81
               },
               {
                 "subjectId": 24,
@@ -297,7 +297,7 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 19,
-                "outcomeId": 80
+                "outcomeId": 78
               },
               {
                 "subjectId": 24,
@@ -315,7 +315,7 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 19,
-                "outcomeId": 80
+                "outcomeId": 78
               },
               {
                 "subjectId": 24,
@@ -348,11 +348,11 @@ const curriculums = [
               },
               {
                 "subjectId": 7,
-                "outcomeId": 164
+                "outcomeId": 30
               },
               {
                 "subjectId": 13,
-                "outcomeId": 56
+                "outcomeId": 54
               }
             ]
           },
@@ -374,7 +374,11 @@ const curriculums = [
               },
               {
                 "subjectId": 7,
-                "outcomeId": 163
+                "outcomeId": 29
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 51
               },
               {
                 "subjectId": 13,
@@ -382,11 +386,7 @@ const curriculums = [
               },
               {
                 "subjectId": 13,
-                "outcomeId": 55
-              },
-              {
-                "subjectId": 13,
-                "outcomeId": 56
+                "outcomeId": 54
               }
             ]
           },
@@ -396,23 +396,23 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 7,
-                "outcomeId": 161
+                "outcomeId": 27
               },
               {
                 "subjectId": 7,
-                "outcomeId": 162
+                "outcomeId": 28
               },
               {
                 "subjectId": 7,
-                "outcomeId": 163
+                "outcomeId": 29
               },
               {
                 "subjectId": 13,
-                "outcomeId": 54
+                "outcomeId": 52
               },
               {
                 "subjectId": 13,
-                "outcomeId": 57
+                "outcomeId": 55
               }
             ]
           },
@@ -426,7 +426,11 @@ const curriculums = [
               },
               {
                 "subjectId": 7,
-                "outcomeId": 164
+                "outcomeId": 30
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 51
               },
               {
                 "subjectId": 13,
@@ -434,11 +438,7 @@ const curriculums = [
               },
               {
                 "subjectId": 13,
-                "outcomeId": 55
-              },
-              {
-                "subjectId": 13,
-                "outcomeId": 58
+                "outcomeId": 56
               }
             ]
           }
@@ -455,7 +455,7 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 181
+                "outcomeId": 12
               },
               {
                 "subjectId": 4,
@@ -511,7 +511,7 @@ const curriculums = [
               },
               {
                 "subjectId": 20,
-                "outcomeId": 84
+                "outcomeId": 82
               },
               {
                 "subjectId": 22,
@@ -527,7 +527,7 @@ const curriculums = [
               },
               {
                 "subjectId": 21,
-                "outcomeId": 88
+                "outcomeId": 86
               }
             ]
           },
@@ -537,11 +537,11 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 12
+                "outcomeId": 13
               },
               {
                 "subjectId": 3,
-                "outcomeId": 13
+                "outcomeId": 100013
               },
               {
                 "subjectId": 4,
@@ -589,7 +589,7 @@ const curriculums = [
               },
               {
                 "subjectId": 21,
-                "outcomeId": 93
+                "outcomeId": 91
               }
             ]
           },
@@ -607,7 +607,7 @@ const curriculums = [
               },
               {
                 "subjectId": 3,
-                "outcomeId": 12
+                "outcomeId": 13
               },
               {
                 "subjectId": 5,
@@ -655,7 +655,7 @@ const curriculums = [
               },
               {
                 "subjectId": 20,
-                "outcomeId": 85
+                "outcomeId": 83
               },
               {
                 "subjectId": 22,
@@ -729,7 +729,15 @@ const curriculums = [
               },
               {
                 "subjectId": 21,
+                "outcomeId": 87
+              },
+              {
+                "subjectId": 21,
                 "outcomeId": 89
+              },
+              {
+                "subjectId": 21,
+                "outcomeId": 90
               },
               {
                 "subjectId": 21,
@@ -738,14 +746,6 @@ const curriculums = [
               {
                 "subjectId": 21,
                 "outcomeId": 92
-              },
-              {
-                "subjectId": 21,
-                "outcomeId": 93
-              },
-              {
-                "subjectId": 21,
-                "outcomeId": 94
               }
             ]
           },
@@ -779,7 +779,7 @@ const curriculums = [
               },
               {
                 "subjectId": 20,
-                "outcomeId": 87
+                "outcomeId": 85
               },
               {
                 "subjectId": 22,
@@ -791,7 +791,11 @@ const curriculums = [
               },
               {
                 "subjectId": 21,
-                "outcomeId": 88
+                "outcomeId": 86
+              },
+              {
+                "subjectId": 21,
+                "outcomeId": 87
               },
               {
                 "subjectId": 21,
@@ -804,10 +808,6 @@ const curriculums = [
               {
                 "subjectId": 21,
                 "outcomeId": 93
-              },
-              {
-                "subjectId": 21,
-                "outcomeId": 95
               }
             ]
           }
@@ -819,36 +819,36 @@ const curriculums = [
         "objective": "Õpilane süvendab teadmisi ja oskusi valdkonna spetsiifilistes või uudsetes teemades.",
         "learningOutcomes": [
           {
-            "id": 189,
+            "id": 1,
             "description": "Analüüsib ja teeb põhjendatud valiku valdkonnaspetsiifilise või uudse lähenemisviisi osas,  seostab oma valiku teoreetiliste käsitluste ja praktiliste rakendustega.",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
-                "outcomeId": 59
+                "outcomeId": 57
               },
               {
                 "subjectId": 14,
-                "outcomeId": 60
+                "outcomeId": 58
               },
               {
                 "subjectId": 15,
-                "outcomeId": 63
+                "outcomeId": 61
               },
               {
                 "subjectId": 15,
-                "outcomeId": 64
+                "outcomeId": 62
               },
               {
                 "subjectId": 8,
-                "outcomeId": 165
+                "outcomeId": 31
               },
               {
                 "subjectId": 12,
-                "outcomeId": 48
+                "outcomeId": 46
               },
               {
                 "subjectId": 12,
-                "outcomeId": 49
+                "outcomeId": 47
               },
               {
                 "subjectId": 23,
@@ -885,36 +885,36 @@ const curriculums = [
             ]
           },
           {
-            "id": 190,
+            "id": 2,
             "description": "Rakendab omandatud teadmisi ja oskusi praktilistes disaini- või tarkvaraarenduse projektides.",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
-                "outcomeId": 61
+                "outcomeId": 59
               },
               {
                 "subjectId": 14,
-                "outcomeId": 62
+                "outcomeId": 60
               },
               {
                 "subjectId": 15,
-                "outcomeId": 65
+                "outcomeId": 63
               },
               {
                 "subjectId": 15,
-                "outcomeId": 66
+                "outcomeId": 64
               },
               {
                 "subjectId": 8,
-                "outcomeId": 166
+                "outcomeId": 32
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 46
               },
               {
                 "subjectId": 12,
                 "outcomeId": 48
-              },
-              {
-                "subjectId": 12,
-                "outcomeId": 50
               },
               {
                 "subjectId": 23,
@@ -955,11 +955,15 @@ const curriculums = [
             ]
           },
           {
-            "id": 191,
+            "id": 3,
             "description": "Demonstreerib praktiliste ülesannete täitmisel loovust ja probleemilahendusoskusi.",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
+                "outcomeId": 60
+              },
+              {
+                "subjectId": 15,
                 "outcomeId": 62
               },
               {
@@ -967,20 +971,16 @@ const curriculums = [
                 "outcomeId": 64
               },
               {
-                "subjectId": 15,
-                "outcomeId": 66
+                "subjectId": 8,
+                "outcomeId": 33
               },
               {
-                "subjectId": 8,
-                "outcomeId": 167
+                "subjectId": 12,
+                "outcomeId": 46
               },
               {
                 "subjectId": 12,
                 "outcomeId": 48
-              },
-              {
-                "subjectId": 12,
-                "outcomeId": 50
               },
               {
                 "subjectId": 23,
@@ -1032,15 +1032,15 @@ const curriculums = [
         "objective": "Üliõpilane leiab võimalusi enesearenguks lähtudes individuaalsest huvist ja arendab oma võõrkeele- ja arvutikasutamise oskusi.",
         "learningOutcomes": [
           {
-            "id": 192,
+            "id": 1,
             "description": "süvendab erialaseid teadmisi ja oskusi;"
           },
           {
-            "id": 193,
+            "id": 2,
             "description": "on tõstnud oma võõrkeeleoskuse vähemalt B1.2 tasemele;"
           },
           {
-            "id": 194,
+            "id": 3,
             "description": "muu keelega kooli lõpetanu on tõstnud eesti keele oskuse C1 tasemele"
           }
         ]
@@ -1051,7 +1051,7 @@ const curriculums = [
         "objective": "Õpilane arendab oma erialast inglise keelt.",
         "learningOutcomes": [
           {
-            "id": 195,
+            "id": 1,
             "description": "Kasutab erialast inglisekeelset terminoloogiat.",
             "subjectOutcomes": [
               {
@@ -1065,7 +1065,7 @@ const curriculums = [
             ]
           },
           {
-            "id": 196,
+            "id": 2,
             "description": "Mõistab ja koostab erialaseid inglisekeelseid tekste.",
             "subjectOutcomes": [
               {
@@ -1083,7 +1083,7 @@ const curriculums = [
             ]
           },
           {
-            "id": 197,
+            "id": 3,
             "description": "Väljendab ladusalt suuliselt ja kirjalikult inglise keeles oma seisukohti.",
             "subjectOutcomes": [
               {
@@ -1108,52 +1108,52 @@ const curriculums = [
         "objective": "Üliõpilane viib läbi erialase uurimuse, analüüsib uurimistulemusi, vormistab tulemuse lõputööks ja kaitseb valminud lõputööd.",
         "learningOutcomes": [
           {
-            "id": 198,
+            "id": 1,
             "description": "Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 176
+                "outcomeId": 146
               }
             ]
           },
           {
-            "id": 199,
+            "id": 2,
             "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 177
+                "outcomeId": 147
               }
             ]
           },
           {
-            "id": 200,
+            "id": 3,
             "description": "Valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 178
+                "outcomeId": 148
               }
             ]
           },
           {
-            "id": 201,
+            "id": 4,
             "description": "Kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 179
+                "outcomeId": 149
               }
             ]
           },
           {
-            "id": 202,
+            "id": 5,
             "description": "Hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 180
+                "outcomeId": 150
               }
             ]
           }
@@ -1258,11 +1258,11 @@ const curriculums = [
         "objective": "Eesmärk on luua eeldused programmeerimise olemuse, baasmõistete ja põhimeetodite tundmiseks. Kursus toetab protseduurse programmeerimise aluste omandamist, tüüpiliste keeletarindite mõistmist, probleemide analüüsioskuse ja algoritmilise mõtlemise arengut. Samuti valmistatakse õppijaid ette teiste programmeerimisega seotud ainete edukaks läbimiseks.",
         "outcomes": [
           {
-            "id": 181,
+            "id": 12,
             "description": "Kasutab programmikoodi töötlemiseks, silumiseks ja testimiseks sobivat keskkonda."
           },
           {
-            "id": 12,
+            "id": 13,
             "description": "Rakendab versioonihaldust (nt Git ja GitHub) programmikoodi haldamiseks ning kasutab sobivaid tööriistu koodi kirjutamiseks, silumiseks ja testimiseks."
           }
         ],
@@ -1285,19 +1285,19 @@ const curriculums = [
         "objective": "Tutvustada arvutigraafika ja multimeediumi põhialuseid. Luua võimalused vektor- ja rastergraafika, heli- ja videotöötluse ning animatsiooni peamiste töövõtete omandamiseks.",
         "outcomes": [
           {
-            "id": 148,
+            "id": 14,
             "description": "Kasutab valdkondlikku terminoloogiat korrektselt ning eesmärgipäraselt."
           },
           {
-            "id": 149,
+            "id": 15,
             "description": "Eristab arvutigraafika- ja meedialiike ning failivorminguid."
           },
           {
-            "id": 150,
+            "id": 16,
             "description": "Valib arvutigraafika ja multimeediumi lahenduste loomiseks sobiva tarkvara ja töövõtted."
           },
           {
-            "id": 151,
+            "id": 17,
             "description": "Loob vektor- ja rastergraafikat, salvestab ja monteerib digitaalset heli ja videot ning loob lihtsamaid 2D animatsioone valdkondlikest põhiprintsiipidest ning headest tavadest lähtuvalt."
           }
         ],
@@ -1320,23 +1320,23 @@ const curriculums = [
         "objective": "Luua alused teadmiste ja oskuste kujunemiseks tarkvaraarenduse protsessidest, arendusmeetoditest ning kaasaegsetest töövahenditest. Anda baasteadmised tarkvaraarenduse headest tavadest, tarkvara jätkusuutlikkuse tagamisest (koodi kvaliteet, testimine, versioonihaldus) ja meeskonnatöös osalemisest, kasutades professionaalseid tööriistu nagu Git ja GitHub. Tutvustada tarkwaralitsentse, nende tüüpe ja rakendamist, arvestades õiguslikke ja eetilisi aspekte tarkvaraarenduses. Õppeaine lõppeesmärk on anda õppijatele kindel baas tarkvaraarenduse metoodikate ja tööriistade mõistmiseks ning rakendamiseks, valmistades neid ette nii teoreetilisteks kui ka praktilisteks väljakutseteks tarkwaraarenduse valdkonnas.",
         "outcomes": [
           {
-            "id": 152,
+            "id": 18,
             "description": "Selgitab tarkvara olemust, erinevaid tarkvaratüüpe ja arhitektuuri ning tarkvara arendusprotsesside ja metoodikate (sh SDLC ja agiilsed meetodid) põhimõtteid ja eeliseid."
           },
           {
-            "id": 153,
+            "id": 19,
             "description": "Kirjeldab tarkvara litsentsimise tüüpe, nende rakendusvõimalusi ja mõju tarkvaraprojektidele."
           },
           {
-            "id": 154,
+            "id": 20,
             "description": "Kasutab versioonihalduse tööriistu, nagu Git ja GitHub, meeskonnatööks, arvestades tarkvaraarenduse häid tavasid."
           },
           {
-            "id": 155,
+            "id": 21,
             "description": "Rakendab koodi kvaliteedi ja jätkusuutlikkuse tagamiseks häid arendustavasid, sealhulgas dokumenteerimist ja koodi ülevaatust."
           },
           {
-            "id": 156,
+            "id": 22,
             "description": "Planeerib ja juhib oma töövoogu efektiivselt, rakendades ajahalduse põhimõtteid."
           }
         ],
@@ -1359,19 +1359,19 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele arusaam tehisintellekti olemusest, põhimõtetest ja kasutusvõimalustest, edendada kriitilist mõtlemist seoses TI eetika ja ühiskondlike mõjudega ning valmistada neid ette TI-põhiste tööriistade teadlikuks rakendamiseks erinevates erialakontekstides.",
         "outcomes": [
           {
-            "id": 157,
+            "id": 23,
             "description": "Selgitab tehisintellekti põhimõtteid, ajalugu ja rakendusvaldkondi, hinnates selle eeliseid ja piiranguid."
           },
           {
-            "id": 158,
+            "id": 24,
             "description": "Analüüsib tehisintellekti eetilisi, sotsiaalseid ja majanduslikke mõjusid ning nende mõju ühiskonnale."
           },
           {
-            "id": 159,
+            "id": 25,
             "description": "Kasutab TI-põhiseid tööriistu oma erialaga seotud ülesannete lahendamisel."
           },
           {
-            "id": 160,
+            "id": 26,
             "description": "Hindab tehisintellekti rakendamise võimalusi ja riske erinevates valdkondades."
           }
         ],
@@ -1394,19 +1394,19 @@ const curriculums = [
         "objective": "Kujundada integreeritud teadmine psühholoogia eri suundadest ja rakendamise võimalustest. Toetada arusaamise kujunemist inimesest kui biopsühhosotsiaalsest reaalsust mõtestavast tervikust.",
         "outcomes": [
           {
-            "id": 161,
+            "id": 27,
             "description": "Omab ülevaadet põhiteemadest, millega tegeleb tänapäeva teaduslik psühholoogia."
           },
           {
-            "id": 162,
+            "id": 28,
             "description": "Mõistab inimese psüühika funktsioneerimise põhilisi seaduspärasusi ja nende seotust keskkondlike teguritega."
           },
           {
-            "id": 163,
+            "id": 29,
             "description": "Seostab teaduslikku psühholoogiat rakenduslike väljunditega."
           },
           {
-            "id": 164,
+            "id": 30,
             "description": "Oskab analüüsida iseennast ja ümbritsevat maailma teadusliku psühholoogia printsiipidest ja käsitlustest lähtuvalt."
           }
         ],
@@ -1429,15 +1429,15 @@ const curriculums = [
         "objective": "Anda üliõpilastele praktiline ülevaade sisuhaldussüsteemidest ja nende rakendamisest erinevates projektides, tutvustada SEO ja veebianalüütika põhitõdesid ning nende rakendamist veebiarenduses, ning arendada oskusi kasutada sisuhaldussüsteeme veebilehtede loomisel ja optimeerimisel.",
         "outcomes": [
           {
-            "id": 165,
+            "id": 31,
             "description": "Kirjeldab sisuhaldussüsteemide tööpõhimõtteid ja rakendusvõimalusi erinevat tüüpi veebiprojektides."
           },
           {
-            "id": 166,
+            "id": 32,
             "description": "Loob ja kohandab veebilehti, kasutades sisuhaldussüsteeme, rakendades SEO põhimõtteid ja veebiarenduse häid tavasid."
           },
           {
-            "id": 167,
+            "id": 33,
             "description": "Kasutab veebianalüütika tööriistu veebilehe jõudluse ja kasutajakogemuse analüüsimiseks ning parandamiseks."
           }
         ],
@@ -1463,19 +1463,19 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused kaasaegsete eesrakenduste arendamiseks, hõlmates HTML-i, CSS-i ja JavaScripti kasutamist, CSS-i raamistike rakendamist, ning veebilahenduste loomisel ligipääsetavuse ja valideerimise standardite järgimist. Lisaks arendada oskusi projekti dokumenteerimisel ja versioonihaldustööriistade (nt Git, GitHub) tõhusal kasutamisel, et toetada koostööd ja projekti jätkusuutlikkust.",
         "outcomes": [
           {
-            "id": 168,
+            "id": 34,
             "description": "Loob semantilise ja kohanduva (responsive) disainiga veebilehti, kasutades HTML-i, CSS-i ja vajalikke raamistikke."
           },
           {
-            "id": 169,
+            "id": 35,
             "description": "Rakendab JavaScripti DOM-i manipuleerimiseks, sündmuste käsitlemiseks ja väliste API-de andmete töötlemiseks ning kuvamiseks."
           },
           {
-            "id": 170,
+            "id": 36,
             "description": "Järgib ligipääsetavuse (WCAG) ja koodi valideerimise standardeid veebilehtede kvaliteedi ja kasutusmugavuse tagamiseks."
           },
           {
-            "id": 171,
+            "id": 37,
             "description": "Kasutab Git-i ja GitHubi tööriistu veebiarendusprojektide haldamiseks, dokumenteerimiseks ja koostöö korraldamiseks."
           }
         ],
@@ -1498,19 +1498,19 @@ const curriculums = [
         "objective": "Tutvustada disainiprotsessi, disainmõtlemise ja kasutajakogemuse disaini põhiprintsiipe ning peamisi töövõtteid;\nLuua võimalused disaini lähteülesande ja hüpoteesi koostamiseks, disaini- ja kasutajauuringute läbiviimiseks, kasutajatega suhestumise töövõtete rakendamiseks, disaini kontseptsioonide väljatöötamiseks ja prototüüpimiseks.",
         "outcomes": [
           {
-            "id": 172,
+            "id": 38,
             "description": "Rakendab iteratiivset disainiprotsessi ja disainmõtlemise põhimõtteid probleemide lahendamisel, sõnastades disaini lähteülesandeid, probleemipüstitusi ja hüpoteese."
           },
           {
-            "id": 173,
+            "id": 39,
             "description": "Viib läbi disaini- ja kasutajauuringuid, kogub ning analüüsib andmeid vastutustundlikult ja eetiliselt."
           },
           {
-            "id": 174,
+            "id": 40,
             "description": "Rakendab kasutajakogemuse disaini põhimõtteid, töötab välja ja hindab kriitiliselt ideid ning disainikontseptsioone."
           },
           {
-            "id": 175,
+            "id": 41,
             "description": "Koostab erinevates tehnikates prototüüpe, testib lahenduste kasutatavust ja vastavust disaini lähteülesandele."
           }
         ],
@@ -1533,19 +1533,19 @@ const curriculums = [
         "objective": "Anda ülevaade graafilise disaini põhialustest ja parimatest tavadest. Luua võimalused graafilise disaini teooriate, terminoloogia, põhiprintsiipide ja töövõtete omandamiseks ning rakendamiseks kujundustööde loomeprotsessis.",
         "outcomes": [
           {
-            "id": 44,
+            "id": 42,
             "description": "Planeerib ja järgib kujundamisel süsteemselt graafilise disaini loomeprotsessi."
           },
           {
-            "id": 45,
+            "id": 43,
             "description": "Selgitab graafilise disaini (sh visuaalse taju, kompositsiooni, värvusõpetuse, tüpograafia) põhiprintsiipe ja rakendab neid kujundustöödes loovalt vastavalt valdkondlikele headele tavadele."
           },
           {
-            "id": 46,
+            "id": 44,
             "description": "Kirjeldab, analüüsib ja hindab kujundusi graafilise disaini teooriatest lähtuvalt."
           },
           {
-            "id": 47,
+            "id": 45,
             "description": "Kasutab valdkondlikku terminoloogiat korrektselt ja eesmärgipäraselt."
           }
         ],
@@ -1571,23 +1571,23 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused dünaamiliste veebirakenduste loomiseks, keskendudes serveripoolse renderdamise (SSR) ja monoliitse arhitektuuri rakendamisele. Kursus arendab oskusi kasutada Node.js-i ja selle mooduleid (sh Express), luua turvalisi ja jätkusuutlikke veebirakendusi, töötada välistest API-dest pärinevate andmetega ning rakendada parimaid praktikaid versioonihalduse ja dokumenteerimise alal, toetades seeläbi arendusprotsesside kvaliteeti ja meeskonnatööd.",
         "outcomes": [
           {
-            "id": 48,
+            "id": 46,
             "description": "Loob ja haldab serveripoolseid rakendusi, kasutades Node.js-i ja kolmanda osapoole mooduleid (nt Express)."
           },
           {
-            "id": 49,
+            "id": 47,
             "description": "Rakendab serveripoolse renderdamise (SSR) ja monoliitse arhitektuuri põhimõtteid, kasutades mallimootoreid (EJS, Pug, Handlebars)."
           },
           {
-            "id": 50,
+            "id": 48,
             "description": "Töötleb välistest API-dest pärinevaid JSON-formaadis andmeid."
           },
           {
-            "id": 51,
+            "id": 49,
             "description": "Analüüsib ja rakendab veebirakenduste turvalisuse parimaid praktikaid, lähtudes OWASP TOP10 soovitustest."
           },
           {
-            "id": 52,
+            "id": 50,
             "description": "Dokumenteerib arendusprotsessi ja kasutab versioonihalduse tööriistu (nt Git ja GitHub), toetades meeskonnatööd ja projektide jätkusuutlikkust."
           }
         ],
@@ -1610,27 +1610,27 @@ const curriculums = [
         "objective": "ELU õppeaine eesmärk on toetada üliõpilaste üldpädevuste süvendamist ja selle kaudu tõsta õppijate interdistsiplinaarsete probleemide lahendamise pädevuse kujunemist.",
         "outcomes": [
           {
-            "id": 53,
+            "id": 51,
             "description": "Loob seoseid ja analüüsib ELU projektis seatud eesmärke ja nende lahendusvõimalusi nii enda kui teiste erialade perspektiividest lähtudes."
           },
           {
-            "id": 54,
+            "id": 52,
             "description": "Kasutab ELU projekti elluviimise käigus omandatud uusi erialaseid ja erialade vahelisi teadmisi ning tunneb ära nende rakendamisvõimalused."
           },
           {
-            "id": 55,
+            "id": 53,
             "description": "Rakendab projekti- ja meeskonnatöö toimimise põhimõtteid, sh rollide jaotamine, vastutuse võtmine, panustamine grupitöösse ning on omandanud ajajuhtimise oskused."
           },
           {
-            "id": 56,
+            "id": 54,
             "description": "Analüüsib projekti edenemist ja selle tulemuslikkust, hinnates oma tegevusi kriitiliselt ja kavandades parendusmeetmeid."
           },
           {
-            "id": 57,
+            "id": 55,
             "description": "Analüüsib enda ja teiste rolli ja vastutust projekti tegevuste ja eesmärkide elluviimisel."
           },
           {
-            "id": 58,
+            "id": 56,
             "description": "Tutvustab projekti tulemusi sidusrühmadele ja/või avalikkusele."
           }
         ],
@@ -1653,19 +1653,19 @@ const curriculums = [
         "objective": "Anda ülevaade mängudisaini alustest ning toetada teadmiste ja oskuste kujunemist, mis võimaldavad üliõpilasel osaleda mängukavandi loomise protsessis. Kursus keskendub mängumehaanika, esteetika ja narratiivi tasakaalustamisele, samuti mängijate psühholoogia tundmisele ja mängudisaini dokumentatsiooni koostamisele. Kursus arendab loovust ja analüütilist mõtlemist, mis on vajalikud kaasahaaravate ja kvaliteetsete mängukogemuste loomiseks.",
         "outcomes": [
           {
-            "id": 59,
+            "id": 57,
             "description": "Omab struktureeritud arusaamist videomängude kavandamise ja disaini põhimõtetest: mängu mehaanika, esteetika ja narratiiv."
           },
           {
-            "id": 60,
+            "id": 58,
             "description": "Valdab praktilisi oskusi mängukogemuse analüüsimiseks ja mängudisaini dokumentatsiooni koostamiseks."
           },
           {
-            "id": 61,
+            "id": 59,
             "description": "On valmis osalema mängudisaini meeskonnas, mõistes tarkvaraarenduse protsessi erinevaid etappe, sealhulgas ideede kavandamist, testimist ja arendamist."
           },
           {
-            "id": 62,
+            "id": 60,
             "description": "Tunneb mängužanrite ja mängijate motivatsiooni analüüsi tähtsust mängukogemuse loomisel."
           }
         ],
@@ -1691,19 +1691,19 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised kasutajaliidese disaini põhimõtetest ja tööprotsessist ning arendada oskusi luua funktsionaalseid, visuaalselt atraktiivseid ja juurdepääsetavusega arvestavaid kasutajaliideseid. Kursus toetab kogemuste omandamist interaktiivsete, kõrge detailsusega prototüüpide loomiseks.",
         "outcomes": [
           {
-            "id": 63,
+            "id": 61,
             "description": "Rakendab kasutajaliidese disaini põhimõtteid ja heuristikuid kasutajaliidese loomise protsessis."
           },
           {
-            "id": 64,
+            "id": 62,
             "description": "Kujundab kasutajaliideseid, arvestades funktsionaalsuse, visuaalse atraktiivsuse ja juurdepääsetavuse nõuetega."
           },
           {
-            "id": 65,
+            "id": 63,
             "description": "Kasutab disaini tööriistu, et luua interaktiivne ja kõrge detailsusega prototüüp."
           },
           {
-            "id": 66,
+            "id": 64,
             "description": "Analüüsib ja rakendab disainimustreid ning hindab tumemustrite mõju kasutajakogemusele."
           }
         ],
@@ -1729,19 +1729,19 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused andmebaaside projekteerimisel, haldamisel ja optimeerimisel. Kursus keskendub relatsiooniliste andmebaaside alustele ja kaasaegsetele andmebaasilahendustele, sealhulgas SQL-i kasutamisele, andmestruktuuride efektiivsuse tagamisele, päringute optimeerimisele, skaleeritavusele ja turvalisusele. Samuti arendab õppeaine oskusi salvestatud protseduuride, funktsioonide ja päästikute loomisel, andmebaaside administreerimisel ning andmete varundamise ja taasteplaanide rakendamisel, et toetada praktiliste probleemide lahendamist ja süsteemide töökindlust.",
         "outcomes": [
           {
-            "id": 67,
+            "id": 65,
             "description": "Koostab andmemudeleid ja ER-diagramme, rakendab võtmeid ja seoseid ning viib läbi andmebaasi normaliseerimise, et tagada andmestruktuuride efektiivsus ja terviklikkus."
           },
           {
-            "id": 68,
+            "id": 66,
             "description": "Kasutab SQL-i põhikäske ja keerukamaid funktsioone (nt JOIN-id, aknafunktsioonid) tabelite loomiseks, päringute tegemiseks ja andmete optimeerimiseks, sealhulgas indekseid päringute kiirendamiseks."
           },
           {
-            "id": 69,
+            "id": 67,
             "description": "Haldab andmebaaside kasutajaõigusi, rakendab varundamise ja taasteplaani tehnikaid ning tagab andmete turvalisuse vastavalt parimatele praktikatele."
           },
           {
-            "id": 70,
+            "id": 68,
             "description": "Loob salvestatud protseduure, funktsioone ja päästikuid, et tõsta andmebaaside funktsionaalsust ning automatiseerida protsesse, tagades süsteemi töökindluse ja veahaldust."
           }
         ],
@@ -1767,19 +1767,19 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused kaasaegsete JavaScripti raamistikute, eelkõige Reacti, kasutamiseks veebiarenduses, keskendudes komponentidel põhinevate eesrakenduste loomisele. Kursus arendab oskusi reaktiivsete kasutajaliideste arendamiseks, front-end rakenduste sidumiseks väliste API-dega, asünkroonse programmeerimise kasutamiseks ning erinevate stiilimismeetodite ja kasutajaliidese teekide rakendamiseks. Samuti pööratakse tähelepanu projektide dokumenteerimisele ja versioonihalduse rakendamisele, et toetada koostööd ja arendusprotsesside jätkusuutlikkust.",
         "outcomes": [
           {
-            "id": 71,
+            "id": 69,
             "description": "Kasutab Reacti raamistikku, seisundi haldamist, sündmuste töötlemist ja komponentidel põhinevat arhitektuuri reaktiivsete kasutajaliideste loomiseks."
           },
           {
-            "id": 72,
+            "id": 70,
             "description": "Kasutab eesrakendustes andmete pärimiseks väliseid rakendusliideseid, hallates asünkroonseid päringuid ja andmete töötlemist efektiivsete meetoditega."
           },
           {
-            "id": 73,
+            "id": 71,
             "description": "Rakendab erinevaid stiilimismeetodeid ja kasutajaliidese teeke visuaalselt atraktiivsete ja funktsionaalsete eesrakenduste loomiseks."
           },
           {
-            "id": 74,
+            "id": 72,
             "description": "Dokumenteerib arendusprotsessi ja kasutab versioonihalduse tööriistu (nt Git ja GitHub), toetades meeskonnatööd ja projekti jätkusuutlikkust."
           }
         ],
@@ -1805,23 +1805,23 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused kaasaegsete, turvaliste ja hästi dokumenteeritud tagarakenduste loomiseks, kasutades Node.js-i ja TypeScripti. Kursus keskendub RESTful API-de disainimisele ja arendamisele, rakendades objektorienteeritud programmeerimise (OOP) põhimõtteid, turvalisuse parimaid praktikaid ja autentimise ning autoriseerimise meetodeid. Samuti arendatakse oskusi API testimisel ja dokumenteerimisel, valmistades õppijaid ette professionaalsete arendustegevuste jaoks.",
         "outcomes": [
           {
-            "id": 75,
+            "id": 73,
             "description": "Loob struktureeritud rakendusliideseid, kasutades Node.js-i ja TypeScripti abil OOP-põhist arhitektuuri ning RESTful API disaini põhimõtteid."
           },
           {
-            "id": 76,
+            "id": 74,
             "description": "Rakendab autentimise ja autoriseerimise meetodeid, sealhulgas JWT-põhiseid lahendusi."
           },
           {
-            "id": 77,
+            "id": 75,
             "description": "Tagab rakendusliidese turvalisuse, järgides OWASP TOP10 juhiseid."
           },
           {
-            "id": 78,
+            "id": 76,
             "description": "Testib ja dokumenteerib loodud rakendusliideste arendusprotsessi kaasaegsete tööriistadega (nt Jest, Mocha, Swagger), tagades kasutajasõbralikkuse ja kvaliteedi."
           },
           {
-            "id": 79,
+            "id": 77,
             "description": "Kasutab koodi haldamiseks ja dokumenteerimiseks versioonihaldust (nt Git ja GitHub), et toetada arendusprotsessi tõhusust ja meeskonnatööd ning tagada projekti jätkusuutlikkus."
           }
         ],
@@ -1848,19 +1848,19 @@ const curriculums = [
         "objective": "Eesmärk on luua võimalused õpingute jooksul omandatud oskuste ja teadmiste kinnistamiseks reaalelulise probleemi lahendamisel meeskonnatöös. Praktika eesmärk on anda kogemus tarkvaraarenduse tööprotsessidest, sealhulgas planeerimisest, arendusest ja testimisest, arendada meeskonnatöö oskusi ning rakendada tarkvaraarenduses kasutatavaid metoodikaid ja tööriistu.",
         "outcomes": [
           {
-            "id": 80,
+            "id": 78,
             "description": "Osaleb meeskonnatöös tarkvaraarendusprojekti läbiviimisel ja täidab erinevaid rolle, nagu projektijuht, arendaja, disainer või testija."
           },
           {
-            "id": 81,
+            "id": 79,
             "description": "Kasutab järjepidevalt projekti vältel koodihalduskeskkonda ja projektihalduskeskkonda ülesannete ja nende oleku haldamiseks."
           },
           {
-            "id": 82,
+            "id": 80,
             "description": "Dokumenteerib oma tegevusi projekti jooksul, täidab korrektselt praktikapäevikut ning arvestab projektile kulunud aega."
           },
           {
-            "id": 83,
+            "id": 81,
             "description": "Osaleb meeskondliku aruande koostamisel ja tarkvaraarendusprojekti kaitsmisel, demonstreerides praktika käigus omandatud oskusi ja teadmisi."
           }
         ],
@@ -1886,19 +1886,19 @@ const curriculums = [
         "objective": "Eesmärk on anda õpilastele arusaam diskreetse matemaatika alustest ja selle rakendustest IT-valdkonnas. Kursus toetab matemaatiliste teadmiste rakendamist praktiliste probleemide lahendamisel, arendades oskust integreerida diskreetset matemaatikat programmeerimisse, algoritmide ja andmestruktuuride kujundamisse.",
         "outcomes": [
           {
-            "id": 84,
+            "id": 82,
             "description": "Selgitab diskreetse matemaatika põhimõtteid ja analüüsib nende rakendusi programmeerimises."
           },
           {
-            "id": 85,
+            "id": 83,
             "description": "Rakendab hulkade, loogika, graafide ja kombinatoorika põhimõtteid, et lahendada programmeerimisülesandeid."
           },
           {
-            "id": 86,
+            "id": 84,
             "description": "Kasutab rekursiooni ja algoritmide analüüsi praktiliste probleemide lahendamiseks, hinnates nende keerukust ja tõhusust."
           },
           {
-            "id": 87,
+            "id": 85,
             "description": "Lahendab IT-valdkonna probleeme, kasutades diskreetset aritmeetikat ja arvuteooria meetodeid."
           }
         ],
@@ -1921,35 +1921,35 @@ const curriculums = [
         "objective": "Luua võimalused üliõpilaste tänapäevase arusaama kujunemise toetamiseks teadusliku uurimistöö meetoditest, kujundada uurimisprojekti läbiviimise oskust ja luua alused üliõpilase uurimistöö koostamiseks. Luua võimalused andmete kogumise, töötlemise ning lihtsama statistilise analüüsi läbiviimiseks vajaminevate teoreetiliste teadmiste ja praktiliste oskuste omandamise toetamiseks. Arendada üliõpilaste teadmisi ja oskusi läbi praktilise kogemuse, mis võimaldab neil teha otsuseid sobivate andmeanalüüsi meetodite valikul, tulemuste tõlgendamisel ja esitlemisel.",
         "outcomes": [
           {
-            "id": 88,
+            "id": 86,
             "description": "Kirjeldab uurimistöö olemust ja sellele esitatavaid nõudeid."
           },
           {
-            "id": 89,
+            "id": 87,
             "description": "Kavandab oma uurimuse."
           },
           {
-            "id": 90,
+            "id": 88,
             "description": "Püstitab andmetest lähtuvad ning statistilist analüüsi eeldavad sobivad uurimisküsimused."
           },
           {
-            "id": 91,
+            "id": 89,
             "description": "Valib uurimisprobleemist ja eesmärgist lähtuvalt sobivad andmete kogumise meetodid."
           },
           {
-            "id": 92,
+            "id": 90,
             "description": "Koostab korrektse ülesehitusega andmestiku."
           },
           {
-            "id": 93,
+            "id": 91,
             "description": "Eristab andmete/tunnuste tüüpe ning valib vastavalt andmete tüübile ja püstitatud uurimisküsimustele sobivad analüüsimeetodid."
           },
           {
-            "id": 94,
+            "id": 92,
             "description": "Kirjeldab andmete analüüsil saadud tulemusi ja esitleb neid arusaadavalt."
           },
           {
-            "id": 95,
+            "id": 93,
             "description": "Kasutab tabelarvutusprogrammi lihtsama andmetöötluse ja -analüüsi läbiviimiseks."
           }
         ],
@@ -1972,19 +1972,19 @@ const curriculums = [
         "objective": "Luua võimalused teadmiste omandamiseks projektijuhtimisest ja projektitöös vajaminevatest praktilistest juhtimisalastest oskustest.",
         "outcomes": [
           {
-            "id": 96,
+            "id": 94,
             "description": "Teab projektijuhtimisega seotud mõisteid."
           },
           {
-            "id": 97,
+            "id": 95,
             "description": "Püstitab ja sõnastab tegevuse eesmärke ja prioriteete."
           },
           {
-            "id": 98,
+            "id": 96,
             "description": "Oskab valida projektijuhtimise meetodit."
           },
           {
-            "id": 99,
+            "id": 97,
             "description": "Mõistab projektijuhtimise protsessi."
           }
         ],
@@ -2007,23 +2007,23 @@ const curriculums = [
         "objective": "Erialaterminoloogia omandamine inglise keeles ja erialase suulise ning kirjaliku väljendusoskuse süvendamine.",
         "outcomes": [
           {
-            "id": 100,
+            "id": 98,
             "description": "On teadlik erialasest terminoloogiast."
           },
           {
-            "id": 101,
+            "id": 99,
             "description": "Suudab vestelda semestri jooksul läbitud teemadel."
           },
           {
-            "id": 102,
+            "id": 100,
             "description": "Mõistab erialaseid tekste."
           },
           {
-            "id": 103,
+            "id": 101,
             "description": "Oskab kasutada erialaseid sõnaraamatuid ja koostada erialast ettekannet ning esitada seda kaasüliõpilaste ees."
           },
           {
-            "id": 104,
+            "id": 102,
             "description": "On saavutanud Euroopa Nõukogu keeleoskustasemete süsteemis erialases inglise keeles taseme B2.1."
           }
         ],
@@ -2048,19 +2048,19 @@ const curriculums = [
         "objective": "Arendada üliõpilaste raster- ja vektorgraafika-alaseid teadmisi ning oskusi. Luua võimalused raster- ja vektorgraafika tarkvara loovaks ning tehniliselt korrektseks käsitsemiseks eritüübiliste kujundusgraafiliste tööde loomisel.",
         "outcomes": [
           {
-            "id": 105,
+            "id": 103,
             "description": "Langetab kujundusvalikuid kujundusgraafika ja meediumi tüübist, kujunduse eesmärgist ning tehnilistest nõudmistest lähtuvalt."
           },
           {
-            "id": 106,
+            "id": 104,
             "description": "Käsitseb raster- ja vektorgraafika tarkvara oskuslikult ning loovalt."
           },
           {
-            "id": 107,
+            "id": 105,
             "description": "Kasutab kujundusgraafika loomisel erinevaid tehnikaid ja vahendeid, kombineerides neid tarkvara võimalustega."
           },
           {
-            "id": 108,
+            "id": 106,
             "description": "Kavandab ja teostab juhiste alusel või iseseisva loovtööna kujunduse elemente ja/või tervikkujundusi."
           }
         ],
@@ -2085,19 +2085,19 @@ const curriculums = [
         "objective": "Eesmärk on luua võimalused Praktika I jooksul omandatud teadmiste ja oskuste kinnistamiseks ja süvendamiseks, rakendades neid kliendi poolt ette antud tarkvaraarendusprojekti raames. Praktika arendab oskusi meeskonnatöös, dokumenteerimises, kasutajauuringute läbiviimises ja kvaliteetse lahenduse loomises, keskendudes projekti üldisele järjepidevusele ja kliendivajaduste täitmisele.",
         "outcomes": [
           {
-            "id": 109,
+            "id": 107,
             "description": "Osaleb meeskonnatöös kliendi poolt ette antud tarkvaraarendusprojekti läbiviimisel, täites projekti jooksul ühte või mitut rolli (nt projektijuht, arendaja, disainer, testija)."
           },
           {
-            "id": 110,
+            "id": 108,
             "description": "Osaleb kasutajauuringute läbiviimisel ja analüüsimisel ning rakendab saadud teadmisi projekti arendamisel."
           },
           {
-            "id": 111,
+            "id": 109,
             "description": "Kasutab järjepidevalt projektihaldus- ja koodihaldustööriistu ülesannete ja nende oleku haldamiseks ning meeskonnatöö koordineerimiseks."
           },
           {
-            "id": 112,
+            "id": 110,
             "description": "Dokumenteerib oma tegevused projekti jooksul ning esitab individuaalse aruande vastavalt praktikajuhendile."
           }
         ],
@@ -2122,27 +2122,27 @@ const curriculums = [
         "objective": "Luua võimalused uurimismeetodite rakendamise oskuste süvendamiseks.Toetada üliõpilaste oskust erialasest pädevusest lähtuvalt leida lahendusi uurimistöös tekkinud kitsaskohtadele. Luua võimalused nõuetele vastava diplomitöö esitlemiseks. Anda ülevaade kaitsmisprotseduurist.",
         "outcomes": [
           {
-            "id": 113,
+            "id": 111,
             "description": "Oskab piiritleda ja fokuseerida oma erialase lõputöö teemat."
           },
           {
-            "id": 114,
+            "id": 112,
             "description": "Koostab valitud teemal tervikliku struktuuriga lõputöö (teoreetilise ja empiirilise osa seos) ja teab, mida uut pakub tema lõputöö võrreldes senise teadmisega."
           },
           {
-            "id": 115,
+            "id": 113,
             "description": "Oskab vastavalt püstitatud eesmärgile planeerida ja ellu viia uurimisprotsessi ning töötada erialase kirjandusega; on võimeline analüüsima oma töö tugevusi ja nõrkusi ning neid põhjendama."
           },
           {
-            "id": 116,
+            "id": 114,
             "description": "Oskab empiirilist materjali töödelda ja üldistada ning valdab kasutatud uurimismeetodeid."
           },
           {
-            "id": 117,
+            "id": 115,
             "description": "Vormistab kirjalike tööde juhendile vastava lõputöö, mis on keeleliselt (grammatiline, ortograafiline ja terminoloogiline) korrektne ja stiililiselt ühtne."
           },
           {
-            "id": 118,
+            "id": 116,
             "description": "Oskab töös kirjeldatud seisukohti esitleda ja argumenteerida ning avalikul kaitsmisel küsimustele vastata."
           }
         ],
@@ -2165,19 +2165,19 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele teadmised ja praktilised oskused serverite haldamiseks, keskendudes virtuaalmasinatele, konteineriseerimisele, orkestreerimisele ja CI/CD töövoogudele. Kursus arendab oskusi rakenduste logimisel, monitoorimisel ja deploy protsessides ning rõhutab serverihalduse turvalisuse ja automatiseerimise olulisust.",
         "outcomes": [
           {
-            "id": 119,
+            "id": 117,
             "description": "Loob ja haldab virtuaalservereid ja konteineriseeritud rakendusi, kasutades tehnoloogiaid nagu Docker ja Kubernetes, ning mõistab nende eeliseid ja rakendusvõimalusi."
           },
           {
-            "id": 120,
+            "id": 118,
             "description": "Rakendab CI/CD töövoogusid, kasutades tööriistu nagu GitHub Actions, automatiseerides testimise ja deployment’i protsesse."
           },
           {
-            "id": 121,
+            "id": 119,
             "description": "Kasutab logimise ja monitoorimise tööriistu (nt Winston, Prometheus, Grafana) rakenduste jõudluse jälgimiseks ning alarmide ja teavituste seadistamiseks."
           },
           {
-            "id": 122,
+            "id": 120,
             "description": "Tagab serverite turvalisuse, rakendades tulemüüre, autentimist, SSL-sertifikaate ning tundlike andmete kaitset, järgides parimaid praktikaid ja turvanõudeid."
           }
         ],
@@ -2203,19 +2203,19 @@ const curriculums = [
         "objective": "Eesmärk on toetada lineaarsete ja mittelineaarsete andmestruktuuride tundmaõppimist ning nende praktilist rakendamist. Kursus arendab probleemide analüüsimise ja lahendamise oskust, kasutades andmestruktuure ja algoritme, ning toetab praktilise programmeerimisoskuse kujunemist.",
         "outcomes": [
           {
-            "id": 123,
+            "id": 121,
             "description": "Kirjeldab staatilisi ja dünaamilisi lineaarseid ning mittelineaarseid andmestruktuure ning nendel rakendatavaid algoritme."
           },
           {
-            "id": 124,
+            "id": 122,
             "description": "Analüüsib ja valib sobivad andmestruktuurid ja algoritmid vastavalt lahendatavale probleemile."
           },
           {
-            "id": 125,
+            "id": 123,
             "description": "Rakendab ja optimeerib põhilisi algoritme, sealhulgas otsingu-, sorteerimis-, graafi- ja puualgoritme."
           },
           {
-            "id": 126,
+            "id": 124,
             "description": "Realiseerib keerulisemaid andmestruktuure ja algoritme, sealhulgas puid ja graafe, ning hindab algoritmide keerukust ja optimeerimisvõimalusi."
           }
         ],
@@ -2240,23 +2240,23 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused mobiilirakenduste arendamiseks React Native’i abil, keskendudes rakenduste planeerimisele, arendamisele, testimisele, andmete integreerimisele välisest API-st ning dokumenteerimisele ja versioonihalduse kasutamisele. Kursus laiendab õppijate arusaama mobiilirakenduste rollist ja võimalustest kaasaegses maailmas, tutvustades ka alternatiivseid lahendusi ja tulevikusuundi.",
         "outcomes": [
           {
-            "id": 127,
+            "id": 125,
             "description": "Selgitab mobiilirakenduste arendamise aluseid, sealhulgas platvormide eripärasid, arenduse etappe ja tulevikusuundi."
           },
           {
-            "id": 128,
+            "id": 126,
             "description": "Kasutab React Native’i ja sellega seotud tööriistu mobiilirakenduste loomiseks."
           },
           {
-            "id": 129,
+            "id": 127,
             "description": "Kasutab mobiilirakenduse loomisel seisundihaldust, andmevooge ja väliseid rakendusliideseid."
           },
           {
-            "id": 130,
+            "id": 128,
             "description": "Rakendab turvalisuse ja privaatsuse parimaid tavasid mobiilirakenduste arendamisel."
           },
           {
-            "id": 131,
+            "id": 129,
             "description": "Kasutab versioonihaldust programmikoodi ja dokumentatsiooni haldamiseks."
           }
         ],
@@ -2279,19 +2279,19 @@ const curriculums = [
         "objective": "Eesmärk on anda süsteemne ülevaade kaasaegsest andmeturbest ja krüptograafiast, pakkudes teadmisi turbeprobleemide tuvastamiseks ja lahendamiseks ning turvalisuse tagamiseks arvutivõrkudes ja süsteemides.",
         "outcomes": [
           {
-            "id": 132,
+            "id": 130,
             "description": "Selgitab kaasaegseid andmeturbe meetodeid ning rakendab riskianalüüsi ja turvapoliitikaid turvalisuse tagamiseks arvutivõrkudes ja infosüsteemides."
           },
           {
-            "id": 133,
+            "id": 131,
             "description": "Kirjeldab autentimismeetodeid ja juurdepääsukontrolli süsteeme, sealhulgas Active Directory’t, LDAP katalooge ja single sign-on lahendusi."
           },
           {
-            "id": 134,
+            "id": 132,
             "description": "Selgitab turvalise programmeerimise põhimõtteid ning OWASP TOP 10 ja muid programmeerimiskeskkondades esinevaid haavatavusi."
           },
           {
-            "id": 135,
+            "id": 133,
             "description": "Analüüsib rünnakute avastamise ja intsidentide haldamise meetodeid, lähtudes seadusandlikest nõuetest ja taasteplaanidest."
           }
         ],
@@ -2314,19 +2314,19 @@ const curriculums = [
         "objective": "Eesmärk on pakkuda üliõpilastele võimalusi õppetöö käigus omandatud teadmiste ja oskuste rakendamiseks ning kinnistamiseks praktilises keskkonnas. Praktika arendab analüüsi-, probleemilahendus- ja ajaplaneerimise oskusi, toetades üliõpilaste professionaalset arengut kas ettevõttepraktika või individuaalse projekti kaudu. Samuti soodustab praktika dokumenteerimise, versioonihalduse ja tööprotsessi läbipaistvuse oskuste arendamist.",
         "outcomes": [
           {
-            "id": 136,
+            "id": 134,
             "description": "Rakendab varasemalt õpitud teadmisi ja oskusi praktilises keskkonnas."
           },
           {
-            "id": 137,
+            "id": 135,
             "description": "Planeerib ja täidab ülesandeid, hallates tööprotsesse ja ajakasutust vastavalt praktikakeskkonna või projekti vajadustele."
           },
           {
-            "id": 138,
+            "id": 136,
             "description": "Dokumenteerib tööprotsessi, kasutades praktikapäevikut ning koostades selge ja põhjaliku praktika dokumentatsiooni."
           },
           {
-            "id": 139,
+            "id": 137,
             "description": "Hindab kriitiliselt oma tööprotsessi, reflekteerib saadud kogemusi ning esitleb oma tulemusi, selgitades saavutatud õpitulemusi ja edasisi arenguvõimalusi."
           }
         ],
@@ -2349,19 +2349,19 @@ const curriculums = [
         "objective": "Eesmärk on anda õppijatele ülevaade IT-valdkonda reguleerivast seadusandlusest, sealhulgas autoriõigustest, andmesubjekti õigustest, e-äri õiguslikust raamistikust ja isikuandmete kaitsest, et toetada vastutustundlikku ja õiguspärast tegutsemist IT-sektoris.",
         "outcomes": [
           {
-            "id": 140,
+            "id": 138,
             "description": "Orienteerub IT-valdkonda reguleerivates õigusnormides ning rakendab neid erinevates praktilistes olukordades."
           },
           {
-            "id": 141,
+            "id": 139,
             "description": "Tunneb autoriõigusi, litsentsilepinguid ja nende kasutamise tingimusi."
           },
           {
-            "id": 142,
+            "id": 140,
             "description": "Selgitab andmesubjekti õigusi ja isikuandmete kaitse nõudeid vastavalt kehtivale seadusandlusele."
           },
           {
-            "id": 143,
+            "id": 141,
             "description": "Analüüsib e-äri, IT-süütegude ja tööstusomandi õiguslikke aspekte."
           }
         ],
@@ -2384,19 +2384,19 @@ const curriculums = [
         "objective": "Eesmärk on laiendada õppijate silmaringi IT-sektorist, pakkudes võimalust valida ja osaleda tegevustes, mis vastavad nende individuaalsetele huvidele ja arenguvajadustele. Kursus toetab praktilist kokkupuudet valdkonnaga, arendab analüüsioskusi ning aitab kujundada pikaajalist karjääriplaani.",
         "outcomes": [
           {
-            "id": 144,
+            "id": 142,
             "description": "Analüüsib IT-sektori hetkeseisu ja arengutrende, tuginedes valitud tegevustest saadud teadmistele ja kogemustele."
           },
           {
-            "id": 145,
+            "id": 143,
             "description": "Osaleb ja panustab individuaalselt valitud praktilistesse IT-tegevustesse, nagu vabavara projektid, häkatonid või ettevõtete külastamised."
           },
           {
-            "id": 146,
+            "id": 144,
             "description": "Kavandab ja esitab ettekandeid või arutelusid IT-valdkonna teemadel, rakendades saadud teadmisi ja kogemusi."
           },
           {
-            "id": 147,
+            "id": 145,
             "description": "Reflekteerib oma oskusi ja kogemusi, koostades eneseanalüüsi ning arenguplaani vastavalt oma eesmärkidele."
           }
         ],
@@ -2418,23 +2418,23 @@ const curriculums = [
         "objective": "",
         "outcomes": [
           {
-            "id": 176,
+            "id": 146,
             "description": "Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti."
           },
           {
-            "id": 177,
+            "id": 147,
             "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi."
           },
           {
-            "id": 178,
+            "id": 148,
             "description": "Valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest."
           },
           {
-            "id": 179,
+            "id": 149,
             "description": "Kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi."
           },
           {
-            "id": 180,
+            "id": 150,
             "description": "Hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust."
           }
         ],
@@ -2489,7 +2489,7 @@ const curriculums = [
     "objective": "Õppekava lõpetaja on IT-valdkonna spetsialist, kes osaleb ja vajadusel juhib veebipõhiste digilahenduste kõiki tarkvaraarenduse elutsükli etappe, luues andmepõhiseid, turvalisi ja kestlikku arengut toetavaid lahendusi, tegutsedes interdistsiplinaarsetes meeskondades ning täiustades oma professionaalseid pädevusi kogu karjääri vältel.",
     "learningOutcomes": [
       {
-        "id": 181,
+        "id": 1,
         "description": "Selgitab ja rakendab tarkvaraarenduse ja disaini teoreetilisi lähtekohti ning arengusuundi, eristades fakte arvamustest ja põhjendades valikuid andmepõhise otsustamise abil.",
         "khsOutcome": "Teab õppevaldkonna teoreetilisi lähtekohti ja arengusuundi ning eristab fakte arvamustest.",
         "moduleOutcomes": [
@@ -2499,28 +2499,28 @@ const curriculums = [
           },
           {
             "moduleId": 6,
-            "outcomeId": 195
+            "outcomeId": 1
           },
           {
             "moduleId": 6,
-            "outcomeId": 196
+            "outcomeId": 2
           },
           {
             "moduleId": 6,
-            "outcomeId": 197
+            "outcomeId": 3
           },
           {
             "moduleId": 7,
-            "outcomeId": 198
+            "outcomeId": 1
           },
           {
             "moduleId": 7,
-            "outcomeId": 200
+            "outcomeId": 3
           }
         ]
       },
       {
-        "id": 182,
+        "id": 2,
         "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleeme, kavandab andmete kogumise- ja analüüsiprotsessi ning loob tulemuste põhjal kasutajakeskseid ja kestlikke digilahendusi.",
         "khsOutcome": "Sõnastab õppevaldkonnaga seotud probleeme, kavandades andmekogumist ja analüüsides tulemusi.",
         "moduleOutcomes": [
@@ -2534,7 +2534,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 191
+            "outcomeId": 3
           },
           {
             "moduleId": 1,
@@ -2542,12 +2542,12 @@ const curriculums = [
           },
           {
             "moduleId": 7,
-            "outcomeId": 199
+            "outcomeId": 2
           }
         ]
       },
       {
-        "id": 183,
+        "id": 3,
         "description": "Kommunikeerib erialaseid ideid ja lahendusi eesti või inglise keeles, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise.",
         "khsOutcome": "Selgitab õppevaldkonna aktuaalseid teemasid õppevaldkonnale olulises (võõr)keeles erinevates kultuurikeskkondades, kohandades oma suhtlusstiili sihtrühmale vastavaks.",
         "moduleOutcomes": [
@@ -2565,24 +2565,24 @@ const curriculums = [
           },
           {
             "moduleId": 6,
-            "outcomeId": 195
+            "outcomeId": 1
           },
           {
             "moduleId": 6,
-            "outcomeId": 196
+            "outcomeId": 2
           },
           {
             "moduleId": 6,
-            "outcomeId": 197
+            "outcomeId": 3
           },
           {
             "moduleId": 7,
-            "outcomeId": 201
+            "outcomeId": 4
           }
         ]
       },
       {
-        "id": 184,
+        "id": 4,
         "description": "Osaleb tarkvara disaini- ja arendusprojektides iseseisvalt ja meeskonnas kogu tarkvaraarenduse elutsükli vältel, rakendades agiilseid tööviise, väärtustades innovatsiooni ja ettevõtlikkust ning luues kasutajakeskseid, turvalisi ja visuaalselt atraktiivseid interdistsiplinaarseid digilahendusi.",
         "khsOutcome": "Töötab iseseisvalt ja meeskonnas välja õppevaldkonnaga seotud probleemide lahendused, arvestades meeskonnaliikmete võimaluste ja vajadustega ning väärtustades innovatsiooni ja ettevõtlikkust.",
         "moduleOutcomes": [
@@ -2592,7 +2592,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 190
+            "outcomeId": 2
           },
           {
             "moduleId": 1,
@@ -2604,12 +2604,12 @@ const curriculums = [
           },
           {
             "moduleId": 5,
-            "outcomeId": 195
+            "outcomeId": 4
           }
         ]
       },
       {
-        "id": 185,
+        "id": 5,
         "description": "Täidab erialaseid ülesandeid vastutustundlikult, loovalt ja eetiliselt, tulles toime võimalike pingeolukordadega ning arvestades füüsilist ja vaimset tervist mõjutavaid tegureid.",
         "khsOutcome": "Täidab vastutustundlikult, loovalt ja eetiliselt erialaseid ülesandeid, tulles toime pingeolukordadega ning füüsilist ja vaimset tervist mõjutavate teguritega.",
         "moduleOutcomes": [
@@ -2619,7 +2619,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 191
+            "outcomeId": 3
           },
           {
             "moduleId": 1,
@@ -2631,12 +2631,12 @@ const curriculums = [
           },
           {
             "moduleId": 5,
-            "outcomeId": 195
+            "outcomeId": 4
           }
         ]
       },
       {
-        "id": 186,
+        "id": 6,
         "description": "Arvestab tööriistade kasutamisel, erialaste ülesannete täitmisel ja lahenduste loomisel turvalisuse ja eetilisusega.",
         "khsOutcome": "Rakendab omandatud teadmisi ja oskusi turvaliselt, sh erinevate digi- jm tehniliste vahendite abil.",
         "moduleOutcomes": [
@@ -2650,12 +2650,12 @@ const curriculums = [
           },
           {
             "moduleId": 7,
-            "outcomeId": 200
+            "outcomeId": 3
           }
         ]
       },
       {
-        "id": 187,
+        "id": 7,
         "description": "Seab isiklikud õpieesmärgid, hindab ja reflekteerib oma õppeprotsessi ning planeerib teadlikult oma õpet ja karjääri.",
         "khsOutcome": "Püstitab õpieesmärke, analüüsib oma õppeprotsessi ning kujundab teadlikult oma õpi- ja karjääriteed.",
         "moduleOutcomes": [
@@ -2665,7 +2665,7 @@ const curriculums = [
           },
           {
             "moduleId": 4,
-            "outcomeId": 192
+            "outcomeId": 4
           },
           {
             "moduleId": 1,
@@ -2673,12 +2673,12 @@ const curriculums = [
           },
           {
             "moduleId": 5,
-            "outcomeId": 196
+            "outcomeId": 5
           }
         ]
       },
       {
-        "id": 188,
+        "id": 8,
         "description": "Tegutseb erialaspetsialisti ja kodanikuna kestliku arengu põhimõtteid järgides, hindab oma digilahenduste keskkonna- ja ühiskonnamõju ning teeb vastutustundlikke otsuseid.",
         "khsOutcome": "Tegutseb erialaspetsialisti ja kodanikuna viisidel, mis toetavad keskkonna ja ühiskonna jätkusuutlikkust.",
         "moduleOutcomes": [
@@ -2688,7 +2688,7 @@ const curriculums = [
           },
           {
             "moduleId": 7,
-            "outcomeId": 202
+            "outcomeId": 5
           }
         ]
       }
@@ -2710,15 +2710,15 @@ const curriculums = [
               },
               {
                 "subjectId": 25,
-                "outcomeId": 181
+                "outcomeId": 113
               },
               {
                 "subjectId": 25,
-                "outcomeId": 182
+                "outcomeId": 114
               },
               {
                 "subjectId": 31,
-                "outcomeId": 136
+                "outcomeId": 142
               }
             ]
           },
@@ -2736,19 +2736,19 @@ const curriculums = [
               },
               {
                 "subjectId": 25,
-                "outcomeId": 183
+                "outcomeId": 115
               },
               {
                 "subjectId": 25,
-                "outcomeId": 184
+                "outcomeId": 116
               },
               {
                 "subjectId": 31,
-                "outcomeId": 137
+                "outcomeId": 143
               },
               {
                 "subjectId": 31,
-                "outcomeId": 138
+                "outcomeId": 144
               }
             ]
           },
@@ -2758,11 +2758,11 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 25,
-                "outcomeId": 185
+                "outcomeId": 117
               },
               {
                 "subjectId": 31,
-                "outcomeId": 136
+                "outcomeId": 142
               }
             ]
           },
@@ -2776,11 +2776,11 @@ const curriculums = [
               },
               {
                 "subjectId": 25,
-                "outcomeId": 186
+                "outcomeId": 118
               },
               {
                 "subjectId": 31,
-                "outcomeId": 139
+                "outcomeId": 145
               }
             ]
           },
@@ -2794,19 +2794,19 @@ const curriculums = [
               },
               {
                 "subjectId": 25,
-                "outcomeId": 181
+                "outcomeId": 113
               },
               {
                 "subjectId": 25,
-                "outcomeId": 182
+                "outcomeId": 114
               },
               {
                 "subjectId": 31,
-                "outcomeId": 137
+                "outcomeId": 143
               },
               {
                 "subjectId": 31,
-                "outcomeId": 136
+                "outcomeId": 142
               }
             ]
           },
@@ -2820,11 +2820,11 @@ const curriculums = [
               },
               {
                 "subjectId": 25,
-                "outcomeId": 181
+                "outcomeId": 113
               },
               {
                 "subjectId": 31,
-                "outcomeId": 139
+                "outcomeId": 145
               }
             ]
           }
@@ -2841,19 +2841,19 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 1,
-                "outcomeId": 4
+                "outcomeId": 1
               },
               {
                 "subjectId": 1,
-                "outcomeId": 187
+                "outcomeId": 2
               },
               {
                 "subjectId": 7,
-                "outcomeId": 164
+                "outcomeId": 24
               },
               {
                 "subjectId": 13,
-                "outcomeId": 56
+                "outcomeId": 49
               }
             ]
           },
@@ -2863,31 +2863,31 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 1,
-                "outcomeId": 188
-              },
-              {
-                "subjectId": 1,
                 "outcomeId": 3
               },
               {
                 "subjectId": 1,
-                "outcomeId": 7
+                "outcomeId": 4
+              },
+              {
+                "subjectId": 1,
+                "outcomeId": 5
               },
               {
                 "subjectId": 7,
-                "outcomeId": 189
+                "outcomeId": 25
               },
               {
                 "subjectId": 13,
-                "outcomeId": 53
+                "outcomeId": 50
               },
               {
                 "subjectId": 13,
-                "outcomeId": 55
+                "outcomeId": 51
               },
               {
                 "subjectId": 13,
-                "outcomeId": 56
+                "outcomeId": 49
               }
             ]
           },
@@ -2897,23 +2897,23 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 7,
-                "outcomeId": 190
+                "outcomeId": 26
               },
               {
                 "subjectId": 7,
-                "outcomeId": 191
+                "outcomeId": 27
               },
               {
                 "subjectId": 7,
-                "outcomeId": 189
+                "outcomeId": 25
               },
               {
                 "subjectId": 13,
-                "outcomeId": 54
+                "outcomeId": 52
               },
               {
                 "subjectId": 13,
-                "outcomeId": 57
+                "outcomeId": 53
               }
             ]
           },
@@ -2923,23 +2923,23 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 1,
-                "outcomeId": 5
+                "outcomeId": 6
               },
               {
                 "subjectId": 7,
-                "outcomeId": 164
+                "outcomeId": 24
               },
               {
                 "subjectId": 13,
-                "outcomeId": 53
+                "outcomeId": 50
               },
               {
                 "subjectId": 13,
-                "outcomeId": 55
+                "outcomeId": 51
               },
               {
                 "subjectId": 13,
-                "outcomeId": 58
+                "outcomeId": 54
               }
             ]
           },
@@ -2961,63 +2961,63 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 192
+                "outcomeId": 9
               },
               {
                 "subjectId": 32,
-                "outcomeId": 143
+                "outcomeId": 146
               },
               {
                 "subjectId": 32,
-                "outcomeId": 140
+                "outcomeId": 147
               },
               {
                 "subjectId": 29,
-                "outcomeId": 127
+                "outcomeId": 133
               },
               {
                 "subjectId": 2,
-                "outcomeId": 8
+                "outcomeId": 7
               },
               {
                 "subjectId": 26,
-                "outcomeId": 114
+                "outcomeId": 119
               },
               {
                 "subjectId": 26,
-                "outcomeId": 118
+                "outcomeId": 120
               },
               {
                 "subjectId": 4,
-                "outcomeId": 148
+                "outcomeId": 14
               },
               {
                 "subjectId": 5,
-                "outcomeId": 152
+                "outcomeId": 17
               },
               {
                 "subjectId": 6,
-                "outcomeId": 157
+                "outcomeId": 20
               },
               {
                 "subjectId": 9,
-                "outcomeId": 168
+                "outcomeId": 31
               },
               {
                 "subjectId": 10,
-                "outcomeId": 172
+                "outcomeId": 34
               },
               {
                 "subjectId": 28,
-                "outcomeId": 123
+                "outcomeId": 130
               },
               {
                 "subjectId": 16,
-                "outcomeId": 67
+                "outcomeId": 65
               },
               {
                 "subjectId": 17,
-                "outcomeId": 71
+                "outcomeId": 69
               },
               {
                 "subjectId": 20,
@@ -3025,27 +3025,27 @@ const curriculums = [
               },
               {
                 "subjectId": 30,
-                "outcomeId": 132
+                "outcomeId": 137
+              },
+              {
+                "subjectId": 22,
+                "outcomeId": 95
               },
               {
                 "subjectId": 22,
                 "outcomeId": 96
               },
               {
-                "subjectId": 22,
-                "outcomeId": 99
+                "subjectId": 11,
+                "outcomeId": 39
               },
               {
                 "subjectId": 11,
-                "outcomeId": 45
-              },
-              {
-                "subjectId": 11,
-                "outcomeId": 47
+                "outcomeId": 40
               },
               {
                 "subjectId": 21,
-                "outcomeId": 88
+                "outcomeId": 87
               }
             ]
           },
@@ -3055,67 +3055,67 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 226
+                "outcomeId": 10
               },
               {
                 "subjectId": 3,
-                "outcomeId": 193
+                "outcomeId": 11
               },
               {
                 "subjectId": 32,
-                "outcomeId": 141
+                "outcomeId": 148
               },
               {
                 "subjectId": 32,
-                "outcomeId": 142
+                "outcomeId": 149
               },
               {
                 "subjectId": 29,
-                "outcomeId": 130
-              },
-              {
-                "subjectId": 4,
-                "outcomeId": 150
-              },
-              {
-                "subjectId": 5,
-                "outcomeId": 194
-              },
-              {
-                "subjectId": 6,
-                "outcomeId": 159
-              },
-              {
-                "subjectId": 9,
-                "outcomeId": 171
-              },
-              {
-                "subjectId": 10,
-                "outcomeId": 173
-              },
-              {
-                "subjectId": 16,
-                "outcomeId": 69
-              },
-              {
-                "subjectId": 17,
-                "outcomeId": 195
-              },
-              {
-                "subjectId": 30,
-                "outcomeId": 133
-              },
-              {
-                "subjectId": 30,
                 "outcomeId": 134
               },
               {
+                "subjectId": 4,
+                "outcomeId": 15
+              },
+              {
+                "subjectId": 5,
+                "outcomeId": 18
+              },
+              {
+                "subjectId": 6,
+                "outcomeId": 21
+              },
+              {
+                "subjectId": 9,
+                "outcomeId": 32
+              },
+              {
+                "subjectId": 10,
+                "outcomeId": 35
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 66
+              },
+              {
+                "subjectId": 17,
+                "outcomeId": 70
+              },
+              {
+                "subjectId": 30,
+                "outcomeId": 138
+              },
+              {
+                "subjectId": 30,
+                "outcomeId": 139
+              },
+              {
                 "subjectId": 11,
-                "outcomeId": 44
+                "outcomeId": 41
               },
               {
                 "subjectId": 21,
-                "outcomeId": 95
+                "outcomeId": 88
               }
             ]
           },
@@ -3125,63 +3125,63 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 196
+                "outcomeId": 12
               },
               {
                 "subjectId": 3,
-                "outcomeId": 197
+                "outcomeId": 13
               },
               {
                 "subjectId": 3,
-                "outcomeId": 226
+                "outcomeId": 10
               },
               {
                 "subjectId": 29,
-                "outcomeId": 128
+                "outcomeId": 135
               },
               {
                 "subjectId": 26,
-                "outcomeId": 115
+                "outcomeId": 121
               },
               {
                 "subjectId": 4,
-                "outcomeId": 151
+                "outcomeId": 16
               },
               {
                 "subjectId": 5,
-                "outcomeId": 155
+                "outcomeId": 19
               },
               {
                 "subjectId": 9,
-                "outcomeId": 170
+                "outcomeId": 33
               },
               {
                 "subjectId": 10,
-                "outcomeId": 174
+                "outcomeId": 36
               },
               {
                 "subjectId": 10,
-                "outcomeId": 175
+                "outcomeId": 37
               },
               {
                 "subjectId": 28,
-                "outcomeId": 124
+                "outcomeId": 131
+              },
+              {
+                "subjectId": 16,
+                "outcomeId": 67
               },
               {
                 "subjectId": 16,
                 "outcomeId": 68
               },
               {
-                "subjectId": 16,
-                "outcomeId": 70
+                "subjectId": 17,
+                "outcomeId": 71
               },
               {
                 "subjectId": 17,
                 "outcomeId": 72
-              },
-              {
-                "subjectId": 17,
-                "outcomeId": 73
               },
               {
                 "subjectId": 20,
@@ -3189,7 +3189,7 @@ const curriculums = [
               },
               {
                 "subjectId": 30,
-                "outcomeId": 134
+                "outcomeId": 139
               },
               {
                 "subjectId": 22,
@@ -3201,7 +3201,7 @@ const curriculums = [
               },
               {
                 "subjectId": 11,
-                "outcomeId": 45
+                "outcomeId": 39
               }
             ]
           },
@@ -3211,55 +3211,55 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 32,
-                "outcomeId": 143
+                "outcomeId": 146
               },
               {
                 "subjectId": 32,
-                "outcomeId": 140
+                "outcomeId": 147
               },
               {
                 "subjectId": 29,
-                "outcomeId": 131
+                "outcomeId": 136
               },
               {
                 "subjectId": 2,
-                "outcomeId": 11
+                "outcomeId": 8
               },
               {
                 "subjectId": 26,
-                "outcomeId": 116
+                "outcomeId": 122
               },
               {
                 "subjectId": 26,
-                "outcomeId": 115
+                "outcomeId": 121
               },
               {
                 "subjectId": 6,
-                "outcomeId": 158
+                "outcomeId": 22
               },
               {
                 "subjectId": 6,
-                "outcomeId": 160
+                "outcomeId": 23
               },
               {
                 "subjectId": 9,
-                "outcomeId": 170
+                "outcomeId": 33
               },
               {
                 "subjectId": 10,
-                "outcomeId": 173
+                "outcomeId": 35
               },
               {
                 "subjectId": 16,
-                "outcomeId": 67
+                "outcomeId": 65
               },
               {
                 "subjectId": 17,
-                "outcomeId": 195
+                "outcomeId": 70
               },
               {
                 "subjectId": 30,
-                "outcomeId": 135
+                "outcomeId": 140
               },
               {
                 "subjectId": 22,
@@ -3267,11 +3267,15 @@ const curriculums = [
               },
               {
                 "subjectId": 11,
-                "outcomeId": 46
+                "outcomeId": 42
               },
               {
                 "subjectId": 21,
-                "outcomeId": 198
+                "outcomeId": 89
+              },
+              {
+                "subjectId": 21,
+                "outcomeId": 90
               },
               {
                 "subjectId": 21,
@@ -3284,10 +3288,6 @@ const curriculums = [
               {
                 "subjectId": 21,
                 "outcomeId": 93
-              },
-              {
-                "subjectId": 21,
-                "outcomeId": 199
               }
             ]
           },
@@ -3297,63 +3297,63 @@ const curriculums = [
             "subjectOutcomes": [
               {
                 "subjectId": 3,
-                "outcomeId": 196
+                "outcomeId": 12
               },
               {
                 "subjectId": 26,
-                "outcomeId": 113
+                "outcomeId": 123
               },
               {
                 "subjectId": 26,
-                "outcomeId": 114
+                "outcomeId": 119
               },
               {
                 "subjectId": 26,
-                "outcomeId": 116
+                "outcomeId": 122
               },
               {
                 "subjectId": 10,
-                "outcomeId": 173
+                "outcomeId": 35
               },
               {
                 "subjectId": 10,
-                "outcomeId": 200
+                "outcomeId": 38
               },
               {
                 "subjectId": 28,
-                "outcomeId": 125
+                "outcomeId": 132
               },
               {
                 "subjectId": 20,
-                "outcomeId": 201
+                "outcomeId": 86
               },
               {
                 "subjectId": 30,
-                "outcomeId": 202
+                "outcomeId": 141
               },
               {
                 "subjectId": 11,
-                "outcomeId": 46
+                "outcomeId": 42
               },
               {
                 "subjectId": 21,
-                "outcomeId": 88
+                "outcomeId": 87
               },
               {
                 "subjectId": 21,
-                "outcomeId": 198
+                "outcomeId": 89
               },
               {
                 "subjectId": 21,
-                "outcomeId": 91
+                "outcomeId": 90
               },
               {
                 "subjectId": 21,
-                "outcomeId": 93
+                "outcomeId": 92
               },
               {
                 "subjectId": 21,
-                "outcomeId": 203
+                "outcomeId": 94
               }
             ]
           }
@@ -3365,44 +3365,114 @@ const curriculums = [
         "objective": "Õpilane süvendab teadmisi ja oskusi valdkonna spetsiifilistes või uudsetes teemades.",
         "learningOutcomes": [
           {
-            "id": 189,
+            "id": 1,
             "description": "Analüüsib ja teeb põhjendatud valiku valdkonnaspetsiifilise või uudse lähenemisviisi osas,  seostab oma valiku teoreetiliste käsitluste ja praktiliste rakendustega.",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
-                "outcomeId": 59
+                "outcomeId": 55
               },
               {
                 "subjectId": 14,
-                "outcomeId": 62
+                "outcomeId": 56
               },
               {
                 "subjectId": 27,
-                "outcomeId": 119
+                "outcomeId": 124
               },
               {
                 "subjectId": 27,
-                "outcomeId": 120
+                "outcomeId": 125
               },
               {
                 "subjectId": 8,
-                "outcomeId": 165
+                "outcomeId": 28
               },
               {
                 "subjectId": 12,
-                "outcomeId": 49
+                "outcomeId": 43
               },
               {
                 "subjectId": 12,
-                "outcomeId": 51
+                "outcomeId": 44
+              },
+              {
+                "subjectId": 15,
+                "outcomeId": 60
+              },
+              {
+                "subjectId": 15,
+                "outcomeId": 61
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 73
+              },
+              {
+                "subjectId": 18,
+                "outcomeId": 74
+              },
+              {
+                "subjectId": 24,
+                "outcomeId": 108
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 150
+              },
+              {
+                "subjectId": 33,
+                "outcomeId": 151
+              },
+              {
+                "subjectId": 35,
+                "outcomeId": 161
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "description": "Rakendab omandatud teadmisi ja oskusi praktilistes disaini- või tarkvaraarenduse projektides.",
+            "subjectOutcomes": [
+              {
+                "subjectId": 14,
+                "outcomeId": 57
+              },
+              {
+                "subjectId": 14,
+                "outcomeId": 58
+              },
+              {
+                "subjectId": 27,
+                "outcomeId": 126
+              },
+              {
+                "subjectId": 27,
+                "outcomeId": 127
+              },
+              {
+                "subjectId": 8,
+                "outcomeId": 29
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 45
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 46
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 47
+              },
+              {
+                "subjectId": 15,
+                "outcomeId": 62
               },
               {
                 "subjectId": 15,
                 "outcomeId": 63
-              },
-              {
-                "subjectId": 15,
-                "outcomeId": 66
               },
               {
                 "subjectId": 18,
@@ -3410,73 +3480,77 @@ const curriculums = [
               },
               {
                 "subjectId": 18,
+                "outcomeId": 76
+              },
+              {
+                "subjectId": 18,
                 "outcomeId": 77
               },
               {
                 "subjectId": 24,
-                "outcomeId": 105
+                "outcomeId": 109
+              },
+              {
+                "subjectId": 24,
+                "outcomeId": 110
               },
               {
                 "subjectId": 33,
-                "outcomeId": 144
+                "outcomeId": 152
               },
               {
                 "subjectId": 33,
-                "outcomeId": 204
+                "outcomeId": 153
               },
               {
                 "subjectId": 35,
-                "outcomeId": 205
+                "outcomeId": 162
               }
             ]
           },
           {
-            "id": 190,
-            "description": "Rakendab omandatud teadmisi ja oskusi praktilistes disaini- või tarkvaraarenduse projektides.",
+            "id": 3,
+            "description": "Demonstreerib praktiliste ülesannete täitmisel loovust ja probleemilahendusoskusi.",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
-                "outcomeId": 60
+                "outcomeId": 58
               },
               {
                 "subjectId": 14,
-                "outcomeId": 61
+                "outcomeId": 59
               },
               {
                 "subjectId": 27,
-                "outcomeId": 121
+                "outcomeId": 128
               },
               {
                 "subjectId": 27,
-                "outcomeId": 122
+                "outcomeId": 129
               },
               {
                 "subjectId": 8,
-                "outcomeId": 166
+                "outcomeId": 30
+              },
+              {
+                "subjectId": 12,
+                "outcomeId": 45
               },
               {
                 "subjectId": 12,
                 "outcomeId": 48
               },
               {
-                "subjectId": 12,
-                "outcomeId": 50
+                "subjectId": 15,
+                "outcomeId": 62
               },
               {
-                "subjectId": 12,
-                "outcomeId": 206
+                "subjectId": 15,
+                "outcomeId": 63
               },
               {
                 "subjectId": 15,
                 "outcomeId": 64
-              },
-              {
-                "subjectId": 15,
-                "outcomeId": 65
-              },
-              {
-                "subjectId": 18,
-                "outcomeId": 76
               },
               {
                 "subjectId": 18,
@@ -3484,106 +3558,32 @@ const curriculums = [
               },
               {
                 "subjectId": 18,
-                "outcomeId": 207
+                "outcomeId": 79
               },
               {
                 "subjectId": 24,
-                "outcomeId": 106
+                "outcomeId": 111
               },
               {
                 "subjectId": 24,
-                "outcomeId": 107
+                "outcomeId": 112
               },
               {
                 "subjectId": 33,
-                "outcomeId": 208
+                "outcomeId": 154
               },
               {
                 "subjectId": 33,
-                "outcomeId": 209
+                "outcomeId": 155
               },
               {
                 "subjectId": 35,
-                "outcomeId": 210
+                "outcomeId": 163
               }
             ]
           },
           {
-            "id": 191,
-            "description": "Demonstreerib praktiliste ülesannete täitmisel loovust ja probleemilahendusoskusi.",
-            "subjectOutcomes": [
-              {
-                "subjectId": 14,
-                "outcomeId": 61
-              },
-              {
-                "subjectId": 14,
-                "outcomeId": 211
-              },
-              {
-                "subjectId": 27,
-                "outcomeId": 212
-              },
-              {
-                "subjectId": 27,
-                "outcomeId": 213
-              },
-              {
-                "subjectId": 8,
-                "outcomeId": 167
-              },
-              {
-                "subjectId": 12,
-                "outcomeId": 48
-              },
-              {
-                "subjectId": 12,
-                "outcomeId": 214
-              },
-              {
-                "subjectId": 15,
-                "outcomeId": 64
-              },
-              {
-                "subjectId": 15,
-                "outcomeId": 65
-              },
-              {
-                "subjectId": 15,
-                "outcomeId": 215
-              },
-              {
-                "subjectId": 18,
-                "outcomeId": 216
-              },
-              {
-                "subjectId": 18,
-                "outcomeId": 217
-              },
-              {
-                "subjectId": 24,
-                "outcomeId": 108
-              },
-              {
-                "subjectId": 24,
-                "outcomeId": 218
-              },
-              {
-                "subjectId": 33,
-                "outcomeId": 147
-              },
-              {
-                "subjectId": 33,
-                "outcomeId": 219
-              },
-              {
-                "subjectId": 35,
-                "outcomeId": 220
-              }
-            ]
-          },
-          {
-            "id": 192,
+            "id": 4,
             "description": "Süvendab või laiendab erialaseid teadmisi ja oskusi lähtuvalt oma huvidest ja karjäärieesmärkidest.",
             "subjectOutcomes": []
           }
@@ -3595,23 +3595,23 @@ const curriculums = [
         "objective": "Üliõpilane leiab võimalusi enesearenguks lähtudes individuaalsest huvist ja arendab oma võõrkeele- ja arvutikasutamise oskusi.",
         "learningOutcomes": [
           {
-            "id": 192,
+            "id": 1,
             "description": "süvendab erialaseid teadmisi ja oskusi;"
           },
           {
-            "id": 193,
+            "id": 2,
             "description": "on tõstnud oma võõrkeeleoskuse vähemalt B1.2 tasemele;"
           },
           {
-            "id": 194,
+            "id": 3,
             "description": "muu keelega kooli lõpetanu on tõstnud eesti keele oskuse C1 tasemele"
           },
           {
-            "id": 195,
+            "id": 4,
             "description": "Seob valitud ained erialaste teadmistega, demonstreerides interdistsiplinaarset mõtlemist ja loovust."
           },
           {
-            "id": 196,
+            "id": 5,
             "description": "Täiendab individuaalsest huvist ja eesmärgist lähtuvalt oma oskusi ja teadmisi"
           }
         ]
@@ -3622,29 +3622,29 @@ const curriculums = [
         "objective": "Õpilane arendab oma erialast inglise keelt.",
         "learningOutcomes": [
           {
-            "id": 195,
+            "id": 1,
             "description": "Kasutab erialast inglisekeelset terminoloogiat.",
             "subjectOutcomes": [
+              {
+                "subjectId": 23,
+                "outcomeId": 99
+              },
               {
                 "subjectId": 23,
                 "outcomeId": 100
               },
               {
                 "subjectId": 23,
-                "outcomeId": 221
+                "outcomeId": 101
               },
               {
                 "subjectId": 23,
-                "outcomeId": 222
-              },
-              {
-                "subjectId": 23,
-                "outcomeId": 221
+                "outcomeId": 100
               }
             ]
           },
           {
-            "id": 196,
+            "id": 2,
             "description": "Mõistab ja koostab erialaseid inglisekeelseid tekste.",
             "subjectOutcomes": [
               {
@@ -3653,7 +3653,7 @@ const curriculums = [
               },
               {
                 "subjectId": 23,
-                "outcomeId": 223
+                "outcomeId": 103
               },
               {
                 "subjectId": 23,
@@ -3665,7 +3665,7 @@ const curriculums = [
               },
               {
                 "subjectId": 23,
-                "outcomeId": 224
+                "outcomeId": 105
               },
               {
                 "subjectId": 23,
@@ -3674,16 +3674,16 @@ const curriculums = [
             ]
           },
           {
-            "id": 197,
+            "id": 3,
             "description": "Väljendab ladusalt suuliselt ja kirjalikult inglise keeles oma seisukohti.",
             "subjectOutcomes": [
               {
                 "subjectId": 23,
-                "outcomeId": 101
+                "outcomeId": 106
               },
               {
                 "subjectId": 23,
-                "outcomeId": 225
+                "outcomeId": 107
               },
               {
                 "subjectId": 23,
@@ -3691,11 +3691,11 @@ const curriculums = [
               },
               {
                 "subjectId": 23,
-                "outcomeId": 101
+                "outcomeId": 106
               },
               {
                 "subjectId": 23,
-                "outcomeId": 225
+                "outcomeId": 107
               },
               {
                 "subjectId": 23,
@@ -3711,52 +3711,52 @@ const curriculums = [
         "objective": "Üliõpilane viib läbi erialase uurimuse, analüüsib uurimistulemusi, vormistab tulemuse lõputööks ja kaitseb valminud lõputööd.",
         "learningOutcomes": [
           {
-            "id": 198,
+            "id": 1,
             "description": "Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 176
+                "outcomeId": 156
               }
             ]
           },
           {
-            "id": 199,
+            "id": 2,
             "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 177
+                "outcomeId": 157
               }
             ]
           },
           {
-            "id": 200,
+            "id": 3,
             "description": "Valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 178
+                "outcomeId": 158
               }
             ]
           },
           {
-            "id": 201,
+            "id": 4,
             "description": "Kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 179
+                "outcomeId": 159
               }
             ]
           },
           {
-            "id": 202,
+            "id": 5,
             "description": "Hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
-                "outcomeId": 180
+                "outcomeId": 160
               }
             ]
           }
@@ -3778,27 +3778,27 @@ const curriculums = [
         "objective": "Luua võimalus õppeprotsessi eesmärgistamise ja enesejuhtimise alaste oskuste kujundamiseks ning toetada kõrgkoolis eduka õppimise valmisoleku kujunemist",
         "outcomes": [
           {
-            "id": 4,
+            "id": 1,
             "description": "Kasutab kriitilise mõtlemise, lugemise, kirjutamise meetodeid ja strateegiaid, analüüsib argumentide sisulist külge ning esitab oma seisukohti nii suuliselt kui kirjalikult"
           },
           {
-            "id": 187,
+            "id": 2,
             "description": "Vormistab nõuetekohase kirjaliku akadeemilise teksti koos korrektse viitamistehnikaga"
           },
           {
-            "id": 188,
+            "id": 3,
             "description": "Tunneb tänapäevast õppeprotsessi, ajajuhtimise meetodeid ja oskab analüüsida ennast õppijana, hoida oma tervist"
           },
           {
-            "id": 3,
+            "id": 4,
             "description": "Tunneb Tallinna Ülikooli õppekorralduse eeskirja ja teab erinevatele ette tulla võivatele õppekorralduslikele probleemidele lahendusi"
           },
           {
-            "id": 7,
+            "id": 5,
             "description": "Valdab õppetöös kasutatavaid õpikeskkondi (ÕIS, Moodle) ja kasutab õppetegevust toetavaid enamlevinuid programme"
           },
           {
-            "id": 5,
+            "id": 6,
             "description": "Tunneb grupiprotsesse ja koostöise õppimise põhimõtteid"
           }
         ],
@@ -3820,11 +3820,11 @@ const curriculums = [
         "objective": "Anda üliõpilastele ajalooline ja kontseptuaalne ülevaade informaatikast kui äri-, teadus- ja insenerivaldkonnast, tutvustades selle arengulugu, põhiprintsiipe ja tulevikusuundi.",
         "outcomes": [
           {
-            "id": 8,
+            "id": 7,
             "description": "Seostab informaatika ajaloo sündmusi ning selgitab nende mõju infotehnoloogia arengule"
           },
           {
-            "id": 11,
+            "id": 8,
             "description": "Hindab kaasaegsete tehnoloogiate (nt tehisintellekt, krüptograafia) mõju IT tulevikule ja ühiskonnale"
           }
         ],
@@ -3846,23 +3846,23 @@ const curriculums = [
         "objective": "Eesmärk on luua eeldused programmeerimise olemuse, baasmõistete ja põhimeetodite tundmiseks. Kursus toetab protseduurse programmeerimise aluste omandamist, tüüpiliste keeletarindite mõistmist, probleemide analüüsioskuse ja algoritmilise mõtlemise arengut. Samuti valmistatakse õppijaid ette teiste programmeerimisega seotud ainete edukaks läbimiseks.",
         "outcomes": [
           {
-            "id": 192,
+            "id": 9,
             "description": "Tunneb protseduurse programmeerimise põhimõtteid, mõisteid ja keelt ning mõistab programmeerimise olemust"
           },
           {
-            "id": 226,
+            "id": 10,
             "description": "Kasutab programmikoodi töötlemiseks, silumiseks ja testimiseks sobivat keskkonda"
           },
           {
-            "id": 193,
+            "id": 11,
             "description": "Kasutab versioonihaldust programmikoodi ja dokumentatsiooni haldamiseks"
           },
           {
-            "id": 196,
+            "id": 12,
             "description": "Analüüsib lihtsamaid probleeme ning koostab nende lahendamiseks algoritme, rakendades tüüpalgoritme ja algoritmilist mõtlemist"
           },
           {
-            "id": 197,
+            "id": 13,
             "description": "Esitab algoritme tegevusskeemi abil ning tõlgib algoritme programmeerimiskeelde, järgides kodeerimise reegleid ja häid tavasid"
           }
         ],
@@ -3884,15 +3884,15 @@ const curriculums = [
         "objective": "Tutvustada arvutigraafika ja multimeediumi põhialuseid. Luua võimalused vektor- ja rastergraafika, heli- ja videotöötluse ning animatsiooni peamiste töövõtete omandamiseks.",
         "outcomes": [
           {
-            "id": 148,
+            "id": 14,
             "description": "Kasutab valdkondlikku terminoloogiat korrektselt ning eesmärgipäraselt"
           },
           {
-            "id": 150,
+            "id": 15,
             "description": "Valib arvutigraafika ja multimeediumi lahenduste loomiseks sobiva tarkvara ja töövõtted"
           },
           {
-            "id": 151,
+            "id": 16,
             "description": "Loob vektor- ja rastergraafikat, salvestab ja monteerib digitaalset heli ja videot ning loob lihtsamaid 2D animatsioone valdkondlikest põhiprintsiipidest ning headest tavadest lähtuvalt"
           }
         ],
@@ -3914,15 +3914,15 @@ const curriculums = [
         "objective": "Luua alused teadmiste ja oskuste kujunemiseks tarkvaraarenduse protsessidest, arendusmeetoditest ning kaasaegsetest töövahenditest. Anda baasteadmised tarkvaraarenduse headest tavadest, tarkvara jätkusuutlikkuse tagamisest (koodi kvaliteet, testimine, versioonihaldus) ja meeskonnatöös osalemisest, kasutades professionaalseid tööriistu nagu Git ja GitHub. Tutvustada tarkwaralitsentse, nende tüüpe ja rakendamist, arvestades õiguslikke ja eetilisi aspekte tarkvaraarenduses. Õppeaine lõppeesmärk on anda õppijatele kindel baas tarkvaraarenduse metoodikate ja tööriistade mõistmiseks ning rakendamiseks, valmistades neid ette nii teoreetilisteks kui ka praktilisteks väljakutseteks tarkwaraarenduse valdkonnas.",
         "outcomes": [
           {
-            "id": 152,
+            "id": 17,
             "description": "Selgitab tarkvara olemust, erinevaid tarkvaratüüpe ja arhitektuuri ning tarkvara arendusprotsesside ja metoodikate (sh SDLC ja agiilsed meetodid) põhimõtteid ja eeliseid"
           },
           {
-            "id": 194,
+            "id": 18,
             "description": "Kasutab versioonihalduse tööriistu, nagu Git ja GitHub, meeskonnatööks"
           },
           {
-            "id": 155,
+            "id": 19,
             "description": "Rakendab koodi kvaliteedi ja jätkusuutlikkuse tagamiseks häid arendustavasid, sealhulgas dokumenteerimist ja koodi ülevaatust"
           }
         ],
@@ -3944,19 +3944,19 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele arusaam tehisintellekti olemusest, põhimõtetest ja kasutusvõimalustest, edendada kriitilist mõtlemist seoses TI eetika ja ühiskondlike mõjudega ning valmistada neid ette TI-põhiste tööriistade teadlikuks rakendamiseks erinevates erialakontekstides.",
         "outcomes": [
           {
-            "id": 157,
+            "id": 20,
             "description": "Selgitab tehisintellekti põhimõtteid, ajalugu ja rakendusvaldkondi, hinnates selle eeliseid ja piiranguid"
           },
           {
-            "id": 159,
+            "id": 21,
             "description": "Kasutab TI-põhiseid tööriistu oma erialaga seotud ülesannete lahendamisel"
           },
           {
-            "id": 158,
+            "id": 22,
             "description": "Analüüsib tehisintellekti eetilisi, sotsiaalseid ja majanduslikke mõjusid ning nende mõju ühiskonnale"
           },
           {
-            "id": 160,
+            "id": 23,
             "description": "Hindab tehisintellekti rakendamise võimalusi ja riske erinevates valdkondades"
           }
         ],
@@ -3978,19 +3978,19 @@ const curriculums = [
         "objective": "Kujundada integreeritud teadmine psühholoogia eri suundadest ja rakendamise võimalustest. Toetada arusaamise kujunemist inimesest kui biopsühhosotsiaalsest reaalsust mõtestavast tervikust.",
         "outcomes": [
           {
-            "id": 164,
+            "id": 24,
             "description": "Oskab analüüsida iseennast ja ümbritsevat maailma teadusliku psühholoogia printsiipidest ja käsitlustest lähtuvalt"
           },
           {
-            "id": 189,
+            "id": 25,
             "description": "Oskab seostada teaduslikku psühholoogiat rakenduslike väljunditega"
           },
           {
-            "id": 190,
+            "id": 26,
             "description": "Teab, millega tegeleb tänapäeva teaduslik psühholoogia"
           },
           {
-            "id": 191,
+            "id": 27,
             "description": "Teab, millised on inimese psüühika funktsioneerimise põhilised seaduspärasused ja nende seotus keskkondlike teguritega"
           }
         ],
@@ -4012,15 +4012,15 @@ const curriculums = [
         "objective": "Anda üliõpilastele praktiline ülevaade sisuhaldussüsteemidest ja nende rakendamisest erinevates projektides, tutvustada SEO ja veebianalüütika põhitõdesid ning nende rakendamist veebiarenduses, ning arendada oskusi kasutada sisuhaldussüsteeme veebilehtede loomisel ja optimeerimisel.",
         "outcomes": [
           {
-            "id": 165,
+            "id": 28,
             "description": "Kirjeldab sisuhaldussüsteemide tööpõhimõtteid ja rakendusvõimalusi erinevat tüüpi veebiprojektides"
           },
           {
-            "id": 166,
+            "id": 29,
             "description": "Loob ja kohandab veebilehti, kasutades sisuhaldussüsteeme, rakendades SEO põhimõtteid ja veebiarenduse häid tavasid"
           },
           {
-            "id": 167,
+            "id": 30,
             "description": "Kasutab veebianalüütika tööriistu veebilehe jõudluse ja kasutajakogemuse analüüsimiseks ning parandamiseks"
           }
         ],
@@ -4045,15 +4045,15 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused kaasaegsete eesrakenduste arendamiseks, hõlmates HTML-i, CSS-i ja JavaScripti kasutamist, CSS-i raamistike rakendamist, ning veebilahenduste loomisel ligipääsetavuse ja valideerimise standardite järgimist. Lisaks arendada oskusi projekti dokumenteerimisel ja versioonihaldustööriistade (nt Git, GitHub) tõhusal kasutamisel, et toetada koostööd ja projekti jätkusuutlikkust.",
         "outcomes": [
           {
-            "id": 168,
+            "id": 31,
             "description": "Loob semantilise ja kohanduva (responsive) disainiga veebilehti, kasutades HTML-i, CSS-i ja vajalikke raamistikke"
           },
           {
-            "id": 171,
+            "id": 32,
             "description": "Kasutab Git-i ja GitHubi tööriistu veebiarendusprojektide haldamiseks, dokumenteerimiseks ja koostöö korraldamiseks"
           },
           {
-            "id": 170,
+            "id": 33,
             "description": "Järgib ligipääsetavuse (WCAG) ja koodi valideerimise standardeid veebilehtede kvaliteedi ja kasutusmugavuse tagamiseks"
           }
         ],
@@ -4075,23 +4075,23 @@ const curriculums = [
         "objective": "Tutvustada disainiprotsessi, disainmõtlemise ja kasutajakogemuse disaini põhiprintsiipe ning peamisi töövõtteid;\nLuua võimalused disaini lähteülesande ja hüpoteesi koostamiseks, disaini- ja kasutajauuringute läbiviimiseks, kasutajatega suhestumise töövõtete rakendamiseks, disaini kontseptsioonide väljatöötamiseks ja prototüüpimiseks.",
         "outcomes": [
           {
-            "id": 172,
+            "id": 34,
             "description": "Rakendab iteratiivset disainiprotsessi ja disainmõtlemise põhimõtteid probleemide lahendamisel, sõnastades disaini lähteülesandeid, probleemipüstitusi ja hüpoteese"
           },
           {
-            "id": 173,
+            "id": 35,
             "description": "Viib läbi disaini- ja kasutajauuringuid, kogub ning analüüsib andmeid vastutustundlikult ja eetiliselt"
           },
           {
-            "id": 174,
+            "id": 36,
             "description": "Rakendab kasutajakogemuse disaini põhimõtteid, töötab välja ja hindab kriitiliselt ideid ning disainikontseptsioone"
           },
           {
-            "id": 175,
+            "id": 37,
             "description": "Koostab erinevates tehnikates prototüüpe, testib lahenduste kasutatavust ja vastavust disaini lähteülesandele"
           },
           {
-            "id": 200,
+            "id": 38,
             "description": "Rakendab iteratiivset disainiprotsessi ja disainmõtlemise põhimõtteid probleemide lahendamisel"
           }
         ],
@@ -4113,19 +4113,19 @@ const curriculums = [
         "objective": "Anda ülevaade graafilise disaini põhialustest ja parimatest tavadest. Luua võimalused graafilise disaini teooriate, terminoloogia, põhiprintsiipide ja töövõtete omandamiseks ning rakendamiseks kujundustööde loomeprotsessis.",
         "outcomes": [
           {
-            "id": 45,
+            "id": 39,
             "description": "Selgitab graafilise disaini (sh visuaalse taju, kompositsiooni, värvusõpetuse, tüpograafia) põhiprintsiipe ja rakendab neid kujundustöödes loovalt vastavalt valdkondlikele headele tavadele"
           },
           {
-            "id": 47,
+            "id": 40,
             "description": "Kasutab valdkondlikku terminoloogiat korrektselt ja eesmärgipäraselt"
           },
           {
-            "id": 44,
+            "id": 41,
             "description": "Planeerib ja järgib kujundamisel süsteemselt graafilise disaini loomeprotsessi"
           },
           {
-            "id": 46,
+            "id": 42,
             "description": "Kirjeldab, analüüsib ja hindab kujundusi graafilise disaini teooriatest lähtuvalt"
           }
         ],
@@ -4150,27 +4150,27 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused dünaamiliste veebirakenduste loomiseks, keskendudes serveripoolse renderdamise (SSR) ja monoliitse arhitektuuri rakendamisele. Kursus arendab oskusi kasutada Node.js-i ja selle mooduleid (sh Express), luua turvalisi ja jätkusuutlikke veebirakendusi, töötada välistest API-dest pärinevate andmetega ning rakendada parimaid praktikaid versioonihalduse ja dokumenteerimise alal, toetades seeläbi arendusprotsesside kvaliteeti ja meeskonnatööd.",
         "outcomes": [
           {
-            "id": 49,
+            "id": 43,
             "description": "Rakendab serveripoolse renderdamise (SSR) ja monoliitse arhitektuuri põhimõtteid, kasutades mallimootoreid (EJS, Pug, Handlebars)"
           },
           {
-            "id": 51,
+            "id": 44,
             "description": "Analüüsib ja rakendab veebirakenduste turvalisuse parimaid praktikaid, lähtudes OWASP TOP10 soovitustest"
           },
           {
-            "id": 48,
+            "id": 45,
             "description": "Loob ja haldab serveripoolseid rakendusi, kasutades Node.js-i ja kolmanda osapoole mooduleid (nt Express)"
           },
           {
-            "id": 50,
+            "id": 46,
             "description": "Töötleb välistest API-dest pärinevaid JSON-formaadis andmeid"
           },
           {
-            "id": 206,
+            "id": 47,
             "description": "Dokumenteerib arendusprotsessi ja kasutab versioonihalduse tööriistu"
           },
           {
-            "id": 214,
+            "id": 48,
             "description": "Rakendab serveripoolse renderdamise ja turvalisuse parimaid praktikaid, kohandades lahendusi erinevatele arendusvajadustele"
           }
         ],
@@ -4192,27 +4192,27 @@ const curriculums = [
         "objective": "ELU õppeaine eesmärk on toetada üliõpilaste üldpädevuste süvendamist ja selle kaudu tõsta õppijate interdistsiplinaarsete probleemide lahendamise pädevuse kujunemist.",
         "outcomes": [
           {
-            "id": 56,
+            "id": 49,
             "description": "Analüüsib projekti edenemist ja selle tulemuslikkust, hinnates oma tegevusi kriitiliselt ja kavandades parendusmeetmeid"
           },
           {
-            "id": 53,
+            "id": 50,
             "description": "Loob seoseid ja analüüsib ELU projektis seatud eesmärke ja nende lahendusvõimalusi nii enda kui teiste erialade perspektiividest lähtudes"
           },
           {
-            "id": 55,
+            "id": 51,
             "description": "Rakendab projekti- ja meeskonnatöö toimimise põhimõtteid, sh rollide jaotamine, vastutuse võtmine, panustamine grupitöösse ning on omandanud ajajuhtimise oskused"
           },
           {
-            "id": 54,
+            "id": 52,
             "description": "Kasutab ELU projekti elluviimise käigus omandatud uusi erialaseid ja erialade vahelisi teadmisi ning tunneb ära nende rakendamisvõimalused"
           },
           {
-            "id": 57,
+            "id": 53,
             "description": "Analüüsib enda ja teiste rolli ja vastutust projekti tegevuste ja eesmärkide elluviimisel"
           },
           {
-            "id": 58,
+            "id": 54,
             "description": "Tutvustab projekti tulemusi sidusrühmadele ja/või avalikkusele"
           }
         ],
@@ -4234,23 +4234,23 @@ const curriculums = [
         "objective": "Anda ülevaade mängudisaini alustest ning toetada teadmiste ja oskuste kujunemist, mis võimaldavad üliõpilasel osaleda mängukavandi loomise protsessis. Kursus keskendub mängumehaanika, esteetika ja narratiivi tasakaalustamisele, samuti mängijate psühholoogia tundmisele ja mängudisaini dokumentatsiooni koostamisele. Kursus arendab loovust ja analüütilist mõtlemist, mis on vajalikud kaasahaaravate ja kvaliteetsete mängukogemuste loomiseks.",
         "outcomes": [
           {
-            "id": 59,
+            "id": 55,
             "description": "Omab struktureeritud arusaamist videomängude kavandamise ja disaini põhimõtetest: mängu mehaanika, esteetika ja narratiiv"
           },
           {
-            "id": 62,
+            "id": 56,
             "description": "Tunneb mängužanrite ja mängijate motivatsiooni analüüsi tähtsust mängukogemuse loomisel"
           },
           {
-            "id": 60,
+            "id": 57,
             "description": "Valdab praktilisi oskusi mängukogemuse analüüsimiseks ja mängudisaini dokumentatsiooni koostamiseks"
           },
           {
-            "id": 61,
+            "id": 58,
             "description": "On valmis osalema mängudisaini meeskonnas, mõistes tarkvaraarenduse protsessi erinevaid etappe, sealhulgas ideede kavandamist, testimist ja arendamist"
           },
           {
-            "id": 211,
+            "id": 59,
             "description": "Rakendab mängudisaini põhimõtteid loominguliste ja kasutajakesksete lahenduste väljatöötamisel (kaudselt väljendub kõigis eelnevates õpiväljundites)"
           }
         ],
@@ -4275,23 +4275,23 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised kasutajaliidese disaini põhimõtetest ja tööprotsessist ning arendada oskusi luua funktsionaalseid, visuaalselt atraktiivseid ja juurdepääsetavusega arvestavaid kasutajaliideseid. Kursus toetab kogemuste omandamist interaktiivsete, kõrge detailsusega prototüüpide loomiseks.",
         "outcomes": [
           {
-            "id": 63,
+            "id": 60,
             "description": "Rakendab kasutajaliidese disaini põhimõtteid ja heuristikuid kasutajaliidese loomise protsessis"
           },
           {
-            "id": 66,
+            "id": 61,
             "description": "Analüüsib ja rakendab disainimustreid ning hindab tumemustrite mõju kasutajakogemusele"
           },
           {
-            "id": 64,
+            "id": 62,
             "description": "Kujundab kasutajaliideseid, arvestades funktsionaalsuse, visuaalse atraktiivsuse ja juurdepääsetavuse nõuetega"
           },
           {
-            "id": 65,
+            "id": 63,
             "description": "Kasutab disaini tööriistu, et luua interaktiivne ja kõrge detailsusega prototüüp"
           },
           {
-            "id": 215,
+            "id": 64,
             "description": "Analüüsib ja rakendab disainimustreid, leides loovaid ja eetilisi lahendusi kasutajakogemuse parandamiseks"
           }
         ],
@@ -4316,19 +4316,19 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused andmebaaside projekteerimisel, haldamisel ja optimeerimisel. Kursus keskendub relatsiooniliste andmebaaside alustele ja kaasaegsetele andmebaasilahendustele, sealhulgas SQL-i kasutamisele, andmestruktuuride efektiivsuse tagamisele, päringute optimeerimisele, skaleeritavusele ja turvalisusele. Samuti arendab õppeaine oskusi salvestatud protseduuride, funktsioonide ja päästikute loomisel, andmebaaside administreerimisel ning andmete varundamise ja taasteplaanide rakendamisel, et toetada praktiliste probleemide lahendamist ja süsteemide töökindlust.",
         "outcomes": [
           {
-            "id": 67,
+            "id": 65,
             "description": "Koostab andmemudeleid ja ER-diagramme, rakendab võtmeid ja seoseid ning viib läbi andmebaasi normaliseerimise, et tagada andmestruktuuride efektiivsus ja terviklikkus"
           },
           {
-            "id": 69,
+            "id": 66,
             "description": "Haldab andmebaaside kasutajaõigusi, rakendab varundamise ja taasteplaani tehnikaid ning tagab andmete turvalisuse vastavalt parimatele praktikatele"
           },
           {
-            "id": 68,
+            "id": 67,
             "description": "Kasutab SQL-i põhikäske ja keerukamaid funktsioone tabelite loomiseks, päringute tegemiseks ja andmete optimeerimiseks, sealhulgas indekseid päringute kiirendamiseks"
           },
           {
-            "id": 70,
+            "id": 68,
             "description": "Loob salvestatud protseduure, funktsioone ja päästikuid, et tõsta andmebaaside funktsionaalsust ning automatiseerida protsesse, tagades süsteemi töökindluse ja veahaldust"
           }
         ],
@@ -4353,19 +4353,19 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused kaasaegsete JavaScripti raamistikute, eelkõige Reacti, kasutamiseks veebiarenduses, keskendudes komponentidel põhinevate eesrakenduste loomisele. Kursus arendab oskusi reaktiivsete kasutajaliideste arendamiseks, front-end rakenduste sidumiseks väliste API-dega, asünkroonse programmeerimise kasutamiseks ning erinevate stiilimismeetodite ja kasutajaliidese teekide rakendamiseks. Samuti pööratakse tähelepanu projektide dokumenteerimisele ja versioonihalduse rakendamisele, et toetada koostööd ja arendusprotsesside jätkusuutlikkust.",
         "outcomes": [
           {
-            "id": 71,
+            "id": 69,
             "description": "Kasutab Reacti raamistikku, seisundi haldamist, sündmuste töötlemist ja komponentidel põhinevat arhitektuuri reaktiivsete kasutajaliidestega rakenduste loomiseks"
           },
           {
-            "id": 195,
+            "id": 70,
             "description": "Dokumenteerib arendusprotsessi ja kasutab versioonihalduse tööriistu"
           },
           {
-            "id": 72,
+            "id": 71,
             "description": "Kasutab eesrakendustes andmete pärimiseks väliseid rakendusliideseid, hallates asünkroonseid päringuid ja andmete töötlemist"
           },
           {
-            "id": 73,
+            "id": 72,
             "description": "Rakendab erinevaid stiilimismeetodeid ja kasutajaliidese teeke visuaalselt atraktiivsete ja funktsionaalsete eesrakenduste loomiseks"
           }
         ],
@@ -4390,31 +4390,31 @@ const curriculums = [
         "objective": "Õppeaine eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused kaasaegsete, turvaliste ja hästi dokumenteeritud tagarakenduste loomiseks, kasutades Node.js-i ja TypeScripti. Kursus keskendub RESTful API-de disainimisele ja arendamisele, rakendades objektorienteeritud programmeerimise (OOP) põhimõtteid, turvalisuse parimaid praktikaid ja autentimise ning autoriseerimise meetodeid. Samuti arendatakse oskusi API testimisel ja dokumenteerimisel, valmistades õppijaid ette professionaalsete arendustegevuste jaoks.",
         "outcomes": [
           {
-            "id": 75,
+            "id": 73,
             "description": "Loob struktureeritud rakendusliideseid, kasutades Node.js-i ja TypeScripti abil OOP-põhist arhitektuuri ning RESTful API disaini põhimõtteid"
           },
           {
-            "id": 77,
+            "id": 74,
             "description": "Tagab rakendusliidese turvalisuse, järgides OWASP TOP10 juhiseid"
           },
           {
-            "id": 76,
+            "id": 75,
             "description": "Rakendab autentimise ja autoriseerimise meetodeid, sealhulgas JWT-põhiseid lahendusi"
           },
           {
-            "id": 78,
+            "id": 76,
             "description": "Testib ja dokumenteerib loodud rakendusliideste arendusprotsessi kaasaegsete tööriistadega (nt Jest, Mocha, Swagger), tagades kasutajasõbralikkuse ja kvaliteedi"
           },
           {
-            "id": 207,
+            "id": 77,
             "description": "Kasutab koodi haldamiseks ja dokumenteerimiseks versioonihaldust"
           },
           {
-            "id": 216,
+            "id": 78,
             "description": "Loob ja täiustab rakendusliideseid, ühendades OOP, testimise ja turvalisuse põhimõtteid innovatiivsete ning kasutajasõbralike lahenduste väljatöötamiseks"
           },
           {
-            "id": 217,
+            "id": 79,
             "description": "Rakendab autentimis- ja autoriseerimislahendusi loovalt, kohandades neid erinevatele arenduskeskkondadele"
           }
         ],
@@ -4485,7 +4485,7 @@ const curriculums = [
             "description": "Rakendab hulkade, loogika, graafide ja kombinatoorika põhimõtteid, et lahendada programmeerimisülesandeid"
           },
           {
-            "id": 201,
+            "id": 86,
             "description": "Lahendab IT-valdkonna probleeme, kasutades diskreetset matemaatikat ja arvuteooria meetodeid"
           }
         ],
@@ -4507,35 +4507,35 @@ const curriculums = [
         "objective": "Luua võimalused üliõpilaste tänapäevase arusaama kujunemise toetamiseks teadusliku uurimistöö meetoditest, kujundada uurimisprojekti läbiviimise oskust ja luua alused üliõpilase uurimistöö koostamiseks. Luua võimalused andmete kogumise, töötlemise ning lihtsama statistilise analüüsi läbiviimiseks vajaminevate teoreetiliste teadmiste ja praktiliste oskuste omandamise toetamiseks. Arendada üliõpilaste teadmisi ja oskusi läbi praktilise kogemuse, mis võimaldab neil teha otsuseid sobivate andmeanalüüsi meetodite valikul, tulemuste tõlgendamisel ja esitlemisel.",
         "outcomes": [
           {
-            "id": 88,
+            "id": 87,
             "description": "Kirjeldab uurimistöö olemust ja sellele esitatavaid nõudeid"
           },
           {
-            "id": 95,
+            "id": 88,
             "description": "Kasutab tabelarvutusprogrammi lihtsama andmetöötluse ja –analüüsi läbiviimiseks"
           },
           {
-            "id": 198,
+            "id": 89,
             "description": "Püstitab probleemist lähtuva eesmärgi ja statistilist analüüsi eeldavad sobivad uurimisküsimused"
           },
           {
-            "id": 91,
+            "id": 90,
             "description": "Valib uurimisprobleemist ja eesmärgist lähtuvalt sobivad andmete kogumise meetodid"
           },
           {
-            "id": 92,
+            "id": 91,
             "description": "Koostab korrektse ülesehitusega andmestiku"
           },
           {
-            "id": 93,
+            "id": 92,
             "description": "Eristab andmete/tunnuste tüüpe ning valib vastavalt andmete tüübile ja püstitatud uurimisküsimustele sobivad analüüsimeetodid"
           },
           {
-            "id": 199,
+            "id": 93,
             "description": "Selgitab andmete analüüsil saadud tulemusi ja esitleb neid arusaadavalt"
           },
           {
-            "id": 203,
+            "id": 94,
             "description": "Koostab nõuetekohase lõputöö projekti, mis sisaldab kõiki vajalikke komponente (sh ajakava ja metodoloogiline plaan) ning esitleb seda suuliselt"
           }
         ],
@@ -4557,11 +4557,11 @@ const curriculums = [
         "objective": "Luua võimalused teadmiste omandamiseks projektijuhtimisest ja projektitöös vajaminevatest praktilistest juhtimisalastest oskustest.",
         "outcomes": [
           {
-            "id": 96,
+            "id": 95,
             "description": "Teab projektijuhtimisega seotud mõisteid"
           },
           {
-            "id": 99,
+            "id": 96,
             "description": "Mõistab projektijuhtimise protsessi"
           },
           {
@@ -4591,15 +4591,15 @@ const curriculums = [
         "objective": "Erialaterminoloogia omandamine inglise keeles ja erialase suulise ning kirjaliku väljendusoskuse süvendamine.",
         "outcomes": [
           {
-            "id": 100,
+            "id": 99,
             "description": "On teadlik erialasest terminoloogiast"
           },
           {
-            "id": 221,
+            "id": 100,
             "description": "Oskab kasutada erialaseid sõnaraamatuid ja koostada erialast ettekannet ning seda kaasüliõpilaste ees ette kanda"
           },
           {
-            "id": 222,
+            "id": 101,
             "description": "Omab teadmised erialasest terminoloogiast"
           },
           {
@@ -4607,7 +4607,7 @@ const curriculums = [
             "description": "Mõistab erialaseid tekste"
           },
           {
-            "id": 223,
+            "id": 103,
             "description": "Oskab kasutada erialaseid sõnaraamatuid ja koostada erialast ettekannet ja kirjalikke tekste"
           },
           {
@@ -4615,15 +4615,15 @@ const curriculums = [
             "description": "On saavutanud Euroopa Nõukogu keeleoskustasemete süsteemis erialases inglise keeles taseme B2.1"
           },
           {
-            "id": 224,
+            "id": 105,
             "description": "Oskab kasutada erialaseid sõnaraamatuid ja koostada erialast ettekannet"
           },
           {
-            "id": 101,
+            "id": 106,
             "description": "Suudab vestelda semestri jooksul läbitud teemadel"
           },
           {
-            "id": 225,
+            "id": 107,
             "description": "Oskab koostada ja esitada erialast ettekannet kaasüliõpilaste ees"
           }
         ],
@@ -4647,23 +4647,23 @@ const curriculums = [
         "objective": "Arendada üliõpilaste raster- ja vektorgraafika-alaseid teadmisi ning oskusi. Luua võimalused raster- ja vektorgraafika tarkvara loovaks ning tehniliselt korrektseks käsitsemiseks eritüübiliste kujundusgraafiliste tööde loomisel.",
         "outcomes": [
           {
-            "id": 105,
+            "id": 108,
             "description": "Langetab kujundusvalikuid kujundusgraafika ja meediumi tüübist, kujunduse eesmärgist ning tehnilistest nõudmistest lähtuvalt"
           },
           {
-            "id": 106,
+            "id": 109,
             "description": "Käsitseb raster- ja vektorgraafika tarkvara oskuslikult ning loovalt"
           },
           {
-            "id": 107,
+            "id": 110,
             "description": "Kasutab kujundusgraafika loomisel erinevaid tehnikaid ja vahendeid, kombineerides neid tarkvara võimalustega"
           },
           {
-            "id": 108,
+            "id": 111,
             "description": "Kavandab ja teostab juhiste alusel või iseseisva loovtööna kujunduse elemente ja/või tervikkujundusi"
           },
           {
-            "id": 218,
+            "id": 112,
             "description": "Rakendab erinevaid graafilisi tehnikaid ja töövõtteid loovalt, saavutades esteetiliselt ja tehniliselt tasakaalustatud tulemuse"
           }
         ],
@@ -4687,27 +4687,27 @@ const curriculums = [
         "objective": "Eesmärk on luua võimalused Praktika I jooksul omandatud teadmiste ja oskuste kinnistamiseks ja süvendamiseks, rakendades neid kliendi poolt ette antud tarkvaraarendusprojekti raames. Praktika arendab oskusi meeskonnatöös, dokumenteerimises, kasutajauuringute läbiviimises ja kvaliteetse lahenduse loomises, keskendudes projekti üldisele järjepidevusele ja kliendivajaduste täitmisele.",
         "outcomes": [
           {
-            "id": 181,
+            "id": 113,
             "description": "Osaleb meeskonnatöös tarkvaraarendusprojekti läbiviimisel ja täidab erinevaid rolle, nagu projektijuht, arendaja, disainer või testija"
           },
           {
-            "id": 182,
+            "id": 114,
             "description": "Demonstreerib ettevõtlikkust ja innovatsioonivõimet, pakkudes välja uusi ideid ja parendusettepanekuid projekti kvaliteedi, kasutajakogemuse või tööprotsesside tõhustamiseks"
           },
           {
-            "id": 183,
+            "id": 115,
             "description": "Kasutab järjepidevalt projekti vältel koodihalduskeskkonda ja projektihalduskeskkonda ülesannete ja nende oleku haldamiseks"
           },
           {
-            "id": 184,
+            "id": 116,
             "description": "Dokumenteerib oma tegevusi projekti jooksul, täidab korrektselt praktikapäevikut ning arvestab projektile kulunud aega"
           },
           {
-            "id": 185,
+            "id": 117,
             "description": "Rakendab kasutajakeskse disaini, küberturbe ja tarkvaraarenduse parimaid praktikaid, et luua turvaline, kestlik ja kasutajasõbralik digilahendus"
           },
           {
-            "id": 186,
+            "id": 118,
             "description": "Osaleb meeskondliku aruande koostamisel ja tarkvaraarendusprojekti kaitsmisel, demonstreerides praktika käigus omandatud oskusi ja teadmisi"
           }
         ],
@@ -4731,23 +4731,23 @@ const curriculums = [
         "objective": "Luua võimalused uurimismeetodite rakendamise oskuste süvendamiseks.Toetada üliõpilaste oskust erialasest pädevusest lähtuvalt leida lahendusi uurimistöös tekkinud kitsaskohtadele. Luua võimalused nõuetele vastava diplomitöö esitlemiseks. Anda ülevaade kaitsmisprotseduurist.",
         "outcomes": [
           {
-            "id": 114,
+            "id": 119,
             "description": "Koostab valitud teemal tervikliku struktuuriga lõputöö (teoreetilise ja empiirilise osa seos) ja teab, mida uut pakub tema lõputöö võrreldes senise teadmisega"
           },
           {
-            "id": 118,
+            "id": 120,
             "description": "Oskab töös kirjeldatud seisukohti esitleda ja argumenteerida ning avalikul kaitsmisel küsimustele vastata"
           },
           {
-            "id": 115,
+            "id": 121,
             "description": "Oskab vastavalt püstitatud eesmärgile planeerida ja ellu viia uurimisprotsessi ning töötada erialase kirjandusega; on võimeline analüüsima oma töö tugevusi ja nõrkusi ning neid põhjendama"
           },
           {
-            "id": 116,
+            "id": 122,
             "description": "Oskab empiirilist materjali töödelda ja üldistada ning valdab kasutatud uurimismeetodeid"
           },
           {
-            "id": 113,
+            "id": 123,
             "description": "Oskab piiritleda ja fokuseerida oma erialase lõputöö teemat"
           }
         ],
@@ -4769,27 +4769,27 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele teadmised ja praktilised oskused serverite haldamiseks, keskendudes virtuaalmasinatele, konteineriseerimisele, orkestreerimisele ja CI/CD töövoogudele. Kursus arendab oskusi rakenduste logimisel, monitoorimisel ja deploy protsessides ning rõhutab serverihalduse turvalisuse ja automatiseerimise olulisust.",
         "outcomes": [
           {
-            "id": 119,
+            "id": 124,
             "description": "Loob ja haldab virtuaalservereid ja konteineriseeritud rakendusi, kasutades tehnoloogiaid nagu Docker ja Kubernetes, ning mõistab nende eeliseid ja rakendusvõimalusi"
           },
           {
-            "id": 120,
+            "id": 125,
             "description": "Rakendab CI/CD töövoogusid, kasutades tööriistu nagu GitHub Actions, automatiseerides testimise ja juurutamise protsesse"
           },
           {
-            "id": 121,
+            "id": 126,
             "description": "Kasutab logimise ja monitoorimise tööriistu (nt Winston, Prometheus, Grafana) rakenduste jõudluse jälgimiseks ning alarmide ja teavituste seadistamiseks"
           },
           {
-            "id": 122,
+            "id": 127,
             "description": "Tagab serverite turvalisuse, rakendades autentimist, SSL-sertifikaate ning tundlike andmete kaitset, järgides parimaid praktikaid ja turvanõudeid"
           },
           {
-            "id": 212,
+            "id": 128,
             "description": "Rakendab CI/CD töövoogusid ja jälgimise tööriistu, lahendades probleemseid olukordi ja optimeerides süsteemide töökindlust"
           },
           {
-            "id": 213,
+            "id": 129,
             "description": "Tagab serverite turvalisuse ja rakenduste stabiilsuse innovatiivsete tehniliste lahenduste kaudu (kaudselt väljendub kõigis eelnevates õpiväljundites)"
           }
         ],
@@ -4814,15 +4814,15 @@ const curriculums = [
         "objective": "Eesmärk on toetada lineaarsete ja mittelineaarsete andmestruktuuride tundmaõppimist ning nende praktilist rakendamist. Kursus arendab probleemide analüüsimise ja lahendamise oskust, kasutades andmestruktuure ja algoritme, ning toetab praktilise programmeerimisoskuse kujunemist.",
         "outcomes": [
           {
-            "id": 123,
+            "id": 130,
             "description": "Kirjeldab staatilisi ja dünaamilisi lineaarseid ning mittelineaarseid andmestruktuure ning nendel rakendatavaid algoritme"
           },
           {
-            "id": 124,
+            "id": 131,
             "description": "Analüüsib ja valib sobivad andmestruktuurid ja algoritmid vastavalt lahendatavale probleemile"
           },
           {
-            "id": 125,
+            "id": 132,
             "description": "Rakendab ja optimeerib põhilisi algoritme, sealhulgas otsingu-, sorteerimis-, graafi- ja puualgoritme"
           }
         ],
@@ -4846,19 +4846,19 @@ const curriculums = [
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused mobiilirakenduste arendamiseks React Native’i abil, keskendudes rakenduste planeerimisele, arendamisele, testimisele, andmete integreerimisele välisest API-st ning dokumenteerimisele ja versioonihalduse kasutamisele. Kursus laiendab õppijate arusaama mobiilirakenduste rollist ja võimalustest kaasaegses maailmas, tutvustades ka alternatiivseid lahendusi ja tulevikusuundi.",
         "outcomes": [
           {
-            "id": 127,
+            "id": 133,
             "description": "Selgitab mobiilirakenduste arendamise aluseid, sealhulgas platvormide eripärasid, arenduse etappe ja tulevikusuundi"
           },
           {
-            "id": 130,
+            "id": 134,
             "description": "Rakendab turvalisuse ja privaatsuse parimaid tavasid mobiilirakenduste arendamisel"
           },
           {
-            "id": 128,
+            "id": 135,
             "description": "Kasutab React Native’i ja sellega seotud tööriistu mobiilirakenduste loomiseks"
           },
           {
-            "id": 131,
+            "id": 136,
             "description": "Kasutab versioonihaldust programmikoodi ja dokumentatsiooni haldamiseks"
           }
         ],
@@ -4880,23 +4880,23 @@ const curriculums = [
         "objective": "Eesmärk on anda süsteemne ülevaade kaasaegsest andmeturbest ja krüptograafiast, pakkudes teadmisi turbeprobleemide tuvastamiseks ja lahendamiseks ning turvalisuse tagamiseks arvutivõrkudes ja süsteemides.",
         "outcomes": [
           {
-            "id": 132,
+            "id": 137,
             "description": "Selgitab kaasaegseid andmeturbe meetodeid ning rakendab riskianalüüsi ja turvapoliitikaid turvalisuse tagamiseks arvutivõrkudes ja infosüsteemides"
           },
           {
-            "id": 133,
+            "id": 138,
             "description": "Kirjeldab autentimismeetodeid ja juurdepääsukontrolli süsteeme, sealhulgas Active Directory’t, LDAP katalooge ja single sign-on lahendusi"
           },
           {
-            "id": 134,
+            "id": 139,
             "description": "Selgitab turvalise programmeerimise põhimõtteid ning OWASP TOP 10 ja muid programmeerimiskeskkondades esinevaid haavatavusi"
           },
           {
-            "id": 135,
+            "id": 140,
             "description": "Analüüsib rünnakute avastamise ja intsidentide haldamise meetodeid, lähtudes seadusandlikest nõuetest ja taasteplaanidest"
           },
           {
-            "id": 202,
+            "id": 141,
             "description": "Selgitab kaasaegseid andmeturbe meetodeid ning rakendab riskianalüüsi ja turvapoliitikaid turvalisuse tagamiseks arvutivõrkudes ja infosüsteemides (andmepõhise analüüsi ja riskihindamise kaudu)"
           }
         ],
@@ -4918,19 +4918,19 @@ const curriculums = [
         "objective": "Eesmärk on pakkuda üliõpilastele võimalusi õppetöö käigus omandatud teadmiste ja oskuste rakendamiseks ning kinnistamiseks praktilises keskkonnas. Praktika arendab analüüsi-, probleemilahendus- ja ajaplaneerimise oskusi, toetades üliõpilaste professionaalset arengut kas ettevõttepraktika või individuaalse projekti kaudu. Samuti soodustab praktika dokumenteerimise, versioonihalduse ja tööprotsessi läbipaistvuse oskuste arendamist.",
         "outcomes": [
           {
-            "id": 136,
+            "id": 142,
             "description": "Rakendab varasemalt õpitud teadmisi ja oskusi praktilises keskkonnas"
           },
           {
-            "id": 137,
+            "id": 143,
             "description": "Planeerib ja täidab ülesandeid, hallates tööprotsesse ja ajakasutust vastavalt praktikakeskkonna või projekti vajadustele"
           },
           {
-            "id": 138,
+            "id": 144,
             "description": "Dokumenteerib tööprotsessi, kasutades praktikapäevikut ning koostades selge ja põhjaliku praktika dokumentatsiooni"
           },
           {
-            "id": 139,
+            "id": 145,
             "description": "Hindab kriitiliselt oma tööprotsessi, reflekteerib saadud kogemusi ning esitleb oma tulemusi, selgitades saavutatud õpitulemusi ja edasisi arenguvõimalusi"
           }
         ],
@@ -4952,19 +4952,19 @@ const curriculums = [
         "objective": "Eesmärk on anda õppijatele ülevaade IT-valdkonda reguleerivast seadusandlusest, sealhulgas autoriõigustest, andmesubjekti õigustest, e-äri õiguslikust raamistikust ja isikuandmete kaitsest, et toetada vastutustundlikku ja õiguspärast tegutsemist IT-sektoris.",
         "outcomes": [
           {
-            "id": 143,
+            "id": 146,
             "description": "Analüüsib e-äri, IT-süütegude ja tööstusomandi õiguslikke aspekte"
           },
           {
-            "id": 140,
+            "id": 147,
             "description": "Orienteerub IT-valdkonda reguleerivates õigusnormides ning rakendab neid erinevates praktilistes olukordades"
           },
           {
-            "id": 141,
+            "id": 148,
             "description": "Tunneb autoriõigusi, litsentsilepinguid ja nende kasutamise tingimusi"
           },
           {
-            "id": 142,
+            "id": 149,
             "description": "Selgitab andmesubjekti õigusi ja isikuandmete kaitse nõudeid vastavalt kehtivale seadusandlusele"
           }
         ],
@@ -4986,27 +4986,27 @@ const curriculums = [
         "objective": "Eesmärk on laiendada õppijate silmaringi IT-sektorist, pakkudes võimalust valida ja osaleda tegevustes, mis vastavad nende individuaalsetele huvidele ja arenguvajadustele. Kursus toetab praktilist kokkupuudet valdkonnaga, arendab analüüsioskusi ning aitab kujundada pikaajalist karjääriplaani.",
         "outcomes": [
           {
-            "id": 144,
+            "id": 150,
             "description": "Analüüsib IT-sektori hetkeseisu ja arengutrende, tuginedes valitud tegevustest saadud teadmistele ja kogemustele"
           },
           {
-            "id": 204,
+            "id": 151,
             "description": "Kavandab ja esitab ettekandeid IT-valdkonna teemadel"
           },
           {
-            "id": 208,
+            "id": 152,
             "description": "Osaleb ja panustab individuaalselt valitud praktilistesse IT-tegevustesse"
           },
           {
-            "id": 209,
+            "id": 153,
             "description": "Osaleb erinevatel IT-valdkonnaga seotud üritustel, nagu konverentsid, õpitoad, häkatonid jms"
           },
           {
-            "id": 147,
+            "id": 154,
             "description": "Reflekteerib oma oskusi ja kogemusi, koostades eneseanalüüsi ning arenguplaani vastavalt oma eesmärkidele"
           },
           {
-            "id": 219,
+            "id": 155,
             "description": "Kavandab ja esitab ettekandeid IT-valdkonna teemadel, kasutades loovat ja kriitilist lähenemist valdkonna probleemide käsitlemisel"
           }
         ],
@@ -5028,23 +5028,23 @@ const curriculums = [
         "objective": "",
         "outcomes": [
           {
-            "id": 176,
+            "id": 156,
             "description": "Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti."
           },
           {
-            "id": 177,
+            "id": 157,
             "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi."
           },
           {
-            "id": 178,
+            "id": 158,
             "description": "Valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest."
           },
           {
-            "id": 179,
+            "id": 159,
             "description": "Kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi."
           },
           {
-            "id": 180,
+            "id": 160,
             "description": "Hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust."
           }
         ],
@@ -5066,15 +5066,15 @@ const curriculums = [
         "objective": "",
         "outcomes": [
           {
-            "id": 205,
+            "id": 161,
             "description": "Oskab oma praktilist töökogemust analüüsida ja seostada seda erialalise arenguga"
           },
           {
-            "id": 210,
+            "id": 162,
             "description": "On arendanud oma erialaseid oskusi ja teadmisi erialaõpingutega ja -huvidega seotud rahvusvahelises töökeskkonnas"
           },
           {
-            "id": 220,
+            "id": 163,
             "description": "On arendanud oma võõrkeeleoskust ning rakendab seda rahvusvahelises professionaalses suhtluses ja koostöös"
           }
         ],

@@ -7,7 +7,7 @@ import { emptyHistory, record, undo, redo } from "./history";
 import {
   nextCurriculumOutcomeId, nextModuleOutcomeId, nextSubjectOutcomeId, addCurriculumOutcome, updateCurriculumOutcome, removeModuleOutcome,
   addModuleOutcome, updateModuleOutcome, addSubjectOutcome, removeSubjectOutcome, linkModuleOutcome, unlinkModuleOutcome,
-  linkSubjectOutcome, unlinkSubjectOutcome, setSubjectOutcomeLinks, linksOfSubjectOutcome, moduleOutcomeUsage,
+  linkSubjectOutcome, unlinkSubjectOutcome, setSubjectOutcomeLinks, linksOfSubjectOutcome, moduleOutcomeUsage, renumberOutcomes,
 } from "./outcomeOps";
 
 const base = () => ({
@@ -118,5 +118,33 @@ describe("history", () => {
     expect(undo(emptyHistory(), "x")).toBeNull();
     expect(record(emptyHistory(), 1, 2).past).toEqual([1]);
     expect(record(record(record(emptyHistory(), 1, 2), 2, 2), 3, 2).past).toEqual([2, 3]);
+  });
+});
+
+describe("renumberOutcomes", () => {
+  const messy = () => {
+    const c = base();
+    c.learningOutcomes = [{ id: 181, description: "ÕV", moduleOutcomes: [{ moduleId: 1, outcomeId: 7 }, { moduleId: 1, outcomeId: 9 }] }];
+    c.modules[0].learningOutcomes = [
+      { id: 7, description: "mo7", subjectOutcomes: [{ subjectId: 1, outcomeId: 50 }, { subjectId: 1, outcomeId: 1 }] },
+      { id: 9, description: "mo9", subjectOutcomes: [{ subjectId: 1, outcomeId: 60 }] },
+    ];
+    c.subjects[0].outcomes = [{ id: 50, description: "a" }, { id: 60, description: "b" }];
+    return c;
+  };
+  it("numbers consecutively and keeps the matrix identical", () => {
+    const c = messy(), n = renumberOutcomes(c);
+    expect(n.learningOutcomes.map((l) => l.id)).toEqual([1]);
+    expect(n.modules[0].learningOutcomes.map((o) => o.id)).toEqual([1, 2]);
+    expect(n.subjects[0].outcomes.map((o) => [o.id, o.description])).toEqual([[1, "a"], [2, "b"]]);
+    expect(n.learningOutcomes[0].moduleOutcomes).toEqual([{ moduleId: 1, outcomeId: 1 }, { moduleId: 1, outcomeId: 2 }]);
+    expect(coverage(n, moduleOutcomeIndex(n))[1]).toEqual(coverage(c, moduleOutcomeIndex(c))[181]);
+  });
+  it("a link to a missing outcome never lands on a real one", () => {
+    const n = renumberOutcomes(messy());
+    // subject 1 now has outcomes 1 and 2, and the old dangling link pointed at outcome 1
+    const dangling = n.modules[0].learningOutcomes[0].subjectOutcomes.find((l) => l.outcomeId !== 1 && l.outcomeId !== 2);
+    expect(dangling.outcomeId).toBeGreaterThan(2);
+    expect(n.modules[0].learningOutcomes[0].subjectOutcomes[0].outcomeId).toBe(1);
   });
 });
