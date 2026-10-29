@@ -4,8 +4,9 @@ import { NO_MODULE, SWATCHES } from "../../constants";
 import { subjectErrors } from "../../utils/checks";
 import { semesterCount } from "../../utils/curricula";
 import { subjectCode, withCode } from "../../utils/subjectCode";
+import { linksOfSubjectOutcome, setSubjectOutcomeLinks } from "../../utils/outcomeOps";
 import {
-  newSubject, saveSubject, deleteSubject, saveModule, deleteModule, saveOutcome, deleteOutcome,
+  newSubject, nextSubjectId, saveSubject, deleteSubject, saveModule, deleteModule, saveOutcome, deleteOutcome,
 } from "../../utils/adminOps";
 
 const clone = (o) => JSON.parse(JSON.stringify(o));
@@ -62,20 +63,56 @@ const Toggle = ({ on, onClick, children }) => (
   <button type="button" className="switch" role="switch" aria-checked={on} onClick={onClick}><i />{children}</button>
 );
 
-const AddSelect = ({ placeholder, options, onPick }) => (
-  <select value="" onChange={(e) => e.target.value && onPick(e.target.value)}>
-    <option value="">{placeholder}</option>
-    {options.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
-  </select>
-);
+// Options with a `group` are shown under that heading, in order of first appearance
+const AddSelect = ({ placeholder, options, onPick }) => {
+  const groups = [...new Set(options.map((o) => o.group).filter(Boolean))];
+  const opt = (o) => <option key={o.key} value={o.key}>{o.label}</option>;
+  return (
+    <select value="" onChange={(e) => e.target.value && onPick(e.target.value)}>
+      <option value="">{placeholder}</option>
+      {options.filter((o) => !o.group).map(opt)}
+      {groups.map((g) => <optgroup key={g} label={g}>{options.filter((o) => o.group === g).map(opt)}</optgroup>)}
+    </select>
+  );
+};
 
-const OutcomeList = ({ items, onChange, onRemove }) =>
-  items.map((o, i) => (
-    <div key={o.id} className="outrow">
-      <textarea rows={2} value={o.description} onChange={(e) => onChange(i, e.target.value)} />
-      <button className="x small" aria-label="Eemalda" onClick={() => onRemove(i)}>×</button>
-    </div>
-  ));
+// A subject's outcomes with the module outcomes each one feeds (the same links the outcomes matrix is built from)
+const SubjectOutcomeList = ({ items, links, modules, ownModule, onChange, onRemove, onLinks }) => {
+  const label = (l) => {
+    const mo = modules.find((m) => m.id === l.moduleId)?.learningOutcomes.find((o) => o.id === l.outcomeId);
+    return { text: mo ? `M${l.moduleId}.${l.outcomeId} · ${clip(mo.description, 38)}` : `puudub: M${l.moduleId}.${l.outcomeId}`, missing: !mo };
+  };
+  const options = (current) => {
+    const has = new Set(current.map((l) => l.moduleId + "." + l.outcomeId));
+    return [...modules].sort((a, b) => (b.id === ownModule) - (a.id === ownModule)).flatMap((m) =>
+      m.learningOutcomes.filter((o) => !has.has(m.id + "." + o.id)).map((o) => ({
+        key: m.id + "." + o.id, group: `M${m.id} · ${m.name}${m.id === ownModule ? " (selle aine moodul)" : ""}`, label: `M${m.id}.${o.id} · ${clip(o.description, 60)}`,
+      })));
+  };
+  return items.map((o, i) => {
+    const current = links[o.id] || [];
+    return (
+      <div key={o.id} className="outblock">
+        <div className="outrow">
+          <textarea rows={2} value={o.description} onChange={(e) => onChange(i, e.target.value)} />
+          <button className="x small" aria-label="Eemalda" onClick={() => onRemove(i)}>×</button>
+        </div>
+        <div className="outlinks">
+          {current.map((l) => {
+            const { text, missing } = label(l);
+            return (
+              <button key={l.moduleId + "." + l.outcomeId} className={"pill" + (missing ? " bad" : l.moduleId !== ownModule ? " warn" : "")} title="Eemalda seos"
+                onClick={() => onLinks(o.id, current.filter((x) => !(x.moduleId === l.moduleId && x.outcomeId === l.outcomeId)))}>{text} ×</button>
+            );
+          })}
+          {!current.length && <span className="muted">Mooduli väljundiga seostamata</span>}
+          <AddSelect placeholder="+ Seo mooduli väljundiga…" options={options(current)}
+            onPick={(v) => { const [moduleId, outcomeId] = v.split(".").map(Number); onLinks(o.id, [...current, { moduleId, outcomeId }]); }} />
+        </div>
+      </div>
+    );
+  });
+};
 
 export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
   const { subjects, modules } = curriculum;
@@ -89,13 +126,16 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
   const links = id === "new" ? 0 : modules.reduce((a, m) => a + m.learningOutcomes.reduce((b, o) => b + (o.subjectOutcomes || []).filter((l) => l.subjectId === id).length, 0), 0);
   const maxOutcome = Math.max(0, ...subjects.flatMap((s) => s.outcomes.map((o) => o.id)), ...d.outcomes.map((o) => o.id));
   const setOutcome = (i, description) => setD({ outcomes: d.outcomes.map((o, j) => (j === i ? { ...o, description } : o)) });
+  // module outcomes each subject outcome feeds; kept in the draft and written with Salvesta
+  const [outLinks, setOutLinks] = useState(() =>
+    Object.fromEntries((id === "new" ? [] : subjects.find((s) => s.id === id).outcomes).map((o) => [o.id, linksOfSubjectOutcome(curriculum, id, o.id)])));
 
   return (
     <Frame
       issues={issues} isNew={id === "new"} heading={d.name || "Uus aine"} errors={errors} deleteLabel="Kustuta aine" canDelete
       confirmText={(deps.length ? `Kustutamisel eemaldatakse eeldus ainetelt: ${deps.map((s) => s.name).join(", ")}. ` : "") +
         (links ? `Eemaldatakse ${links} seost mooduli väljunditega. ` : "") + `Kas kustutada aine „${d.name}“?`}
-      onSave={() => onCommit(saveSubject(curriculum, id, d), id === "new" ? "Aine lisatud" : "Aine salvestatud")}
+      onSave={() => onCommit(setSubjectOutcomeLinks(saveSubject(curriculum, id, d), id === "new" ? nextSubjectId(curriculum) : id, outLinks), id === "new" ? "Aine lisatud" : "Aine salvestatud")}
       onDelete={() => onCommit(deleteSubject(curriculum, id), "Aine kustutatud")}
       onClose={onClose}
     >
@@ -141,7 +181,8 @@ export function SubjectEditor({ curriculum, id, onCommit, onClose, issues }) {
       <Field label="Sisu"><textarea rows={3} value={d.content} onChange={(e) => setD({ content: e.target.value })} /></Field>
       <div className="field">
         <span className="label">Aine õpiväljundid ({d.outcomes.length})</span>
-        <OutcomeList items={d.outcomes} onChange={setOutcome} onRemove={(i) => setD({ outcomes: d.outcomes.filter((_, j) => j !== i) })} />
+        <SubjectOutcomeList items={d.outcomes} links={outLinks} modules={modules} ownModule={d.module} onChange={setOutcome}
+          onRemove={(i) => setD({ outcomes: d.outcomes.filter((_, j) => j !== i) })} onLinks={(soId, list) => setOutLinks((m) => ({ ...m, [soId]: list }))} />
         <button className="b dashed" onClick={() => setD({ outcomes: [...d.outcomes, { id: maxOutcome + 1, description: "" }] })}>+ Lisa õpiväljund</button>
       </div>
     </Frame>
@@ -157,7 +198,14 @@ export function ModuleEditor({ curriculum, id, palette, onCommit, onClose, issue
   });
   const setD = (patch) => setD0((x) => ({ ...x, ...patch }));
   const subj = useMemo(() => Object.fromEntries(subjects.map((s) => [s.id, s])), [subjects]);
-  const allSO = useMemo(() => subjects.flatMap((s) => s.outcomes.map((o) => ({ key: s.id + "." + o.id, label: `${s.name} · ${clip(o.description, 40)}` }))), [subjects]);
+  // Subject outcomes to link: those of this module's subjects (all of them for a module without subjects or when asked)
+  const [allMods, setAllMods] = useState(false);
+  const allSO = useMemo(() => {
+    const own = subjects.filter((s) => s.module === id);
+    const pool = allMods || !own.length ? subjects : own;
+    return [...pool].sort((a, b) => a.semester - b.semester || a.order - b.order).flatMap((s) =>
+      s.outcomes.map((o) => ({ key: s.id + "." + o.id, group: `S${s.semester} · ${s.name}`, label: clip(o.description, 70) })));
+  }, [subjects, id, allMods]);
   const soText = (sid, oid) => subj[sid]?.outcomes.find((o) => o.id === oid)?.description ?? null;
   const used = id === "new" ? [] : subjects.filter((s) => s.module === id);
   const errors = d.name.trim() ? [] : ["Nimi on kohustuslik."];
@@ -185,6 +233,7 @@ export function ModuleEditor({ curriculum, id, palette, onCommit, onClose, issue
       </div>
       <div className="field">
         <span className="label">Mooduli õpiväljundid ({d.learningOutcomes.length})</span>
+        <label className="check"><input type="checkbox" checked={allMods} onChange={(e) => setAllMods(e.target.checked)} /> Näita aine väljundeid kõigist moodulitest</label>
         {d.learningOutcomes.map((o, i) => {
           const links = o.subjectOutcomes || [];
           const has = new Set(links.map((l) => l.subjectId + "." + l.outcomeId));
@@ -207,7 +256,7 @@ export function ModuleEditor({ curriculum, id, palette, onCommit, onClose, issue
                     );
                   })}
                 </div>
-                <AddSelect placeholder={`+ Seo aine väljundiga (${allSO.length - has.size})…`} options={allSO.filter((x) => !has.has(x.key))}
+                <AddSelect placeholder={`+ Seo aine väljundiga (${allSO.filter((x) => !has.has(x.key)).length})…`} options={allSO.filter((x) => !has.has(x.key))}
                   onPick={(v) => { const [subjectId, outcomeId] = v.split(".").map(Number); setO(i, { subjectOutcomes: [...links, { subjectId, outcomeId }] }); }} />
               </div>
             </div>

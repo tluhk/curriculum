@@ -46,3 +46,28 @@
 .nolinks{font-size:12px;color:#8a5a12;padding:2px 0}
 .outcomes .mono{font:500 12px var(--mono)}.outcomes .muted{color:var(--ink-3)}
 @media(max-width:900px){.detail{grid-template-columns:1fr}}
+.otools{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.etools{display:flex;align-items:center;gap:10px}
+.b.small{padding:6px 12px;font-size:13px}
+.detail.editing{background:var(--surface)}
+.eta{display:block;width:100%;border:1px solid var(--line-2);border-radius:var(--radius);padding:7px 10px;font-size:13px;line-height:1.45;background:#fff;resize:vertical;field-sizing:content;min-height:2.4em}
+.eta:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.detail.editing .eta[rows="5"]{font-size:14px}
+.label.spaced{margin-top:14px;margin-bottom:6px}
+.detail.editing .label{margin-bottom:6px}
+.editbtns{margin-top:14px}
+.editcard{display:flex;flex-direction:column;gap:8px;padding:12px 12px 12px 18px}
+.mohead{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.moactions,.soactions{display:flex;gap:6px;flex:none}
+.moactions button,.soactions button{border:1px solid var(--line);background:#fff;border-radius:4px;padding:2px 8px;font-size:12px;cursor:pointer;color:var(--ink-2)}
+.moactions button:hover,.soactions button:hover{border-color:var(--line-2);color:var(--ink)}
+.moactions .danger,.soactions .danger{color:#b3382e}
+.sos{display:flex;flex-direction:column;gap:6px;padding-left:12px;border-left:2px solid var(--line)}
+.sorow{display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:8px;align-items:start}
+.sorow.dim{opacity:.45}
+.sorow .schip{align-self:start;justify-content:flex-start;text-align:left}
+.adds{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.adds.main{margin-top:4px}
+.addsel{max-width:340px;border:1px dashed var(--line-2);border-radius:var(--radius);padding:6px 8px;font-size:13px;background:#fff;color:var(--ink-2);cursor:pointer}
+.addsel:disabled{opacity:.5;cursor:default}
+.check{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)}

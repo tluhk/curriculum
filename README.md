@@ -7,6 +7,9 @@ top bar (curriculum menu and year switch):
   panel, and drag-and-drop that blocks moves breaking a prerequisite (crowded semesters only warn).
 - **Õpiväljundid** – coverage matrix of curriculum outcomes × subjects with a drill-down to module outcomes,
   KHS outcomes and data-health notes.
+  Switch to **Muuda** to edit the links behind the matrix: add, rename and delete outcomes and link ÕV ↔ module
+  outcomes ↔ subject outcomes from the detail panel; the matrix updates at once. ↶ / ↷ (Ctrl+Z / Ctrl+Shift+Z) undo and
+  redo every change, in Haldus too (history lasts until the page is reloaded; the draft itself is kept).
 - **Ajakava** – contact-week timeline per subject and a Thursday–Saturday week view with session details
   (teacher, room, notes), from ÕIS schedule exports in `src/data/schedules/<code>-<year>.json`.
 - **Haldus** – add / edit / delete subjects, modules and curriculum outcomes, plus a live data check. See [RAKENDUSE_ULEVAADE.md](RAKENDUSE_ULEVAADE.md) for the product overview (Estonian).

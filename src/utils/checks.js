@@ -53,6 +53,25 @@ export const checkCurriculum = ({ subjects, modules, learningOutcomes }) => {
     if (!links.length) add("hoiatus", `ÕV ${c.id} pole seotud ühegi mooduli väljundiga.`, "co", c.id);
   });
 
+  // Ids must be unique where links point at them: ÕV and modules per curriculum, module outcomes per module, subject outcomes per subject
+  const dupes = (items) => [...new Set(items.map((x) => x.id).filter((id, i, all) => all.indexOf(id) !== i))];
+  dupes(learningOutcomes).forEach((id) => add("viga", `Õppekava väljundi id ${id} esineb mitu korda.`, "co", id));
+  dupes(modules).forEach((id) => add("viga", `Mooduli id ${id} esineb mitu korda.`, "module", id));
+  dupes(subjects).forEach((id) => add("viga", `Aine id ${id} esineb mitu korda.`, "subject", id));
+  modules.forEach((m) => dupes(m.learningOutcomes).forEach((id) => add("viga", `Mooduli „${m.name}“ väljundi id ${id} esineb mitu korda.`, "module", m.id)));
+  subjects.forEach((s) => dupes(s.outcomes).forEach((id) => add("viga", `Aine „${s.name}“ väljundi id ${id} esineb mitu korda.`, "subject", s.id)));
+
+  // Empty outcome texts and subject outcomes that feed no module outcome
+  learningOutcomes.filter((l) => !l.description.trim()).forEach((l) => add("hoiatus", `ÕV ${l.id} tekst on tühi.`, "co", l.id));
+  modules.forEach((m) => m.learningOutcomes.filter((o) => !o.description.trim()).forEach((o) => add("hoiatus", `M${m.id}.${o.id} tekst on tühi.`, "module", m.id)));
+  const feeds = new Set(modules.flatMap((m) => m.learningOutcomes.flatMap((o) => (o.subjectOutcomes || []).map((l) => l.subjectId + "." + l.outcomeId))));
+  subjects.forEach((s) => {
+    const blank = s.outcomes.filter((o) => !o.description.trim()).length;
+    if (blank) add("hoiatus", `Ainel „${s.name}“ on ${blank} tühja väljundi teksti.`, "subject", s.id);
+    const loose = s.outcomes.filter((o) => o.description.trim() && !feeds.has(s.id + "." + o.id)).length;
+    if (loose) add("info", `Aine „${s.name}“ ${loose} väljundit pole seotud ühegi mooduli väljundiga.`, "subject", s.id);
+  });
+
   const semCredits = {};
   subjects.forEach((s) => (semCredits[s.semester] = (semCredits[s.semester] || 0) + s.credits));
   Object.keys(semCredits)
