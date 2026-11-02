@@ -1994,13 +1994,13 @@ const curriculums = [
       },
       {
         "id": 23,
-        "semester": 6,
+        "semester": 4,
         "order": 5,
         "code": "HKI5081.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5081.HK",
-        "name": "Erialane inglise keel I",
+        "name": "Erialane inglise keel",
         "module": 6,
-        "required": false,
+        "required": true,
         "prerequisites": [],
         "credits": 6,
         "content": "Erialase keeleoskuse taseme tõstmine. Erialase inglise keele omandamine ja vastava terminoloogiaga tutvumine. Üldkeeleoskuse saavutamise lõpptase: lugemis-, kuulamis- , kõnelemis- ja kirjutamisokus B2.1 tasemel.",
@@ -2028,7 +2028,7 @@ const curriculums = [
           }
         ],
         "assessment": "Arvestus",
-        "comment": "ÕIS: toimumise semestrit ei määrata",
+        "comment": "Tase järgi valitakse Erialane inglise keel I (HKI5081.HK) või II (HKI5090.HK); tudeng sooritab ühe",
         "nonUnique": true
       },
       {
@@ -2445,7 +2445,7 @@ const curriculums = [
       {
         "id": 35,
         "semester": 6,
-        "order": 6,
+        "order": 5,
         "code": "HKI5129.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5129.HK",
         "name": "Välispraktika",
@@ -2458,24 +2458,6 @@ const curriculums = [
         "outcomes": [],
         "assessment": "Arvestus",
         "comment": "ÕIS: toimumise semestrit ei määrata",
-        "nonUnique": false
-      },
-      {
-        "id": 36,
-        "semester": 4,
-        "order": 5,
-        "code": "HKI5090.HK",
-        "url": "https://ois2.tlu.ee/tluois/aine/HKI5090.HK",
-        "name": "Erialane inglise keel II",
-        "module": 6,
-        "required": false,
-        "prerequisites": [],
-        "credits": 6,
-        "content": "",
-        "objective": "",
-        "outcomes": [],
-        "assessment": "Arvestus",
-        "comment": "",
         "nonUnique": false
       }
     ]
@@ -2490,7 +2472,7 @@ const curriculums = [
     "learningOutcomes": [
       {
         "id": 1,
-        "description": "Selgitab ja rakendab tarkvaraarenduse ja disaini teoreetilisi lähtekohti ning arengusuundi, eristades fakte arvamustest ja põhjendades valikuid andmepõhise otsustamise abil.",
+        "description": "selgitab ja rakendab tarkvaraarenduse ja disaini teoreetilisi lähtekohti ning arengusuundi, eristades fakte arvamustest ja põhjendades valikuid andmepõhise otsustamise abil",
         "khsOutcome": "Teab õppevaldkonna teoreetilisi lähtekohti ja arengusuundi ning eristab fakte arvamustest.",
         "moduleOutcomes": [
           {
@@ -2521,7 +2503,7 @@ const curriculums = [
       },
       {
         "id": 2,
-        "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleeme, kavandab andmete kogumise- ja analüüsiprotsessi ning loob tulemuste põhjal kasutajakeskseid ja kestlikke digilahendusi.",
+        "description": "tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleeme, kavandab andmete kogumise- ja analüüsiprotsessi ning loob tulemuste põhjal kasutajakeskseid ja kestlikke digilahendusi",
         "khsOutcome": "Sõnastab õppevaldkonnaga seotud probleeme, kavandades andmekogumist ja analüüsides tulemusi.",
         "moduleOutcomes": [
           {
@@ -2548,12 +2530,12 @@ const curriculums = [
       },
       {
         "id": 3,
-        "description": "Kommunikeerib erialaseid ideid ja lahendusi eesti või inglise keeles, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise.",
+        "description": "kommunikeerib erialaseid ideid ja lahendusi eesti või inglise keeles, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise",
         "khsOutcome": "Selgitab õppevaldkonna aktuaalseid teemasid õppevaldkonnale olulises (võõr)keeles erinevates kultuurikeskkondades, kohandades oma suhtlusstiili sihtrühmale vastavaks.",
         "moduleOutcomes": [
           {
             "moduleId": 2,
-            "outcomeId": 5
+            "outcomeId": 3
           },
           {
             "moduleId": 3,
@@ -2583,7 +2565,7 @@ const curriculums = [
       },
       {
         "id": 4,
-        "description": "Osaleb tarkvara disaini- ja arendusprojektides iseseisvalt ja meeskonnas kogu tarkvaraarenduse elutsükli vältel, rakendades agiilseid tööviise, väärtustades innovatsiooni ja ettevõtlikkust ning luues kasutajakeskseid, turvalisi ja visuaalselt atraktiivseid interdistsiplinaarseid digilahendusi.",
+        "description": "osaleb tarkvara disaini- ja arendusprojektides iseseisvalt ja meeskonnas kogu tarkvaraarenduse elutsükli vältel, rakendades agiilseid tööviise, väärtustades innovatsiooni ja ettevõtlikkust ning luues kasutajakeskseid, turvalisi ja visuaalselt atraktiivseid interdistsiplinaarseid digilahendusi",
         "khsOutcome": "Töötab iseseisvalt ja meeskonnas välja õppevaldkonnaga seotud probleemide lahendused, arvestades meeskonnaliikmete võimaluste ja vajadustega ning väärtustades innovatsiooni ja ettevõtlikkust.",
         "moduleOutcomes": [
           {
@@ -2601,16 +2583,12 @@ const curriculums = [
           {
             "moduleId": 1,
             "outcomeId": 5
-          },
-          {
-            "moduleId": 5,
-            "outcomeId": 4
           }
         ]
       },
       {
         "id": 5,
-        "description": "Täidab erialaseid ülesandeid vastutustundlikult, loovalt ja eetiliselt, tulles toime võimalike pingeolukordadega ning arvestades füüsilist ja vaimset tervist mõjutavaid tegureid.",
+        "description": "täidab erialaseid ülesandeid vastutustundlikult, loovalt ja eetiliselt, tulles toime võimalike pingeolukordadega ning arvestades füüsilist ja vaimset tervist mõjutavaid tegureid",
         "khsOutcome": "Täidab vastutustundlikult, loovalt ja eetiliselt erialaseid ülesandeid, tulles toime pingeolukordadega ning füüsilist ja vaimset tervist mõjutavate teguritega.",
         "moduleOutcomes": [
           {
@@ -2628,16 +2606,12 @@ const curriculums = [
           {
             "moduleId": 1,
             "outcomeId": 6
-          },
-          {
-            "moduleId": 5,
-            "outcomeId": 4
           }
         ]
       },
       {
         "id": 6,
-        "description": "Arvestab tööriistade kasutamisel, erialaste ülesannete täitmisel ja lahenduste loomisel turvalisuse ja eetilisusega.",
+        "description": "arvestab tööriistade kasutamisel, erialaste ülesannete täitmisel ja lahenduste loomisel turvalisuse ja eetilisusega",
         "khsOutcome": "Rakendab omandatud teadmisi ja oskusi turvaliselt, sh erinevate digi- jm tehniliste vahendite abil.",
         "moduleOutcomes": [
           {
@@ -2656,30 +2630,22 @@ const curriculums = [
       },
       {
         "id": 7,
-        "description": "Seab isiklikud õpieesmärgid, hindab ja reflekteerib oma õppeprotsessi ning planeerib teadlikult oma õpet ja karjääri.",
+        "description": "seab isiklikud õpieesmärgid, hindab ja reflekteerib oma õppeprotsessi ning planeerib teadlikult oma õpet ja karjääri",
         "khsOutcome": "Püstitab õpieesmärke, analüüsib oma õppeprotsessi ning kujundab teadlikult oma õpi- ja karjääriteed.",
         "moduleOutcomes": [
           {
             "moduleId": 2,
-            "outcomeId": 2
-          },
-          {
-            "moduleId": 4,
-            "outcomeId": 4
+            "outcomeId": 5
           },
           {
             "moduleId": 1,
             "outcomeId": 2
-          },
-          {
-            "moduleId": 5,
-            "outcomeId": 5
           }
         ]
       },
       {
         "id": 8,
-        "description": "Tegutseb erialaspetsialisti ja kodanikuna kestliku arengu põhimõtteid järgides, hindab oma digilahenduste keskkonna- ja ühiskonnamõju ning teeb vastutustundlikke otsuseid.",
+        "description": "tegutseb erialaspetsialisti ja kodanikuna kestliku arengu põhimõtteid järgides, hindab oma digilahenduste keskkonna- ja ühiskonnamõju ning teeb vastutustundlikke otsuseid.",
         "khsOutcome": "Tegutseb erialaspetsialisti ja kodanikuna viisidel, mis toetavad keskkonna ja ühiskonna jätkusuutlikkust.",
         "moduleOutcomes": [
           {
@@ -2702,7 +2668,7 @@ const curriculums = [
         "learningOutcomes": [
           {
             "id": 1,
-            "description": "Analüüsib üksikisiku, organisatsiooni või kogukonna probleemi, kavandab ja viib läbi vajalikud uuringud ning kogutud andmete põhjal loob digilahenduse või selle prototüübi, kasutades agiilse tarkvaraarenduse ja disaini meetodeid.",
+            "description": "analüüsib üksikisiku, organisatsiooni või kogukonna probleemi, kavandab ja viib läbi vajalikud uuringud ning kogutud andmete põhjal loob digilahenduse või selle prototüübi, kasutades agiilse tarkvaraarenduse ja disaini meetodeid",
             "subjectOutcomes": [
               {
                 "subjectId": 19,
@@ -2724,7 +2690,7 @@ const curriculums = [
           },
           {
             "id": 2,
-            "description": "Vastavalt projekti oodatavale tulemusele püstitab eesmärgid, kasutab versioonihaldust ning projektijuhtimise tööriistu ja reflekteerib protsessi.",
+            "description": "vastavalt projekti oodatavale tulemusele püstitab eesmärgid, kasutab versioonihaldust ning projektijuhtimise tööriistu ja reflekteerib protsessi",
             "subjectOutcomes": [
               {
                 "subjectId": 19,
@@ -2754,7 +2720,7 @@ const curriculums = [
           },
           {
             "id": 3,
-            "description": "Tagab lahenduse kasutajakesksuse, turvalisuse ja kestlikkuse rakendades kasutajakeskse disaini, küberturbe ja tarkvaraarenduse praktikaid.",
+            "description": "tagab lahenduse kasutajakesksuse, turvalisuse ja kestlikkuse rakendades kasutajakeskse disaini, küberturbe ja tarkvaraarenduse praktikaid",
             "subjectOutcomes": [
               {
                 "subjectId": 25,
@@ -2768,7 +2734,7 @@ const curriculums = [
           },
           {
             "id": 4,
-            "description": "Kommunikeerib eesmärke, protsessi ja tulemusi sidusrühmadele, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise ning kogub ja võtab arvesse tagasisidet.",
+            "description": "kommunikeerib eesmärke, protsessi ja tulemusi sidusrühmadele, kohandades sõnumeid eri kultuuri- ja sidusrühmadele ning kasutades visuaalseid ja andmepõhiseid esitusviise ning kogub ja võtab arvesse tagasisidet",
             "subjectOutcomes": [
               {
                 "subjectId": 19,
@@ -2786,7 +2752,7 @@ const curriculums = [
           },
           {
             "id": 5,
-            "description": "Näitab üles initsiatiivi individuaal- ja meeskonnatöös, täites ülesandeid vastutustundlikult, loovalt ja eetiliselt.",
+            "description": "näitab üles initsiatiivi individuaal- ja meeskonnatöös, täites ülesandeid vastutustundlikult, loovalt ja eetiliselt",
             "subjectOutcomes": [
               {
                 "subjectId": 19,
@@ -2812,7 +2778,7 @@ const curriculums = [
           },
           {
             "id": 6,
-            "description": "Tuleb toime võimalike pingeolukordadega, arvestades nii enda kui meeskonnakaaslaste füüsilist ja vaimset tervist mõjutavaid tegureid.",
+            "description": "tuleb toime võimalike pingeolukordadega, arvestades nii enda kui meeskonnakaaslaste füüsilist ja vaimset tervist mõjutavaid tegureid.",
             "subjectOutcomes": [
               {
                 "subjectId": 19,
@@ -2833,11 +2799,37 @@ const curriculums = [
       {
         "id": 2,
         "name": "Üleülikoolilised ained",
-        "objective": "Mooduli läbinud üliõpilasel on integreeritud teadmised psühholoogiast,  akadeemiline lugemis- ja kirjutamisoskus ning oskus rakendada projekti- ja meeskonnatöö põhimõtteid. Ta planeerib oma õpi- ja erialast tegevust eesmärgipäraselt, ennastjuhtivalt ja kriitiliselt mõeldes.",
+        "objective": "Üliõpilane omandab integreeritud teadmised psühholoogiast, arendab suulist ja kirjalikku eneseväljendusoskust, õppetööks vajalikku faktipõhist infootsingut. Lisaks arendab oma õpi- ja erialase tegevuse eesmärgipärast planeerimist, ennastjuhtivust ja meeskonnatööd.",
         "learningOutcomes": [
           {
             "id": 1,
-            "description": "omab akadeemilist lugemis- ja kirjaoskust erialaste õpingute edukaks sooritamiseks",
+            "description": "omab integreeritud teadmisi psühholoogia eri suundadest ja rakendamise võimalustest",
+            "subjectOutcomes": [
+              {
+                "subjectId": 7,
+                "outcomeId": 26
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 27
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 25
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 52
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 53
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "description": "arendab suulist ja kirjalikku eneseväljendusoskust",
             "subjectOutcomes": [
               {
                 "subjectId": 1,
@@ -2858,8 +2850,39 @@ const curriculums = [
             ]
           },
           {
-            "id": 2,
-            "description": "eesmärgistab, planeerib ja analüüsib õppetöö ning erialase valdkonnaga seotud protsesse",
+            "id": 3,
+            "description": "hindab kriitiliselt erinevaid informatsiooniallikaid, eristab fakte arvamustest ning loob loogiliselt põhjendatud argumente",
+            "subjectOutcomes": []
+          },
+          {
+            "id": 4,
+            "description": "lahendab interdistsiplinaarseid probleeme, tegutsedes nii meeskonnas kui iseseisvalt, leides seoseid eri valdkondade vahel",
+            "subjectOutcomes": [
+              {
+                "subjectId": 1,
+                "outcomeId": 6
+              },
+              {
+                "subjectId": 7,
+                "outcomeId": 24
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 50
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 51
+              },
+              {
+                "subjectId": 13,
+                "outcomeId": 54
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "description": "püstitab iseseisvalt õpi- ja erialaseid eesmärke, planeerib oma aega tõhusalt ning kohandab oma tegevust muutuvate oludega.",
             "subjectOutcomes": [
               {
                 "subjectId": 1,
@@ -2890,74 +2913,17 @@ const curriculums = [
                 "outcomeId": 49
               }
             ]
-          },
-          {
-            "id": 3,
-            "description": "seostab psühholoogia eri suundi nende rakendusvõimalustega, analüüsides inimkäitumise, õppimise ja ühiskondlike protsesside vahelisi seoseid;",
-            "subjectOutcomes": [
-              {
-                "subjectId": 7,
-                "outcomeId": 26
-              },
-              {
-                "subjectId": 7,
-                "outcomeId": 27
-              },
-              {
-                "subjectId": 7,
-                "outcomeId": 25
-              },
-              {
-                "subjectId": 13,
-                "outcomeId": 52
-              },
-              {
-                "subjectId": 13,
-                "outcomeId": 53
-              }
-            ]
-          },
-          {
-            "id": 4,
-            "description": "lahendab interdistsiplinaarseid probleeme, tegutsedes nii meeskonnas kui iseseisvalt, leides seoseid eri valdkondade vahel.",
-            "subjectOutcomes": [
-              {
-                "subjectId": 1,
-                "outcomeId": 6
-              },
-              {
-                "subjectId": 7,
-                "outcomeId": 24
-              },
-              {
-                "subjectId": 13,
-                "outcomeId": 50
-              },
-              {
-                "subjectId": 13,
-                "outcomeId": 51
-              },
-              {
-                "subjectId": 13,
-                "outcomeId": 54
-              }
-            ]
-          },
-          {
-            "id": 5,
-            "description": "Leiab sobilikke infoallikaid ja loob nende põhjal korrektset akadeemilist teksti ning esitab oma seisukohti nii suuliselt kui ka kirjalikult.",
-            "subjectOutcomes": []
           }
         ]
       },
       {
         "id": 3,
-        "name": "Eriala kohustuslikud ained",
+        "name": "Eriala kohustuslikud õppeained",
         "objective": "Mooduli läbinud üliõpilasel on terviklikud teadmised ja praktilised oskused digilahenduste loomiseks ning valdkondliku uurimistöö läbiviimiseks.",
         "learningOutcomes": [
           {
             "id": 1,
-            "description": "Selgitab, rakendab ja kommunikeerib valdkonna põhimõisteid ja teoreetilisi lähtekohti ning arengusuundi.",
+            "description": "selgitab, rakendab ja kommunikeerib valdkonna põhimõisteid ja teoreetilisi lähtekohti ning arengusuundi",
             "subjectOutcomes": [
               {
                 "subjectId": 3,
@@ -3051,7 +3017,7 @@ const curriculums = [
           },
           {
             "id": 2,
-            "description": "Kasutab disaini-, tarkvaraarenduse- ja multimeediumi tööriistu ning rakendusi turvaliselt ja eetiliselt.",
+            "description": "kasutab disaini-, tarkvaraarenduse- ja multimeediumi tööriistu ning rakendusi turvaliselt ja eetiliselt",
             "subjectOutcomes": [
               {
                 "subjectId": 3,
@@ -3121,7 +3087,7 @@ const curriculums = [
           },
           {
             "id": 3,
-            "description": "Kavandab, disainib, arendab ja testib agiilselt digilahendusi, mis on kasutajakesksed, kestlikud, turvalised ja visuaalselt atraktiivsed.",
+            "description": "kavandab, disainib, arendab ja testib agiilselt digilahendusi, mis on kasutajakesksed, kestlikud, turvalised ja visuaalselt atraktiivsed",
             "subjectOutcomes": [
               {
                 "subjectId": 3,
@@ -3207,7 +3173,7 @@ const curriculums = [
           },
           {
             "id": 4,
-            "description": "Analüüsib lahenduse kestlikkust ning keskkonna- ja ühiskonnamõju, langetab ja dokumenteerib otsuseid andmepõhiselt ning vastutustundlikult.",
+            "description": "analüüsib lahenduse kestlikkust ning keskkonna- ja ühiskonnamõju, langetab ja dokumenteerib otsuseid andmepõhiselt ning vastutustundlikult",
             "subjectOutcomes": [
               {
                 "subjectId": 32,
@@ -3293,7 +3259,7 @@ const curriculums = [
           },
           {
             "id": 5,
-            "description": "Viib läbi uurimistööd, analüüsib andmeid ning rakendab teaduslikke meetodeid tarkvaraarenduse ja disaini kontekstis.",
+            "description": "viib läbi uurimistööd, analüüsib andmeid ning rakendab teaduslikke meetodeid tarkvaraarenduse ja disaini kontekstis.",
             "subjectOutcomes": [
               {
                 "subjectId": 3,
@@ -3362,11 +3328,11 @@ const curriculums = [
       {
         "id": 4,
         "name": "Eriala valikained",
-        "objective": "Õpilane süvendab teadmisi ja oskusi valdkonna spetsiifilistes või uudsetes teemades.",
+        "objective": "Õppija süvendab teadmisi ja oskusi valdkonna spetsiifilistes või uudsetes teemades.",
         "learningOutcomes": [
           {
             "id": 1,
-            "description": "Analüüsib ja teeb põhjendatud valiku valdkonnaspetsiifilise või uudse lähenemisviisi osas,  seostab oma valiku teoreetiliste käsitluste ja praktiliste rakendustega.",
+            "description": "analüüsib ja teeb põhjendatud valiku valdkonnaspetsiifilise või uudse lähenemisviisi osas, seostab oma valiku teoreetiliste käsitluste ja praktiliste rakendustega",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
@@ -3432,7 +3398,7 @@ const curriculums = [
           },
           {
             "id": 2,
-            "description": "Rakendab omandatud teadmisi ja oskusi praktilistes disaini- või tarkvaraarenduse projektides.",
+            "description": "rakendab omandatud teadmisi ja oskusi praktilistes disaini- või tarkvaraarenduse projektides",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
@@ -3510,7 +3476,7 @@ const curriculums = [
           },
           {
             "id": 3,
-            "description": "Demonstreerib praktiliste ülesannete täitmisel loovust ja probleemilahendusoskusi.",
+            "description": "demonstreerib praktiliste ülesannete täitmisel loovust ja probleemilahendusoskusi.",
             "subjectOutcomes": [
               {
                 "subjectId": 14,
@@ -3581,11 +3547,6 @@ const curriculums = [
                 "outcomeId": 163
               }
             ]
-          },
-          {
-            "id": 4,
-            "description": "Süvendab või laiendab erialaseid teadmisi ja oskusi lähtuvalt oma huvidest ja karjäärieesmärkidest.",
-            "subjectOutcomes": []
           }
         ]
       },
@@ -3596,34 +3557,29 @@ const curriculums = [
         "learningOutcomes": [
           {
             "id": 1,
-            "description": "süvendab erialaseid teadmisi ja oskusi;"
+            "description": "süvendab erialaseid teadmisi ja oskusi",
+            "subjectOutcomes": []
           },
           {
             "id": 2,
-            "description": "on tõstnud oma võõrkeeleoskuse vähemalt B1.2 tasemele;"
+            "description": "on tõstnud oma võõrkeeleoskuse vähemalt B1.2 tasemele",
+            "subjectOutcomes": []
           },
           {
             "id": 3,
-            "description": "muu keelega kooli lõpetanu on tõstnud eesti keele oskuse C1 tasemele"
-          },
-          {
-            "id": 4,
-            "description": "Seob valitud ained erialaste teadmistega, demonstreerides interdistsiplinaarset mõtlemist ja loovust."
-          },
-          {
-            "id": 5,
-            "description": "Täiendab individuaalsest huvist ja eesmärgist lähtuvalt oma oskusi ja teadmisi"
+            "description": "muu keelega kooli lõpetanu on tõstnud eesti keele oskuse C1 tasemele.",
+            "subjectOutcomes": []
           }
         ]
       },
       {
         "id": 6,
         "name": "Erialane inglise keel",
-        "objective": "Õpilane arendab oma erialast inglise keelt.",
+        "objective": "Üliõpilane arendab erialast inglise keelt nii kõnes kui kirjas, et mõista ja analüüsida erialast kirjandust ning aktiivselt osaleda rahvusvahelistes koostööprojektides.",
         "learningOutcomes": [
           {
             "id": 1,
-            "description": "Kasutab erialast inglisekeelset terminoloogiat.",
+            "description": "tunneb ja kasutab erialast terminoloogiat",
             "subjectOutcomes": [
               {
                 "subjectId": 23,
@@ -3645,7 +3601,7 @@ const curriculums = [
           },
           {
             "id": 2,
-            "description": "Mõistab ja koostab erialaseid inglisekeelseid tekste.",
+            "description": "mõistab ja koostab erialaseid ingliskeelseid tekste",
             "subjectOutcomes": [
               {
                 "subjectId": 23,
@@ -3675,7 +3631,7 @@ const curriculums = [
           },
           {
             "id": 3,
-            "description": "Väljendab ladusalt suuliselt ja kirjalikult inglise keeles oma seisukohti.",
+            "description": "väljendab oma seisukohti ladusalt suuliselt ja kirjalikult.",
             "subjectOutcomes": [
               {
                 "subjectId": 23,
@@ -3712,7 +3668,7 @@ const curriculums = [
         "learningOutcomes": [
           {
             "id": 1,
-            "description": "Analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti.",
+            "description": "analüüsib erialast kirjandust, hinnates allikate akadeemilisust ja valdkondlikku autoriteeti",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
@@ -3722,7 +3678,7 @@ const curriculums = [
           },
           {
             "id": 2,
-            "description": "Tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi.",
+            "description": "tuvastab ja analüüsib ühiskonna, organisatsiooni või üksikisiku probleemi",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
@@ -3732,7 +3688,7 @@ const curriculums = [
           },
           {
             "id": 3,
-            "description": "Valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest.",
+            "description": "valib uurimistöö eesmärgi saavutamiseks sobivad uurimismeetodid, kogub ja analüüsib andmeid eetiliselt ja turvaliselt ning eristab fakte arvamusest",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
@@ -3742,7 +3698,7 @@ const curriculums = [
           },
           {
             "id": 4,
-            "description": "Kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi.",
+            "description": "kirjutab analüütilisel teemakäsitlusel põhineva lõputöö ja esitleb selle tulemusi",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
@@ -3752,7 +3708,7 @@ const curriculums = [
           },
           {
             "id": 5,
-            "description": "Hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust.",
+            "description": "hindab oma uurimistöö tulemuste keskkonna- ja ühiskonnamõju ning kestlikkust.",
             "subjectOutcomes": [
               {
                 "subjectId": 34,
@@ -3768,6 +3724,7 @@ const curriculums = [
         "id": 1,
         "semester": 1,
         "order": 1,
+        "code": "HKI5080.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5080.HK",
         "name": "Õppimine kõrgkoolis",
         "module": 2,
@@ -3810,8 +3767,9 @@ const curriculums = [
         "id": 2,
         "semester": 1,
         "order": 2,
-        "url": "https://docs.google.com/document/d/18s5CjohWs1-5o0BBVaiKI5med9GjmM7Brzfg1Vtszi0/edit?usp=sharing",
-        "name": "Sissejuhatus Informaatikasse",
+        "code": "HKI5062.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5062.HK",
+        "name": "Sissejuhatus informaatikasse",
         "module": 3,
         "required": true,
         "prerequisites": [],
@@ -3836,7 +3794,8 @@ const curriculums = [
         "id": 3,
         "semester": 1,
         "order": 3,
-        "url": "",
+        "code": "HKI5025.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5025.HK",
         "name": "Programmeerimise alused",
         "module": 3,
         "required": true,
@@ -3874,7 +3833,8 @@ const curriculums = [
         "id": 4,
         "semester": 1,
         "order": 4,
-        "url": "https://docs.google.com/document/d/114ubPoCoaihPibcIUKyRTtJhVl9p__MzU8jqBXoSkG8/edit?usp=drive_link",
+        "code": "HKI5112.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5112.HK",
         "name": "Arvutigraafika ja multimeedium",
         "module": 3,
         "required": true,
@@ -3904,7 +3864,8 @@ const curriculums = [
         "id": 5,
         "semester": 1,
         "order": 5,
-        "url": "",
+        "code": "HKI5113.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5113.HK",
         "name": "Sissejuhatus tarkvaraarendusse",
         "module": 3,
         "required": true,
@@ -3934,7 +3895,8 @@ const curriculums = [
         "id": 6,
         "semester": 1,
         "order": 6,
-        "url": "",
+        "code": "HKI5114.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5114.HK",
         "name": "Tehisintellekti kasutamise alused",
         "module": 3,
         "required": true,
@@ -3968,7 +3930,8 @@ const curriculums = [
         "id": 7,
         "semester": 2,
         "order": 1,
-        "url": "",
+        "code": "PSP6066.LT",
+        "url": "https://ois2.tlu.ee/tluois/aine/PSP6066.LT",
         "name": "Üld- ja sotsiaalpsühholoogia",
         "module": 2,
         "required": true,
@@ -4002,7 +3965,8 @@ const curriculums = [
         "id": 8,
         "semester": 2,
         "order": 2,
-        "url": "",
+        "code": "HKI5115.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5115.HK",
         "name": "Sisuhaldussüsteemid",
         "module": 4,
         "required": false,
@@ -4032,7 +3996,8 @@ const curriculums = [
         "id": 9,
         "semester": 2,
         "order": 3,
-        "url": "https://docs.google.com/document/d/1C51xaLBfMU9Q-EgiGdBA8kk2hJFHX2hukBWUO0zqkto/edit?usp=drive_link",
+        "code": "HKI5116.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5116.HK",
         "name": "Eesrakenduste arendamine",
         "module": 3,
         "required": true,
@@ -4065,7 +4030,8 @@ const curriculums = [
         "id": 10,
         "semester": 2,
         "order": 4,
-        "url": "",
+        "code": "HKI5117.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5117.HK",
         "name": "Kasutajakogemuse disain",
         "module": 3,
         "required": true,
@@ -4101,9 +4067,10 @@ const curriculums = [
       },
       {
         "id": 11,
-        "semester": 2,
-        "order": 5,
-        "url": "https://docs.google.com/document/d/1cieos39x2IMDdeNI0qYOV9kyDcftPmMCuIW7njiwwjQ/edit?usp=drive_link",
+        "semester": 3,
+        "order": 6,
+        "code": "HKM5084.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKM5084.HK",
         "name": "Graafilise disaini alused",
         "module": 3,
         "required": true,
@@ -4136,8 +4103,9 @@ const curriculums = [
       {
         "id": 12,
         "semester": 2,
-        "order": 6,
-        "url": "https://docs.google.com/document/d/1ichmKDcpqirafiCUCWDFq63pMGpyBNuOvEl-SHX2BOc/edit?usp=drive_link",
+        "order": 5,
+        "code": "HKI5118.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5118.HK",
         "name": "Veebirakenduste arendamine",
         "module": 4,
         "required": false,
@@ -4180,10 +4148,11 @@ const curriculums = [
       },
       {
         "id": 13,
-        "semester": 4,
-        "order": 5,
+        "semester": 3,
+        "order": 7,
+        "code": "YID6001.YM",
         "url": "https://ois2.tlu.ee/tluois/aine/YID6001.YM",
-        "name": "ELU",
+        "name": "ELU - Erialasid Lõimiv Uuendus",
         "module": 2,
         "required": true,
         "prerequisites": [],
@@ -4216,15 +4185,16 @@ const curriculums = [
             "description": "Tutvustab projekti tulemusi sidusrühmadele ja/või avalikkusele"
           }
         ],
-        "assessment": "Üleülikooliline aine, kus me ise ei saa midagi muuta",
-        "comment": "",
+        "assessment": "Arvestus",
+        "comment": "Üleülikooliline aine, kus me ise ei saa midagi muuta",
         "nonUnique": true
       },
       {
         "id": 14,
         "semester": 3,
-        "order": 4,
-        "url": "https://docs.google.com/document/d/1hOerUbvnc5uM0jXw4L_TXgJ8jR_n9vZbPMxvIYCQH4Y/edit?usp=drive_link",
+        "order": 3,
+        "code": "HKI5060.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5060.HK",
         "name": "Videomängude disain",
         "module": 4,
         "required": false,
@@ -4261,8 +4231,9 @@ const curriculums = [
       {
         "id": 15,
         "semester": 3,
-        "order": 5,
-        "url": "https://docs.google.com/document/d/11XWgv2ivSePeArtVBEoYjqETSCUaU_eObQqe2Fsxt1o/edit?usp=sharing",
+        "order": 4,
+        "code": "HKI5120.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5120.HK",
         "name": "Kasutajaliidese disain",
         "module": 4,
         "required": false,
@@ -4302,8 +4273,9 @@ const curriculums = [
       {
         "id": 16,
         "semester": 3,
-        "order": 2,
-        "url": "https://docs.google.com/document/d/150blCByumkF1QIqJjLQ2ubW4lbMlXaHs9yKeVeUdl6o/edit?usp=drive_link",
+        "order": 1,
+        "code": "HKI5121.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5121.HK",
         "name": "Andmebaasid",
         "module": 3,
         "required": true,
@@ -4339,8 +4311,9 @@ const curriculums = [
       {
         "id": 17,
         "semester": 3,
-        "order": 3,
-        "url": "https://docs.google.com/document/d/1lsd4LZM_II0EBGEAkYqZjkGplWwV_z7w8qvUzzFdp7c/edit?usp=sharing",
+        "order": 2,
+        "code": "HKI5122.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5122.HK",
         "name": "Veebiraamistike rakendamine",
         "module": 3,
         "required": true,
@@ -4376,8 +4349,9 @@ const curriculums = [
       {
         "id": 18,
         "semester": 3,
-        "order": 6,
-        "url": "https://docs.google.com/document/d/1U2k1eYAq9tXR4LpzQ0XIPvWVT5RCPoDz5Li6hFHKwjA/edit?usp=drive_link",
+        "order": 5,
+        "code": "HKI5123.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5123.HK",
         "name": "Tagarakenduste arendamine",
         "module": 4,
         "required": false,
@@ -4426,7 +4400,8 @@ const curriculums = [
         "id": 19,
         "semester": 4,
         "order": 1,
-        "url": "https://docs.google.com/document/d/1wXVIB-t2qg9oJhWFbWA1xIXKB-4p5I6Krx616rp08M8/edit?usp=sharing",
+        "code": "HKI5109.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5109.HK",
         "name": "Praktika I",
         "module": 1,
         "required": true,
@@ -4464,7 +4439,8 @@ const curriculums = [
         "id": 20,
         "semester": 4,
         "order": 2,
-        "url": "https://docs.google.com/document/d/1950rkgB_Pnib_Fwiy5c0XEKdifB_t9v9oxohOGJPZTw/edit?usp=sharing",
+        "code": "HKI5124.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5124.HK",
         "name": "IT matemaatika",
         "module": 3,
         "required": true,
@@ -4497,6 +4473,7 @@ const curriculums = [
         "id": 21,
         "semester": 4,
         "order": 3,
+        "code": "HKT5097.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKT5097.HK",
         "name": "Uurimistöö alused ja andmeanalüüs",
         "module": 3,
@@ -4539,14 +4516,15 @@ const curriculums = [
             "description": "Koostab nõuetekohase lõputöö projekti, mis sisaldab kõiki vajalikke komponente (sh ajakava ja metodoloogiline plaan) ning esitleb seda suuliselt"
           }
         ],
-        "assessment": "Arvestus",
+        "assessment": "Eksam",
         "comment": "",
         "nonUnique": true
       },
       {
         "id": 22,
-        "semester": 4,
-        "order": 4,
+        "semester": 2,
+        "order": 6,
+        "code": "HKL5112.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKL5112.HK",
         "name": "Protsessi- ja projektijuhtimine",
         "module": 3,
@@ -4581,6 +4559,7 @@ const curriculums = [
         "id": 23,
         "semester": 4,
         "order": 6,
+        "code": "HKI5081.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5081.HK",
         "name": "Erialane inglise keel",
         "module": 6,
@@ -4628,14 +4607,15 @@ const curriculums = [
           }
         ],
         "assessment": "Arvestus",
-        "comment": "",
+        "comment": "Tase järgi valitakse Erialane inglise keel I (HKI5081.HK) või II (HKI5090.HK); tudeng sooritab ühe",
         "nonUnique": true
       },
       {
         "id": 24,
-        "semester": 3,
-        "order": 1,
-        "url": "https://ois2.tlu.ee/tluois/aine/HKM5110.HK",
+        "semester": 4,
+        "order": 4,
+        "code": "HKI5125.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5125.HK",
         "name": "Kujundustarkvara edasijõudnutele",
         "module": 4,
         "required": false,
@@ -4667,7 +4647,7 @@ const curriculums = [
             "description": "Rakendab erinevaid graafilisi tehnikaid ja töövõtteid loovalt, saavutades esteetiliselt ja tehniliselt tasakaalustatud tulemuse"
           }
         ],
-        "assessment": "Arvestus",
+        "assessment": "Eksam",
         "comment": "",
         "nonUnique": true
       },
@@ -4675,7 +4655,8 @@ const curriculums = [
         "id": 25,
         "semester": 5,
         "order": 1,
-        "url": "https://docs.google.com/document/d/1M4Ic1P8pyOiC5egEC0cHTnoTLIuiOzCKZKxLDRQwCFE/edit?usp=sharing",
+        "code": "HKI5110.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5110.HK",
         "name": "Praktika II",
         "module": 1,
         "required": true,
@@ -4711,7 +4692,7 @@ const curriculums = [
             "description": "Osaleb meeskondliku aruande koostamisel ja tarkvaraarendusprojekti kaitsmisel, demonstreerides praktika käigus omandatud oskusi ja teadmisi"
           }
         ],
-        "assessment": "Eksam",
+        "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
       },
@@ -4719,6 +4700,7 @@ const curriculums = [
         "id": 26,
         "semester": 5,
         "order": 2,
+        "code": "HKI5111.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5111.HK",
         "name": "Uurimistöö",
         "module": 3,
@@ -4751,7 +4733,7 @@ const curriculums = [
             "description": "Oskab piiritleda ja fokuseerida oma erialase lõputöö teemat"
           }
         ],
-        "assessment": "",
+        "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
       },
@@ -4759,7 +4741,8 @@ const curriculums = [
         "id": 27,
         "semester": 5,
         "order": 6,
-        "url": "https://docs.google.com/document/d/12ZNpfiYkFrO6qCH9YM0uxAwJim00gBXdKLkN_p_KDUk/edit?usp=sharing",
+        "code": "HKI5100.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5100.HK",
         "name": "Serverihaldus",
         "module": 4,
         "required": false,
@@ -4801,7 +4784,8 @@ const curriculums = [
         "id": 28,
         "semester": 5,
         "order": 4,
-        "url": "https://docs.google.com/document/d/1lHbUAy7YjXLFJfyVkZ1hNaWwEwDSdzMeGYvKQz99Upo/edit?usp=drive_link",
+        "code": "HKI5119.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5119.HK",
         "name": "Algoritmid ja andmestruktuurid",
         "module": 3,
         "required": true,
@@ -4834,14 +4818,15 @@ const curriculums = [
         "id": 29,
         "semester": 5,
         "order": 5,
-        "url": "https://docs.google.com/document/d/1Oe83DofqBJAC-kW_If4BLIJP4GFz-32dtluj-vr2gMA/edit?usp=drive_link",
+        "code": "HKI5061.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5061.HK",
         "name": "Mobiilirakenduste arendamine",
         "module": 3,
         "required": true,
         "prerequisites": [
           5
         ],
-        "credits": 6,
+        "credits": 4,
         "content": "Õppeaine annab põhjaliku ülevaate mobiilirakenduste arenduse põhialustest, keskendudes mobiilsete platvormide ja seadmete eripäradele, mobiilirakenduste ajaloole ja nende rollile kaasaegses äris ning igapäevaelus. Kursusel käsitletakse mobiilirakenduste arendamise kõiki etappe, sealhulgas planeerimist, arhitektuuri kavandamist, arendamist, testimist ja vigade käsitlemist. Erilist tähelepanu pööratakse turvalisusele ja privaatsusele, rakendades parimaid tavasid usaldusväärsete lahenduste loomiseks. Õppijad omandavad praktilised oskused React Native’i arenduskeskkonnas, alustades seadistamisest ja integreerimisest teiste tööriistade ja teekidega (nt Expo, Redux). Kursusel käsitletakse ka andmete pärimist välisest API-st, nende töötlemist ja kuvamist mobiilirakendustes. Samuti võrreldakse alternatiivseid lahendusi, nagu veebipõhised rakendused, hübriidlahendused ja progressiivsed veebirakendused (PWA). Praktiliste ülesannete raames loovad õppijad React Native’i abil mobiilirakenduse, rakendades seisundihaldust, andmevooge ja API-de integreerimist. Lisaks pööratakse tähelepanu dokumenteerimisele ja versioonihalduse (nt Git, GitHub) kasutamisele, et toetada arendusprotsessi läbipaistvust ja meeskonnatööd.",
         "objective": "Eesmärk on anda üliõpilastele põhjalikud teadmised ja praktilised oskused mobiilirakenduste arendamiseks React Native’i abil, keskendudes rakenduste planeerimisele, arendamisele, testimisele, andmete integreerimisele välisest API-st ning dokumenteerimisele ja versioonihalduse kasutamisele. Kursus laiendab õppijate arusaama mobiilirakenduste rollist ja võimalustest kaasaegses maailmas, tutvustades ka alternatiivseid lahendusi ja tulevikusuundi.",
         "outcomes": [
@@ -4862,7 +4847,7 @@ const curriculums = [
             "description": "Kasutab versioonihaldust programmikoodi ja dokumentatsiooni haldamiseks"
           }
         ],
-        "assessment": "Eksam",
+        "assessment": "Arvestus",
         "comment": "",
         "nonUnique": false
       },
@@ -4870,7 +4855,8 @@ const curriculums = [
         "id": 30,
         "semester": 5,
         "order": 3,
-        "url": "https://docs.google.com/document/d/1voUAJxShlguFIeo0qsLQRnjeAKlqvYRDSVR5rBoEbgM/edit?usp=sharing",
+        "code": "HKI5126.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5126.HK",
         "name": "Küberturve",
         "module": 3,
         "required": true,
@@ -4908,7 +4894,8 @@ const curriculums = [
         "id": 31,
         "semester": 6,
         "order": 1,
-        "url": "https://docs.google.com/document/d/1XawSc2t-5gvOhFItbgcZzo2kbz2IH85H8O0ArB6pIdc/edit?usp=sharing",
+        "code": "HKI5127.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5127.HK",
         "name": "Praktika III",
         "module": 1,
         "required": true,
@@ -4940,8 +4927,9 @@ const curriculums = [
       },
       {
         "id": 32,
-        "semester": 6,
-        "order": 2,
+        "semester": 4,
+        "order": 5,
+        "code": "HKI5030.HK",
         "url": "https://ois2.tlu.ee/tluois/aine/HKI5030.HK",
         "name": "IT ja õigus",
         "module": 3,
@@ -4968,18 +4956,19 @@ const curriculums = [
             "description": "Selgitab andmesubjekti õigusi ja isikuandmete kaitse nõudeid vastavalt kehtivale seadusandlusele"
           }
         ],
-        "assessment": "",
+        "assessment": "Eksam",
         "comment": "",
         "nonUnique": true
       },
       {
         "id": 33,
-        "semester": 6,
-        "order": 3,
-        "url": "https://docs.google.com/document/d/1wKC9kwk5OqCIyQ-1AKp_94oqdlc5Yp3nyOsJwmk5VCA/edit?usp=sharing",
+        "semester": 5,
+        "order": 7,
+        "code": "HKI5128.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5128.HK",
         "name": "Erialaseminar",
         "module": 4,
-        "required": true,
+        "required": false,
         "prerequisites": [],
         "credits": 4,
         "content": "Õppeaine eesmärk on pakkuda paindlikku võimalust süvendada teadmisi IT-sektorist ja osaleda valdkonnaga seotud praktilistes tegevustes, mis toetavad õppija isiklikku arengut ja huve. Kursus hõlmab mitmeid võimalikke komponente, millest õppija saab valida endale sobivaimad, et laiendada oma teadmisi ja kogemusi IT-sektoris.\n\nValikute hulka kuuluvad:\n\n- IT-sektori hetkeseisu ja arengutrendide analüüs, tuginedes kaasaegsetele tehnoloogiatele ja innovatsioonivaldkondadele.\n- Osalemine IT-konverentsidel, seminaridel, töötubades, häkatonidel või vabavara projektides.\n- Praktiline kokkupuude IT-sektoriga IT-ettevõtete külastuste ja spetsialistidega kohtumiste kaudu.\n- Ettekannete ettevalmistamine ja esitamine IT-valdkonna huvipakkuvatel teemadel.\n- Eneseanalüüsi ja arenguplaani koostamine, kaardistades oma tugevused ja arenguvajadused ning planeerides karjääriteed.\n- Osalemine erinevates IT-sektorit puudutavates uuringutes.\n- jms\n\nÕppeaine annab võimaluse keskenduda neile teemadele ja tegevustele, mis on õppija arengu ja eesmärkide saavutamise seisukohalt kõige olulisemad, pakkudes paindlikkust õppekava täitmisel.",
@@ -5017,7 +5006,7 @@ const curriculums = [
       {
         "id": 34,
         "semester": 6,
-        "order": 5,
+        "order": 3,
         "url": "",
         "name": "Lõputöö",
         "module": 7,
@@ -5055,8 +5044,9 @@ const curriculums = [
       {
         "id": 35,
         "semester": 6,
-        "order": 4,
-        "url": "",
+        "order": 2,
+        "code": "HKI5129.HK",
+        "url": "https://ois2.tlu.ee/tluois/aine/HKI5129.HK",
         "name": "Välispraktika",
         "module": 4,
         "required": false,
@@ -5078,8 +5068,8 @@ const curriculums = [
             "description": "On arendanud oma võõrkeeleoskust ning rakendab seda rahvusvahelises professionaalses suhtluses ja koostöös"
           }
         ],
-        "assessment": "",
-        "comment": "",
+        "assessment": "Arvestus",
+        "comment": "ÕIS: toimumise semestrit ei määrata",
         "nonUnique": false
       }
     ]
